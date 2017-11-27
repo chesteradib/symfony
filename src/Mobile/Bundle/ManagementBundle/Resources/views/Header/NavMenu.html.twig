@@ -1,0 +1,15 @@
+<a class="toggle-nav-menu tnavi" href="#">
+        &#9776;
+        {% set totalMessages = number_of_messages_not_seen
+                        + number_of_new_posts_by_followeds_not_seen
+                        + number_of_follows_not_seen %}
+        <span class="notification-counter-mobile-all"
+            {% if totalMessages < 1 %}
+              style="display:none"
+            {% endif%}
+            >
+          {% if totalMessages > 0 %}
+            {{ totalMessages }}
+          {% endif%}
+        </span>
+</a>

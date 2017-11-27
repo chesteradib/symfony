@@ -1,0 +1,163 @@
+$logoWidth: 156px;
+$headerHeight: 60px;
+$menuItemWidth: 86px;
+$sprite1 :url('../images/spritesheet1.png');
+$sprite3 : url('../images/spritesheet3.png');
+$vert:#006233;
+$rouge: #c1272d;
+$black: black;
+$gris:#e1e1e1;
+
+
+.follow_unfollow_of_follower
+{
+  width: 90px;
+  height: 60px;
+  float:right;
+  padding-top: 14px;
+}
+
+.image_of_follower
+{
+  width: 60px;
+  height: 60px;
+  float:right;
+  border-right: 1px solid rgba(0, 98, 51, 0.2);
+  
+}
+
+.initial_info_of_follower
+{
+  font-size: 11px;
+  float:right;
+}
+
+.username_of_follower
+{
+    height:15px;
+    line-height: 15px;
+    font-size: 14px;
+    padding-top:10px; 
+}
+.domain_name_of_follower
+{
+    font-style: oblique;
+    padding-top:12px;
+    font-size: 11px;
+}
+
+.number_of_articles_of_follower
+{
+    font-style: oblique;
+    font-size: 11px;
+}
+
+.username_of_follower, .domain_name_of_follower,.number_of_articles_of_follower
+{
+    text-align: right;
+    padding-right:5px;
+
+}
+
+.my_network_item a.show_shop
+{
+    width:160px;
+    height:100%;
+    float:right;
+    border-bottom: 1px solid rgba(0, 98, 51, 0.2);
+    border-left: 1px solid rgba(0, 98, 51, 0.2);
+
+}
+.my_network_item a.show_shop:hover
+{
+    background-color: $gris;
+}
+
+
+/* Old ones to be managed in the future */
+
+.trigger_follow
+{
+    width:60px;
+    height:33px;
+    display: block;
+    background: url('../images/spritesheet1.png') no-repeat;
+    cursor: pointer;
+    margin:0 auto;  
+    background-position: 41.4% 0;
+    background-size: 1805% 196.969696%;
+}
+
+/*
+.trigger_follow:hover
+{
+
+    background-position: 29.618% 0;
+    opacity: 0.7;
+}
+
+.trigger_follow:click
+{
+
+    background-position: 41.4% 0;
+}
+*/
+.trigger_unfollow
+{
+
+    
+    
+    width:60px;
+    height:33px;
+    display: block;
+    background: url('../images/spritesheet1.png') no-repeat;
+    cursor: pointer;
+    margin:0 auto;  
+    background-position: 29.618% 0;//35.48% 0;
+    opacity: 0.7;
+    background-size: 1805% 196.969696%;
+    
+}
+/*
+.trigger_unfollow:click
+{
+    background-position: 29.618% 0;//35.48% 0; 
+}
+
+*/
+.follow-word
+{
+    width: 100%;
+    color: #006233;
+    font-size: 9px;
+    font-weight: 600;
+    height: 19px;
+    display: block;
+    padding-left: 2px;
+    opacity: 0.4;
+    cursor: default;
+    padding-left: 14px;
+}
+
+
+.unfollow-word
+{
+    display: none;
+}
+
+.rotate
+{
+    
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#follow_unfollow_of_follower_in_shop
+{
+    width: 90px;
+    height: 60px;
+    float: left;
+}

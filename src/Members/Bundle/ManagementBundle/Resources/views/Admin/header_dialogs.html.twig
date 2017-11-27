@@ -1,0 +1,17 @@
+    <div class="header_dialogs">
+        <div class="inbox_dialog" style="display:none">
+            <div id="my_inbox_progress"><div></div></div>
+            <div id="my_inbox_content"></div>
+        </div>
+        <div class="my_market_dialog" id="my_market_dialog" style="display:none">
+            <div id="my_market_progress"><div></div></div>
+            <div id="my_market_content"></div>
+        </div>
+        <div class="network_dialog" style="display:none">
+            <div id="my_network_progress"><div></div></div>
+            <div id="my_network_content"></div>
+        </div>
+        <div class="categories_dialog" style="display:none">
+            {% include "ShopManagementBundle:Category:AllCategoriesForHeader.html.twig" %}
+        </div>
+    </div>

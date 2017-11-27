@@ -1,0 +1,50 @@
+    {% if follows|length == 0  %} 
+    <div id="no-items-my_network">
+        {{ 'header_dialogs.my_network.no_new_followers'| trans}}
+    </div> 
+    {% else %}  
+    {% for follow in follows %}
+        <a href="javascript:void(0);" class="show_shop my_networkk trigger" 
+           data-url="{{ path('index')}}shop/" 
+           data-follow-seen-url="{{ path('follow_seen')}}"
+           data-shop-id="{{follow.follower.id}}"
+           data-last-date-url="{{path('last_date')}}"
+        >
+            <div class="my_network_item">
+                {% if follow.follower.getProfilePicture %}
+                    {% set createdAt = follow.follower.getCreatedAt %}
+                    {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                        ~createdAt|date('m')~'/'
+                        ~follow.follower.getProfilePicture.path %}
+                    <div class="m-s-p-p-u-d profile_image {% if follow.follower.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
+                        {% if follow.follower.getProfilePicture.widthVsHeight == 0 %}
+                            <img class="m-s-p-p-u photo equal" src="{{ asset(image_url) }}" height= 25/>
+                        {% elseif follow.follower.getProfilePicture.widthVsHeight == 1 %}
+                            <span class="helper"></span>
+                            <img class="m-s-p-p-u photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                        {% elseif follow.follower.getProfilePicture.widthVsHeight == 2 %}
+                            <img class="m-s-p-p-u photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                        {% endif %}      
+                    </div>
+                {% else %}
+                <div class="m-s-p-p-u-d profile_image center-horizontally">
+                        <img class="photo equal" src="{{ asset('pp/index.png') }}"/>
+                </div>
+                {% endif %}  
+                <div class="m-s-u-is-following">
+                    {{follow.follower.username}}
+                </div>
+                <div class="m-is-following">
+                    {{ 'header_dialogs.my_network.is_now_following_you'| trans}}
+                </div>    
+            </div>
+    </a>
+    {% endfor %}
+    {% endif %}
+    
+    <a href="javascript:void(0);" class="show_all_my_network_trigger">
+        <div class="my_network_item" id="all_my_network">
+            {{ 'header_dialogs.my_network.show_all_my_network'| trans}}
+        </div>
+    </a>
+</div>

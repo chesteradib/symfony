@@ -1,0 +1,32 @@
+{
+  "name": "community",
+  "version": "1.0.0",
+  "description": "Symfony Standard Edition ========================",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.2",
+    "browser-sync": "^2.11.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-if": "^2.0.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "help": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lettersandblankspaces/test-repository.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lettersandblankspaces/test-repository/issues"
+  },
+  "homepage": "https://github.com/lettersandblankspaces/test-repository#readme"
+}

@@ -1,0 +1,114 @@
+ 
+################################
+global_item_show:
+    pattern:  /g/item/{id}
+    defaults: { _controller: "ShopManagementBundle:Post:globalShow" }
+    
+post_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ShopManagementBundle:Post:show" }
+
+post_new:
+    pattern:  /new
+    defaults: { _controller: "ShopManagementBundle:Post:new" }
+
+post_edits:
+    pattern:  /{id}/edits
+    defaults: { _controller: "ShopManagementBundle:Post:edits" }
+
+
+post_creates:
+    pattern:  /creates
+    defaults: { _controller: "ShopManagementBundle:Post:creates" }
+
+    
+post_updates:
+    pattern:  /{id}/updates
+    defaults: { _controller: "ShopManagementBundle:Post:updates" }
+    requirements: { _method: post|put }
+
+
+post_deletes:
+    pattern:  /{id}/deletes
+    defaults: { _controller: "ShopManagementBundle:Post:deletes" }
+    requirements: { _method: post|delete }
+    
+    
+################################    
+    
+post_bought:
+    pattern:  /{post_id}/bought
+    defaults: { _controller: "ShopManagementBundle:Post:bought" }
+    requirements: { _method: post|delete }
+
+
+#######################################
+get_my_market_posts:
+    pattern:  /my_market_posts/
+    defaults: { _controller: "ShopManagementBundle:Market:displayMarketPosts" }
+
+get_my_market:
+    pattern:  /my_market/
+    defaults: { _controller: "ShopManagementBundle:Market:displayMyMarket" }
+
+get_my_market_dialog:
+    pattern: /my_market_dialog/
+    defaults: { _controller: "ShopManagementBundle:Market:myMarketDialog"}
+################################
+
+get_posts:
+    pattern:  /{shop_id}/posts/
+    defaults: { _controller: "ShopManagementBundle:Shop:displayPosts" }
+    
+get_my_shop:
+    pattern: /my_shop/
+    defaults: {_controller: "ShopManagementBundle:MyShop:displayMyShop"}
+
+get_shop:
+    pattern: /shop/{shop_id}/
+    defaults: {_controller: "ShopManagementBundle:Shop:displayShop"}
+    
+    
+
+    
+################################
+
+image_uploads:
+    pattern:  /image_uploads
+    defaults: { _controller: ShopManagementBundle:Image:uploads}
+    requirements: { _method: post|put }
+    
+    
+image_deletes:
+    pattern:  /image_deletes
+    defaults: { _controller: ShopManagementBundle:Image:deletes}
+    requirements: { _method: post|delete }
+ 
+    
+################################   
+
+show_shop:
+    pattern:  /{shop_id}/external
+    defaults: { _controller: "ShopManagementBundle:External:showShop" }
+    
+
+################################
+
+show_category:
+    pattern: /category
+    defaults: {_controller : "ShopManagementBundle:Category:getArticlesOfCategory"}
+    
+
+page_of_show_category:
+  path: /page_of_category/{category_id}/
+  defaults: {_controller: ShopManagementBundle:Category:getPageOfArticlesOfCategory}    
+  
+
+    
+################################    
+    
+post_retweet:
+    pattern:  /{post_id}/retweet
+    defaults: { _controller: "ShopManagementBundle:Post:retweet" }
+    requirements: { _method: post|delete }
+

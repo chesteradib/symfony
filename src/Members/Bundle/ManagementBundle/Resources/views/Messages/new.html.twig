@@ -1,0 +1,7 @@
+<form class="message-form" 
+          id="message_add_trigger" 
+          action="{{ path('add_message', { 'receiver_id': post_author_id, 'post_id' :post_id }) }}" 
+          method="post" {{ form_enctype(form) }} novalidate>        
+    {{ form_row(form.messageContent) }}
+    {{ form_widget(form._token) }}
+</form>

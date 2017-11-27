@@ -1,0 +1,20 @@
+parameters:
+#    members_management.example.class: Members\Bundle\ManagementBundle\Example
+     members_management.message.class:  Members\Bundle\ManagementBundle\Entity\Message
+services:
+  members_management.profile.form.type:
+    class: Members\Bundle\ManagementBundle\Form\Type\ProfileFormType
+    arguments: [%fos_user.model.user.class%]
+    tags:
+      - {name:form.type, alias:members_management_user_profile}
+  members_management.follow.services:
+      class: Members\Bundle\ManagementBundle\Entity\FollowServices
+      arguments:  ["@doctrine.orm.default_entity_manager"]
+  members_management.messages.services:
+      class: Members\Bundle\ManagementBundle\Entity\MessagesServices
+      arguments:  ["@doctrine.orm.default_entity_manager", %members_management.message.class%]
+  
+  members_management.user.services:
+      class: Members\Bundle\ManagementBundle\Entity\UserServices
+      arguments:    ["@doctrine.orm.default_entity_manager"]
+  

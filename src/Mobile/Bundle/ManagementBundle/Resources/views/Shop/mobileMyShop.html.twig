@@ -1,0 +1,81 @@
+<div id="mobile-container">
+    <div id="mobile-context">
+        <div id="mobile-context-breadcrumb">
+            <div id="mobile-context-user-name">
+                {{ 'menu.my_shop'| trans}}
+            </div>
+             <div id="mobile-context-number-of-items">
+                {% if total_number_of_items >0 %}
+                (
+                {{total_number_of_items}}
+                {% if total_number_of_items == 1 %}
+                    {{ 'global.article'| trans}})
+                {% else %}
+                    {{ 'global.articles'| trans}})
+                {%endif%}
+            {%endif%}
+            </div>
+        </div>
+        {%if user.getProfilePicture %}
+            <div id="mobile-context-user-image" class="{% if user.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
+                {% set createdAt = user.getCreatedAt %}
+                {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                ~createdAt|date('m')~'/'
+                ~user.getProfilePicture.path %}
+                {% if user.getProfilePicture.widthVsHeight == 0 %}
+                <img class="photo equal-profile-image"  src="{{ asset(image_url) }}"/>
+                {% elseif user.getProfilePicture.widthVsHeight == 1 %}
+                <span class="helper"></span>
+                <img class="photo fat-profile-image"  src="{{ asset(image_url) }}"/>
+                {% elseif user.getProfilePicture.widthVsHeight == 2 %}
+                <img class="photo tall-profile-image"  src="{{ asset(image_url) }}"/>
+                {% endif%}
+            </div>
+        {%else%}
+            <div id="mobile-context-user-image" class="center-horizontally">
+                <img class="photo equal-profile-image" src="{{asset('pp/index.png') }}" height= 25/>
+            </div>
+        {%endif%}
+    </div>
+    <div id="mobile-content">
+        <div id="mobile-content-items-container">
+            {% if entities|length <=0 %}
+                <div class="no-items">{{ 'header_dialogs.my_shop.empty'| trans}}</div>
+            {% endif %}
+            {% include "MobileManagementBundle::items.html.twig" %} 
+        </div>
+        {% if number_of_pages >1%}
+        <div id="mobile-content-pagination"
+            data-current-page="{{page}}" 
+            data-url="{{path('mobile_my_shop',{ 'page':page})}}"
+            data-total-pages="{{number_of_pages}}"
+            >
+            <div id="pagination-navigation">
+            {% if number_of_pages > 0 %}
+            <a href="{{ path('mobile_my_shop', { 'page' : page + 1}) }}">
+                <div id="show_next_page" 
+                   class="{% if number_of_pages == page + 1 %}hide{% endif %}"
+                   >
+                </div>
+            </a>
+            <div id="page-number">
+                <input id="current-page" type="text" name="fname" value="{{page + 1}}">
+                <span id="total-pages">/{{ number_of_pages }}</span>
+            </div>
+            <a href="{{ path('mobile_my_shop', { 'page' : page - 1}) }}">
+            <div id="show_previous_page" 
+                class="{% if page == 0 %}hide{% endif %}"
+                >
+            </div>
+            </a>
+                <div id="pagination-message">
+                    <div id="pagination-message-text">{{'errors.pagination' | trans}}</div>
+                    <div id="pagination-message-close">X</div>
+                </div>
+            {% endif %}
+        </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+

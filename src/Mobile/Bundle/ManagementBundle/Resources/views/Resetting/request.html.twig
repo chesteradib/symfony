@@ -1,0 +1,22 @@
+{% extends ':mobile:base.html.twig' %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/mobile_fos_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+{% include "MobileManagementBundle:Header:mobileFosHeader.html.twig" %}
+    
+{% block fos_user_content %}
+    {% include "MobileManagementBundle:Resetting:request_content.html.twig" %}
+{% endblock fos_user_content %}
+ 
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_my_inbox_js.js') }}"></script> 
+{% endblock %}

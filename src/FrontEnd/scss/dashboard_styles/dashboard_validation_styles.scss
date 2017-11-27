@@ -1,0 +1,84 @@
+
+
+$formTitleErrorWidth: 230px;
+$formContentErrorWidth: 230px;
+$formPriceErrorWidth:  230px;
+$formImagesErrorWidth: 140px;
+
+
+
+#form-categories-error
+{
+    width:$formTitleErrorWidth;
+    right: 575 + $formTitleErrorWidth;
+    top: calc(1%);
+}
+
+#form-title-error
+{
+    width:$formTitleErrorWidth;
+    right: 575 + $formTitleErrorWidth;
+    top: calc(6.7%);
+}
+#form-content-error
+{
+    width:$formContentErrorWidth;
+    right: 575px + $formContentErrorWidth;
+    top: calc(20.5%);
+}
+
+#form-price-error
+{
+    width:$formPriceErrorWidth;
+    right: 575px + $formPriceErrorWidth ;
+    top: calc(36%);
+    
+}
+#form-images-error
+{
+    width:$formImagesErrorWidth;
+    right: 664px + $formImagesErrorWidth;
+    top: calc(46.9%);
+}
+
+#form-notes-error
+{
+    width:$formImagesErrorWidth;
+    right: 664px + $formImagesErrorWidth;
+    top: calc(80.5%);
+}
+
+.error-theme
+{
+    position:absolute;
+    
+}
+.error-message
+{
+    background-color: $rouge;
+    margin: 4px;
+    padding:4px;
+    color: white;
+    font-size:11px;
+    line-height: 100%;
+    border-radius: 2px;
+    
+}
+
+.error-message-close
+{
+    width: 20px;
+    height: 20px;
+    float: left;
+    border: 1px solid white;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+
+}
+.error-message-text
+{
+    width:calc( 100% - 20px);
+    float: left;
+}

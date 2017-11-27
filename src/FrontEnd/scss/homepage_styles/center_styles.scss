@@ -1,0 +1,166 @@
+$vert-opace:rgba(0,98,51,0.3);
+
+#center-context
+{
+    height:50px;
+    width: 100%;
+
+}
+
+#center-content
+{
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+#center-items-container
+{
+    height:calc(100% - 40px);
+    width: 100%;
+}
+
+#center-content-pagination
+{
+    height: 40px;
+}
+
+.item-container
+{
+    height: 125px;
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+    
+}
+.item-container.active
+{
+    background-color:$vert-opace;  
+}
+
+
+.product-price-in-posts
+{
+    text-align: right;
+    background: rgba(0, 98, 51, 0.5);
+    color: white;
+    border-radius: 7px;
+    padding: 0 4px;
+    float: right;
+    height:20px;
+
+}
+.p-p-i-p{
+   font-size: 12px;
+   text-align: right;
+}
+
+.p-p-i-p-currency
+{
+   font-size: 8px;
+   text-align: right;
+ 
+}
+
+.product-image-and-title
+{
+    position: relative;
+    height:120px;
+    vertical-align:top; 
+}
+
+.product-title-in-posts
+{
+    height: 80%;
+    width: 100%;
+    color:  white;
+    background: none;
+    z-index: -1;
+    position: absolute;
+    padding: 36% 8px 0 8px;
+    text-align: center;
+    font-size: 11px;
+}
+.product-image-in-posts
+{
+    display: block;
+    height: 100%;
+    width: 100%; 
+    float:right;
+    position: relative;
+}
+
+.product-image-and-title:after
+{
+    content:'\A';
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.product-image-and-title:hover:after
+{
+    opacity:1;
+}
+.product-user-image-in-posts
+{
+    height:10%;  
+    position: relative;
+}
+
+
+.product-user-image img
+{
+    width:100%;  
+    height:100%;
+}
+
+.item-container .fatty
+{
+   height:100%;        
+}
+
+.item-container .tally
+{
+    width:100%;    
+}
+
+.product-user-image
+{
+    width:35%;
+    float:right;   
+    right:-8px;
+    top:-35px;
+    position: absolute;
+    border-radius: 20%;        
+}
+
+.product-user-image img
+{
+    border-radius: 20%;       
+}
+
+.round {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  float: left; 
+}
+
+.no-items
+{
+    padding-left: 10px;
+    color: #c1272d;
+    font-size: 11px;
+    height: 50px;
+    margin: 10px 0 10px 40px;
+}

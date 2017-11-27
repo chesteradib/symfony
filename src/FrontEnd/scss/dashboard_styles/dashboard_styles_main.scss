@@ -1,0 +1,234 @@
+@import 'dashboard_header';
+@import 'all_my_inbox';
+@import 'all_my_network';
+@import 'notification';
+@import 'customLightBox';
+@import 'pagination';
+@import 'center_styles';
+@import 'left_styles';
+@import 'shop';
+@import 'dashboard_item_show';
+@import 'dashboard_add_new_item';
+@import 'dashboard_validation_styles';
+@import 'jquery.ui.chatbox';
+@import 'categories';
+
+$rouge: #c1272d;
+$vert-opace:rgb(230, 239, 235);
+$vert-opace2:rgba(0,98,51,0.2);
+$vert-opace3:rgba(0,98,51,0.3);
+
+$vert:#006233;
+$sprite1 :url('../images/spritesheet1.png');
+$sprite2 : url('../images/spritesheet2.png');
+$sprite3 : url('../images/spritesheet3.png');
+
+
+
+
+html {
+  box-sizing: border-box;
+  height:100vh;
+  width:100vw;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin:0;
+    overflow: hidden;
+    font-family: Verdana, 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+a
+{
+    text-decoration:none;
+    color: $black;
+}
+
+.clear
+{
+    clear:both;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;}
+/**/
+/**/
+/**/
+/**/
+/**/
+
+#content
+{
+    height: calc(100% - 70px);
+    width: calc(101.2vw + 800px); ;
+    transition: transform 1s
+}
+
+#content.righty{
+    transform: translateX(-416px) translateX(0.6vw);
+}
+
+#content.centry{
+    transform: translateX(-200px) translateX(0.6vw);
+}
+
+#left_container,#center_container, #right_container
+{
+   border: 1px solid #bfbfbf;
+   height: calc(100% - 4px);
+   float:left;
+   margin: 0 0.3vw;
+}
+
+#left_container
+{
+   width: 400px;
+}
+#right_container
+{
+    width: 400px;
+}
+#center_container
+{
+    width: calc(98.8vw - 400px);
+}
+
+#left_progress,#right_progress,#center_progress
+{
+  height: 4px;
+  background-color: #e9f6e9;
+}
+
+#right_progress div, #center_progress div, #left_progress div
+{
+    height: 100%;
+    width: 0;
+    background-color: $vert;  
+}
+
+#left_progress
+{
+    
+}
+#right_progress
+{
+    
+}
+#center_progress
+{
+    
+}
+
+#right,#center,#left
+{
+    height:99.5%;
+    
+}
+
+#right
+{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+}
+#center
+{
+
+}
+#left
+{
+    
+}
+
+#left_direction, #right_direction
+{
+  position:absolute;
+  width:25px;
+  height: calc(100% - 70px);
+  background-color: $vert-opace;
+  top:$headerHeight + 10px;
+  cursor:pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#left_direction:hover, #right_direction:hover
+{
+    opacity: 0.8;
+}
+
+
+#left_direction
+{
+  left:0;
+  visibility:hidden;
+  padding: 19% 0 0 2px;
+}
+
+#right_direction
+{
+  right:0;
+  visibility:hidden;
+  padding: 19% 0 0 3px;
+}
+#right_direction_arrow
+{
+
+  background: url("../images/spritesheet3.png") no-repeat;
+  cursor: pointer;
+  background-position: 61.309% 0%;
+  background-size: 3460% 100%;
+  width: 20px;
+  height: 36px;
+
+}
+#left_direction_arrow
+{
+    background: url("../images/spritesheet3.png") no-repeat;
+    cursor: pointer;
+    background-position: 100% 0%;
+    background-size: 3460% 100%;
+    opacity: 0.7;
+    width: 20px;
+    height: 36px;
+}
+
+/**/
+/**/
+/**/
+
+
+
+.chooser { top: -100px; z-index: 1; 
+    position:absolute;
+    opacity:0;
+    /* For IE8 "Keep the IE opacity settings in this order for max compatibility" */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* For IE5 - 7 */
+    filter: alpha(opacity=0);
+
+
+}
+
+/**/
+/**/
+
+.profile_picture { 
+    position: relative; margin: 0 0 40px;
+}
+
+            
+
+#chatters_container
+{
+  position:absolute;
+  width:130px;
+  background-color: $vert-opace;
+  left: 710px;
+}

@@ -1,0 +1,37 @@
+Shop\Bundle\ManagementBundle\Entity\Category:
+    type: entity
+    table: category
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+        hasChildren:
+            type: boolean
+    manyToOne:
+        parent:
+            targetEntity: Shop\Bundle\ManagementBundle\Entity\Category
+            inversedBy: children
+            JoinColumn:
+                name: parent_id 
+                referencedColumnName: id
+                onUpdate: "CASCADE" 
+                onDelete: "CASCADE"
+    OneToMany:
+        children:
+            targetEntity: Shop\Bundle\ManagementBundle\Entity\Category
+            mappedBy: parent
+            cascade:      [persist]
+    
+    manyToMany:
+        posts:
+            mappedBy: categories
+            targetEntity: Shop\Bundle\ManagementBundle\Entity\Post
+    
+    lifecycleCallbacks: {  }
+
+

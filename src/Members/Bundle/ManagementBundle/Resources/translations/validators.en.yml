@@ -1,0 +1,31 @@
+post:
+    title:
+        not_blank: The title of the article (or service) cannot be blank.
+        length:
+            min: The name of the item should at least contain 10 charcaters.
+            max: The name of the item should not exceed 80 charcaters.
+    description:
+        not_blank: The description of the item cannot be blank.
+        length:
+            min: The description the item should at least contain 20 charcaters.
+            max: The description the item should not exceed 50000 charcaters.
+    price:
+        not_blank: The price of the item cannot be blank.
+        greater_than_or_equal: The price of your product should be greater than or equal to 0.
+        type: The price of the item should be numeric.
+        length: The price of the item should should not exceed 10 digits.
+    images:
+        count: 
+            min: You must upload at least 2 images.
+            max: You must upload at maximum 5 images.
+        image:
+            minHeight: The image height should be greater than 96 pixels.
+            minWidth: The image width should be greater than 138 pixels.
+        file:
+            mimetype: Only the filetypes image are allowed.
+            maxSize: The maxmimum allowed file size is 5MB.
+    categories:
+        not_blank: Vous devez selectionner au minimum une catégorie.
+    notes:
+        length: 
+            max: Les notes sur l'annonce ne doivent pas depasser 150 caracteres.

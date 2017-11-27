@@ -1,0 +1,15 @@
+
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: community
+    test_database_name: test_community
+    database_user: root
+    database_password: null
+    mailer_transport: gmail
+    mailer_host: smtp.gmail.com
+    mailer_user: baghinsaferdotcom@gmail.com
+    mailer_password: salamoalaikom
+    locale: en
+    secret: ThisTokenIsNotSoSecretChangeIt

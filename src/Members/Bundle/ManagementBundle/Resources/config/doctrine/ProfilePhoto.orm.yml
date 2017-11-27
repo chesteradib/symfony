@@ -1,0 +1,15 @@
+Members\Bundle\ManagementBundle\Entity\ProfilePhoto:
+    type: entity
+    table: profile_photo
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        path:
+            type: string
+        widthVsHeight:
+            type: integer
+    lifecycleCallbacks: {  }
+ 

@@ -1,0 +1,67 @@
+    {% if messages|length == 0  %} 
+    <div id="no-items-my_market">
+        {{ 'header_dialogs.my_market.no_new_items'| trans}}
+    </div> 
+    
+    {% else %}
+        {% for message in messages %}
+        {# This if is removable since I have no NULL NULL countF=0 when empty result#}
+        {% if message.countF >0 %}
+        <a href="javascript:void(0);" class="show_shop my_markett trigger" 
+               data-url="{{ path('index')}}shop/" 
+               data-shop-id="{{message[0].user.id}}"
+               data-last-date-url="{{path('last_date')}}"
+               >
+            <div class="my_market_item">
+                <div class="m-n m-result">
+                    {{message.countF }}
+                </div>
+                <div class="m-from">
+                    new items from
+                </div>
+                {% if message[0].user.getProfilePicture %}
+                <div class="m-s-p-p-u-d profile_image {% if message[0].user.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
+                    {% set createdAt = message[0].user.getCreatedAt %}
+                    {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                        ~createdAt|date('m')~'/'
+                        ~message[0].user.getProfilePicture.path %}
+                        {% if message[0].user.getProfilePicture.widthVsHeight == 0 %}
+                            <img class="m-s-p-p-u photo equal" src="{{ asset(image_url) }}" height= 25/>
+                        {% elseif message[0].user.getProfilePicture.widthVsHeight == 1 %}
+                            <span class="helper"></span>
+                            <img class="m-s-p-p-u photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                        {% elseif message[0].user.getProfilePicture.widthVsHeight == 2 %}
+                            <img class="m-s-p-p-u photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                        {% endif%}      
+                </div>
+                {% else%} 
+                <div class="m-s-p-p-u-d profile_image center-horizontally">
+                    <img class="m-s-p-p-u photo equal" src="{{ asset('pp/index.png') }}" height= 25/>
+                </div>
+                {% endif%} 
+                <div class="m-s-u">
+                        {{message[0].user.username}}
+                </div>    
+                <div class="m-at">
+                        {{ 'header_dialogs.my_market.at'| trans}}
+                </div>   
+                <div class="m-s-d">
+                    <div class="m-s-d-up">
+                       {{ message[0].postDate|date('H:m') }} 
+                    </div>
+                    <div  class="m-s-d-down">
+                       {{ message[0].postDate|date('M-d') }}
+                    </div>
+                </div>   
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    
+    {% endif %}
+    <a href="javascript:void(0);" class="show_market" id="show_all_my_market">
+        <div class="my_market_item" id="all_my_market">
+            {{ 'header_dialogs.my_market.show_all_my_market'| trans}}
+        </div>
+    </a>
+

@@ -1,0 +1,66 @@
+Members\Bundle\ManagementBundle\Entity\User:
+    type:  entity
+    table: fos_user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        domain_name:
+            type: string
+            length: 30
+            column: domain_name
+            nullable: true
+        latitude:
+            type: float
+            column: latitude
+            nullable: true
+        longitude:
+            type: float
+            column: longitude
+            nullable: true
+        store_description:
+            type: text
+            column: store_description
+            nullable: true
+        phone_number:
+            type: string
+            column: phone_number
+            nullable: true
+        createdAt:
+            type: datetime
+            column: created_at
+            nullable: true
+    oneToMany:
+      posts:
+        mappedBy: user
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Post
+        cascade:      [persist]
+    oneToMany:
+      messages_sent:
+        mappedBy: sender
+        targetEntity: Members\Bundle\ManagementBundle\Entity\Message
+        cascade:      [persist]
+      messages_received:
+        mappedBy: receiver
+        targetEntity: Members\Bundle\ManagementBundle\Entity\Message
+        cascade:      [persist]
+    oneToOne:
+      profile_picture:
+        targetEntity: Members\Bundle\ManagementBundle\Entity\ProfilePhoto
+        joinColumn:
+          name: profile_picture
+          type: integer
+          referencedColumnName: id
+    oneToMany:
+      followerrs:
+        mappedBy: follower
+        targetEntity: Members\Bundle\ManagementBundle\Entity\Follow
+        cascade:      [persist]
+    oneToMany:
+      followedds:
+        mappedBy: followed
+        targetEntity: Members\Bundle\ManagementBundle\Entity\Follow
+        cascade:      [persist]
+    lifecycleCallbacks: {  }

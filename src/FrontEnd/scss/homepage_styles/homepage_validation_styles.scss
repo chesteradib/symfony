@@ -1,0 +1,100 @@
+$rouge: #c1272d;
+$openChatErrorWidth: 200px;
+
+#open-chat-error
+{
+    width:$openChatErrorWidth - 40px;
+    left: 1030px;
+    top: 515px;
+    margin: 4px;
+    padding:4px;
+}
+
+#follow-unfollow-error
+{
+    width: 110px;
+    left: 26px;
+    top: 190px;
+    margin: 4px;
+    padding:4px;
+}
+#security-error, #register-form-email-error,#register-form-username-error,#register-form-firstpass-error,#register-form-secondpass-error
+{
+    width: 170px;
+    left: -155px;
+    //top: 90px;
+    margin: 4px;
+    //padding:4px;
+}
+
+
+#follow-unfollow-error .error-message
+{
+
+
+}
+
+#open-chat-error .error-message
+{
+
+
+}
+#security-error .error-message
+{
+    padding: 2px 14px 2px 2px;
+}
+
+#open-chat-error .login_trigger, #open-chat-error .signup_trigger
+{
+    float: right;
+    width: 50px;
+    margin: 0 5px;   
+}
+#follow-unfollow-error.login_trigger,#follow-unfollow-error.signup_trigger
+{
+    float: right;
+    width: 60px;
+    margin: 0 5px;
+}
+.error-theme
+{
+    position:absolute;
+    background-color: $rouge;
+    color: white;
+    font-size:11px;
+    line-height: 100%;
+    border-radius: 2px;
+}
+.error-message-close
+{
+    width: 20px;
+    height: 20px;
+    float: left;
+    border: 1px solid white;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.error-message-text
+{
+    width:calc( 100% - 20px);
+    float: left;
+}
+
+.error-button
+{
+    border: 1px solid white;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.message-text
+{
+    width:90%;
+    margin: 5px;
+}

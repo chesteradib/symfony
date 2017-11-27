@@ -1,0 +1,21 @@
+{{shop_id}}
+
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+</div>
+
+
+
+
+
+{% for entity in entities %}
+   <div class="my_article" id="{{entity.id}}">
+       <a href="javascript:void(0);" class="show_article_trigger" data-show-url="{{path('post_show',{ 'id': entity.id})}}" >
+          <img src="{{asset(entity.postMainImagePath)}}" height= 25/>
+        </a>
+    </div>
+{% endfor %}

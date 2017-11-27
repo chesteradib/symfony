@@ -1,0 +1,257 @@
+$prim:#006233;
+/*
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+}
+*/
+body{
+
+	font-weight: 300;
+	
+	::-webkit-input-placeholder { /* WebKit browsers */
+		font-weight: 300;
+                color:white;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		 opacity:  1;
+		font-weight: 300;
+                color:white;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		 opacity:  1;
+		font-weight: 300;
+                color:white;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+		font-weight: 300;
+                color:white;
+	}
+}
+
+.wrapper{
+	background: rgba(255, 255,255,1);
+        /*background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+        background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+        background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+        background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);*/
+	//background-color: rgba(255, 255, 255, 1);
+	//position: absolute;
+	//top: 50%;
+	//left: 0;
+	//width: 40%;
+	height: 280px;
+	//margin: 80px auto;
+	overflow: hidden;
+	
+	&.form-success{
+		.container{
+			h1{
+				transform: translateY(85px);
+			}
+		}
+	}
+}
+
+.container{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 5px 0;
+	height: 280px;
+	text-align: center;
+	
+	h1{
+		font-size: 40px;
+		transition-duration: 1s;
+		transition-timing-function: ease-in-put;
+		font-weight: 200;
+	}
+}
+
+#login_form, #register_form,#reset_request_form, #reset_reset_form
+{
+	padding: 20px 0;
+        //I don't knwo why relative positionning here'
+	//position: relative;
+	z-index: 10000;
+	
+	input{
+		display: block;
+		appearance: none;
+		outline: 0;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		background-color: rgba(0, 98, 51, 0.8);
+                width: 250px;
+		border-radius: 3px;
+		padding: 8px 12px;
+                margin: 0 auto 6px auto;
+		display: block;
+		text-align: center;
+		font-size: 14px;
+		
+		color: white;
+		
+		transition-duration: 0.25s;
+		font-weight: 300;
+		
+		&:hover{
+			background-color: rgba(0, 98, 51, 0.4);
+                        border: 1px solid rgba(59, 70, 50, 0.2);
+		}
+		
+		&:focus{
+			background-color: white;
+			width: 290px;
+			border: 1px solid rgba(0, 98, 51, 0.8);
+			color: $vert;
+		}
+	}
+	#remember_me
+        {
+
+            width: 50px;
+            float:left;
+        }
+        .checkbox
+        {
+
+            width: 200px;
+            float:left;
+        }
+        .p-container
+        {
+            //height:50px;
+            margin: 0 auto 10px auto;
+        }
+	button{
+		appearance: none;
+		outline: 0;
+		background-color: white;
+		border: 0;
+		padding: 10px 15px;
+		color: $prim;
+		border-radius: 3px;
+		width: 250px;
+		cursor: pointer;
+		font-size: 18px;
+		transition-duration: 0.25s;
+		margin: 0 auto 10px auto;
+                display:block;
+                border: 1px solid rgba(59, 70, 50, 0.2);
+		&:hover{
+			background-color: rgb(245, 247, 249);
+		}
+	}
+}
+
+
+#security_footer .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+#security_footer .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+/* Login and register initially hidden divs*/ 
+
+
+#login, #register
+{
+    //display: none;
+    position: absolute;
+    
+    width: 100%;
+    z-index: 10000;
+    
+    
+}
+
+#login
+{
+    
+}
+
+#register
+{
+    
+    
+}
+
+#security
+{
+    position: absolute;
+    width: 100%;
+    z-index: 10000;
+}
+
+#security_header
+{
+    height: 280px;
+}
+
+#security_footer
+{
+    height: 30px;
+}
+
+#security_fucker
+{
+    height: 60px;
+    background-color: white;
+}
+#security_fucker,#security_footer,#security_header, #security_progress
+{
+    position: relative;
+    width: 300px;
+    z-index: 10000;
+    margin: 0 0 0 auto;
+}
+
+#security_progress
+{
+  height: 4px;
+  background-color: #e9f6e9;
+}
+
+#security_progress div
+{
+    height: 100%;
+    width: 0;
+    background-color: $vert;  
+}
+
+.back_to_login
+{
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    color: #006233;
+    border-radius: 3px;
+    width: 220px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 20px auto 10px auto;
+    display: block;
+    border: 1px solid rgba(59, 70, 50, 0.2);
+
+}

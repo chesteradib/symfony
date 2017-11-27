@@ -1,0 +1,19 @@
+parameters:
+    fos_user.listener.email_confirmation.class: Mobile\Bundle\ManagementBundle\EventListener\MobileCheckEmailListener
+    mobile_management.menu.notification.class: Mobile\Bundle\ManagementBundle\Service\MenuNotifications
+services:
+    fos_user.listener.email_confirmation:
+        class: %fos_user.listener.email_confirmation.class%
+        arguments:    ["@fos_user.mailer", "@fos_user.util.token_generator", "@router", "@session"]
+        tags:
+            - { name: kernel.event_subscriber }
+    #custom_service:
+     #   class: %custom_service.class%
+      #  arguments:    ["@fos_user.mailer", "@fos_user.util.token_generator", "@router", "@session"]
+       # tags:
+        #    - { name: kernel.event_subscriber }
+        
+        
+    mobile_management.menu.notification:
+        class: %mobile_management.menu.notification.class%
+        arguments: ["@members_management.messages.services", "@members_management.follow.services", "@shop_management.mymarket.services"]

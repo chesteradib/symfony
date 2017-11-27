@@ -1,0 +1,57 @@
+{% for followed in followeds_and_related_data %}
+    <div class="my_network_item left-item-container">
+        <a href="{{ path('mobile_shop_show', { 'shop_id' : followed['item'].followed.id , 'page' : 0})}}"
+           class="show_shop users">  
+        {% if followed['item'].followed.getProfilePicture %}
+            <div class="image_of_follower m-i-p-p-u-d {% if followed['item'].followed.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
+                {% set createdAt = followed['item'].followed.getCreatedAt %}
+                {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                    ~createdAt|date('m')~'/'
+                    ~followed['item'].followed.getProfilePicture.path %}     
+                {% if followed['item'].followed.getProfilePicture.widthVsHeight == 0 %}
+                <img class="m-i-p-p-u photo equal" src="{{ asset(image_url) }}" height= 25/>
+                {% elseif followed['item'].followed.getProfilePicture.widthVsHeight == 1 %}
+                <span class="helper"></span>
+                <img class="m-i-p-p-u photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                {% elseif followed['item'].followed.getProfilePicture.widthVsHeight == 2 %}
+                <img class="m-i-p-p-u photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                {% endif%}
+            </div>
+        {% else %}
+            <div class="image_of_follower m-i-p-p-u-d center-horizontally">    
+               <img class="photo equal" src="{{ asset('pp/index.png') }}"/>
+            </div>   
+        {% endif %}  
+            <div class="initial_info_of_follower">
+                <div class="username_of_follower">
+                    {{followed['item'].followed.username}} 
+                </div>
+                <div class="domain_name_of_follower">
+                    {{followed['number_of_followers']}}
+                    {% if followed['number_of_followers'] == 1 %}
+                    {{ 'global.follower'| trans}}
+                    {% else %}
+                    {{ 'global.followers'| trans}}
+                    {%endif%}
+                </div>  
+                <div class="number_of_articles_of_follower">
+                    {{followed['number_of_articles']}}
+                    {% if followed['number_of_articles'] == 1 %}
+                        {{ 'global.article'| trans}}
+                    {% else%}
+                        {{ 'global.articles'| trans}}
+                    {%endif%}
+                </div>
+            </div>
+            </a>
+    <div class="follow_unfollow_of_follower">
+        <a data-url="{{path('follow_unfollow_shop',{ 'shop_id': followed['item'].followed.id}) }}"
+           href="javascript:void(0);" 
+           class="trigger_follow trigger_unfollow"
+           ></a>
+        <a href="javascript:void(0);" class="follow-word">{{ 'global.unfollow'| trans}}</a>
+    </div>
+    <div class="clear"></div>
+</div>
+{% endfor %}
+

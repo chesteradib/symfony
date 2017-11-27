@@ -1,0 +1,224 @@
+<?php
+
+namespace Members\Bundle\ManagementBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Message
+ */
+class Message
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \Members\Bundle\ManagementBundle\Entity\User
+     */
+    private $sender;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set sender
+     *
+     * @param \Members\Bundle\ManagementBundle\Entity\User $sender
+     * @return Message
+     */
+    public function setSender(\Members\Bundle\ManagementBundle\Entity\User $sender = null)
+    {
+        $this->sender = $sender;
+    
+        return $this;
+    }
+
+    /**
+     * Get sender
+     *
+     * @return \Members\Bundle\ManagementBundle\Entity\User 
+     */
+    public function getSender()
+    {
+        return $this->sender;
+    }
+    /**
+     * @var \Members\Bundle\ManagementBundle\Entity\User
+     */
+    private $receiver;
+
+
+    /**
+     * Set receiver
+     *
+     * @param \Members\Bundle\ManagementBundle\Entity\User $receiver
+     * @return Message
+     */
+    public function setReceiver(\Members\Bundle\ManagementBundle\Entity\User $receiver = null)
+    {
+        $this->receiver = $receiver;
+    
+        return $this;
+    }
+
+    /**
+     * Get receiver
+     *
+     * @return \Members\Bundle\ManagementBundle\Entity\User 
+     */
+    public function getReceiver()
+    {
+        return $this->receiver;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $messageDate;
+
+    /**
+     * @var string
+     */
+    private $messageContent;
+
+    /**
+     * @var boolean
+     */
+    private $messageSeen;
+
+
+    /**
+     * Set messageDate
+     *
+     * @param \DateTime $messageDate
+     * @return Message
+     */
+    public function setMessageDate($messageDate)
+    {
+        $this->messageDate = $messageDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get messageDate
+     *
+     * @return \DateTime 
+     */
+    public function getMessageDate()
+    {
+        return $this->messageDate;
+    }
+
+    /**
+     * Set messageContent
+     *
+     * @param string $messageContent
+     * @return Message
+     */
+    public function setMessageContent($messageContent)
+    {
+        $this->messageContent = $messageContent;
+    
+        return $this;
+    }
+
+    /**
+     * Get messageContent
+     *
+     * @return string 
+     */
+    public function getMessageContent()
+    {
+        return $this->messageContent;
+    }
+
+    /**
+     * Set messageSeen
+     *
+     * @param boolean $messageSeen
+     * @return Message
+     */
+    public function setMessageSeen($messageSeen)
+    {
+        $this->messageSeen = $messageSeen;
+    
+        return $this;
+    }
+
+    /**
+     * Get messageSeen
+     *
+     * @return boolean 
+     */
+    public function getMessageSeen()
+    {
+        return $this->messageSeen;
+    }
+    /**
+     * @var \Shop\Bundle\ManagementBundle\Entity\Post
+     */
+    private $post;
+
+
+    /**
+     * Set post
+     *
+     * @param \Shop\Bundle\ManagementBundle\Entity\Post $post
+     * @return Message
+     */
+    public function setPost(\Shop\Bundle\ManagementBundle\Entity\Post $post = null)
+    {
+        $this->post = $post;
+    
+        return $this;
+    }
+
+    /**
+     * Get post
+     *
+     * @return \Shop\Bundle\ManagementBundle\Entity\Post 
+     */
+    public function getPost()
+    {
+        return $this->post;
+    }
+
+    /**
+     * @var \Members\Bundle\ManagementBundle\Entity\User
+     */
+    private $postOwner;
+
+
+    /**
+     * Set postOwner
+     *
+     * @param \Members\Bundle\ManagementBundle\Entity\User $postOwner
+     * @return Message
+     */
+    public function setPostOwner(\Members\Bundle\ManagementBundle\Entity\User $postOwner = null)
+    {
+        $this->postOwner = $postOwner;
+    
+        return $this;
+    }
+
+    /**
+     * Get postOwner
+     *
+     * @return \Members\Bundle\ManagementBundle\Entity\User 
+     */
+    public function getPostOwner()
+    {
+        return $this->postOwner;
+    }
+}

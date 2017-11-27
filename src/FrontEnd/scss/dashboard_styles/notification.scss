@@ -1,0 +1,31 @@
+ .notification-container {
+    position: relative;
+
+
+}
+
+.notification-counter-my_market, .notification-counter-my_inbox {   
+    position: relative;
+    top: -12px;
+    left: -10px;
+    background-color: #c1272d;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1px 3px;
+    font: 8px Verdana;
+}
+
+
+.notification-counter-my_followers{   
+    position: relative;
+    top: -25px;
+    left: -4px;
+    background-color: #c1272d;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1px 3px;
+    font: 8px Verdana;
+}
+
+
+

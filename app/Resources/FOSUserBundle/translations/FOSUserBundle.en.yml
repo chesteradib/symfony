@@ -1,0 +1,12 @@
+security:
+    i_forgot_password: Forgot Password?
+    
+registration:
+    enter_username: Saisir votre nom d'utilisateur ici
+    enter_password: Saisir votre mot de passe ici
+    re_enter_password: Re-saisir votre mot de passe ici
+    enter_email: Saisir votre adresse mail ici 
+resetting:
+    back_to_login: Back to login
+    enter_new_password: Saisir votre nouveau mot de passe ici
+    re_enter_new_password: Re-saisir votre nouveau mot de passe ici

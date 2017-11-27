@@ -1,0 +1,73 @@
+{% for message in all_my_messages %}
+    {% if app.user == message.sender %}{% set theother = message.receiver %}
+    {% else %}{% set theother = message.sender %}{% endif %}
+
+    <a href="{{ path('mobile_discussion', { 'post_id' : message.post.id ,'shop_id' : theother.id })}}" 
+               class="open_chat_trigger trigger2" 
+               >
+        <div class="all_my_inbox_item left-item left-item-container"> 
+            {% set concernedImage= message.post.postMainImagePath %}
+            {% if concernedImage 
+            and concernedImage.uploadDate
+            %}
+            {% set uploadDate = concernedImage.uploadDate %}
+            {% set image_url = 'uploads/'~uploadDate|date('Y')~'/'
+                    ~uploadDate|date('m')~'/'
+                    ~uploadDate|date('d')~'/'
+                    ~uploadDate|date('H')~'/'~'m_'
+                    ~concernedImage.path %}
+
+            <div class="product-image-in-in_all_my_inbox round-p-i-in_all_my_inbox">
+                 {% if message.post.postMainImagePath.widthVsHeight == 0 %}
+                <img src="{{  asset(image_url) }}"/>
+                {% elseif message.post.postMainImagePath.widthVsHeight == 1 %}
+                <img class="fatty"  src="{{  asset(image_url) }}"/>
+                {% elseif message.post.postMainImagePath.widthVsHeight == 2 %}
+                <img class="tally"  src="{{ asset(image_url) }}"/>
+                {% endif%}
+            </div>
+            {%endif%}
+
+            <div class="interlocutor">
+            {% if  theother.getProfilePicture %}
+                <div class="interlocutor-top {% if theother.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
+                    {% set createdAt = theother.getCreatedAt %}
+                    {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                        ~createdAt|date('m')~'/'
+                        ~theother.getProfilePicture.path %}
+                    {% if theother.getProfilePicture.widthVsHeight == 0 %}
+                    <img class="photo equal" src="{{ asset(image_url) }}" height= 25/>
+                    {% elseif theother.getProfilePicture.widthVsHeight == 1 %}
+                    <span class="helper"></span>
+                    <img class="photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                    {% elseif theother.getProfilePicture.widthVsHeight == 2 %}
+                    <img class="photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                    {% endif%}
+                </div>
+            {% else %}
+                <div class="center-horizontally">
+                    <img class="photo equal" src="{{ asset('pp/index.png') }}"/>
+                </div>
+            {% endif %} 
+                <div class="interlocutor-bottom">{{ theother.username }}</div>
+            </div>
+
+            <div class="m-content">
+                <div class="m-content-top">
+                    {%if message.sender == app.user%}
+                        <img src="{{ asset('images/right-arrow.png') }}"/>
+                    {%else%}
+                        <img src="{{ asset('images/left-arrow.png') }}"/>
+                    {%endif%}
+                    <span class="m-d-in_all_my_inbox">
+                        {{ message.messageDate|date('H:m') }} - {{ message.messageDate|date('M-d') }}
+                    </span>
+                </div>
+                <div class="m-content-bottom">
+                    {{ message.messageContent|length > 30 ? message.messageContent|slice(0, 30) ~ '...' : message.messageContent  }}
+                </div>
+            </div>              
+        </div>
+    </a> 
+{% endfor %}
+

@@ -1,0 +1,77 @@
+{% extends '::base.html.twig' %}
+
+{% block myscript %}
+<script type="text/javascript" id= "mscript" data-url="{{ path('mobile_admin', { page : 0})}}" >
+        
+    if( ('onorientationchange' in window) 
+            || (window.screen.width< window.screen.height)
+            || (window.screen.width< 1280)
+            ) { 
+        var url = document.getElementById('mscript').getAttribute('data-url');
+        window.location.replace(url);
+    }
+</script>
+{% endblock %}
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/dashboard_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+{% include "MembersManagementBundle:Admin:dashboardTemplates.html.twig" %} 
+    <div id="header">
+        {% include "MembersManagementBundle:Admin:header.html.twig" %} 
+    </div>
+    <div id="content" class="righty"
+        data-current-user-id="{{currentUser.id}}" 
+        data-current-user-username="{{app.user.username}}"
+        data-message-seen-base-url="{{ path('message_seen')}}"
+        data-messages-seen-base-url="{{ path('messages_seen')}}"
+        data-all-new-posters-url="{{ path('all_new_posters')}}"
+        data-url-all-jawla="{{ path('all_jawla')}}"
+        data-url-show-all-my-market="{{path('get_my_market')}}"
+        data-url-show-all-my-network="{{path('all_my_network')}}"
+        data-url-show-all-my-followeds="{{path('all_my_followeds')}}"
+        data-new-article-url="{{ path('post_new') }}"
+        data-url-category="{{ path('show_category') }}"
+        data-ws-ip="{{ app.request.server.get("SERVER_ADDR") }}"
+        >
+        <div id="left_container">
+            <div id="left_progress">
+                <div></div>
+            </div>
+            <div id="left">
+                {% include "MembersManagementBundle:AdminInitial:adminLeftInitial.html.twig" %}
+            </div>
+        </div>
+        <div id="center_container">
+            <div id="center_progress"><div></div></div>
+            <div id="center">
+                {% include "MembersManagementBundle:AdminInitial:adminCenterInitial.html.twig" %}
+            </div>
+        </div>
+        <div id="right_container">
+            <div id="right_progress"><div></div></div>
+            <div id="right">
+                {% include "MembersManagementBundle:AdminInitial:adminRightInitial.html.twig" %}
+            </div>
+       </div>
+       <div id="chatters_container"></div>
+       <div id="chatboxes_container"></div>
+    </div>
+                
+    <div id="left_direction">
+        <div id="left_direction_arrow"></div>
+    </div>
+    <div id="right_direction">
+         <div id="right_direction_arrow"></div>
+    </div>
+    
+{% endblock %}
+
+{% block javascripts %}
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARigii_Hpo_HXVDiHlNw3FeZgFuxbTAWE"></script>-->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/dashboard_js.js') }}"></script>   
+{% endblock %}

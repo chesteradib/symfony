@@ -1,0 +1,93 @@
+{% extends ':mobile:base.html.twig' %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/mobile_fos_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    
+{% include "MobileManagementBundle:Header:mobileFosHeader.html.twig" %}
+
+
+{% block fos_user_content %}
+    
+<div id="mobile-container">    
+{% if error %}
+    <div id="security-error" class="error-theme">
+        <div class="error-message">
+            <div class="error-message-text">
+                <div class="message-text">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            </div>
+            <div class="error-message-close">X</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+{% endif %}
+
+<div class="wrapper">
+	<div class="container">
+		
+                <form id="login_form"
+                        action="{{ path("fos_user_security_check") }}" 
+                        method="post"
+                        >
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                    
+                    <input type="text" 
+                           id="username" 
+                           name="_username" 
+                           value="{{ last_username }}"
+                           required="required"
+                           placeholder="{{ 'security.login.username'|trans }}"
+                           />
+
+                    
+                    <input type="password" 
+                           id="password" 
+                           name="_password" 
+                           required="required"
+                           placeholder="{{ 'security.login.password'|trans }}"
+                           />
+
+                    <button type="submit" 
+                           id="_submit" 
+                           name="_submit">
+                           {{ 'security.login.submit'|trans }}
+                    </button>
+                    {#            
+                    <div class="p-container">
+                        <div>
+                            <input type="checkbox" 
+                                   checked=""
+                                   id="remember_me" 
+                                   name="_remember_me" 
+                                   value="off"
+                                   />
+                            <label class="checkbox">{{ 'security.login.remember_me'|trans }}</label>
+                            <div class="clear"></div>
+                        </div>
+                    </div>      
+                    #}
+                </form>
+                <div>            
+                    <a id="forgot_trigger" href="{{path('mobile_fos_user_resetting_request')}}">
+                        {{ 'security.i_forgot_password'|trans({},'FOSUserBundle') }}
+                    </a>  
+                </div>
+    </div>
+</div>
+                        
+                        </div>
+{% endblock fos_user_content %}
+
+
+ 
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_my_inbox_js.js') }}"></script>
+{% endblock %}

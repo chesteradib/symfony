@@ -1,0 +1,29 @@
+{% extends ':mobile:base.html.twig' %}
+
+{% block myscript %}
+    <script type="text/javascript" id= "mscript" data-url="{{ path('index') }}" >
+        if( !(
+            ('onorientationchange' in window) 
+            || (window.screen.width< window.screen.height)
+            || (window.screen.width< 1280)
+            ) 
+         ){ 
+        var url = document.getElementById('mscript').getAttribute('data-url');
+        window.location.replace(url);
+        }
+    </script>
+{% endblock %} 
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/mobile_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    {% include "MobileManagementBundle:Header:mobileAdminHeader.html.twig" %}
+    {% include "MobileManagementBundle:Index:mobileAllJawla.html.twig" %} 
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_my_inbox_js.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends ':mobile:base.html.twig' %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block myscript %}
+    <script type="text/javascript" id= "mscript" data-url="{{ path('fos_user_resetting_reset', {'token': token}) }}" >
+        if( !(
+            ('onorientationchange' in window) 
+            || (window.screen.width< window.screen.height)
+            || (window.screen.width< 1280)
+            ) 
+         ){ 
+        var url = document.getElementById('mscript').getAttribute('data-url');
+        window.location.replace(url);
+        }
+    </script>
+{% endblock %} 
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/mobile_fos_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    
+{% include "MobileManagementBundle:Header:mobileFosHeader.html.twig" %}
+
+{% block fos_user_content %}           
+    {% include "MobileManagementBundle:Resetting:reset_content.html.twig" %}
+{% endblock fos_user_content %}
+ 
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_my_inbox_js.js') }}"></script> 
+{% endblock %}

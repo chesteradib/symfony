@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block myscript %}
+    <script type="text/javascript" id= "mscript" data-url="{{ path('index') }}" >
+            /* The mobile designis for :
+             * 1. device can rotate
+             * 2. device width < device height
+             * 3. device dith < 500 // not yet implemented in following if
+             **/  
+            if( !(
+                    ('onorientationchange' in window) 
+                    || (window.screen.width< window.screen.height)
+                    || (window.screen.width< 1280)
+                    ) 
+                 ){ 
+                var url = document.getElementById('mscript').getAttribute('data-url');
+                window.location.replace(url);
+        }
+    </script>
+{% endblock %} 
+
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/mobile_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+        {% include "MobileManagementBundle:Header:mobileAdminHeader.html.twig" %}
+    {% else %}
+        {% include "MobileManagementBundle:Header:mobileNonAdminHeader.html.twig" %}
+    {% endif %}
+    
+    {% include "MobileManagementBundle:Item:mobileShow.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_show_js.js') }}"></script>
+{% endblock %}
+
+
+
+
+

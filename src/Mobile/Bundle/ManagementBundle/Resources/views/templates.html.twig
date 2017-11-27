@@ -1,0 +1,18 @@
+<script id="uploadedImageTemplate" type="text/x-jsrender">
+    <div class="one_photo" id="<%:image_id%>">
+        <div class="image_div <%if widthVsHeight===2%>center-horizontally<%/if%>">
+            <%if widthVsHeight===0%>
+                <img class="photo" src="{{asset('uploads/')}}<%:uploadedURL%>"/>
+            <%else widthVsHeight===1%>
+                <span class="helper"></span>
+                <img class="photo faty" src="{{asset('uploads/')}}<%:uploadedURL%>"/>
+            <%else widthVsHeight===2%>
+                <img class="photo tall" src="{{asset('uploads/')}}<%:uploadedURL%>"/>
+            <%/if%>
+        </div>
+        <div class="image_controls">
+            <a href="javascript:void(0);" class="delete_image_trigger"></a>
+            <a href="javascript:void(0);" class="set_as_main <%if main === true%>main<%/if%>"></a>
+        </div>
+    </div>
+</script>

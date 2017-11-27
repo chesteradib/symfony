@@ -1,0 +1,156 @@
+mobile_item_show:
+    path:  /m/item/{id}
+    defaults: { _controller: "MobileManagementBundle:Item:mobileShow" }
+    
+mobile_item_new:
+    path: /m/new
+    defaults: { _controller: "MobileManagementBundle:Item:mobileNew" }
+    
+mobile_item_creates:
+    path: /m/creates
+    defaults: { _controller: "MobileManagementBundle:Item:mobileCreates" }
+    
+
+mobile_item_edits:
+    path:  /m/edits/{id}
+    defaults: { _controller: "MobileManagementBundle:Item:mobileEdits" }
+
+mobile_item_updates:
+    path:  /m/updates/{id}
+    defaults: { _controller: "MobileManagementBundle:Item:mobileUpdates" }
+    requirements: { _method: post|put }
+
+
+mobile_item_deletes:
+    path:  /m/deletes/{id}
+    defaults: { _controller: "MobileManagementBundle:Item:mobileDeletes" }
+    requirements: { _method: post|delete }
+    
+###################################
+
+mobile_shop_show:
+    path: /m/{shop_id}/g/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileShop:displayMobileShop" }
+
+
+mobile_shop_from_my_network_show:
+    path: /m/{shop_id}/g/g/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileShop:displayMobileShopFromMyNetwork" }
+
+mobile_shop_from_my_market_show:
+    path: /m/{shop_id}/g/d/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileShop:displayMobileShopFromMyMarket" }
+    
+###################################
+mobile_my_shop:
+    path: /m/my/shop/g/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileMyShop:displayMobileMyShop" }
+
+###################################
+mobile_my_market:
+    path: /m/my/market/g/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileMyMarket:displayMobileMyMarket" }
+
+###################################
+
+mobile_my_inbox:
+    path: /m/my/inbox/g/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileMessaging:mobileMyInbox" }
+
+###################################
+### Discussion route ##############
+###################################
+
+mobile_discussion:
+    path : /m/mobile_discussion/{post_id}/{shop_id}/
+    defaults: {_controller: MobileManagementBundle:MobileMessaging:getDiscussionAboutPostWith}
+
+   
+###################################
+### Landing pages ##############
+###################################
+    
+mobile_admin:
+    path:     /m/my/admin/g/{page}
+    defaults: { _controller: MobileManagementBundle:MobileAdmin:mobileAdmin }
+    
+mobile_index:
+    path:   /m/my/index/g/{page}
+    defaults: { _controller: MobileManagementBundle:MobileIndex:mobileIndex }
+    
+#######################################
+
+
+mobile_fos_user_security_login:
+    path:     /m/login
+    defaults: { _controller: MobileManagementBundle:MobileSecurity:login }
+    
+#######################################
+
+
+mobile_fos_user_registration_register:
+    path:     /m/register
+    defaults: { _controller: MobileManagementBundle:MobileRegistration:mobileRegister }
+
+mobile_fos_user_registration_check_email:
+    path:     /m/register/check-email
+    defaults: { _controller: MobileManagementBundle:MobileRegistration:mobileCheckEmail }
+
+mobile_fos_user_registration_confirm:
+    path:     /m/register/confirm/{token}
+    defaults: { _controller: MobileManagementBundle:MobileRegistration:mobileConfirm }
+    
+mobile_fos_user_registration_confirmed:
+    path:     /m/register/confirmed
+    defaults: { _controller: MobileManagementBundle:MobileRegistration:mobileConfirmed }
+    
+
+#######################################    
+
+mobile_fos_user_resetting_request:
+    path:     /m/resetting/request
+    defaults: { _controller: MobileManagementBundle:MobileResetting:request}
+
+
+mobile_fos_user_resetting_send_email:
+    path:     /m/resetting/send-email
+    defaults: { _controller: MobileManagementBundle:MobileResetting:sendEmail}
+
+mobile_fos_user_resetting_check_email:
+    path:     /m/resetting/check-email
+    defaults: { _controller: MobileManagementBundle:MobileResetting:checkEmail}
+
+mobile_fos_user_resetting_reset:
+    path:     /m/resetting/reset/{token}
+    defaults: { _controller: MobileManagementBundle:MobileResetting:reset}
+
+
+#######################################
+
+mobile_all_my_network:
+    path:     /m/my/network/g/{page}
+    defaults: { _controller: MobileManagementBundle:MobileFollow:mobileAllMyNetwork }
+
+mobile_all_my_followeds:
+    path:     /m/my/followeds/g/{page}
+    defaults: { _controller: MobileManagementBundle:MobileFollow:mobileAllMyFolloweds }
+    
+#######################################
+
+
+mobile_page_of_search:
+    path:  /m/search/{SearchText}/g/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileAdmin:pageOfSearch" } 
+    
+mobile_site_search:
+    path:  /m/search/
+    defaults: { _controller: MobileManagementBundle:MobileAdmin:search}
+    requirements: { _method: post|head }
+    
+    
+#######################################
+
+
+mobile_category:
+    path:  /m/category/{categoryId}/g/{page}
+    defaults: { _controller: "MobileManagementBundle:MobileCategory:mobileCategory" } 

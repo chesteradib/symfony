@@ -1,0 +1,160 @@
+{% extends "::base.html.twig" %}
+
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/homepage_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    
+{% include "MembersManagementBundle:HomePageInitial:homePageTemplates.html.twig" %} 
+    
+<div id="header">
+      {% include "MembersManagementBundle:HomePageInitial:HomePageHeader.html.twig" %}  
+</div>
+
+<div id="content" class="righty" 
+     data-login-login-url="{{ path('fos_user_security_login')}}"
+     data-is-login-login="1"
+     data-all-new-posters-url="{{ path('all_new_posters')}}"
+     data-url-all-jawla="{{ path('all_jawla')}}"
+     data-url-category="{{ path('show_category') }}"
+     >
+    <div id="left_container">
+        <div id="left_progress">
+            <div></div>
+        </div>
+        <div id="left">
+            {% include "MembersManagementBundle:HomePageInitial:HomePageLeftInitial.html.twig" %}
+        </div>
+    </div>
+    <div id="center_container">
+        <div id="center_progress">
+            <div></div>
+        </div>
+        <div id="center">
+            {% include "MembersManagementBundle:HomePageInitial:HomePageCenterInitial.html.twig" %}
+        </div>
+    </div>
+    <div id="right_container">
+        <div id="right_progress">
+            <div></div>
+        </div>
+        <div id="right">
+            {% include "MembersManagementBundle:HomePageInitial:HomePageRightInitial.html.twig" %}
+        </div>
+    </div>
+</div>
+        
+        
+<div id="security">
+    <div id="security_fucker">
+        <div id="login_trigger_container">
+            <a href="javascript:void(0);" class="login_trigger">
+                {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+            </a>
+        </div>
+
+        <div id="signup_trigger_container">
+            <a href="javascript:void(0);" class="signup_trigger">
+                {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
+            </a>
+        </div>
+
+    </div>
+    <div id="security_progress">
+            <div></div>
+    </div>
+    <div id="security_header">
+        <div id="login">
+        {% block fos_user_content %}
+            {% if error %}
+                <div id="security-error" class="error-theme">
+                    <div class="error-message">
+                        <div class="error-message-text">
+                            <div class="message-text">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        </div>
+                        <div class="error-message-close">X</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            {% endif %}
+            <div class="wrapper">
+                <div class="container">
+                    <form id="login_form"
+                            action="{{ path("fos_user_security_check") }}" 
+                            method="post"
+                            >
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                        <input type="text" 
+                               id="username" 
+                               name="_username" 
+                               value="{{ last_username }}"
+                               required="required"
+                               placeholder="{{ 'security.login.username'|trans }}"
+                               />
+                        <input type="password" 
+                               id="password" 
+                               name="_password" 
+                               required="required"
+                               placeholder="{{ 'security.login.password'|trans }}"
+                               />
+                        <button type="submit" 
+                               id="_submit" 
+                               name="_submit">
+                               {{ 'security.login.submit'|trans }}
+                        </button>
+                        {# 
+                        <div class="p-container">
+                            <div>
+                                <input type="checkbox" 
+                                       checked=""
+                                       id="remember_me" 
+                                       name="_remember_me" 
+                                       value="off"
+                                       />
+                                <label class="checkbox">{{ 'security.login.remember_me'|trans }}</label>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        #}
+                    </form>
+                    <div>            
+                        <a id="forgot_trigger" href="{{path('fos_user_resetting_request')}}">
+                            {{ 'security.i_forgot_password'|trans }}
+                        </a>  
+                    </div>
+            </div>
+        </div>
+        {% endblock fos_user_content %}
+        </div>
+        <div id="register">
+        {{ render(controller('MembersManagementBundle:Registration:register')) }}
+        </div>
+    </div>
+    <div id="security_footer">
+        <a class="lb-close"></a>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/homepage_js.js') }}"></script> 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+ 

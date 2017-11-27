@@ -1,0 +1,50 @@
+Members\Bundle\ManagementBundle\Entity\Message:
+    type: entity
+    table: message
+    repositoryClass: Members\Bundle\ManagementBundle\Entity\MessageRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        messageDate:
+            type: datetime
+            column: message_date
+        messageContent:
+            type: text
+            column: message_content
+        messageSeen:
+            type: boolean
+            column: message_seen
+    manyToOne:
+      sender:
+        targetEntity: Members\Bundle\ManagementBundle\Entity\User
+        joinColumn:
+          name: sender_id
+          type: integer
+          referencedColumnName: id
+          onDelete: cascade
+      receiver:
+        targetEntity: Members\Bundle\ManagementBundle\Entity\User
+        joinColumn:
+          name: receiver_id
+          type: integer
+          referencedColumnName: id
+          onDelete: cascade
+      postOwner:
+        targetEntity: Members\Bundle\ManagementBundle\Entity\User
+        joinColumn:
+          name: post_owner_id
+          type: integer
+          referencedColumnName: id
+          onDelete: cascade
+      post:
+        inversedBy: messages
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Post
+        joinColumn:
+          name: post_id
+          type: integer
+          referencedColumnName : id
+          onDelete : cascade  
+    lifecycleCallbacks: {  }

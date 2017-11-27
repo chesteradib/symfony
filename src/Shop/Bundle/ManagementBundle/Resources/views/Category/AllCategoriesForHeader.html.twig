@@ -1,0 +1,74 @@
+
+<table id="categories_table">
+    <tr>
+    
+    <td>
+            {% for i in 0..2 %}
+                <h4>
+                    <a href="javascript:void(0);"
+                       class="show_category_trigger"
+                       data-id="{{categories[i][0].id}}"
+                       >{{ (categories[i][0].Name~'.'~categories[i][0].Name) | trans }}
+                    </a>
+                </h4>
+                <ul>
+                    {% for subCategory in categories[i][1] %}
+                        <li>
+                            <a href="javascript:void(0);" 
+                                class="show_category_trigger"
+                                data-id="{{subCategory.id}}"
+                                >{{ (categories[i][0].Name~'.'~subCategory.Name)| trans }}
+                            </a>
+                            </li>
+                    {%endfor%} 
+                </ul>
+            {%endfor%}
+        </td>
+        
+        <td>
+            {% for i in 3..5 %}
+                <h4>
+                    <a href="javascript:void(0);"
+                       class="show_category_trigger"
+                       data-id="{{categories[i][0].id}}"
+                       >{{ (categories[i][0].Name~'.'~categories[i][0].Name) | trans }}
+                    </a>
+                </h4>
+                <ul>
+                    {% for subCategory in categories[i][1] %}
+                        <li>
+                            <a href="javascript:void(0);" 
+                                class="show_category_trigger"
+                                data-id="{{subCategory.id}}"
+                                >{{ (categories[i][0].Name~'.'~subCategory.Name)| trans }}
+                            </a>
+                            </li>
+                    {%endfor%} 
+                </ul>
+            {%endfor%}
+        </td>
+            
+        <td>
+             {% for i in 6..19 %}
+                <h4>
+                    <a href="javascript:void(0);"
+                       class="show_category_trigger"
+                       data-id="{{categories[i][0].id}}"
+                       >{{ (categories[i][0].Name~'.'~categories[i][0].Name) | trans }}
+                    </a>
+                </h4>
+                <ul>
+                    {% for subCategory in categories[i][1] %}
+                        <li>
+                            <a href="javascript:void(0);" 
+                                class="show_category_trigger"
+                                data-id="{{subCategory.id}}"
+                                >{{ (categories[i][0].Name~'.'~subCategory.Name)| trans }}
+                            </a>
+                            </li>
+                    {%endfor%} 
+                </ul>
+            {%endfor%}
+        </td>
+    </tr>
+</table>

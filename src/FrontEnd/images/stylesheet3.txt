@@ -1,0 +1,119 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-logo_click {
+    width: 156px;
+    height: 60px;
+    background-position: 0 0;
+}
+
+.sprite-logo_hover {
+    width: 156px;
+    height: 60px;
+    background-position: -156px 0;
+}
+
+.sprite-logo_original {
+    width: 156px;
+    height: 60px;
+    background-position: -312px 0;
+}
+
+.sprite-next_lightbox_click {
+    width: 30px;
+    height: 42px;
+    background-position: -468px 0;
+}
+
+.sprite-next_lightbox_hover {
+    width: 30px;
+    height: 42px;
+    background-position: -498px 0;
+}
+
+.sprite-next_lightbox_original {
+    width: 30px;
+    height: 42px;
+    background-position: -528px 0;
+}
+
+.sprite-next_notlightbox_click {
+    width: 30px;
+    height: 51px;
+    background-position: -558px 0;
+}
+
+.sprite-next_notlightbox_hover {
+    width: 30px;
+    height: 51px;
+    background-position: -588px 0;
+}
+
+.sprite-next_notlightbox_original {
+    width: 30px;
+    height: 51px;
+    background-position: -618px 0;
+}
+
+.sprite-number_of_followers {
+    width: 60px;
+    height: 33px;
+    background-position: -648px 0;
+}
+
+.sprite-open_chat_trigger_click {
+    width: 50px;
+    height: 41px;
+    background-position: -708px 0;
+}
+
+.sprite-open_chat_trigger_hover {
+    width: 50px;
+    height: 41px;
+    background-position: -758px 0;
+}
+
+.sprite-open_chat_trigger_original {
+    width: 50px;
+    height: 41px;
+    background-position: -808px 0;
+}
+
+.sprite-previous_lightbox_click {
+    width: 30px;
+    height: 42px;
+    background-position: -858px 0;
+}
+
+.sprite-previous_lightbox_hover {
+    width: 30px;
+    height: 42px;
+    background-position: -888px 0;
+}
+
+.sprite-previous_lightbox_original {
+    width: 30px;
+    height: 42px;
+    background-position: -918px 0;
+}
+
+.sprite-previous_notlightbox_click {
+    width: 30px;
+    height: 51px;
+    background-position: -948px 0;
+}
+
+.sprite-previous_notlightbox_hover {
+    width: 30px;
+    height: 51px;
+    background-position: -978px 0;
+}
+
+.sprite-previous_notlightbox_original {
+    width: 30px;
+    height: 51px;
+    background-position: -1008px 0;
+}

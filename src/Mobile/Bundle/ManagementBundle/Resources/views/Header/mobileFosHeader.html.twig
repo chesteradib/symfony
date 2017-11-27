@@ -1,0 +1,18 @@
+<nav class="menu">
+    
+    <a class="toggle-nav-menu tnavi" href="#">&#9776;</a>
+   
+    <div class="menuItems navi active">
+        <ul>
+            <li class="current-item"><a href="{{ path('mobile_index', { 'page': 0}) }}">
+                    {{ 'menu.home'| trans}}
+                </a></li>
+            <li class=""><a href="{{ path('mobile_fos_user_security_login') }}">
+                    {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+                </a></li>
+            <li class=""><a href="{{ path('mobile_fos_user_registration_register') }}">
+                    {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
+                </a></li>
+        </ul>   
+    </div>  
+</nav>

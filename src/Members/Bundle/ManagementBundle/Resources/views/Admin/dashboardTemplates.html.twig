@@ -1,0 +1,194 @@
+<script id="messageItemTemplate" type="text/x-jsrender">
+        <a href="javascript:void(0);" 
+           class="open_chat_trigger trigger" 
+           data-post-id="<%:post_id%>" 
+           data-sender-id="<%:sender_id%>"
+           data-url="{{ path('index')}}new_message/"
+           data-url2="{{ path('index')}}messages_between_two_users_about_article/"
+           data-ppwvsh="<%:post_main_image_widthVsHeight%>"
+           data-miwvsh="<%:sender_profile_picture_widthVsHeight%>"
+        >
+        <div class="inbox_item" data-sender-id="<%:sender_id%>">
+                <div class="m-n m-result">
+                    1
+                </div>
+        
+                <div class="m-from">
+                    message from
+                </div>
+        
+                <div class="m-s-p-p-u-d profile_image 
+                    <%if sender_profile_picture_widthVsHeight===2%>center-horizontally<%/if%>"
+                >
+                    <%if sender_profile_picture_widthVsHeight===0%>
+                        <img class="m-s-p-p-u photo equal" src="{{asset('uploads/profilepictures/')}}<%:sender_profile_picture_path%>" height= 25/>
+                    <%else sender_profile_picture_widthVsHeight===1%>
+                        <span class="helper"></span>
+                        <img class="m-s-p-p-u photo fat-profile-image" src="{{asset('uploads/profilepictures/')}}<%:sender_profile_picture_path%>" height= 25/>
+                    <%else sender_profile_picture_widthVsHeight===2%><img class="m-s-p-p-u photo tall-profile-image" src="{{asset('uploads/profilepictures/')}}<%:sender_profile_picture_path%>" height= 25/><%/if%>
+                </div>
+        
+                <div class="m-s-u">
+                    <%:sender_username%>
+                </div>
+        
+                <div class="m-about">
+                    {{ 'header_dialogs.my_inbox.about'| trans}}
+                </div>
+                <div class="m-p-m-i-u-d profile_image <%if post_main_image_widthVsHeight===2%>center-horizontally<%/if%>">
+                    <%if post_main_image_widthVsHeight===0%>
+                        <img class="m-p-m-i-u photo equal" src="{{asset('uploads/')}}<%:post_main_image_path%>" height= 25/>
+                    <%else post_main_image_widthVsHeight===1%>
+                        <span class="helper"></span>
+                        <img class="m-p-m-i-u photo fat-profile-image" src="{{asset('uploads/')}}<%:post_main_image_path%>" height= 25/>
+                    <%else post_main_image_widthVsHeight===2%><img class="m-p-m-i-u photo tall-profile-image" src="{{asset('uploads/')}}<%:post_main_image_path%>" height= 25/><%/if%>    
+                </div>
+                <div class="m-at">
+                    {{ 'header_dialogs.my_inbox.at'| trans}}
+                </div>       
+                <div class="m-s-d">
+                    <div class="m-s-d-up">
+                        <%hmm:message_date.date%>
+                    </div>
+                    <div  class="m-s-d-down">
+                        <%mmmdo:message_date.date%>
+                    </div>
+                </div>
+        </div>
+    </a>
+</script>
+
+<script id="followItemTemplate" type="text/x-jsrender">
+    <a href="javascript:void(0);" 
+    class="show_shop my_networkk trigger" 
+    data-url="{{ path('index')}}shop/" 
+    data-shop-id="<%:follower_id%>"
+    data-follow-seen-url="{{ path('follow_seen')}}"
+    data-last-date-url="{{path('last_date')}}"
+    >
+        <div class="my_network_item">
+                <div class="m-s-p-p-u-d profile_image
+                    <%if follower_profile_picture_widthVsHeigth===2%>center-horizontally<%/if%>"
+                    >
+                    <%if follower_profile_picture_widthVsHeigth===0%>
+                        <img class="m-s-p-p-u photo equal" src="{{asset('uploads/profilepictures/')}}<%:follower_profile_picture_url%>" height= 25/>
+                    <%else follower_profile_picture_widthVsHeigth===1%>
+                        <span class="helper"></span>
+                        <img class="m-s-p-p-u photo fat-profile-image" src="{{asset('uploads/profilepictures/')}}<%:follower_profile_picture_url%>" height= 25/>
+                    <%else follower_profile_picture_widthVsHeigth===2%>
+                        <img class="m-s-p-p-u photo tall-profile-image" src="{{asset('uploads/profilepictures/')}}<%:follower_profile_picture_url%>" height= 25/>
+                    <%/if%>    
+                </div>
+                <div class="m-s-u-is-following">
+                    <%:follower_username%>
+                </div>
+                <div class="m-is-following">
+                    {{ 'header_dialogs.my_network.is_now_following_you'| trans}}
+                </div>    
+        </div>
+    </a>
+</script>
+
+<script id="newPostItemTemplate" type="text/x-jsrender">
+    <a href="javascript:void(0);" class="show_shop my_markett trigger" 
+        data-url="{{ path('index')}}shop/" 
+        data-shop-id="<%:followed_id%>"
+        data-last-date-url="{{path('last_date')}}"
+        >
+        <div class="my_market_item">
+            <div class="m-n m-result">1</div>
+            <div class="m-from">
+                new item from
+            </div>
+            <div class="m-s-p-p-u-d profile_image 
+                <%if followed_profile_picture_widthVsHeight===2%>center-horizontally<%/if%>"
+                >
+                <%if followed_profile_picture_widthVsHeight===0%>
+                    <img class="m-s-p-p-u photo equal" src="{{asset('uploads/profilepictures/')}}<%:followed_profile_picture_url%>" height= 25/>
+                <%else followed_profile_picture_widthVsHeight===1%>
+                    <span class="helper"></span>
+                    <img class="m-s-p-p-u photo fat-profile-image" src="{{asset('uploads/profilepictures/')}}<%:followed_profile_picture_url%>" height= 25/>
+                <%else followed_profile_picture_widthVsHeight===2%><img class="m-s-p-p-u photo tall-profile-image" src="{{asset('uploads/profilepictures/')}}<%:followed_profile_picture_url%>" height= 25/>
+                <%/if%>
+            </div>
+            <div class="m-s-u">
+                <%:followed_name%>
+            </div>    
+            <div class="m-at">
+                    at
+            </div>
+            <div class="m-s-d">
+                <div class="m-s-d-up">
+                        <%hmm:date.date%>
+                    </div>
+                    <div  class="m-s-d-down">
+                        <%mmmdo:date.date%>
+                    </div>
+            </div>
+
+        </div>
+    </a>
+</script>
+
+<script id="uploadedImageTemplate" type="text/x-jsrender">
+    <div class="one_photo" id="<%:image_id%>">
+        <div class="image_div <%if widthVsHeight===2%>center-horizontally<%/if%>">
+            <%if widthVsHeight===0%>
+                <img class="photo" src="{{asset('uploads/')}}<%:uploadedURL%>"/>
+            <%else widthVsHeight===1%>
+                <span class="helper"></span>
+                <img class="photo faty" src="{{asset('uploads/')}}<%:uploadedURL%>"/>
+            <%else widthVsHeight===2%>
+                <img class="photo tall" src="{{asset('uploads/')}}<%:uploadedURL%>"/>
+            <%/if%>
+        </div>
+        <div class="image_controls">
+            <a href="javascript:void(0);" class="delete_image_trigger"></a>
+            <a href="javascript:void(0);" class="set_as_main <%if main === true%>main<%/if%>"></a>
+        </div>
+    </div>
+</script>
+
+<script id="chatBoxTitleTemplate" type="text/x-jsrender">
+    <div class="ui-chatbox-title-m-from">{{'header_dialogs.my_inbox.chat_with'|trans}}</div>
+    <div class="ui-chatbox-title-m-s-u"><%:title_interlocutor_user_name%></div>
+    <div class="m-s-p-p-u-d profile_image 
+        <%if title_interlocutor_picture_widthVsHeight===2%>center-horizontally<%/if%>">
+        <%if title_interlocutor_picture_widthVsHeight===0%>
+            <img class="m-s-p-p-u photo equal" src="<%:title_interlocutor_picture_url%>" height= 25/>
+        <%else title_interlocutor_picture_widthVsHeight===1%>
+            <span class="helper"></span>
+            <img class="m-s-p-p-u photo fat-profile-image" src="<%:title_interlocutor_picture_url%>" height= 25/>
+        <%else title_interlocutor_picture_widthVsHeight===2%><img class="m-s-p-p-u photo tall-profile-image" src="<%:title_interlocutor_picture_url%>" height= 25/><%/if%>
+    </div>
+    <div class="ui-chatbox-title-m-about">{{ 'header_dialogs.my_inbox.about'| trans}}</div>
+    <div class="m-p-m-i-u-d profile_image <%if title_interlocutor_post_main_image_widthVsHeight===2%>center-horizontally<%/if%>">
+        <%if title_interlocutor_post_main_image_widthVsHeight===0%>
+            <img class="m-p-m-i-u photo equal" src="<%:title_interlocutor_post_main_image_url%>" height= 25/>
+        <%else title_interlocutor_post_main_image_widthVsHeight===1%>
+            <span class="helper"></span>
+            <img class="m-p-m-i-u photo fat-profile-image" src="<%:title_interlocutor_post_main_image_url%>" height= 25/>
+        <%else title_interlocutor_post_main_image_widthVsHeight===2%><img class="m-p-m-i-u photo tall-profile-image" src="<%:title_interlocutor_post_main_image_url%>" height= 25/><%/if%>    
+    </div>
+</script>
+
+<script id="chatterBoxTitleTemplate" type="text/x-jsrender">
+    <div class="m-s-p-p-u-d profile_image 
+        <%if title_interlocutor_picture_widthVsHeight===2%>center-horizontally<%/if%>">
+        <%if title_interlocutor_picture_widthVsHeight===0%>
+            <img class="m-s-p-p-u photo equal" src="<%:title_interlocutor_picture_url%>" height= 25/>
+        <%else title_interlocutor_picture_widthVsHeight===1%>
+            <span class="helper"></span>
+            <img class="m-s-p-p-u photo fat-profile-image" src="<%:title_interlocutor_picture_url%>" height= 25/>
+        <%else title_interlocutor_picture_widthVsHeight===2%><img class="m-s-p-p-u photo tall-profile-image" src="<%:title_interlocutor_picture_url%>" height= 25/><%/if%>
+    </div>
+    <div class="m-p-m-i-u-d profile_image <%if title_interlocutor_post_main_image_widthVsHeight===2%>center-horizontally<%/if%>">
+        <%if title_interlocutor_post_main_image_widthVsHeight===0%>
+            <img class="m-p-m-i-u photo equal" src="<%:title_interlocutor_post_main_image_url%>" height= 25/>
+        <%else title_interlocutor_post_main_image_widthVsHeight===1%>
+            <span class="helper"></span>
+            <img class="m-p-m-i-u photo fat-profile-image" src="<%:title_interlocutor_post_main_image_url%>" height= 25/>
+        <%else title_interlocutor_post_main_image_widthVsHeight===2%><img class="m-p-m-i-u photo tall-profile-image" src="<%:title_interlocutor_post_main_image_url%>" height= 25/><%/if%>    
+    </div>
+</script>
+

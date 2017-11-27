@@ -1,0 +1,92 @@
+Shop\Bundle\ManagementBundle\Entity\Post:
+    type: entity
+    table: post
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        postDate:
+            type: datetime
+            column: post_date
+            nullable: true
+        postContent:
+            type: text
+            column: post_content
+            nullable: true
+        postTitle:
+            type: string
+            length: 255
+            column: post_title
+            nullable: true
+        bought:
+            type: boolean
+            column: bought
+            nullable: true
+        postPrice:
+            type: integer
+            column: post_price
+            nullable: true
+        postStatus:
+            type: string
+            column: post_status
+            nullable: true
+        postNotes:
+            type: string
+            column: post_notes
+            nullable: true
+    manyToOne:
+      user:
+        targetEntity: Members\Bundle\ManagementBundle\Entity\User
+        joinColumn:
+          name: post_user_id
+          type: integer
+          referencedColumnName: id
+          onDelete: cascade
+      postPlace:
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Place
+        nullable: true
+        joinColumn:
+          name: post_place
+          type: integer
+          referencedColumnName: id
+          onDelete: "SET NULL"
+    oneToMany:
+      images:
+        mappedBy: post
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Image
+        cascade:      [persist]
+      messages:
+        mappedBy: post
+        targetEntity: Members\Bundle\ManagementBundle\Entity\Message
+        cascade:      [persist]
+    oneToOne:        
+      postMainImagePath:
+        fetch: EAGER
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Image
+        nullable: true
+        joinColumn:
+          name: post_main_image_path
+          type: integer
+          referencedColumnName: id
+          onDelete: "SET NULL"
+    manyToMany:
+      categories:
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Category
+        inversedBy: posts
+        indexedBy: name
+        cascade:      [persist]
+        joinTable:  
+            name: item_category
+            joinColumns:
+              item_id:
+                referencedColumnName: id
+                onUpdate: "CASCADE" 
+                onDelete: "CASCADE"
+            inverseJoinColumns:
+              category_id:
+                referencedColumnName: id
+                onUpdate: "CASCADE" 
+                onDelete: "CASCADE"          
+    lifecycleCallbacks: {  }

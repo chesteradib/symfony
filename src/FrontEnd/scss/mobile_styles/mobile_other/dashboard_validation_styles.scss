@@ -1,0 +1,65 @@
+
+
+$formTitleErrorWidth: 230px;
+$formContentErrorWidth: 230px;
+$formPriceErrorWidth:  230px;
+$formImagesErrorWidth: 140px;
+
+
+
+#form-title-error
+{
+
+}
+#form-content-error
+{
+
+}
+
+#form-price-error
+{
+
+    
+}
+#form-images-error
+{
+
+}
+
+.error-theme
+{
+
+    
+}
+.error-message
+{
+    background-color: $rouge;
+    margin: 4px auto;
+    padding:4px;
+    color: white;
+    font-size:11px;
+    line-height: 100%;
+    border-radius: 2px;
+    max-width: 250px;
+    width:200px;
+    //float:right;
+    
+}
+
+.error-message-close
+{
+    width: 20px;
+    height: 20px;
+    float: left;
+    border: 1px solid white;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+
+}
+.error-message-text
+{
+    width:calc( 100% - 20px);
+    float: left;
+}

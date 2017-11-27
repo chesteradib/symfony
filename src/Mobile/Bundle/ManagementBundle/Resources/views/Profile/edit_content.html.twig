@@ -1,0 +1,27 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} 
+      method="POST" 
+      class="fos_user_profile_edit" 
+      data-iu-url="{{ path('update_profile_picture', { 'user_id': user.id })}}"  
+      novalidate>
+      {{ form_errors(form) }}
+{{ form_widget(form) }}
+      
+    <div class="profile_picture">
+         <img class="photo"  src="{{ asset(profile_url) }}" width="60"/>
+         <input type="file" id="fos_user_profile_form_profile_picture" name="fos_user_profile_form[profile_picture]" required="required" class="chooser">
+         <a href="#">Click me to choose a file</a>
+      </div>      
+    
+
+    
+      <div class="map-canvas" id="map-canvas" style="height:180px" ></div>
+      
+ 
+      <div>
+        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+      </div>
+
+      <a href="javascript:void(0);" class="cancel_button_edit_profile" data-url="{{ path('fos_user_profile_show')}}">Cancel</a>
+</form>

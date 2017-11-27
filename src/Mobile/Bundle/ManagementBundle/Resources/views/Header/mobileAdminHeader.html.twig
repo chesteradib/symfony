@@ -1,0 +1,95 @@
+<nav class="menu">
+    
+    {% include "MobileManagementBundle:Header:NavMenu.html.twig" %} 
+    
+    <a class="toggle-nav-search tnavi" href="#">{{ 'menu.search.search'| trans}}</a>
+    <a class="toggle-nav-by-category tnavi" href="#">{{ 'menu.navigate_by_category'| trans}}</a>
+   
+    <div class="menuItems navi active">
+        <ul>
+            <li class="current-item">
+                <a href="{{ path('mobile_admin', { 'page': 0}) }}">
+                    {{ 'menu.home'| trans}}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('mobile_my_inbox', { 'page': 0}) }}">
+                    {{ 'menu.my_inbox'| trans}}
+                </a>
+                <span class="notification-counter-my_inbox"
+                  {% if number_of_messages_not_seen < 1 %}
+                    style="display:none"
+                  {% endif%}
+                  >
+                {% if number_of_messages_not_seen > 0 %}
+                {{number_of_messages_not_seen}}
+                {% endif%}
+                </span>
+            </li>
+            <li>
+                <a href="{{ path('mobile_my_market', { 'page': 0}) }}">
+                    {{ 'menu.my_market'| trans}}
+                </a>
+                <span class="notification-counter-my_market"
+
+                    {% if number_of_new_posts_by_followeds_not_seen < 1 %}
+                        style="display:none"
+                    {% endif%} 
+                    >
+                    {% if number_of_new_posts_by_followeds_not_seen > 0 %}
+                        {{number_of_new_posts_by_followeds_not_seen}}
+                    {% endif%}
+                </span>
+            </li>
+            <li>
+                <a href="{{ path('mobile_my_shop', { 'page': 0}) }}">
+                    {{ 'menu.my_shop'| trans}}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('mobile_item_new', { 'page': 0}) }}">
+                    {{ 'menu.new_article'| trans}}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {{ 'menu.my_settings'| trans}}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('mobile_all_my_network', { 'page': 0}) }}">
+                    {{ 'left.all_my_network.all_my_network'| trans}}
+                </a>
+                <span class="notification-counter notification-counter-my_followers"
+                      {% if number_of_follows_not_seen < 1 %}
+                       style="display:none"
+                      {% endif%}
+                      >
+                {% if number_of_follows_not_seen > 0 %}
+                        {{number_of_follows_not_seen}}
+                {% endif%}
+                </span>
+            </li>
+            <li>
+                <a href="{{ path('mobile_all_my_followeds', { 'page': 0}) }}">
+                    {{ 'left.all_my_followeds.all_my_followeds'| trans}}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('fos_user_security_logout') }}">
+                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+            </li>
+        </ul>   
+    </div>
+        
+    <div class="search-form navi active">
+        {% include "MobileManagementBundle:Header:search.html.twig" %} 
+    </div>
+        
+    <div class="by-category-select navi active">
+        {% include "MobileManagementBundle:Header:CategoriesSelect.html.twig" %} 
+    </div>
+    
+
+</nav>

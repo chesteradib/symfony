@@ -1,0 +1,102 @@
+.all_my_inbox_item a.show_shop
+{
+    width:100%;
+    height:100%; 
+}
+.all_my_inbox_item .m-i-p-p-u-d:hover, .all_my_inbox_item .m-content:hover, .all_my_inbox_item .product-container-in_all_my_inbox:hover
+{
+    border-bottom: 1px solid rgba(0,98,51,0.2);
+    border-right: 1px solid rgba(0,98,51,0.2);
+    border-left: 1px solid rgba(0,98,51,0.2);
+}
+.interlocutor 
+{
+    height: 75px + 2px;    
+    width: 77px;
+    float:right;
+    padding-top: 5px;
+    border-bottom: 1px solid rgba(0,98,51,0);
+    border-right: 1px solid rgba(0,98,51,0);
+    border-left: 1px solid rgba(0,98,51,0);
+}
+
+.interlocutor-top
+{
+    height: 55px + 2px; 
+    width: 77px;
+    border-bottom: 1px solid rgba(0,98,51,0);
+    border-right: 1px solid rgba(0,98,51,0);
+    border-left: 1px solid rgba(0,98,51,0);
+}
+.interlocutor-bottom
+{
+    width: 77px;
+    border-bottom: 1px solid rgba(0,98,51,0);
+    border-right: 1px solid rgba(0,98,51,0);
+    border-left: 1px solid rgba(0,98,51,0);
+    text-align: center;
+    font-size: 11px;
+}
+
+.m-content
+{
+    height: 75px + 2px;
+    width: 95px;
+    float:right;
+    line-height: 20px;
+    font-size: 11px; 
+    border-bottom: 1px solid rgba(0,98,51,0);
+    border-right: 1px solid rgba(0,98,51,0);
+    border-left: 1px solid rgba(0,98,51,0);
+}
+
+.m-content-top
+{
+    height: 20px + 2px;
+    width: 95px;
+    line-height: 20px;
+    font-size: 11px; 
+}
+.m-content-top img
+{
+    height: 99%;
+    float: right;
+}
+
+.m-d-in_all_my_inbox
+{
+    font-size: 10px;
+}
+.m-content-bottom
+{
+    height: 48px + 2px;
+    width: 95px;
+    float:right;
+    line-height: 14px;
+    font-size: 11px;
+    margin-top: -3px;
+    padding: 5px;
+    background-color:  #c3e3b5;
+    border-radius: 8px;
+}
+
+.product-image-in-in_all_my_inbox
+{
+    display: block;
+    height: 75px + 2px;
+    width:77px;
+    float: right;
+    position: relative;
+    float: right;
+}
+
+.round-p-i-in_all_my_inbox
+{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 77px;
+    height: 75px + 2px;
+}
+
+
+

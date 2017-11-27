@@ -1,0 +1,70 @@
+<div id="left-items-container" class="all_my_network">
+    {% if all_new_posters_and_related_data|length == 0  %} 
+    <div id="no-items-my_network">
+        {{ 'left.all_new_posters.no_new_posters'| trans }} 
+    </div> 
+    {% else %}  
+    {% for new_poster in all_new_posters_and_related_data %}
+        <div class="my_network_item left-item-container">
+            <a href="javascript:void(0);"
+               class="show_shop users"
+               data-url="{{ path('index')}}shop/" 
+               data-shop-id="{{new_poster['item'].id}}"
+               data-last-date-url="{{path('last_date')}}"
+               >
+                {% if new_poster['item'].getProfilePicture %}
+                    <div class="image_of_follower m-i-p-p-u-d {% if new_poster['item'].getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
+                        {% set createdAt = new_poster['item'].getCreatedAt %}
+                        {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                            ~createdAt|date('m')~'/'
+                            ~new_poster['item'].getProfilePicture.path %}
+                            {% if new_poster['item'].getProfilePicture.widthVsHeight == 0 %}
+                            <img class="m-i-p-p-u photo equal" src="{{ asset(image_url) }}" height= 25/>
+                            {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 1 %}
+                            <span class="helper"></span>
+                            <img class="m-i-p-p-u photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                            {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 2 %}
+                            <img class="m-i-p-p-u photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                            {% endif%}
+                    </div>
+                {% else %}
+                    <div class="image_of_follower m-i-p-p-u-d center-horizontally">
+                        <img class="photo equal" src="{{ asset('pp/index.png') }}"/>
+                    </div>
+                {% endif %}
+                
+                <div class="initial_info_of_follower">
+                    <div class="username_of_follower">
+                        {{new_poster['item'].username}}
+                    </div>
+                    <div class="domain_name_of_follower">
+                        {{new_poster['number_of_followers']}}
+                        {% if new_poster['number_of_followers'] == 1 %}
+                        {{ 'global.follower'| trans}}
+                        {% else %}
+                        {{ 'global.followers'| trans}}
+                        {%endif%}
+                    </div>  
+                    <div class="number_of_articles_of_follower">
+                        {{new_poster['number_of_articles']}}
+                        {% if new_poster['number_of_articles'] == 1 %}
+                            {{ 'global.article'| trans}}
+                        {% else%}
+                            {{ 'global.articles'| trans}}
+                        {%endif%}
+                    </div>
+                </div>
+            </a>
+      
+            <div class="follow_unfollow_of_follower">
+                <a data-url="{{path('follow_unfollow_shop',{ 'shop_id': new_poster['item'].id}) }}"
+                   href="javascript:void(0);" 
+                   class="trigger_follow {% if new_poster['doesCurrentUserFollowThisUser'] %}trigger_unfollow{% endif %}"
+                   ></a>
+                <a href="javascript:void(0);" class="follow-word">{% if new_poster['doesCurrentUserFollowThisUser'] %}{{ 'global.unfollow'| trans}}{% else %}{{ 'global.follow'| trans}}{%endif%}</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+{% endfor %}0
+{% endif %}
+</div>

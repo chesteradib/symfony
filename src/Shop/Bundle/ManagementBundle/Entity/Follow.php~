@@ -1,0 +1,138 @@
+<?php
+
+namespace Shop\Bundle\ManagementBundle\Entity;
+
+
+/**
+ * Follow
+ */
+class Follow
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var integer
+     */
+    private $follower;
+
+    /**
+     * @var integer
+     */
+    private $followed;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set follower
+     *
+     * @param integer $follower
+     * @return Follow
+     */
+    public function setFollower($follower)
+    {
+        $this->follower = $follower;
+    
+        return $this;
+    }
+
+    /**
+     * Get follower
+     *
+     * @return integer 
+     */
+    public function getFollower()
+    {
+        return $this->follower;
+    }
+
+    /**
+     * Set followed
+     *
+     * @param integer $followed
+     * @return Follow
+     */
+    public function setFollowed($followed)
+    {
+        $this->followed = $followed;
+    
+        return $this;
+    }
+
+    /**
+     * Get followed
+     *
+     * @return integer 
+     */
+    public function getFollowed()
+    {
+        return $this->followed;
+    }
+    /**
+     * @var \Members\Bundle\ManagementBundle\Entity\User
+     */
+    private $followerr;
+
+
+    /**
+     * Set followerr
+     *
+     * @param \Members\Bundle\ManagementBundle\Entity\User $followerr
+     * @return Follow
+     */
+    public function setFollowerr(\Members\Bundle\ManagementBundle\Entity\User $followerr = null)
+    {
+        $this->followerr = $followerr;
+    
+        return $this;
+    }
+
+    /**
+     * Get followerr
+     *
+     * @return \Members\Bundle\ManagementBundle\Entity\User 
+     */
+    public function getFollowerr()
+    {
+        return $this->followerr;
+    }
+    /**
+     * @var \Members\Bundle\ManagementBundle\Entity\User
+     */
+    private $followedd;
+
+
+    /**
+     * Set followedd
+     *
+     * @param \Members\Bundle\ManagementBundle\Entity\User $followedd
+     * @return Follow
+     */
+    public function setFollowedd(\Members\Bundle\ManagementBundle\Entity\User $followedd = null)
+    {
+        $this->followedd = $followedd;
+    
+        return $this;
+    }
+
+    /**
+     * Get followedd
+     *
+     * @return \Members\Bundle\ManagementBundle\Entity\User 
+     */
+    public function getFollowedd()
+    {
+        return $this->followedd;
+    }
+}

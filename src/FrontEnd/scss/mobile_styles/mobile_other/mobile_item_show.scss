@@ -1,0 +1,511 @@
+
+$sprite1 :url('../images/spritesheet1.png');
+$sprite2 : url('../images/spritesheet2.png');
+$sprite3 : url('../images/spritesheet3.png');
+$sprite4 : url('../images/chat.png');
+
+$vert:#006233;
+$vert-opace:rgba(0,98,51,0.3);
+$vert-opace7:rgba(0,98,51,0.7);
+
+*
+{
+  box-sizing: border-box;
+  -moz-box-sizing: borders-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Product Show */
+/* Product Show */
+
+
+
+
+#post-title-price-description
+{
+    display: table;
+    height: 100%;
+    table-layout: fixed;
+    width: 100%;   
+}
+
+#post-title-price-date
+{
+    display: table-row;
+}
+
+#post-title
+{
+    margin: 0;
+    max-width: 71%;
+    float: left;
+    padding: 5px 0 0 5px;
+    font-size: 20px;
+}
+
+#post-price-and-date
+{
+   margin:0;
+   text-align: right;
+   min-width:27%;
+   float:right;
+   margin:5px 5px 0 0;
+   background: rgba(241, 241, 241, 0.65);
+   border-radius: 8px;
+}
+
+#post-price
+{
+    width:100%;
+    background-color: #006233;
+    color: white;
+    border-radius: 8px;
+    padding-right: 4px;
+}
+#p-price
+{
+   
+}
+
+#post-date
+{
+  width:100%; 
+  font-size: 10px;
+  color:$vert;
+}
+
+#currency
+{
+   font-size: 9px;
+   text-align: right;
+   width:100%;
+}
+
+
+#post-content
+{
+    text-align: justify;
+    padding:5px;
+    margin:5px;
+    font-size:14px;
+    min-height: 150px;
+}
+
+
+/* Product Show thumbnails Scroller */
+/* Product Show thumbnails Scroller */            
+/* Product Show thumbnails Scroller */
+/* Product Show thumbnails Scroller */
+
+
+#post-images
+{
+
+}
+
+#post-main-image
+{
+
+}
+
+.mobile_image
+{
+    width: 100%;
+    
+}
+/* Post Footer CSS */
+/* Post Footer CSS */
+
+#post-footer
+{
+    height:60px;
+    width:100%;
+    
+}
+
+#post-footer-left
+{
+    float:left;
+    min-width:250px;
+    font-size:11px;
+    line-height: 11px;
+}
+
+#post-footer-right
+{
+    float:right;
+    height:60px;
+    width: 240px - 1px;
+}
+
+/* Post Chat CSS */
+/* Post Footer CSS */
+
+
+#post-chat
+{
+    width:60px;
+    height:100%;
+    float:left; 
+}
+
+.o-c-t-s
+{
+    background: $sprite4 no-repeat;
+    width:100%;
+    height:41px;
+    display:inline-block;
+    background-position: 81.78% 0; 
+    opacity: 0.7;
+    display:block;
+    margin-top:4px;
+}
+
+.o-c-t-s:hover
+{
+    opacity: 1;
+}
+
+#chat-word
+{
+    text-align: center;
+    width: 100%;
+    display: none;
+    color:$vert;
+    font-size:11px;
+    font-weight: 800;
+}
+
+
+.open_chat_trigger:hover~#chat-word{
+    display: block;
+}
+
+/* Post Owner CSS */
+/* Post Owner CSS */
+
+#post-owner-image-name
+{
+    width:180px;
+    height:100%;
+    float:left;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background:rgba(241, 241, 241, 0.65);
+}
+
+#post-owner-image
+{
+    width:60px;
+    height:100%;
+    float:left;
+    
+}
+
+#post-owner-name
+{
+    width:115px;
+    float:left;
+    font-size:15px;
+    height: 60px;
+    line-height: 60px;    
+}
+/* Post Bought CSS */
+/* Post  Bought CSS */
+
+#post-bought
+{
+    font-size: 11px;
+    height: 40px;
+    float: right;
+}
+
+.bought_trigger_off,.bought_trigger_on
+{
+    background: $sprite1 no-repeat;
+    display: inline-block;
+    width:50px;
+    height:40px;
+    background-size: 1547.14% 116.07%;
+}
+.bought_trigger_on
+{
+    background-position: 86.179% 0;  
+}
+
+.bought_trigger_off
+{
+
+    background-position: 100% 0;
+    
+}
+
+/* Edit article */
+
+
+#post-edit
+{
+    width:100%; 
+    line-height: 30px;
+    font-family: Verdana, 'Helvetica Neue',Helvetica,Arial,sans-serif; 
+}
+
+#post-edit::after, #post-delete::after
+{
+    display:block;
+    font-weight:bold;
+    height:1px;
+    color:transparent;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+
+#edit_article_trigger
+{
+    display:inline-block;
+    padding: 0 0 0 0;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+    border-radius: 8px;
+}
+
+#edit_article_symbol
+{
+    display:inline-block;
+    width:30px;
+    float:left;
+    height:27px;
+    margin: 1.5px 0;
+    background: url('../images/spritesheet1.png') no-repeat;
+    cursor: pointer;
+    background-size: 3008.33% 162.5%;
+    background-position : 25.5% 0;
+}
+
+#edit_article_text
+{
+    display:inline-block;
+    height:30px;
+    width:60px;
+    float:left;
+    cursor: pointer;
+    color: #006233;
+    color: $vert;
+}
+
+
+#post-delete
+{
+    width:100%;
+    height:50%;   
+    line-height: 30px;
+    text-decoration:none;
+    font-family: Verdana, 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 11px;   
+}
+
+form#delete_article_trigger 
+{
+    
+}
+
+
+form#delete_article_trigger button
+{
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+    border-radius: 8px;
+    font-size: inherit;
+}
+
+#delete_article_symbol
+{
+    display:inline-block;
+    width:30px;
+    height:30px; 
+    background: url('../images/spritesheet2.png') no-repeat;
+    background-size:1003.125% 100%; 
+    background-position:100% 0;
+    float:left; 
+}
+
+#delete_article_text
+{
+    display:inline-block;
+    height:30px;
+    float:left;
+    line-height: 30px;
+    color: $rouge;
+}
+
+
+#post-retweet
+{
+    width:100%; 
+    line-height: 30px;
+    font-family: Verdana, 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+#retweet_article_trigger
+{
+    display:inline-block;
+    padding: 0 0 0 0;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+    border-radius: 8px;
+    height:100%;
+}
+
+#retweet_article_symbol
+{
+    display:inline-block;
+    width:50px;
+    float:left;
+    height:50px;
+    background: url('../images/retweet.png') no-repeat;
+    background-size: 100%;
+}
+
+#retweet_article_text
+{
+    display: inline-block;
+    height: 50px;
+    width: 70px;
+    float: left;
+    cursor: pointer;
+    color: $vert;
+    line-height: 10px;
+    padding-top: 14px;
+}
+
+
+#post-second-bought
+{
+    width:100%; 
+    line-height: 30px;
+    font-family: Verdana, 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+
+#post-second-bought .bought-trigger
+{
+    display:inline-block;
+    padding: 0 0 0 0;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+    border-radius: 8px;
+    height:100%;
+    width: auto;
+}
+
+.bought_article_symbol
+{
+    display:inline-block;
+    width:60px;
+    float:left;
+    height:50px;
+}
+
+.bought_article_text
+{
+    display:inline-block;
+    float:left;
+    cursor: pointer;
+    color: $vert;
+    line-height: 10px;
+    padding-top: 20px;
+}
+
+
+/*   *//*   *//*   *//*   */
+/* Profile picture styles*/
+/*   *//*   *//*   *//*   */
+
+.center-horizontally
+{
+    text-align: center;
+}
+.equal-profile-image
+{
+    
+    width:100%;
+    height:100%;
+}
+.tall-profile-image
+{
+    height: 100%;
+}
+.fat-profile-image
+{
+    vertical-align:middle;
+    width: 88%;
+    padding-right: 3px;
+}
+
+/*   *//*   *//*   *//*   */
+/* Images styles */
+/* Images in square shapes like: Scroller */
+/*   *//*   *//*   *//*   */
+
+.tall
+{
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.fat
+{
+    vertical-align: middle;
+    width:64px;
+}
+.equal
+{
+    width:99%;
+    height:99%;
+}
+
+
+/*   *//*   *//*   *//*   *//*   */
+/* Images styles FOR  Main Image*/
+/*   *//*   *//*   *//*   *//*   */
+
+.mi-very-fat
+{
+    width: 384px;    
+    vertical-align: middle;
+    height:initial;
+}
+.mi-fat
+{
+    height:250px;
+    width:initial;
+    vertical-align: auto;
+}
+.mi-tall
+{
+    text-align: center;
+    width:initial;
+    vertical-align: inherit;
+    height:250px;
+}
+
+
+/* The helper span */
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
+#post-owner-image-name {
+    width: 179px;
+    height: 100%;
+    float: left;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+}

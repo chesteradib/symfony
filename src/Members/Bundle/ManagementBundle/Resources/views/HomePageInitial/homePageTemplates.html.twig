@@ -1,0 +1,26 @@
+<script id="openChatErrorTemplate" type="text/x-jsrender">
+    <div id="open-chat-error" class="error-theme">
+        <div class="error-message">
+            <div class="error-message-text">
+                <div class="message-text">{{ 'errors.chat.login_to_chat'| trans}}</div>
+                <div class="login_trigger error-button">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</div>
+                <div class="signup_trigger error-button">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</div>
+            </div>
+            <div class="error-message-close">X</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+<script id="followUnfollowErrorTemplate" type="text/x-jsrender">
+    <div id="follow-unfollow-error" class="error-theme">
+        <div class="error-message">
+            <div class="error-message-text">
+                <div class="message-text">{{ 'errors.follow.login_to_follow'| trans}}</div>
+                <div class="login_trigger error-button">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</div>
+                <div class="signup_trigger error-button">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</div>
+            </div>
+            <div class="error-message-close">X</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>

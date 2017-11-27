@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+
+{#
+{% block myscript %}
+{% endblock %} 
+#}
+
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/mobile_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    {% include "MobileManagementBundle::templates.html.twig" %}
+    {% include "MobileManagementBundle:Header:mobileAdminHeader.html.twig" %}
+    {% include "MobileManagementBundle:Item:mobileEdits.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_new_item_js.js') }}"></script>
+{% endblock %}
+
+
+
+
+

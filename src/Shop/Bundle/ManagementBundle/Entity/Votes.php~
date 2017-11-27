@@ -1,0 +1,83 @@
+<?php
+
+namespace Shop\Bundle\ManagementBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Votes
+ */
+class Votes
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var integer
+     */
+    private $voterId;
+
+    /**
+     * @var \Shop\Bundle\ManagementBundle\Entity\Post
+     */
+    private $post;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set voterId
+     *
+     * @param integer $voterId
+     * @return Votes
+     */
+    public function setVoterId($voterId)
+    {
+        $this->voterId = $voterId;
+    
+        return $this;
+    }
+
+    /**
+     * Get voterId
+     *
+     * @return integer 
+     */
+    public function getVoterId()
+    {
+        return $this->voterId;
+    }
+
+    /**
+     * Set post
+     *
+     * @param \Shop\Bundle\ManagementBundle\Entity\Post $post
+     * @return Votes
+     */
+    public function setPost(\Shop\Bundle\ManagementBundle\Entity\Post $post = null)
+    {
+        $this->post = $post;
+    
+        return $this;
+    }
+
+    /**
+     * Get post
+     *
+     * @return \Shop\Bundle\ManagementBundle\Entity\Post 
+     */
+    public function getPost()
+    {
+        return $this->post;
+    }
+}

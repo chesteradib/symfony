@@ -1,0 +1,38 @@
+<div id="center-context">
+    <div id="center-context-articles-from">
+        {% if not category.getParent %}
+        {{ (category.getName~'.'~category.getName) | trans }}
+        {% else %}
+        {{ (category.getParent.getName~'.'~category.getName) | trans }}
+        {% endif %}
+        {% if total_number_of_items >0 %}
+        ({{total_number_of_items}} {{ 'global.article'| trans}}{% if total_number_of_items >1 %}s{%endif%})  
+        {%endif%}
+    </div>
+</div>
+
+
+<div id="center-content">
+    <div id="center-items-container">
+        {% if entities|length <=0 %}
+            <div class="no-items">{{'center.category.no_items'|trans}} 
+                "{% if not category.getParent %}
+                {{ (category.getName~'.'~category.getName) | trans }}
+                {% else %}
+                {{ (category.getParent.getName~'.'~category.getName) | trans }}
+                {% endif %}"
+            </div>
+        {% endif %}
+        {% include "ShopManagementBundle::items.html.twig" %}  
+    </div>
+
+    <div 
+        id="center-content-pagination" class="center-pagination"
+        data-current-page="0" 
+        data-url="{{path('page_of_show_category',{ 'category_id': category_id})}}"
+        data-total-pages="{{ number_of_pages}}" > 
+        
+        {% include "MembersManagementBundle:HomePage:pagination.html.twig" %}
+     </div>
+</div>
+

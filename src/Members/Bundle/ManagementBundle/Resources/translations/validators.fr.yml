@@ -1,0 +1,45 @@
+post:
+    title:
+        not_blank: Le titre de votre annonce ne doit pas être vide.
+        length:
+            min: >
+                Le titre de votre annonce doit contenir au minimum 10 caractères.
+            max: >
+                Le titre de votre annonce doit contenir au maximum 80 caractères.
+    description:
+        not_blank: La description de votre annonce ne doit pas être vide.
+        length:
+            min: >
+                La description de votre annonce doit contenir au minimum 10 caractères.
+            max: >
+                La description de votre annonce ne doit pas dépasser 80 caractères.
+    price:
+        not_blank: Le prix de votre annonce ne doit pas etre vide.
+        greater_than_or_equal:  >
+                Le prix de votre annonce doit être supérieur ou egal a 0.
+        type: >
+                Le prix de votre annonce doit être une valeur numérique.
+        length: >
+                Le prix de votre annonce ne doit pas dépasser 10 chiffres.
+    images:
+        count: 
+            min: Vous devez charger au minimum 1 image.
+            max: Vous ne pouvez charger que 8 images au maximum.
+        image:
+            minHeight: >
+                La hauteur de l'image doit dépasser 96 pixels.
+            minWidth: >
+                La largeur de l'image doit dépasser 138 pixels.
+        file:
+            mimetype: >
+                Seulement les fichiers de type image sont autorisés.
+            maxSize: >
+                La taille maximale de l'image ne doit pas dépasser 5MB.
+    categories:
+        not_blank: >
+            Vous devez sélectionner au minimum une catégorie.
+    notes:
+        length: 
+            max: >
+                Les notes sur l'annonce ne doivent pas dépasser 250 caractères.
+            

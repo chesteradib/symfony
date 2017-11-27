@@ -1,0 +1,183 @@
+menu:
+    my_inbox: My Inbox
+    my_market: My Market
+    my_shop: My Shop
+    new_article: New Article
+    my_settings: My Settings
+    navigate_by_category : Navigate by category
+    search:
+        search_in_all_site: Search in all website
+        search: Search
+    home: Home
+
+errors:
+    follow:
+        login_to_follow: You should be logged in to follow a user
+    chat:
+        login_to_chat: You should be logged in to chat with this person!
+    pagination: This value is not valid!
+    
+header_dialogs:
+    my_inbox:
+        about: about
+        at: at
+        chat_with: Discussion avec
+        show_all_my_inbox: Show all my inbox
+        no_new_messages: You have no new messages for the moment.
+    my_network:
+        is_now_following_you: is now following you.
+        show_all_my_network: Show all my followers.
+        no_new_followers: You have no new followers for the moment.
+    my_market:
+        at: at
+        show_all_my_market: Show all my market.
+        no_new_items: There are no new items from people you follow.
+        empty: Your market is empty because you are not following anywone yet or because people you follow hasn't posted yet. Follow someone by clicking on
+    my_shop:
+        empty: Votre boutique est vide. Pour commencer a vendre, veuillez cliquer sur "Déposer une annonce".        
+left:
+    all_my_inbox:
+        all_my_inbox: My Inbox
+        no_messages: You have no messages yet.
+    all_my_network:
+        all_my_network: My followers
+        no_followers: You have no followers yet. Try to follow people first. Suggestions
+    all_new_posters:
+        all_new_posters: Active Members
+        no_new_posters: No active members for the moment. There are no posts at all in the whole website.  
+    all_my_followeds:
+        all_my_followeds: All my Followeds
+        no_new_followeds: You are not following any one. Click on "Follow". Suggestions
+       
+
+
+center:
+    home: Welcome, total number of articles now is
+    no_items_in_home: We are doing a maintenance task. We are sorry, please to come back again.
+    search:
+        search_results: Search results
+        no_results_message: No Search reasults.
+    shop:
+        items_from: Items from
+        no_items_from: No items from 
+    category:
+        no_items: Il n'y a pas d'annonces dans la catégorie         
+        
+
+global:
+    follower: follower
+    followers: followers
+    article: article
+    articles: articles
+    service: service
+    followed: followed
+    followeds: followeds
+    total: in total
+    follow: Follow
+    unfollow: Unfollow
+    result: Result
+    
+post:
+    show:
+        edit: Edit
+        delete: Delete
+        chat: Chat
+        sold: Sold
+        disponible: Available
+        retweet: Re-déposer l'annonce
+    new:
+        enter_title: What is the title of your item?
+        enter_description: What is the description of your item?
+        enter_price: The price?
+        product_or_service: 
+        add_images_label: Add Images ( Max=10 et Min=2)
+        create_article: Create
+        cancel_article_creation: Cancel
+        enter_category: What category?
+        notes: Notes (optionnel)
+        principale: Principale
+    edit:
+        update: Update
+        
+        
+        #####################
+
+informatique:
+    informatique: Informatique
+    ordinateurs_de_bureau: Odinateurs de bureau
+    ordinateurs_portables: Odinateurs portables
+    tablettes: Tablettes
+    accessoires_informatiques: Accéssoires  informatiques
+multimedia:
+    multimedia: Multimedia
+    son: Son
+    jeux_video_et_consoles: Jeux vidéos et consoles
+    televisions: Télévisions
+    projecteurs: Projecteurs
+    appareils_photo_et_cameras: Appareils photos et caméras
+    accessoires_multimedia: Accéssoires multimedia
+immobilier:
+    immobilier: Immobilier
+    appartements: Appartements
+    maisons_et_villas: Maison et villas
+    collocation: Collocation
+    bureaux: Bureaux
+    magasins: Magasins
+    terrains_et_fermes: Terrains et fermes
+    locations_de_vacances: Locations de vacances
+    autre: Autre
+la_maison:
+    la_maison: Maison
+    cuisine: Cuisine 
+    meubles: Meubles
+    decoration: Décoration
+    jardin: Jardin
+    outils_de_bricolage: Outils de bricolage
+    autre: Autre
+habillement_et_bien_etre:
+    habillement_et_bien_etre: Habillement et bien être
+    vetements: Vêtements
+    chaussures: Chaussures
+    montres: Montres
+    bijoux: Bijoux
+    sacs: Sacs
+    beaute: Beauté
+    bebe: Bébé
+    accessoires: Accéssoires
+    autre: Autre
+emploi:
+    emploi: Emploi
+    demandes_d_emploi: Demandes d'emploi
+    offres_d_emploi: Offres d'emploi
+    offres_de_stages: Offres de stages
+    demandes_de_stages: Demande de stages
+lecture:
+    lecture: Lecture
+    livres: Livres
+    magazines: Magazines
+telephones:
+    telephones: Téléphones
+mariage:
+    mariage: Mariage
+instruments_de_musique:
+    instruments_de_musique: Instruments de musique
+sport:
+    sport: Sport
+art: 
+    art: Art
+collections:
+    collections: Collections
+voyages:
+    voyages: Voyages
+cinema:
+    cinema: Cinéma
+animaux:
+    animaux: Animaux
+affaires:
+    affaires: Affaires
+materiels_professionel:
+    materiels_professionel: Matériels professionnels
+cours_et_formations:
+    cours_et_formations: Cours et formations
+services:
+    services: Services

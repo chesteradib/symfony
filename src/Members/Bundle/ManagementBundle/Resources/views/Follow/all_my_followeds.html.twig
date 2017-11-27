@@ -1,0 +1,23 @@
+<div id="left_context">
+     <div id="left-context-articles-from">    
+        {{ 'left.all_my_followeds.all_my_followeds'| trans}}
+            {% if followeds_and_related_data|length >0%}
+            ({{followeds_and_related_data|length}})
+            {%endif%}
+     </div>
+</div>
+
+<div id="left_content">
+    {% include "MembersManagementBundle:Follow:all_my_followeds_items.html.twig" %} 
+
+    {% if followeds_and_related_data|length >0%}
+    <div 
+        id="center-content-pagination" class="left-pagination"
+        data-current-page="0" 
+        data-url="{{path('page_of_all_my_followeds')}}"
+        data-total-pages="{{ number_of_pages}}"> 
+        
+        {% include "MembersManagementBundle:HomePage:pagination.html.twig" %}
+     </div>
+     {%endif%}
+</div>

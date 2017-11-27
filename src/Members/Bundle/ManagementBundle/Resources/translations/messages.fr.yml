@@ -1,0 +1,222 @@
+menu:
+    my_inbox: Mon Inbox
+    my_market: >
+            Mon marché
+    my_shop: Ma boutique
+    new_article: Déposer une annonce
+    my_settings: Mes parametres
+    navigate_by_category : >
+                        Naviguer par catégorie
+    search:
+        search_in_all_site: Chercher dans tout le site
+        search: Chercher
+    home: Acceuil
+    
+errors:
+    follow:
+        login_to_follow: >
+            Vous devez etre connecté pour pouvoir s'abonner a cet utilisateur
+    chat:
+        login_to_chat: >
+            Vous devez etre connecté pour pouvoir chatter avec cet utilisateur
+    pagination: >
+            Cette valeur n'est pas valide !
+
+header_dialogs:
+    my_inbox:
+        about: >
+            à propos
+        at: >
+            à 
+        chat_with: Chat with
+        show_all_my_inbox: >
+            Toute la boite de réception
+        no_new_messages: Vous n'avez pas de nouveaux messages en ce moment.
+    my_network:
+        is_now_following_you: >
+            s'est abonné à votre boutique.
+        show_all_my_network: >
+            Toute la liste de mes abonnés.
+        no_new_followers: >
+            Vous n'avez pas de nouveaux abonnés en ce moment.
+    my_market:
+        at: >
+            à
+        show_all_my_market: >
+            Tout mon marché.
+        no_new_items: Il n' y a pas de nouveaux annonces provenant de vos abonnements.
+        empty: >
+            Votre marché est vide. Veuillez vous abonner à d'autres membres pour recevoir toutes leurs nouvelles annonces et avoir votre marché toujours mis à jour.
+    my_shop:
+        empty: Votre boutique est vide. Pour commencer a vendre, veuillez cliquer sur "Déposer une annonce". 
+
+left:
+    all_my_inbox:
+        all_my_inbox: >
+            Ma boite de réception
+        no_messages: Vous n'avez recu aucun message jusuq'au moment.
+    all_my_network:
+        all_my_network: >
+            Mes abonnés
+        no_followers: >
+            Vous n'avez pas d'abonnés. Votre boutique est probablement inactive. Veuillez mettre de l'activité dans votre boutique en déposant des annonces.
+    all_new_posters:
+        all_new_posters: Membres actifs 
+        no_new_posters: Pas de membres actifs pour le moment.
+    all_my_followeds:
+        all_my_followeds: Mes abonnements
+        no_followeds: >
+            Vous n'etes abonné à personne. Veuillez cliquer sur "S'abonner" d'un membre qui vous interesse pour recevoir toutes ses nouvelles annonces en temps réel.
+
+item : article
+
+center:
+    home: Bienvenue, il y a au total
+    no_items_in_home: On est en train d'effectuer une operation de maintenance, merci de revenir plus tard.
+    search:
+        search_results: >
+            Les résultats de la recherche
+        no_results_message: >
+            Aucune annonce ne correspond à votre recherche. Essayez avec d'autres mots clé.
+    shop:
+        items_from: Annonces de
+        no_items_from: Il n'y a pas d'annonces provenant de 
+    category:
+        no_items: Il n'y a pas d'annonces dans la catégorie 
+        
+global:
+    follower: >
+        abonné
+    followers: >
+        abonnés
+    article: annonce
+    articles: annonces
+    service: service
+    followed: abonnement
+    followeds: abonnements
+    total: au total
+    follow: S'abonner
+    unfollow: >
+        Se désabonner
+    result: >
+        Résult
+    
+post:
+    show:
+        edit: Editer
+        delete: Supprimer
+        chat: Chatter
+        sold: Vendu
+        disponible: Disponible
+        retweet: Re-déposer l'annonce
+    new:
+        enter_title: Le titre de votre annonce
+        enter_description: Le texte de votre annonce
+        enter_price: Le prix
+        product_or_service: Produit ou Service?
+        add_images_label: Ajouter des images(Min=1 et Max=8)
+        create_article: >
+            Créer
+        cancel_article_creation: Annuler
+        enter_category: >
+            La catégorie de votre annonce
+        notes: Notes sur l'annonce (Optionnels/Visibles à vous seulement)
+        principale: Principale
+    edit:
+        update: >
+            Mettre à jour
+        
+        
+        
+        #########################33
+
+informatique:
+    informatique: Informatique
+    ordinateurs_de_bureau: Ordinateurs de bureau
+    ordinateurs_portables: Ordinateurs portables
+    tablettes: Tablettes
+    accessoires_informatiques: >
+        Accéssoires  informatiques
+multimedia:
+    multimedia: Multimedia
+    son: Son
+    jeux_video_et_consoles: >
+        Jeux vidéos et consoles
+    televisions: >
+        Télévisions
+    projecteurs: Projecteurs
+    appareils_photo_et_cameras: Appareils photos et caméras
+    accessoires_multimedia: >
+        Accéssoires multimedia
+immobilier:
+    immobilier: Immobilier
+    appartements: Appartements
+    maisons_et_villas: Maison et villas
+    collocation: Collocation
+    bureaux: Bureaux
+    magasins: Magasins
+    terrains_et_fermes: Terrains et fermes
+    locations_de_vacances: Locations de vacances
+    autre: Autre
+la_maison:
+    la_maison: Maison
+    cuisine: Cuisine 
+    meubles: Meubles
+    decoration: Décoration
+    jardin: Jardin
+    outils_de_bricolage: Outils de bricolage
+    autre: Autre
+habillement_et_bien_etre:
+    habillement_et_bien_etre: Habillement et bien être
+    vetements: >
+        Vêtements
+    chaussures: Chaussures
+    montres: Montres
+    bijoux: Bijoux
+    sacs: Sacs
+    beaute: >
+        Beauté
+    bebe: >
+        Bébé
+    accessoires: >
+        Accéssoires
+    autre: Autre
+emploi:
+    emploi: Emploi
+    demandes_d_emploi: Demandes d'emploi
+    offres_d_emploi: Offres d'emploi
+    offres_de_stages: Offres de stages
+    demandes_de_stages: Demande de stages
+lecture:
+    lecture: Lecture
+    livres: Livres
+    magazines: Magazines
+telephones:
+    telephones: Téléphones
+mariage:
+    mariage: Mariage
+instruments_de_musique:
+    instruments_de_musique: Instruments de musique
+sport:
+    sport: Sport
+art: 
+    art: Art
+collections:
+    collections: Collections
+voyages:
+    voyages: Voyages
+cinema:
+    cinema: >
+        Cinéma
+animaux:
+    animaux: Animaux
+affaires:
+    affaires: Affaires
+materiels_professionel:
+    materiels_professionel: >
+        Matériels professionnels
+cours_et_formations:
+    cours_et_formations: Cours et formations
+services:
+    services: Services
+    

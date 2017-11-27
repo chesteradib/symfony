@@ -1,0 +1,39 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="wrapper">
+	<div class="container">
+            <form id="register_form" action="{{ path('fos_user_registration_register') }}" 
+                  {{ form_enctype(form) }} 
+                  method="POST" 
+                  class="fos_user_registration_register" 
+                  novalidate
+                  id="register_form">
+                    <div id="register-form-email-error" class="error-theme">{{ form_errors(form.email) }}</div>
+                    <div id="register-form-email-widget">
+                        {{ form_widget(form.email, { 'attr': { 'placeholder' : 'registration.enter_email'|trans }}) }}
+                    </div>
+                    
+                    <div id="register-form-username-error" class="error-theme">{{ form_errors(form.username) }}</div>
+                    <div id="register-form-username-widget">
+                        {{ form_widget(form.username, { 'attr': { 'placeholder' : 'registration.enter_username'|trans }}) }}
+                    </div>
+                    
+                    <div id="register-form-firstpass-error" class="error-theme">{{ form_errors(form.plainPassword.first) }}</div>
+                    <div id="register-form-firstpass-widget">
+                        {{ form_widget(form.plainPassword.first, { 'attr': { 'placeholder' : 'registration.enter_password'|trans }}) }}
+                    </div>
+                    
+                    <div id="register-form-secondpass-error" class="error-theme"> {{ form_errors(form.plainPassword.second) }}</div>
+                    <div id="register-form-secondpass-widget">
+                        {{ form_widget(form.plainPassword.second, { 'attr': { 'placeholder' : 'registration.re_enter_password'|trans }}) }}
+                    </div>
+                    {{ form_rest(form) }}
+                    
+                    <div>
+                        <button id="register_button" type="submit">{{ 'registration.submit'|trans }}</button>
+                    </div>
+            </form>
+            
+        </div>
+</div>
+

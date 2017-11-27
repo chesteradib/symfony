@@ -1,0 +1,38 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="wrapper">
+    <div class="container">
+        <form id="reset_request_form" action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+            <div>
+                {% if invalid_username is defined %}
+                    <div id="security-error" class="error-theme">
+                        <div class="error-message">
+                            <div class="error-message-text">
+                                <div class="message-text">{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}</div>
+                            </div>
+                            <div class="error-message-close">X</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <input type="text" 
+                    id="username" 
+                    name="username" 
+                    required="required" 
+                    placeholder="{{ 'resetting.request.username'|trans }}"
+                    />
+            </div>
+            <div>
+                <button id="reset_request_button" type="submit">{{ 'resetting.request.submit'|trans }}</button>
+            </div>
+            <div>
+                <button class="back_to_login"
+                        id="back_to_login" type="submit">{{ 'resetting.back_to_login'|trans }}</button>
+            <div>
+        </form>
+            
+            
+            
+    </div> 
+</div>

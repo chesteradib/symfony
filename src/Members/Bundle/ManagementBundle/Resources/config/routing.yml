@@ -1,0 +1,156 @@
+get_site_search_posts:
+    path:  /{search_text}/site/search/
+    defaults: { _controller: "MembersManagementBundle:Admin:pageOfSearch" } 
+    
+site_search:
+    path:  /site/search
+    defaults: { _controller: MembersManagementBundle:Admin:search}
+    requirements: { _method: post|head }
+
+
+#######################################
+all_jawla:
+  path:  /all_jawla
+  defaults: { _controller: MembersManagementBundle:Admin:allJawla}
+  
+  
+all_jawla_items:
+  path: /all_jawla_items
+  defaults: {_controller: MembersManagementBundle:Admin:allJawlaItems}
+
+
+all_new_posters:
+  path:  /all_new_posters
+  defaults: { _controller: MembersManagementBundle:Admin:allNewPosters}
+  
+  
+page_of_all_new_posters:
+  path: /page_of_all_new_posters
+  defaults: {_controller: MembersManagementBundle:Admin:pageOfAllNewPosters}
+
+
+###############################################  
+
+user_admin_page:
+    path:     /admin/
+    defaults: { _controller: MembersManagementBundle:Admin:admin }
+
+############################################### 
+
+non_fos_user_security_login:
+    path:     /login
+    defaults: { _controller: MembersManagementBundle:Security:bigLogin }
+
+
+###############################################  
+
+follow_unfollow_shop:
+    path:     /followunfollow/{shop_id}
+    defaults: { _controller: MembersManagementBundle:Follow:followUnfollow }
+    requirements: { _method: post|delete }
+
+network_messages:
+  path:  /network_messages
+  defaults: { _controller: MembersManagementBundle:Follow:networkMessages}
+  
+  
+  
+follow_seen:
+  path: /follow_seen
+  defaults: {_controller: MembersManagementBundle:Follow:followSeen}
+
+last_date:
+  path: /last_date
+  defaults: {_controller: MembersManagementBundle:Follow:lastDate}
+  
+all_my_network:
+  path:  /all_my_network
+  defaults: { _controller: MembersManagementBundle:Follow:allMyNetwork}
+  
+  
+page_of_all_my_network:
+  path: /page_of_all_my_network
+  defaults: {_controller: MembersManagementBundle:Follow:pageOfAllMyNetwork}
+  
+all_my_followeds:
+  path:  /all_my_followeds
+  defaults: { _controller: MembersManagementBundle:Follow:allMyFolloweds}
+  
+  
+page_of_all_my_followeds:
+  path: /page_of_my_followeds
+  defaults: {_controller: MembersManagementBundle:Follow:pageOfAllMyFolloweds}
+  
+###############################################  
+index:
+  path: /
+  defaults: { _controller: MembersManagementBundle:Index:index }
+
+
+
+mobile:
+  path: /mobile
+  defaults: { _controller: MembersManagementBundle:Index:mobile }
+  
+
+############################################### 
+
+
+add_message:
+  path:  /{receiver_id}/{post_id}/add_message
+  defaults: { _controller: MembersManagementBundle:Messages:addMessage}
+  
+new_message:
+  path:  /new_message/{receiver_id}/{post_id}
+  defaults: { _controller: MembersManagementBundle:Messages:newMessage}
+
+inbox_messages:
+  path:  /{receiver_id}/inbox_messages
+  defaults: { _controller: MembersManagementBundle:Messages:inboxMessages}
+  
+all_my_inbox:
+  path:  /all_my_inbox
+  defaults: { _controller: MembersManagementBundle:Messages:allMyInbox}
+
+page_of_all_my_inbox:
+  path: /page_of_all_my_inbox
+  defaults: {_controller: MembersManagementBundle:Messages:pageOfAllMyInbox}
+      
+messages_between_two_users_about_article:
+  path: /messages_between_two_users_about_article/{sender_id}/{receiver_id}/{post_id}
+  defaults: {_controller: MembersManagementBundle:Messages:getMessagesBetweenTwoUsersAboutArticle}
+
+
+message_seen:
+  path: /message_seen
+  defaults: {_controller: MembersManagementBundle:Messages:messageSeen}
+  
+messages_seen:
+  path: /messages_seen
+  defaults: {_controller: MembersManagementBundle:Messages:messagesSeen}
+
+############################################### 
+
+latlngjson:
+    path: /latlngjson
+    defaults: { _controller: MembersManagementBundle:Profile:latLngJson, _format: json}
+    
+    
+###############################################  
+
+update_profile_picture:
+    path: /{user_id}/update_profile_picture
+    defaults: { _controller: MembersManagementBundle:Profile:updateProfilePicture}
+
+delete_profile_picture:
+    path: /{img_id}/delete_profile_picture
+    defaults: { _controller: MembersManagementBundle:Profile:deleteProfilePicture}
+
+    
+    
+###############################################  
+
+deactivate_profile:
+    path: /deactivate_profile
+    defaults: { _controller: MembersManagementBundle:Profile:deactivateProfile}
+    

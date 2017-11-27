@@ -1,0 +1,91 @@
+
+
+
+/*   *//*   *//*   *//*   */
+/* Profile picture styles*/
+/*   *//*   *//*   *//*   */
+.center-horizontally
+{
+    text-align: center;
+}
+.equal-profile-image
+{
+    
+    width:100%;
+    height:100%;
+}
+.tall-profile-image
+{
+    height: 100%;
+}
+.fat-profile-image
+{
+    vertical-align:middle;
+    width: 88%;
+    padding-right: 3px;
+}
+
+/*   *//*   *//*   *//*   */
+/* Images styles */
+/* Images in square shapes like: Scroller */
+/*   *//*   *//*   *//*   */
+.tall
+{
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.fat
+{
+    vertical-align: middle;
+    width:64px;
+}
+.equal
+{
+    width:99%;
+    height:99%;
+}
+
+
+/*   *//*   *//*   *//*   *//*   */
+/* Images styles FOR  Main Image*/
+/*   *//*   *//*   *//*   *//*   */
+
+.mi-very-fat
+{
+    width: 384px;    
+    vertical-align: middle;
+    height:initial;
+}
+.mi-fat
+{
+    height:250px;
+    width:initial;
+    vertical-align: auto;
+}
+.mi-tall
+{
+    text-align: center;
+    width:initial;
+    vertical-align: inherit;
+    height:250px;
+}
+
+
+/* The helper span */
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
+#post-owner-image-name {
+    width: 179px;
+    height: 100%;
+    float: left;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+}

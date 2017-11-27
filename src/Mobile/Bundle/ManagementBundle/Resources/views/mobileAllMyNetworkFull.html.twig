@@ -1,0 +1,19 @@
+{% extends ':mobile:base.html.twig' %}
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/mobile_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    {% include "MobileManagementBundle:Header:mobileAdminHeader.html.twig" %}
+    {% include "MobileManagementBundle:Follow:all_my_network.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_my_inbox_js.js') }}"></script>
+{% endblock %}
+
+     
+     
+     

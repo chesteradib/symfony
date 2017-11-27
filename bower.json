@@ -1,0 +1,26 @@
+{
+  "name": "community",
+  "description": "Symfony Standard Edition ========================",
+  "main": "index.js",
+  "authors": [
+    "lettersandblankspaces <whitelettersandblankspaces@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lettersandblankspaces/test-repository",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "1.11.4",
+    "jquery": "1.9.1",
+    "malihu-custom-scrollbar-plugin": "~3.1.3",
+    "jsrender": "~0.9.71",
+    "moment": "~2.11.1"
+  }
+}

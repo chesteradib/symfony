@@ -1,0 +1,31 @@
+parameters:
+    shop_management.post.class: Shop\Bundle\ManagementBundle\Entity\Post
+    
+
+services:
+   my_shop_controller:
+        class: Shop\Bundle\ManagementBundle\Entity\ServiceName
+        arguments:    ["@doctrine.orm.default_entity_manager", "@members_management.follow.services"]
+   
+   
+   shop_management.image.services:
+        class: Shop\Bundle\ManagementBundle\Entity\ImageServices
+        arguments:    ["@doctrine.orm.default_entity_manager"]
+        
+        
+   shop_management.mymarket.services:
+        class: Shop\Bundle\ManagementBundle\Entity\MyMarketServices
+        arguments:    ["@doctrine.orm.default_entity_manager"]
+        
+   shop_management.post.handler:
+        class: Shop\Bundle\ManagementBundle\Handler\PostHandler
+        arguments: ["@doctrine.orm.entity_manager" , %shop_management.post.class% ]
+        
+   shop_management.article.paginator:
+       class: Shop\Bundle\ManagementBundle\Handler\Paginator
+       arguments : ["@my_shop_controller"]
+   
+   shop_management.category.services:
+       class: Shop\Bundle\ManagementBundle\Entity\CategoryServices
+       arguments:    ["@doctrine.orm.default_entity_manager"]
+   

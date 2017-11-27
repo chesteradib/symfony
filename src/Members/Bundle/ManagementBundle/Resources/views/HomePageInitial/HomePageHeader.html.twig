@@ -1,0 +1,28 @@
+{% include "MembersManagementBundle:HomePageInitial:header_dialogs.html.twig" %} 
+
+<div id="website_logo_in_homepage">
+    <a href="{{path('index')}}"></a>
+</div>
+
+<div class="my_search">
+    {% include "MembersManagementBundle::search.html.twig" %} 
+</div>
+
+<div class="show_categories">
+    <a href="javascript:void(0);" class="show_categories_trigger"> 
+        <div>{{ 'menu.navigate_by_category'| trans}}</div>
+        <div class="show_categories_arrow"></div>
+    </a>
+</div>
+        
+<div id="login_trigger_container">
+    <a href="javascript:void(0);" class="login_trigger">
+        {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+    </a>
+</div>
+
+<div id="signup_trigger_container">
+    <a href="javascript:void(0);" class="signup_trigger">
+        {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
+    </a>
+</div>

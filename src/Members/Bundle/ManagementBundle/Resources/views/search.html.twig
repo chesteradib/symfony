@@ -1,0 +1,17 @@
+<form id="search-form" 
+      class="searchbar-form" 
+      method="post" 
+      action="{{path('site_search')}}"
+      >      
+	<input type="text" 
+               class="search-keyword" 
+               name="SearchText"
+               {# placeholder="{{ 'menu.search.search_in_all_site'| trans }}" #}
+               tabindex="1" 
+               onfocus="if (this.value=='{{ 'menu.search.search_in_all_site'| trans }}') this.value = ''" 
+               maxlength="140" 
+               size="28" 
+               value="{{ 'menu.search.search_in_all_site'| trans }}"
+               >
+        <input type="submit" class="search-button" value>
+</form>

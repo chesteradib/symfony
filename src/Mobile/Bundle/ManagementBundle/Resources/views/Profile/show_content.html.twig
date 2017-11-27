@@ -1,0 +1,25 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show" data-latitude="{{ user.latitude }}" data-longitude="{{ user.longitude }}">
+    <div class="profile_picture">
+      <img class="photo"  src="{{ asset(profile_url) }}" width="60"/> 
+    </div>
+    
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p>{{ user.getDomainName }}</p>
+    <p>{{ user.getStoreDescription }}</p>
+    <div class="map-canvas" id="map-profile-show" style="height:180px"></div>
+
+</div>
+    
+    
+
+
+<a href="javascript:void(0);" class="edit_my_profile" data-url="{{path('fos_user_profile_edit')}}">
+edit
+</a>
+
+<a href="javascript:void(0);" class="deactivate_my_profile" data-url="{{path('deactivate_profile')}}">
+deactivate
+</a>

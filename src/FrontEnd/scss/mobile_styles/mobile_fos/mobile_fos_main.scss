@@ -1,0 +1,58 @@
+$vert-opace:rgb(230, 239, 235);
+$vert-opace2:rgba(0,98,51,0.2);
+$vert-opace3:rgba(0,98,51,0.3);
+
+$rouge: #c1272d;
+
+
+@import 'dashboard_validation_styles';
+@import 'dashboard_header';
+@import 'homepage_login';
+@import '../mobile_header.scss';
+
+*
+{
+  box-sizing: border-box;
+  -moz-box-sizing: borders-box;
+  -webkit-box-sizing: border-box;
+}
+
+.clear
+{
+    clear:both;
+}
+body
+{
+    margin:0;
+}
+
+/**/
+/**/
+/**/
+
+.chooser { top: -100px; z-index: 1; 
+    position:absolute;
+    opacity:0;
+    /* For IE8 "Keep the IE opacity settings in this order for max compatibility" */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /* For IE5 - 7 */
+    filter: alpha(opacity=0);
+
+}
+
+#mobile-container
+{
+    margin: 0 auto;
+    max-width: 500px;
+    width: 98%;   
+}
+
+.fatty
+{
+   height:100%;
+}
+
+.tally
+{
+   width:100%; 
+}

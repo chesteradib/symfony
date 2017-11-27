@@ -1,0 +1,139 @@
+<?php
+
+namespace Members\Bundle\ManagementBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Follow
+ */
+class Follow
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     */
+    private $lastDate;
+
+    /**
+     * @var boolean
+     */
+    private $followSeen;
+
+    /**
+     * @var \Members\Bundle\ManagementBundle\Entity\User
+     */
+    private $follower;
+
+    /**
+     * @var \Members\Bundle\ManagementBundle\Entity\User
+     */
+    private $followed;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set lastDate
+     *
+     * @param \DateTime $lastDate
+     * @return Follow
+     */
+    public function setLastDate($lastDate)
+    {
+        $this->lastDate = $lastDate;
+    
+        return $this;
+    }
+
+    /**
+     * Get lastDate
+     *
+     * @return \DateTime 
+     */
+    public function getLastDate()
+    {
+        return $this->lastDate;
+    }
+
+    /**
+     * Set followSeen
+     *
+     * @param boolean $followSeen
+     * @return Follow
+     */
+    public function setFollowSeen($followSeen)
+    {
+        $this->followSeen = $followSeen;
+    
+        return $this;
+    }
+
+    /**
+     * Get followSeen
+     *
+     * @return boolean 
+     */
+    public function getFollowSeen()
+    {
+        return $this->followSeen;
+    }
+
+    /**
+     * Set follower
+     *
+     * @param \Members\Bundle\ManagementBundle\Entity\User $follower
+     * @return Follow
+     */
+    public function setFollower(\Members\Bundle\ManagementBundle\Entity\User $follower = null)
+    {
+        $this->follower = $follower;
+    
+        return $this;
+    }
+
+    /**
+     * Get follower
+     *
+     * @return \Members\Bundle\ManagementBundle\Entity\User 
+     */
+    public function getFollower()
+    {
+        return $this->follower;
+    }
+
+    /**
+     * Set followed
+     *
+     * @param \Members\Bundle\ManagementBundle\Entity\User $followed
+     * @return Follow
+     */
+    public function setFollowed(\Members\Bundle\ManagementBundle\Entity\User $followed = null)
+    {
+        $this->followed = $followed;
+    
+        return $this;
+    }
+
+    /**
+     * Get followed
+     *
+     * @return \Members\Bundle\ManagementBundle\Entity\User 
+     */
+    public function getFollowed()
+    {
+        return $this->followed;
+    }
+}

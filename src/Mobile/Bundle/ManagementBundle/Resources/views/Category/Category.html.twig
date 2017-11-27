@@ -1,0 +1,69 @@
+<div id="mobile-container">
+    <div id="mobile-context">
+        <div id="mobile-context-breadcrumb">
+            <div id="mobile-context-user-name">
+                {% if not category.getParent %}
+                {{ (category.getName~'.'~category.getName) | trans }}
+                {% else %}
+                {{ (category.getParent.getName~'.'~category.getName) | trans }}
+                {% endif %} 
+            </div>
+            <div id="mobile-context-number-of-items">
+                {% if total_number_of_items >0 %}
+                ({{total_number_of_items}} {{ 'global.article'| trans}}{% if total_number_of_items >1 %}s{%endif%})  
+                {%endif%}
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-content">
+        <div id="mobile-content-items-container">
+            {% if entities|length <=0 %}
+                <div class="no-items">{{'center.category.no_items'|trans}} 
+                "{% if not category.getParent %}
+                {{ (category.getName~'.'~category.getName) | trans }}
+                {% else %}
+                {{ (category.getParent.getName~'.'~category.getName) | trans }}
+                {% endif %}"
+            </div>
+            {% endif %}
+            {% include "MobileManagementBundle::items.html.twig" %}  
+            <div class="clear"></div>
+        </div>
+
+        {% if number_of_pages >1%}
+        <div 
+            id="mobile-content-pagination"
+            data-current-page="{{page}}" 
+            data-url="{{path('mobile_category',{ 'categoryId': category.id, 'page' : page})}}"
+            data-total-pages="{{ number_of_pages}}" > 
+
+            <div id="pagination-navigation">
+            {% if number_of_pages > 0 %}
+            <a href="{{ path('mobile_category', { 'categoryId': category.id, 'page' : page + 1}) }}">
+                <div id="show_next_page" 
+                   class="{% if number_of_pages == page + 1 %}hide{% endif %}"
+                   >
+                </div>
+            </a>
+            <div id="page-number">
+                <input id="current-page" type="text" name="fname" value="{{page + 1}}">
+                <span id="total-pages">/{{ number_of_pages }}</span>
+            </div>
+            <a href="{{ path('mobile_category', { 'categoryId': category.id, 'page' : page - 1}) }}">
+            <div id="show_previous_page" 
+                class="{% if page == 0 %}hide{% endif %}"
+                >
+            </div>
+            </a>
+                <div id="pagination-message">
+                    <div id="pagination-message-text">{{'errors.pagination' | trans}}</div>
+                    <div id="pagination-message-close">X</div>
+                </div>
+            {% endif %}
+        </div>
+         </div>
+        {% endif %}
+    </div>
+</div>
+

@@ -1,0 +1,14 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <div class="wrapper">
+	<div class="container">
+            <div>
+                {{ 'resetting.check_email'|trans({'%email%': email}) }}
+            <div>
+            <div>
+                <button id="back_to_login" type="submit">{{ 'resetting.back_to_login'|trans }}</button>
+            <div>
+        </div>
+    </div>
+{% endblock %}

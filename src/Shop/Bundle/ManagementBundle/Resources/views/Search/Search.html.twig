@@ -1,0 +1,26 @@
+<div id="center-context">
+    <div id="center-context-articles-from">
+        {{'center.search.search_results'|trans}}{% if countOfResults >0%}
+        : {{countOfResults}}
+        {{ 'global.result'| trans}}{% if countOfResults >1%}s{%endif%}{%endif%}
+    </div>
+</div>
+
+
+<div id="center-content">
+   <div id="center-items-container">
+        {% if entities|length <=0 %}
+            <div class="no-items">{{'center.search.no_results_message'|trans}}</div>
+        {% endif %}
+        {% include "ShopManagementBundle::items.html.twig" %} 
+    </div>
+    
+    <div id="center-content-pagination" class="center-pagination"
+        data-current-page="0" 
+        data-url="{{path('get_site_search_posts',{ 'search_text':searchText})}}"
+        data-total-pages="{{number_of_pages}}"
+        >
+        {% include "MembersManagementBundle:HomePage:pagination.html.twig" %}
+    </div>
+</div>
+

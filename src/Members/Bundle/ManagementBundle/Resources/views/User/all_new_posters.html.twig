@@ -1,0 +1,21 @@
+<div id="left_context">
+      <div id="left-context-articles-from">
+       {{ 'left.all_new_posters.all_new_posters'| trans}} 
+    </div>
+</div>
+
+<div id="left_content">
+    {% include "MembersManagementBundle:User:all_new_posters_items.html.twig" %} 
+    
+
+     <!-- data-current-page from 0 to (number_of_pages -1)  -->
+     <!-- data-total-pages from 0 to (number_of_pages -1)  -->
+    <div 
+        id="center-content-pagination" class="left-pagination"
+        data-current-page="0" 
+        data-url="{{path('page_of_all_new_posters')}}"
+        data-total-pages="{{ number_of_pages}}" > 
+        
+        {% include "MembersManagementBundle:HomePage:pagination.html.twig" %}
+     </div>
+</div>

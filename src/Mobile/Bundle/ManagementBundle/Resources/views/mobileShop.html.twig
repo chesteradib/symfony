@@ -1,0 +1,20 @@
+{% extends ':mobile:base.html.twig' %}
+
+{% block stylesheets %}
+   <link rel="stylesheet" href="{{ asset('css/mobile_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+        {% include "MobileManagementBundle:Header:mobileAdminHeader.html.twig" %}
+    {% else %}
+        {% include "MobileManagementBundle:Header:mobileNonAdminHeader.html.twig" %}
+    {% endif %}
+    {% include "MobileManagementBundle:Shop:Shop.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/mobile_my_inbox_js.js') }}"></script>
+{% endblock %}
+

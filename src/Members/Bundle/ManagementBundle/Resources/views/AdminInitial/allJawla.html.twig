@@ -1,0 +1,27 @@
+<div id="center-context">
+    <div id="center-context-articles-from">
+        {{ 'center.home'| trans}}{% if total_number_of_items >0%}
+            {{total_number_of_items}}
+        {{ 'global.article'| trans}}{% if total_number_of_items >1%}s{%endif%}    
+        {%endif%}
+    </div>
+</div>
+
+<div id="center-content">
+    <div id="center-items-container">
+        {% if entities|length <=0 %}
+            <div class="no-items">{{ 'center.no_items_in_home'| trans}}</div>
+        {% endif %}
+        {% include "ShopManagementBundle::items.html.twig" %} 
+   </div>
+    <!-- data-current-page from 0 to (number_of_pages -1)  -->
+    <!-- data-total-pages from 0 to (number_of_pages -1)  -->
+
+    <div id="center-content-pagination" class="center-pagination" 
+        data-current-page="0" 
+        data-url="{{path('all_jawla_items')}}"
+        data-total-pages="{{number_of_pages}}"
+        >
+        {% include "MembersManagementBundle:HomePage:pagination.html.twig" %}
+    </div>
+</div>

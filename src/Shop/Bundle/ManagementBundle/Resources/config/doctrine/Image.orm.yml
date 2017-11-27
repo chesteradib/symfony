@@ -1,0 +1,28 @@
+Shop\Bundle\ManagementBundle\Entity\Image:
+    type: entity
+    table: image
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        path:
+            type: string
+        uploadDate:
+            type: datetime
+            column: upload_date
+            nullable: true
+        widthVsHeight:
+            type: integer
+    manyToOne:
+      post:
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Post
+        inversedBy: images
+        joinColumn:
+          name: post_id
+          type: integer
+          referencedColumnName: id
+          onDelete: cascade
+    lifecycleCallbacks: {  }
+ 

@@ -1,0 +1,62 @@
+
+    {% for entity in entities %}
+    <a href="javascript:void(0);" class="show_article_trigger" data-show-url="{{path('post_show',{ 'id': entity.id})}}" >
+        <div class="item-container">
+           <div class="product-price-in-posts">
+               <span class="p-p-i-p">
+                   {% if entity.postPrice %}
+                   {{entity.postPrice}}
+                   {% endif %}
+                </span>
+               <span class="p-p-i-p-currency">DHs</span>
+           </div>
+           <div class="product-image-and-title" id="{{entity.id}}">
+                <div class="product-image-in-posts round">
+                    {% if entity.postMainImagePath 
+                        and entity.postMainImagePath.uploadDate  
+                        and entity.postMainImagePath.widthVsHeight
+                        %}
+                        {% set uploadDate = entity.postMainImagePath.uploadDate %}
+                        {% set image_url = 'uploads/'~uploadDate|date('Y')~'/'
+                                                    ~uploadDate|date('m')~'/'
+                                                    ~uploadDate|date('d')~'/'
+                                                    ~uploadDate|date('H')~'/'~'m_'
+                                                    ~entity.postMainImagePath.path
+                                %}
+                        {% if entity.postMainImagePath.widthVsHeight == 0 %}
+                        <img src="{{  asset(image_url) }}"/>
+                        {% elseif entity.postMainImagePath.widthVsHeight == 1 %}
+                        <img class="fatty"  src="{{  asset(image_url) }}"/>
+                        {% elseif entity.postMainImagePath.widthVsHeight == 2 %}
+                        <img class="tally"  src="{{ asset(image_url) }}"/>
+                        {% endif%}
+                    {% endif %}
+                </div>
+                <div class="product-title-in-posts">
+                    {% if entity.postTitle %}{{entity.postTitle}}{% endif %}
+                </div>                 
+           </div>
+           <div class="product-user-image-in-posts">
+               <div class="product-user-image"> 
+                 {% if entity.user and  entity.user.getProfilePicture %}
+                    {% set createdAt = entity.user.getCreatedAt %}
+                    {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                                        ~createdAt|date('m')~'/'
+                                        ~entity.user.getProfilePicture.path
+                                    %}
+                    {% if entity.user.getProfilePicture.widthVsHeight == 0 %}
+                    <img class="m-i-p-p-u photo equal" src="{{ asset(image_url) }}" height= 25/>
+                    {% elseif entity.user.getProfilePicture.widthVsHeight == 1 %}
+                    <span class="helper"></span>
+                    <img class="m-i-p-p-u photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                    {% elseif entity.user.getProfilePicture.widthVsHeight == 2 %}
+                    <img class="m-i-p-p-u photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                    {% endif%}
+                 {% endif %}
+               </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+

@@ -1,0 +1,6 @@
+{% for message in messages %}
+   <div class="ui-chatbox-msg">
+        <b>{{message.sender.username}}:</b>
+        <span>{{ message.messageContent }}</span>   
+   </div>     
+{% endfor %}

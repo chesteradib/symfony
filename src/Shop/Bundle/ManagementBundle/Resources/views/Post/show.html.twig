@@ -1,0 +1,238 @@
+    <div id="post-title-price-description">
+        <div class="post-title-and-price" id="post-title-price-date">
+            <div id="post-title">{{ entity.postTitle }}</div>
+            <div id="post-price-and-date">
+                <div id="post-price">
+                    <span id="p-price">{{ entity.postPrice }}</span>
+                    <span class="currency" id="currency">DHs</span>                        
+                </div>
+                <div class="post-date" id="post-date">
+                    {{ entity.postDate|date('M-d') }} at {{ entity.postDate|date('H:m') }}   
+                </div>
+                <div id="post-bought">
+                    <a id="bought-trigger"
+                      href="javascript:void(0);" 
+                      data-url="{{ path('post_bought', { 'post_id': entity.id }) }}"
+                    >
+                        <div class="bought_article_symbol bought_trigger_on{% if not entity.bought%} bought_trigger_off{% endif %}"
+                             ></div>
+                        <div class="bought_article_text">
+                            {{ (entity.bought) ? 'post.show.sold'|trans : 'post.show.disponible'|trans }}
+                        </div>
+                        <div class="clear"></div> 
+                    </a>
+                 </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="post-content" id="post-content">
+            <div id="post-content-first-inner">
+                <div id="post-content-second-inner">
+                    {{ entity.postContent|nl2br }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% set counter = 0 %}
+    <div class="post-images" id="post-images">
+            <div class="post-scroller" id="post-scroller" data-number-of-images="{{entity.images | length}}">
+                <div class="left_arrow" id="left_arrow"></div>
+                <div class="post-images-wrapper" id="post-images-wrapper">
+                    <div class="post-images-toScroll" id="post-images-toScroll">
+                        <div class="scrollable mainy active" 
+                             data-title="Image {{counter}}" 
+                             data-lightbox="myCustomLightBox" 
+                             data-number="{{counter}}"
+                             >
+                            {% set uploadDate = entity.postMainImagePath.uploadDate %}
+                            {% set image_url = 'uploads/'~uploadDate|date('Y')~'/'
+                                                ~uploadDate|date('m')~'/'
+                                                ~uploadDate|date('d')~'/'
+                                                ~uploadDate|date('H')~'/'~'s_'
+                                                ~entity.postMainImagePath.path
+                            %}
+                            {% if entity.postMainImagePath.widthVsHeight == 0 %}
+                            <img class="photo equal"  src="{{ asset(image_url) }}"/>
+                            {% elseif entity.postMainImagePath.widthVsHeight == 1 %}
+                            <span class="helper"></span>
+                            <img class="photo fat"  src="{{ asset(image_url) }}"/>
+                            {% elseif entity.postMainImagePath.widthVsHeight == 2 %}
+                            <img class="photo tall"  src="{{ asset(image_url) }}"/>
+                            {% endif%}
+                        </div>
+                        {% set counter = counter + 1 %}
+                        {% for image in entity.images %}
+                            {%if image!=entity.postMainImagePath%}
+                                <div class="scrollable {%if image==entity.postMainImagePath%}mainy{%endif%}" 
+                                     data-title="Image {{counter}}" 
+                                     data-lightbox="myCustomLightBox" 
+                                     data-number="{{counter}}"
+                                     >
+                                    {% set uploadDate = image.uploadDate %}
+                            
+                                    {% set image_url = 'uploads/'~uploadDate|date('Y')~'/'
+                                                    ~uploadDate|date('m')~'/'
+                                                    ~uploadDate|date('d')~'/'
+                                                    ~uploadDate|date('H')~'/'~'s_'
+                                                    ~image.path
+                                    %}
+                                    {% if image.widthVsHeight == 0 %}
+                                    <img class="photo equal"  src="{{ asset(image_url) }}"/>
+                                    {% elseif image.widthVsHeight == 1 %}
+                                    <span class="helper"></span>
+                                    <img class="photo fat"  src="{{ asset(image_url) }}"/>
+                                    {% elseif image.widthVsHeight == 2 %}
+                                    <img class="photo tall"  src="{{ asset(image_url) }}"/>
+                                    {% endif%}
+                                </div>
+                            {%endif%}
+                        {% set counter = counter + 1 %}
+                        {% endfor %}
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="right_arrow" id="right_arrow"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="post-main-image triggerCustomLightBox"
+                 id="post-main-image"
+                 data-target-customLightBox="myCustomLightBox" 
+                 data-number="0"
+                 >
+                    {% set uploadDate = entity.postMainImagePath.uploadDate %}
+                    {% set image_url = 'uploads/'~uploadDate|date('Y')~'/'
+                                        ~uploadDate|date('m')~'/'
+                                        ~uploadDate|date('d')~'/'
+                                        ~uploadDate|date('H')~'/'~'m_'
+                                        ~entity.postMainImagePath.path
+                                    %}
+                    <img src="{{ asset(image_url) }}">
+                    <div class="image-zoom"></div>
+            </div>
+    </div>
+    <div id="post-footer">
+        {% if app.user %}
+            {% if entity.user and (app.user.id == entity.user.id) %}
+            <div id="post-footer-left">    
+                <div id="post-edit-delete">
+                    <div id="post-edit">
+                        <a id="edit_article_trigger"
+                           href="javascript:void(0);" 
+                           data-url="{{ path('post_edits', { 'id': entity.id }) }}"
+                           >
+                            <div id="edit_article_symbol"></div>
+                            <div id="edit_article_text">{{'post.show.edit'|trans}}</div>
+                            <div class="clear"></div>
+                        </a>   
+                    </div>
+
+                        
+                    <div id="post-delete">
+                        <form id="delete_article_trigger"
+                            action="{{ path('post_deletes', { 'id': entity.id }) }}" 
+                            method="post">
+                            <input type="hidden" name="_method" value="DELETE" />
+                            {{ form_widget(delete_form) }}
+                            <button type="submit">
+                                <div id="delete_article_symbol"></div>
+                                <div id="delete_article_text">{{'post.show.delete'|trans}}</div>
+                                <div class="clear"></div>
+                            </button>
+                        </form>
+                    </div>
+                 </div>
+                                
+                <div id="post-retweet">
+                <a id="retweet_article_trigger"  
+                   href="javascript:void(0);"
+                   data-url="{{ path('post_retweet', { 'post_id': entity.id }) }}"
+                        >
+                         <div id="retweet_article_symbol"></div>
+                         <div id="retweet_article_text">{{'post.show.retweet'|trans}}</div>
+                         <div class="clear"></div>
+                     </a>   
+                </div>
+                <div class="clear"></div>
+            </div>
+            {%endif%}
+        {% endif %}
+  
+        <div id="post-footer-right"
+                {% if app.user and (app.user.id == entity.user.id) %}
+                    class="small" 
+                {%else%}
+                    class="wide"
+                {%endif%}
+            >
+                <div class="post-chat" id="post-chat">        
+                {% if entity.user and app.user and app.user.id != entity.user.id %}
+                    <a href="javascript:void(0);" 
+                        class="open_chat_trigger o-c-t-s" 
+                        data-post-author-id="{{entity.user.id}}"
+                        data-post-id="{{entity.id}}" 
+                        data-sender-id="{{app.user.id}}"
+                        data-url="{{ path('index')}}new_message/"
+                        data-url2="{{ path('index')}}messages_between_two_users_about_article/"
+                        data-main-src="{{ asset(image_url) }}"
+                        data-wVsH="{{entity.postMainImagePath.widthVsHeight}}"
+                        >
+                        <div id="chat_symbol"></div>
+                        <div id="chat_text">
+                            {{'post.show.chat'|trans}}
+                        </div>
+                        <div class="clear"></div> 
+                    </a>              
+                {%elseif not app.user %}
+                    <a href="javascript:void(0);" 
+                        class="open_chat_trigger o-c-t-s notpossible" 
+                        >
+                        <div id="chat_symbol"></div>
+                        <div id="chat_text">
+                            {{'post.show.chat'|trans}}
+                        </div>
+                    </a>
+                {%endif%}
+                </div>
+            {% if entity.user %}
+                <a href="javascript:void(0);" 
+                   class="show_shop item" 
+                   data-url="{{ path('index')}}shop/" 
+                   data-shop-id="{{entity.user.id}}"
+                   >   
+                <div class="post-date-owner-image-owner-name" id="post-owner-image-name">
+                    {% if entity.user.getProfilePicture %}
+                    <div class="post-owner-image {% if entity.user.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}" 
+                         id="post-owner-image"
+                         data-wVsH="{{entity.user.getProfilePicture.widthVsHeight}}">
+                        {% set createdAt = entity.user.getCreatedAt %}
+                        {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                            ~createdAt|date('m')~'/'
+                            ~entity.user.getProfilePicture.path %}
+                            {% if entity.user.getProfilePicture.widthVsHeight == 0 %}
+                            <img class="photo equal" src="{{ asset(image_url) }}"/>
+                            {% elseif entity.user.getProfilePicture.widthVsHeight == 1 %}
+                            <span class="helper"></span>
+                            <img class="photo fat-profile-image" src="{{ asset(image_url) }}"/>
+                            {% elseif entity.user.getProfilePicture.widthVsHeight == 2 %}
+                            <img class="photo tall-profile-image" src="{{ asset(image_url) }}"/>
+                            {% endif%}
+                    </div>
+                    {% else %}
+                        <div class="post-owner-image center-horizontally"
+                            id="post-owner-image"
+                            data-wVsH="0">
+                            <img class="photo equal" src="{{ asset('pp/index.png') }}"/>
+                        </div>
+                    {% endif%}
+                    <div class="post-owner-name" id="post-owner-name">
+                        {{entity.user.username}}
+                    </div> 
+            
+                </div>
+                </a>               
+            {%endif%}
+            <div class="clear"></div>
+        </div>
+ </div>
+
+

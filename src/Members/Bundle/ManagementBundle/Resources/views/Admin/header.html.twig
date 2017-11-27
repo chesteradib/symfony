@@ -1,0 +1,127 @@
+{% include "MembersManagementBundle:Admin:header_dialogs.html.twig" %} 
+
+<div class="left_navigation">
+    <div class="website_logo">
+        <a href="{{path('user_admin_page')}}">
+        </a>
+    </div>
+
+    <div class="my_search">
+        {% include "MembersManagementBundle::search.html.twig" %} 
+    </div>
+
+    <div class="show_categories">
+        <a href="javascript:void(0);" class="show_categories_trigger"> 
+            <div>{{ 'menu.navigate_by_category'| trans}}</div>
+            <div class="show_categories_arrow"></div>
+        </a>
+    </div>
+
+    <div class="my_inbox notification-container">
+            <a href="javascript:void(0);" class="show_inbox_trigger" data-url="{{path('inbox_messages',{ 'receiver_id': currentUser.id })}}">
+                {{ 'menu.my_inbox'| trans}}
+            </a>
+            <span class="notification-counter-my_inbox"
+                  {% if number_of_messages_not_seen < 1 %}
+                    style="display:none"
+                  {% endif%}
+                  >
+                {% if number_of_messages_not_seen > 0 %}
+                {{number_of_messages_not_seen}}
+                {% endif%}
+            </span>
+    </div>
+    <div class="my_market notification-container">
+            <a href="javascript:void(0);" class="show_my_market_trigger" data-url="{{path('get_my_market_dialog')}}">
+                {{ 'menu.my_market'| trans}}
+            </a>
+                <span class="notification-counter-my_market"
+
+                    {% if number_of_new_posts_by_followeds_not_seen < 1 %}
+                        style="display:none"
+                    {% endif%} 
+                    >
+                    {% if number_of_new_posts_by_followeds_not_seen > 0 %}
+                        {{number_of_new_posts_by_followeds_not_seen}}
+                    {% endif%}
+                </span>
+    </div>
+    <div class="my_shop_and_new_article">
+        <div class="">
+                <a href="javascript:void(0);" class="show_my_shop" data-url="{{path('get_my_shop')}}">
+                    {{ 'menu.my_shop'| trans}}
+                </a>
+        </div>
+        <div class="new_article">            
+                <a href="javascript:void(0);" class="new_article_trigger" > 
+                    &#8594; {{ 'menu.new_article'| trans}}
+                </a>
+        </div>  
+    </div>
+</div>
+
+
+
+<div class="logout-and-settings">
+    <div class="my_settings">            
+        <a href="javascript:void(0);" class="show_my_profile" data-url="{{path('fos_user_profile_show')}}">
+           {# {{ 'menu.my_settings'| trans}} #}
+        </a>
+    </div>
+    <div class="logout">
+        <a href="{{ path('fos_user_security_logout') }}">
+            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+        </a>
+    </div>
+</div> 
+
+<div class="right_navigation">
+    <div class="superior_right">
+            <div class="my_followers notification-container">
+                <a href="javascript:void(0);" class="show_network_trigger" data-url="{{path('network_messages')}}">
+                {{number_of_followers_of_current_user }}
+                </a>
+                <span class="notification-counter notification-counter-my_followers"
+                      {% if number_of_follows_not_seen < 1 %}
+                       style="display:none"
+                      {% endif%}
+                      >
+                {% if number_of_follows_not_seen > 0 %}
+                        {{number_of_follows_not_seen}}
+                {% endif%}
+                </span>
+            </div>
+            <div class="profile_image">
+                <a href="javascript:void(0);" class="show_my_profile" data-url="{{path('fos_user_profile_show')}}">
+                {% if currentUser.getProfilePicture %}
+                    {% set createdAt = currentUser.getCreatedAt %}
+                    {% set image_url = 'pp/'~createdAt|date('Y')~'/'
+                        ~createdAt|date('m')~'/'
+                        ~currentUser.getProfilePicture.path %}                        
+                    {% if currentUser.getProfilePicture.widthVsHeight == 0 %}
+                        <img class="photo equal" src="{{ asset(image_url) }}"/>
+                    {% elseif currentUser.getProfilePicture.widthVsHeight == 1 %}
+                        <span class="helper"></span>
+                        <img class="photo fat-profile-image" src="{{ asset(image_url) }}"/>
+                    {% elseif currentUser.getProfilePicture.widthVsHeight == 2 %}
+                        <img class="photo tall-profile-image" src="{{ asset(image_url) }}"/>
+                    {% endif%}
+                {% else %}
+                    <img class="photo equal" src="{{ asset('pp/index.png') }}"/>
+                {% endif%}
+                </a>
+            </div>                 
+
+    </div>
+    <div class="inferior_right">            
+            <a  href="{{path('show_shop',{ 'shop_id': currentUser.id })}}" target="_blank">
+               {# {{}}.jaw.la #}
+            </a>
+    </div>
+
+
+
+</div>
+                
+<div class="clear"></div>
+                

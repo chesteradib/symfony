@@ -1,0 +1,161 @@
+<form class="post-form" 
+    id="update_article_trigger" 
+    action="{{ path('post_updates', { 'id': id }) }}"  
+    data-iu-url="{{ path('image_uploads')}}" 
+    data-id-url="{{ path('image_deletes')}}"
+    method="post" 
+    {{ form_enctype(edit_form) }} 
+    novalidate>
+    
+    <div id="item-form-top">
+        <div id="form-categories-error" class="error-theme">{{ form_errors(edit_form.categories) }}</div>
+        <div id="form-categories-widget">            
+            <div id="select_category_label">
+                {{ 'post.new.enter_category' | trans}}                    
+            </div>
+            <select id="shop_bundle_managementbundle_posttype_categories" 
+                name="shop_bundle_managementbundle_posttype[categories][]">
+                {% for key,val in edit_form.categories.vars.choices %}
+                <option value="{{ val.value }}"
+                    {% if edit_form.categories.vars.value is not empty %}
+                        {% for key2,val2 in edit_form.categories.vars.value %}
+                            {%if val.value == val2 and not val.data.hasChildren%}
+                            selected
+                            {% endif %} 
+                        {% endfor %}
+                    {% endif %}
+                    {% if not val.data.getParent %}
+                        class ="parent_category"
+                    {% if val.data.hasChildren %}
+                        disabled="disabled"
+                    {% endif %}
+                    {% endif %}
+                    >
+                    {% if not val.data.getParent %}
+                    {{ (val.data.getName~'.'~val.data.getName) | trans }}
+                    {% else %}
+                    {{ (val.data.getParent.getName~'.'~val.data.getName) | trans }}
+                    {% endif %}   
+                </option>
+                {% endfor %}
+            </select>
+            <div class="clear"></div>
+        </div>
+        
+        <div id="form-title-error" class="error-theme">{{ form_errors(edit_form.postTitle) }}</div>
+        <div id="form-title-widget">
+            {{ form_widget(edit_form.postTitle, { 'attr': { 'placeholder' : 'post.new.enter_title'|trans }}) }}
+        </div>
+
+        <div id="form-content-error" class="error-theme">{{ form_errors(edit_form.postContent) }}</div>
+        <div id="form-content-widget">
+            {{ form_widget(edit_form.postContent, { 'attr': { 'placeholder' : 'post.new.enter_description'|trans }}) }}
+        </div>
+
+        <div id="form-price-error" class="error-theme">{{ form_errors(edit_form.postPrice) }}</div>
+        <div id="form-price-widget">
+            {{ form_widget(edit_form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price'|trans }}) }}
+        </div> 
+
+        <div id="form-images-error" class="error-theme">{{ form_errors(edit_form) }}</div>
+        <div id="form-images-widget"
+             class="images_input" 
+             data-prototype="{{ form_widget(edit_form.images.vars.prototype)|e }}"
+             >
+            <div id="add_image_label">
+                {{'post.new.add_images_label'|trans }}                                
+            </div>
+            <div class="add_image" id="add_image">
+                {% set counter = 0 %}
+                {% for image in entity.images %}
+                    <div data-index="{{counter}}">
+                    <div id="shop_bundle_managementbundle_posttype_images_{{counter}}" >
+                        <div>
+                            <input type="file" 
+                                   id="shop_bundle_managementbundle_posttype_images_{{counter}}_file" 
+                                   name="shop_bundle_managementbundle_posttype[images][{{counter}}][file]" class="chooser" />
+                        </div>
+                    </div>
+                        </div>
+                    {% set counter = counter + 1 %}
+                {% endfor %}
+                <a href="#" id="add_image_trigger"></a>
+            </div>
+
+            <div id="uploaded_images" data-principale="{{'post.new.principale'|trans}}">
+                {% for image in entity.images %}
+                <div class="image_cont has-image">
+                    <div class="one_photo" id="{{image.id}}" url="{{path('image_deletes')}}">
+                        <div class="image_div">
+                             {% set uploadDate = image.uploadDate %}
+                            
+                            {% set image_url = 'uploads/'~uploadDate|date('Y')~'/'
+                                            ~uploadDate|date('m')~'/'
+                                            ~uploadDate|date('d')~'/'
+                                            ~uploadDate|date('H')~'/'~'s_'
+                                            ~image.path
+                            %}
+                            {% if image.widthVsHeight == 0 %}
+                            <img class="photo equal"  src="{{ asset(image_url) }}"/>
+                            {% elseif image.widthVsHeight == 1 %}
+                            <span class="helper"></span>
+                            <img class="photo fat"  src="{{ asset(image_url) }}"/>
+                            {% elseif image.widthVsHeight == 2 %}
+                            <img class="photo tall"  src="{{ asset(image_url) }}"/>
+                            {% endif%}
+                            </div>
+                        <div class="image_controls">
+                            <a href="javascript:void(0);" class="delete_image_trigger"></a>
+                            <a href="javascript:void(0);" class="set_as_main {% if main_image_id!=0 and image.id == main_image_id %}main{% endif %}"></a>
+                        </div>
+                        {% if main_image_id and image.id == main_image_id %}
+                        <div id="principale">{{'post.new.principale'|trans}}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="image_cont empty"></div>
+                <div style="display:none" id="dvloader"><img src="{{ asset('images/loading.gif')}}" /></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="form-hiddens">
+            {% set counter = 0 %}
+            {% for image in entity.images %}
+            <input type="hidden" name="result[]" value="{{image.id}}" data-index="{{counter}}">
+            {% set counter = counter + 1 %}
+            {% endfor %}
+
+            <input type="hidden" name="main-image" value="{%if main_image_id !=0 %}{{main_image_id}} {%endif%}">
+
+            {{ form_widget(edit_form._token) }}
+        </div>
+    </div>
+    <div id="item-form-bottom" data-post-id="{{id}}">
+            <button id="add_item_button" type="submit">{{'post.edit.update'|trans }}</button>
+            <a id="cancel_item_button">
+                {{'post.new.cancel_article_creation'|trans }}
+            </a>
+            <a href="javascript:void(0);"
+                id="bought-trigger"
+                class="{% if entity.bought==true %}bought_trigger_on{%else%}bought_trigger_off{% endif %}"
+                href="javascript:void(0);" 
+                data-url="{{ path('post_bought', { 'post_id': entity.id }) }}"
+                data-author-is-user="1"
+            ></a>
+    </div>
+</form>
+{#
+<form 
+    action="{{ path('post_deletes', { 'id': id }) }}" 
+    method="post" 
+    id="delete_article_trigger"
+    >
+      <input type="hidden" name="_method" value="DELETE" />
+      {{ form_widget(delete_form) }}
+      <button type="submit" id="delete_article_button">{{'post.show.delete'|trans }}</button>
+</form>
+
+#}
+

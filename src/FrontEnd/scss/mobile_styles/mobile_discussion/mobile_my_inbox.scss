@@ -1,0 +1,127 @@
+.all_my_inbox_item a.show_shop
+{
+    width:100%;
+    height:100%;
+    
+    
+}
+.all_my_inbox_item .m-i-p-p-u-d:hover, .all_my_inbox_item .m-content:hover, .all_my_inbox_item .product-container-in_all_my_inbox:hover
+{
+    border-bottom: 1px solid rgba(0,98,51,0.2);
+    border-right: 1px solid rgba(0,98,51,0.2);
+    border-left: 1px solid rgba(0,98,51,0.2);
+
+}
+
+
+.m-i-p-p-u-d
+{
+    height: 60px + 2px; 
+    width: 60px;
+    float:right;
+    border-bottom: 1px solid rgba(0,98,51,0);
+    border-right: 1px solid rgba(0,98,51,0);
+    border-left: 1px solid rgba(0,98,51,0);
+    
+}
+.m-content
+{
+    height: 60px + 2px;
+    width: 150px;
+    float:right;
+    line-height: 60px;
+    font-size: 11px; 
+    border-bottom: 1px solid rgba(0,98,51,0);
+    border-right: 1px solid rgba(0,98,51,0);
+    border-left: 1px solid rgba(0,98,51,0);
+}
+.m-about
+{
+    height:60px + 2px;
+    width: 30px;
+    float:right;
+    line-height: 82px;
+    font-size: 9px; 
+    
+}
+
+.product-container-in_all_my_inbox
+{
+    height: 60px + 2px;
+    width: 60px;
+    float: right;
+    border-bottom: 1px solid rgba(0,98,51,0);
+    border-right: 1px solid rgba(0,98,51,0);
+    border-left: 1px solid rgba(0,98,51,0);
+}
+.product-image-and-title-in_all_my_inbox {
+    position: relative;
+    height: 60px + 2px;
+    width:60px;
+    vertical-align: top;
+}
+
+.product-title-in-in_all_my_inbox
+{
+    height: 60px + 2px;
+    width:60px;
+    color: white;
+    background: none;
+    z-index: -1;
+    position: absolute;
+    padding: 12%;
+    text-align: center;
+    font-size: 11px;
+}
+
+.product-image-in-in_all_my_inbox
+{
+    display: block;
+    height: 60px + 2px;
+    width:60px;
+    float: right;
+    position: relative;
+}
+
+.product-price-in_all_my_inbox
+{
+    height: 60px + 2px;
+    width:60px;
+    text-align: right;
+}
+
+.round-p-i-in_all_my_inbox
+{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px + 2px;
+    float: left;
+}
+
+
+.m-d-in_all_my_inbox
+{
+    width: 50px;
+    height: 60px + 2px;
+    float: right;
+    font-size: 10px;
+    line-height: 60px;
+    padding: 0 2px;
+}
+
+.m-d-up-in_all_my_inbox
+{
+    height: 30px + 1px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.m-d-down-in_all_my_inbox
+{
+    height: 30px + 1px;
+    text-align: center;
+    margin-top: -30px;
+    
+}

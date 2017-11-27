@@ -1,0 +1,149 @@
+$logoWidth: 156px;
+$headerHeight: 60px;
+$menuItemWidth: 86px;
+$sprite1 :url('../images/spritesheet1.png');
+$sprite3 : url('../images/spritesheet3.png');
+$vert:#006233;
+$rouge: #c1272d;
+$black: black;
+$gris:#e1e1e1;
+
+
+$vert-opace:rgb(230, 239, 235);
+
+
+.center-horizontally
+{
+    text-align: center;
+}
+
+.tall-profile-image
+{
+    height: 100%;
+}
+
+
+.profile_image
+{
+    width: $headerHeight * 5/6;
+    float:left;
+    //padding-left: $headerHeight/10;
+    cursor: pointer;
+    background: rgba(220,220,220,0.1);
+    border: 1px solid rgba(164,164,164,0.3);
+    height:100%;  
+}
+.profile-image a
+{
+    height:100%;
+}
+    
+.fat-profile-image
+{
+    vertical-align:middle;
+    width: 89%;
+    padding-right: 3px;
+}
+
+
+
+.m-s-p-p-u-d
+{
+    width:50px;
+    height:50px;
+    float:left;
+}
+
+.m-s-u
+{
+    width: auto;
+    padding: 0 3px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 12px;
+    max-width: 120px;
+    min-width: 120px;
+}
+
+
+.m-about
+{
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 8px;
+    padding: 0 2px;
+    
+    
+}
+.m-s-d
+{
+    width: 50px;
+    height: 50px;
+    float: left;
+    font-size: 10px;
+    line-height: 50px;
+    padding: 0 2px;
+}
+
+.m-s-d-up
+{
+    height:25px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 8px;
+}
+.m-s-d-down
+{
+    height:25px;
+    text-align: center;
+    margin-top: -25px;
+}
+
+
+.m-p-m-i-u-d
+{
+    width:50px;
+    height:50px;
+    float:left;
+    
+}
+
+.m-n
+{
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 2px;
+    max-width: 28px;
+    min-width: 28px;
+    
+    
+}
+.m-from
+{
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 8px;
+    padding: 0 3px;
+}
+.m-at
+{
+    width: 12px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 8px;
+    padding: 0 3px;
+
+}
+
+
+

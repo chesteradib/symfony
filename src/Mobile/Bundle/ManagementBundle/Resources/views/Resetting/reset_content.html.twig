@@ -1,0 +1,19 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div id="mobile-container">
+    <form id="reset_reset_form"
+          action="{{ path('mobile_fos_user_resetting_reset', {'token': token}) }}" {{ form_enctype(form) }} 
+          method="POST" 
+          class="fos_user_resetting_reset">
+            {{ form_widget(form.plainPassword.first, { 'attr': { 'placeholder' : 'resetting.enter_new_password'|trans } }) }}
+            {{ form_errors(form.plainPassword.first) }}
+
+            {{ form_widget(form.plainPassword.second, { 'attr': { 'placeholder' : 'resetting.re_enter_new_password'|trans }}) }}
+            {{ form_errors(form.plainPassword.second) }}
+
+            {{ form_rest(form) }}
+        <div>
+            <button id="reset_reset_button" type="submit"/>{{ 'resetting.reset.submit'|trans }}</button>
+        </div>
+    </form>
+</div>

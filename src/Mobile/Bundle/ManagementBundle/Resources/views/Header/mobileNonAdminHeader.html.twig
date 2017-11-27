@@ -1,0 +1,30 @@
+<nav class="menu">
+    
+    <a class="toggle-nav-menu tnavi" href="#">&#9776;</a>
+    <a class="toggle-nav-search tnavi" href="#">{{ 'menu.search.search'| trans}}</a>
+    <a class="toggle-nav-by-category tnavi" href="#">{{ 'menu.navigate_by_category'| trans}}</a>
+   
+    <div class="menuItems navi active">
+        <ul>
+            <li class="current-item"><a href="{{ path('mobile_index', { 'page': 0}) }}">
+                    {{ 'menu.home'| trans}}
+                </a></li>
+            <li class=""><a href="{{ path('mobile_fos_user_security_login') }}">
+                    {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+                </a></li>
+            <li class=""><a href="{{ path('mobile_fos_user_registration_register') }}">
+                    {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
+                </a></li>
+        </ul>   
+    </div>
+        
+    <div class="search-form navi active">
+        {% include "MobileManagementBundle:Header:search.html.twig" %} 
+    </div>
+        
+    <div class="by-category-select navi active">
+        {% include "MobileManagementBundle:Header:CategoriesSelect.html.twig" %} 
+    </div>
+    
+
+</nav>

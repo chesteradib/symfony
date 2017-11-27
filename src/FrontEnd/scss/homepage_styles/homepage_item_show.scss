@@ -1,0 +1,463 @@
+$sprite1 :url('../images/spritesheet1.png');
+$sprite2 : url('../images/spritesheet2.png');
+$sprite3 : url('../images/spritesheet3.png');
+$sprite4 : url('../images/chat.png');
+
+$vert:#006233;
+$vert-opace:rgba(0,98,51,0.3);
+$vert-opace7:rgba(0,98,51,0.7);
+
+*
+{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Product Show */
+/* Product Show */
+
+#post-title-price-description
+{
+    display: table;
+    height: 100%;
+    table-layout: fixed;
+    width: 100%; 
+    
+}
+#post-title-price-date
+{
+    display: table-row;
+}
+
+#post-title
+{
+    margin: 0;
+    width: 68%;
+    float: left;
+    padding: 5px 0 0 5px;
+    font-size: 20px;
+}
+
+#post-price-and-date
+{
+   margin:0;
+   text-align: right;
+   width:30%;
+   float:right;
+   margin:5px 5px 0 0;
+   background: rgba(241, 241, 241, 0.65);
+   border-radius: 8px;
+}
+
+#post-price
+{
+    width:100%;
+    background-color: #006233;
+    color: white;
+    border-radius: 8px;
+    padding-right: 4px;
+}
+#p-price
+{
+
+}
+
+#post-date
+{
+  width:100%; 
+  font-size: 10px;
+  color:$vert;
+}
+
+#currency
+{
+   font-size: 9px;
+   text-align: right;
+   width:100%;
+}
+
+
+#post-content
+{
+    display: table-row;
+    height: 100%;
+    text-align: justify;    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding:5px;
+    margin:5px;
+    font-size:14px;
+}
+#post-content-first-inner
+{
+    position:relative; 
+    height: 100%; 
+    margin:5px; 
+    padding:5px;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+}
+
+#post-content-second-inner
+{
+    overflow-y: scroll; 
+    position: absolute; 
+    top: 0; 
+    right:0; 
+    bottom: 0; 
+    left: 0; 
+    padding: 5px;
+}
+
+/* Product Show thumbnails Scroller */
+/* Product Show thumbnails Scroller */            
+/* Product Show thumbnails Scroller */
+/* Product Show thumbnails Scroller */
+
+
+#post-images
+{
+    height:320px;
+    display: table-row;
+}
+
+#post-scroller{
+    height:70px;
+    
+}
+
+#post-images-wrapper
+{
+    height:100%;
+    float:left;
+    overflow:hidden;
+    width:350px;
+}
+#left_arrow, #right_arrow
+{
+    float:left;
+    display: block;
+    background: $sprite3 no-repeat;
+    cursor: pointer;
+    width: 20px;
+    height: 40px;
+    margin: 15px 0;  
+}
+#left_arrow
+{
+    
+    background-size: 3460% 117.64%;
+    background-position: 100% 0px;
+}
+
+#right_arrow
+{
+    background-size: 3460% 117.647%;
+    background-position: 61.3% 0px;
+}
+
+#post-images-toScroll
+{
+    height:100%;
+    position:relative;
+}
+
+.scrollable
+{
+    height:100%;
+    float:left;
+    cursor: pointer;
+    width:70px;
+}
+.scrollable.active
+{
+
+    background: $vert-opace;
+
+}
+#post-main-image
+{
+    //height:250px;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: $vert-opace;
+    margin: 0 3px;
+}
+
+#post-main-image:hover
+{
+    opacity: 0.8; 
+}
+
+#post-main-image img
+{  
+    padding:10px;
+}
+
+/* Post Footer CSS */
+/* Post Footer CSS */
+
+#post-footer
+{
+    height:60px;
+    width:100%;
+    display: table-row;
+    
+}
+#post-footer-left
+{
+    float:left;
+    height:60px;
+    width: 160px - 1px - 4px;
+}
+
+#post-footer-right
+{
+    float:right;
+    height:60px;
+    width: 240px - 1px;
+}
+/* Post Chat CSS */
+/* Post Footer CSS */
+
+#post-chat
+{
+    width:60px;
+    float:left; 
+}
+.open_chat_trigger
+{
+    padding: 0 0 0 0;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+    border-radius: 8px;
+    height:100%;
+    width:100%;
+    display:inline-block;
+}
+
+
+#chat_text
+{
+    text-align: center;
+    width: 100%;
+    color:$vert;
+    font-size:11px;
+}
+
+
+#chat_symbol
+{
+    display:inline-block;
+    width:54px;
+    height:36px;
+    background: $sprite4 no-repeat;
+    height:41px;
+    background-position: 81.78% 0; 
+    display:block;
+    margin-top:4px;
+}
+
+/* Post Owner CSS */
+/* Post Owner CSS */
+
+#post-owner-image-name
+{
+    width:180px - 1px;
+    height:100%;
+    float:left;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background:rgba(241, 241, 241, 0.65);
+}
+
+
+#post-owner-image
+{
+    width:60px;
+    height:100%;
+    float:left;
+    
+}
+
+#post-owner-name
+{
+    width:120px - 1px - 4px;
+    float:left;
+    font-size:15px;
+    height: 60px;
+    line-height: 60px;    
+}
+/* Post Bought CSS */
+/* Post  Bought CSS */
+
+#post-bought
+{
+    height: 40px;
+    float: right;
+    width:100%;
+
+}
+
+.bought_trigger_off,.bought_trigger_on
+{
+    background: $sprite1 no-repeat;
+    display: inline-block;
+    width:50px;
+    height:40px;
+    background-size: 1547.14% 116.07%;
+}
+.bought_trigger_on
+{
+
+    background-position: 86.179% 0;  
+}
+.bought_trigger_on:hover
+{
+    
+    background-position: 93.089% 0;
+}
+.bought_trigger_on:active
+{
+   background-position: 100% 0;
+}
+
+.bought_trigger_off
+{
+
+    background-position: 100% 0;
+    
+}
+.bought_trigger_off:hover
+{
+    background-position: 93.089% 0;
+}
+.bought_trigger_off:active
+{
+    background-position: 86.179% 0; 
+}
+
+.bought_article_symbol
+{
+    display:inline-block;
+    width:48px;
+    float:right;
+    height:38px;
+}
+
+.bought_article_text
+{
+    display:inline-block;
+    float:right;
+    cursor: pointer;
+    color: $vert;
+    line-height: 10px;
+    padding-top: 20px;
+    font-size: 10px;
+}
+#bought-trigger
+{
+    display:inline-block;
+    padding: 0 0 0 0;
+    border: 1px solid rgba(164, 164, 164, 0.3);
+    background: rgba(241, 241, 241, 0.65);
+    border-radius: 8px;
+    height:100%;
+    width:100%;
+}
+
+
+
+.show_shop.item:hover,
+a#bought-trigger:hover,
+.open_chat_trigger:hover
+{
+    font-weight: bold;
+    opacity: 0.5;
+    
+}
+
+/* Images styles */
+/* Images in Scroller */
+
+.tall
+{
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.fat
+{
+    vertical-align: middle;
+    width:64px;
+}
+.equal
+{
+    width:99%;
+    height: 99%;
+}
+
+/* Images styles */
+/* Main Image  */
+
+.mi-very-fat
+{
+    width: 384px; 
+    vertical-align: middle;
+    height:initial;
+}
+.mi-fat
+{
+    height:250px;
+    width:initial;
+    vertical-align: auto;
+}
+.mi-tall
+{
+    text-align: center;
+    width:initial;
+    vertical-align: inherit;
+    height:250px;
+}
+
+
+/* The helper span */
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Profile picture styles*/ 
+.center-horizontally
+{
+    text-align: center;
+}
+.equal-profile-image
+{
+    
+    width:100%;
+    height:100%;
+}
+.tall-profile-image
+{
+    height: 100%;
+}
+.fat-profile-image
+{
+    vertical-align:middle;
+    width: 88%;
+    padding-right: 3px;
+}
+
+
+.image-zoom
+{
+    position:absolute;
+    height:60px;
+    width:60px;
+    background-color: black;
+    bottom: 70px;
+    background: $sprite3 no-repeat;
+    margin-left:10px;
+
+}

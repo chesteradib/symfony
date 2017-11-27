@@ -1,0 +1,150 @@
+$logoWidth: 156px;
+$headerHeight: 60px;
+$menuItemWidth: 86px;
+$sprite1 :url('../images/spritesheet1.png');
+$sprite3 : url('../images/spritesheet3.png');
+$vert:#006233;
+$rouge: #c1272d;
+$black: black;
+$gris:#e1e1e1;
+
+$vert-opace:rgb(230, 239, 235);
+
+/* HomePage Footer */
+
+#header
+{
+    height: 60px;
+    width: 100%;
+    background: $vert-opace;
+}
+#website_logo_in_homepage
+{   width: $logoWidth;
+    float:left;
+    height:$headerHeight;
+}
+
+#website_logo_in_homepage a
+{
+    margin: 0 auto;
+    width: $logoWidth;
+    height: $headerHeight;
+    display:block;
+    background: $sprite3 no-repeat;
+    background-position: 35% 0;
+    background-size: 635.68% 100%;
+}
+
+#website_logo_in_homepage a:hover
+{
+    opacity: 0.7;
+}
+
+
+#login_trigger_container,#signup_trigger_container
+{
+    float: right;
+    width: 65px;
+    height: 60px;
+    padding-top: 23px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#header a
+{
+    text-decoration:none;
+    color: $vert;
+    font-family: Verdana, 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+#header a:hover
+{
+    font-weight:bold;
+}
+
+#header a::after
+{
+    display:block;
+    font-weight:bold;
+    height:1px;
+    color:transparent;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+
+#header #home-page-search
+{
+    float:left;
+    width: $menuItemWidth * 6;
+    height:$headerHeight;
+}
+
+.my_search
+{
+    float:left;
+    width: $menuItemWidth * 6;
+    height:$headerHeight;
+    //display:none;
+}
+
+.searchbar-form
+{
+   padding-top: $headerHeight/6; 
+   height: 100%;
+}
+
+
+.searchbar-form .search-keyword {
+    position: relative;
+    display: block;
+    padding: 11px 10px 11px 0;
+    line-height: 18px;
+    font-size: 13px;
+    border: 0 none;
+    font-family: arial;
+    float:left;
+    height: 40px;
+    width: $menuItemWidth * 6 - $menuItemWidth * 6/8;
+}
+
+
+.searchbar-form .search-button {
+    width: $menuItemWidth * 4/7;
+    height: 40px;
+    background: #c1272d $sprite1 no-repeat -587px 8px;
+    border-radius: 0 3px 3px 0;
+    float:left;
+    background-position: 70.95% 0;
+    background-size: 2110% 120%;
+}
+
+/*
+Navigate by categories in Menu styles
+
+*/
+
+.show_categories
+{
+    float:left;
+    width: $menuItemWidth;
+    height:$headerHeight;
+    padding-top:7px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 11.5px;
+    
+}
+
+.show_categories_arrow
+{
+    background-image: url("../images/down-arrow.png");
+    background-size: 100%;
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 16px;
+    
+}
+

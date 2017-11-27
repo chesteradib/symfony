@@ -1,0 +1,56 @@
+<div id="mobile-container">
+    <div id="mobile-context">
+        <div id="mobile-context-breadcrumb">
+            <div id="mobile-context-user-name">
+                {{ 'left.all_new_posters.all_new_posters'| trans}}
+            </div>
+        </div>
+    </div>
+            
+    <div id="mobile-content">
+        <div id="mobile-content-items-container">
+                {% if all_new_posters_and_related_data|length == 0  %} 
+                    <div class="no-items">
+                        {{ 'left.all_my_followeds.no_followeds'| trans}}
+                    </div> 
+                {% endif %}
+            </div>
+
+            {% include "MembersManagementBundle:User:all_new_posters_items.html.twig" %} 
+            <div class="clear"></div>
+        </div>
+
+        {% if number_of_pages >1%}
+        <div id="center-content-pagination"
+            data-current-page="0" 
+            data-url="{{path('page_of_all_new_posters')}}"
+            data-total-pages="{{ number_of_pages}}" > 
+
+                 <div id="pagination-navigation">
+                    {% if number_of_pages > 0 %}
+                        <a href="{{ path('mobile_all_my_followeds', { 'page' : page + 1}) }}">
+                            <div id="show_next_page" 
+                               class="{% if number_of_pages == page + 1 %}hide{% endif %}"
+                               >
+                            </div>
+                        </a>
+                        <div id="page-number">
+                            <input id="current-page" type="text" name="fname" value="{{page + 1}}">
+                            <span id="total-pages">/{{ number_of_pages }}</span>
+                        </div>
+                        <a href="{{ path('mobile_all_my_followeds', { 'page' : page - 1}) }}">
+                        <div id="show_previous_page" 
+                            class="{% if page == 0 %}hide{% endif %}"
+                            >
+                        </div>
+                        </a>
+                        <div id="pagination-message">
+                            <div id="pagination-message-text">{{'errors.pagination' | trans}}</div>
+                            <div id="pagination-message-close">X</div>
+                        </div>
+                        {% endif %}
+                </div>
+        </div>
+        {%endif%}
+    </div>
+</div>

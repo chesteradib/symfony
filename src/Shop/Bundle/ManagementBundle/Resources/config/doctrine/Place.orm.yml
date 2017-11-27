@@ -1,0 +1,21 @@
+Shop\Bundle\ManagementBundle\Entity\Place:
+    type: entity
+    table: place
+    repositoryClass: Shop\Bundle\ManagementBundle\Entity\PlaceRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            column: name
+            nullable: true
+    oneToMany:
+      posts:
+        mappedBy: postPlace
+        targetEntity: Shop\Bundle\ManagementBundle\Entity\Post
+        cascade:      [persist]
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+<select 
+        data-url="{{path('mobile_category', { 'categoryId' : 0 , 'page' : 0})}}"
+        id="shop_bundle_managementbundle_posttype_categories" 
+        name="shop_bundle_managementbundle_posttype[categories][]">
+        
+            <option value="" 
+                selected
+            ></option>
+
+        {% for category in categories %}
+            <option value="{{ category[0].id }}"
+                {#  {% if form.categories.vars.value is not empty %}
+                        {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
+                {% endif %}#}
+                class ="parent_category"
+                >
+                {{ (category[0].getName~'.'~category[0].getName) | trans }}
+            </option>
+    
+            {% for subCategory in category[1] %}
+                <option value="{{ subCategory.id }}"
+                {#  {% if form.categories.vars.value is not empty %}
+                        {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
+                {% endif %}#}
+                >
+                {{ (subCategory.getParent.getName~'.'~subCategory.getName) | trans }}
+                </option>
+            {%endfor%} 
+        {% endfor %}
+        </select>

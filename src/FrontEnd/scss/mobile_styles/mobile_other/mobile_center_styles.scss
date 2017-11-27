@@ -1,0 +1,160 @@
+$vert-opace:rgba(0,98,51,0.3);
+$vert:#006233;
+
+.item-container
+{
+    height: 250px;
+    width: 200px;
+    margin: 0 auto 10px;
+    background-color: aliceblue;
+}
+
+.product-price-in-posts
+{
+    text-align: right;
+    background: rgba(0, 98, 51, 0.5);
+    color: white;
+    border-radius: 7px;
+    padding: 0 4px;
+    float: right;
+    height:20px;
+}
+.p-p-i-p{
+   font-size: 12px;
+   text-align: right;
+}
+
+.p-p-i-p-currency
+{
+   font-size: 8px;
+   text-align: right;
+}
+
+.product-image
+{
+    position: relative;
+    height:165px;
+    vertical-align:top; 
+}
+
+.product-title-in-posts
+{
+    font-size: 12px;
+    width: 70%;
+    color: $vert;
+}
+.product-image-in-posts
+{
+    display: block;
+    height: 100%;
+    width: 100%; 
+    float:right;
+    position: relative;
+}
+
+.product-user-image-in-posts
+{
+    height:40px;  
+    position: relative;
+}
+
+.item-container .fatty
+{
+   height:100%;        
+}
+
+.item-container .tally
+{
+    width:100%;    
+}
+
+.product-user-image
+{
+    width:40px;
+    height:100%;
+    float:right;   
+    position: absolute;
+    border-radius: 20%;        
+}
+
+.product-user-image img
+{
+    border-radius: 20%;       
+}
+
+.round {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  float: left; 
+}
+
+.no-items
+{
+    padding-left: 10px;
+    color: #c1272d;
+    font-size: 11px;
+    height: 50px;
+    margin: 20px;
+}
+
+#mobile-context
+{
+    height:50px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+}
+
+#mobile-context-breadcrumb
+{
+    width: auto;
+    height: 50px;
+    line-height: 30px;
+    float: left;
+    font-size: 12px;
+    background-color: #006233;
+    color: white;
+    border-radius: 2%;
+    padding: 0 5px 0 10px;
+}
+
+#mobile-context-user-name
+{
+    width: auto;
+    padding: 0 3px;
+    height: 20px;
+    font-size: 12px;
+}
+
+#mobile-context-number-of-items
+{
+    width: auto;
+    padding: 0 3px;
+    height: 20px;
+    font-size: 10px;
+}
+
+#mobile-context-user-image
+{   
+    float: left;
+    width:50px;
+    height:100%;
+}
+
+#mobile-content
+{
+    width: 100%;
+}
+
+#mobile-content-items-container
+{
+    height:calc(100% - 40px);
+    width: 100%;
+}
+
+#mobile-content-pagination
+{
+    height: 40px;
+}
