@@ -39,6 +39,7 @@ Shop\Bundle\ManagementBundle\Entity\Post:
     manyToOne:
       user:
         targetEntity: Members\Bundle\ManagementBundle\Entity\User
+        inversedBy: posts
         joinColumn:
           name: post_user_id
           type: integer
@@ -46,6 +47,7 @@ Shop\Bundle\ManagementBundle\Entity\Post:
           onDelete: cascade
       postPlace:
         targetEntity: Shop\Bundle\ManagementBundle\Entity\Place
+        inversedBy: posts
         nullable: true
         joinColumn:
           name: post_place

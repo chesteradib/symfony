@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 class AdminController extends Controller
 {
     
-    
+    /* action for admin area */
     public function adminAction(Request $request)
     {
         if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') ){
