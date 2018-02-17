@@ -25,16 +25,16 @@ Class LoadPostCategoriesData extends AbstractFixture implements OrderedFixtureIn
                 'appartements','maisons_et_villas','collocation','bureaux','magasins', 'terrains_et_fermes' , 'locations_de_vacances','autre'
             ),
             'la_maison' => array(
-                'cuisine', 'meubles','decoration','jardin','outils_de_bricolage', 'autre' 
+                'cuisine', 'meubles','decoration','jardin','outils_de_bricolage', 'autre'
             ),
             'habillement_et_bien_etre' => array(
-                'vetements', 'chaussures','montres','bijoux','sacs','beaute','bebe', 'accessoires', 'autre' 
-            ),           
+                'vetements', 'chaussures','montres','bijoux','sacs','beaute','bebe', 'accessoires', 'autre'
+            ),
             'emploi' => array(
                 'demandes_d_emploi' ,'offres_d_emploi','offres_de_stages','demandes_de_stages'
             ),
             'lecture' => array (
-                 'livres', 'magazines'   
+                 'livres', 'magazines'
             ),
             'telephones'=> array(
             ),
@@ -64,40 +64,40 @@ Class LoadPostCategoriesData extends AbstractFixture implements OrderedFixtureIn
             )
         );
         $i=0;
-        
+
         foreach($categories as $key => $value)
         {
 
             $category= new Category();
             $category->setName($key);
             $category->setParent(null);
-            
+
             if(count($value)>0) $category->setHasChildren(true);
             else  $category->setHasChildren(false);
 
             $om->persist($category);
             $om->flush();
-               
+
             if(is_array($value))
-            {      
+            {
                 foreach($value as $key2 => $value2)
                 {
                     $category2= new Category();
                     $category2->setName($value2);
                     $category2->setParent($category);
                     $category2->setHasChildren(false);
-                    
+
                     $this->setReference('post-category'.$i, $category2);
                     $i++;
-                    
+
                     $om->persist($category2);
                     $om->flush();
-                    
+
                    }
-                   
-            }         
-        }   
-       
+
+            }
+        }
+
     }
     
     public function getOrder()

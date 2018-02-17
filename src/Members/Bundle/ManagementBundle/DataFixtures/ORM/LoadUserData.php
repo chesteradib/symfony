@@ -78,6 +78,7 @@ class loadUserData extends AbstractFixture implements OrderedFixtureInterface, C
             $user->setEmail($faker->email);
             $user->setStoreDescription($faker->text);
             $user->setEnabled(true);
+            $user->setSalt('string');
 
             $user->setProfilePicture($this->getReference('user-profilePh'.$i));
 

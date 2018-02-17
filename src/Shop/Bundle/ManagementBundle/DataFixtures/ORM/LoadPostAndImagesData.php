@@ -17,7 +17,71 @@ Class LoadPostAndImagesData extends AbstractFixture implements OrderedFixtureInt
     
     public function load(ObjectManager $om)
     {
-        
+
+        $categories = array(
+            'informatique' => array(
+                'ordinateurs_de_bureau','ordinateurs_portables','tablettes','accessoires_informatiques'
+            ),
+            'multimedia'=> array(
+                'son','jeux_video_et_consoles','televisions','projecteurs','appareils_photo_et_cameras','accessoires_multimedia'
+            ),
+            'immobilier' => array(
+                'appartements','maisons_et_villas','collocation','bureaux','magasins', 'terrains_et_fermes' , 'locations_de_vacances','autre'
+            ),
+            'la_maison' => array(
+                'cuisine', 'meubles','decoration','jardin','outils_de_bricolage', 'autre'
+            ),
+            'habillement_et_bien_etre' => array(
+                'vetements', 'chaussures','montres','bijoux','sacs','beaute','bebe', 'accessoires', 'autre'
+            ),
+            'emploi' => array(
+                'demandes_d_emploi' ,'offres_d_emploi','offres_de_stages','demandes_de_stages'
+            ),
+            'lecture' => array (
+                'livres', 'magazines'
+            ),
+            'telephones'=> array(
+            ),
+            'mariage'=> array(
+            ),
+            'instruments_de_musique'=> array(
+            ),
+            'sport' => array(
+            ),
+            'art'=> array(
+            ),
+            'collections'=> array(
+            ),
+            'voyages'=> array(
+            ),
+            'cinema'=> array(
+            ),
+            'animaux'=> array(
+            ),
+            'affaires'=> array(
+            ),
+            'materiels_professionel'=> array(
+            ),
+            'cours_et_formations'=> array(
+            ),
+            'services'=> array(
+            )
+        );
+        $z=0;
+
+        foreach($categories as $key => $value)
+        {
+            $z++;
+            if(is_array($value))
+            {
+                foreach($value as $key2 => $value2)
+                {
+                    $z++;
+                }
+
+            }
+        }
+
         $faker = Faker\Factory::create();
         
         for($i=0; $i< 40; $i++)
@@ -47,9 +111,9 @@ Class LoadPostAndImagesData extends AbstractFixture implements OrderedFixtureInt
                 $day= $date->format('d');
                 $hour= $date->format('H');
 
-                $subDirString= $year . DIRECTORY_SEPARATOR 
-                                . $month . DIRECTORY_SEPARATOR 
-                                . $day . DIRECTORY_SEPARATOR 
+                $subDirString= $year . DIRECTORY_SEPARATOR
+                                . $month . DIRECTORY_SEPARATOR
+                                . $day . DIRECTORY_SEPARATOR
                                 . $hour;
                 $targetDir = 'web/uploads/'.$subDirString;
 
@@ -61,7 +125,7 @@ Class LoadPostAndImagesData extends AbstractFixture implements OrderedFixtureInt
                     }
                 }
 
-                $myurl= $faker->image($targetDir, 600, 300,'',false);       
+                $myurl= $faker->image($targetDir, 600, 300,'',false);
                 var_dump($myurl);
                 $image->setPath($myurl);
 
@@ -72,9 +136,9 @@ Class LoadPostAndImagesData extends AbstractFixture implements OrderedFixtureInt
 
                 if($myurl)
                 {
-                if( !copy($targetDir.'/'.$myurl, $smallfile) 
-                        || !copy($targetDir.'/'.$myurl, $mediumfile) 
-                        || !copy($targetDir.'/'.$myurl, $bigfile)) 
+                if( !copy($targetDir.'/'.$myurl, $smallfile)
+                        || !copy($targetDir.'/'.$myurl, $mediumfile)
+                        || !copy($targetDir.'/'.$myurl, $bigfile))
                 {
                     echo "failed to copy";
                 }
@@ -84,19 +148,24 @@ Class LoadPostAndImagesData extends AbstractFixture implements OrderedFixtureInt
 
             }
 
+
+
+
+
+
+        }
             $post->setPostStatus('p');
 
             $post->setUser($this->getReference('user-post'.$n));
 
-            $post->addCategory($this->getReference('post-category1'));
+            //$randomCategoryId = rand(0, $z -1);
+            $post->addCategory($this->getReference('post-category0'));
 
             $this->setReference('message-post'.$i, $post);
 
-
             $om->persist($post);
             $om->flush();
-        }
-
+            var_dump($post->getId());
     }
     }
     
