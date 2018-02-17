@@ -5,8 +5,8 @@ parameters:
     database_port: null
     database_name: community
     test_database_name: test_community
-    database_user: root
-    database_password: null
+    database_user: communityuser
+    database_password: communityuserpassword
     mailer_transport: gmail
     mailer_host: smtp.gmail.com
     mailer_user: baghinsaferdotcom@gmail.com
