@@ -9,8 +9,8 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        //var_dump($this->get('session'));
-        if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') ){
+
+        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY') ){
             $url = $this->generateUrl("user_admin_page");
             return $this->redirect($url);
         }
