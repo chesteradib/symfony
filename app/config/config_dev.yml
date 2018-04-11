@@ -24,8 +24,7 @@ monolog:
             type:  chromephp
             level: info
 
-assetic:
-    use_controller: false
+
     
 
 #swiftmailer:
