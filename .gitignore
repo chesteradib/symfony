@@ -7,7 +7,6 @@
 !app/logs/.gitkeep
 /build/
 /vendor/
-/bin/
 /composer.phar
 /web/bundles/
 /web/css/
@@ -28,4 +27,5 @@ node_modules/
 .sass-cahce
 /nbproject/private/
 ubuntu-xenial-16.04-cloudimg-console.log
+/.vagrant/
 

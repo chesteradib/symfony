@@ -20,6 +20,9 @@ Update
 echo "------PHP 7.0 Installation"
 
 apt-get install -y git acl zip pkg-config build-essential
+
+git clone https://github.com/chesteradib/symfony /vagrant
+
 apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip php-pear php-curl
 
 
@@ -125,5 +128,5 @@ npm install gulp-concat
 npm install gulp-sass
 npm install browser-sync
 
-
+php bin/console doctrine:schema:create -vvv
 
