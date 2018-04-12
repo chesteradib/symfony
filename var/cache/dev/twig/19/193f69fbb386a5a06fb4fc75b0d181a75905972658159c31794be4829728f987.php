@@ -233,6 +233,6 @@ class __TwigTemplate_ebd2fb37c6ba63d896316c4b744675dbc6748b3c1112098d1148967b267
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "::base.html.twig", "/home/adib/devenv/app/Resources/views/base.html.twig");
+", "::base.html.twig", "/vagrant/app/Resources/views/base.html.twig");
     }
 }

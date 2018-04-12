@@ -303,6 +303,6 @@ class __TwigTemplate_b95b77bc066085d5dd6b84288cdfe31d1ad3b3db1a16f2de16cd8daf638
         </td>
     </tr>
 </table>
-", "ShopManagementBundle:Category:AllCategoriesForHeader.html.twig", "/home/adib/devenv/src/Shop/Bundle/ManagementBundle/Resources/views/Category/AllCategoriesForHeader.html.twig");
+", "ShopManagementBundle:Category:AllCategoriesForHeader.html.twig", "/vagrant/src/Shop/Bundle/ManagementBundle/Resources/views/Category/AllCategoriesForHeader.html.twig");
     }
 }

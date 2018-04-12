@@ -388,6 +388,6 @@ class __TwigTemplate_b978dccd5ca0fea32ac11a45d19c609ae97ad5d31ec4f652662210c2a5c
     <script src=\"{{ asset('js/homepage_js.js') }}\"></script> 
 {% endblock %}
 
-", "MembersManagementBundle:Index:index.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig");
+", "MembersManagementBundle:Index:index.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig");
     }
 }

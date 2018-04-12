@@ -76,6 +76,6 @@ class __TwigTemplate_0414d5871493fbb0372945edcad59c84bc60c0114d13cb2524108815be3
         <div class=\"item-container center-item-container\" id=\"center-item-container\"></div>
     {% endfor %}
 </div>
-", "MembersManagementBundle:HomePageInitial:HomePagePostsInitial.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePagePostsInitial.html.twig");
+", "MembersManagementBundle:HomePageInitial:HomePagePostsInitial.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePagePostsInitial.html.twig");
     }
 }

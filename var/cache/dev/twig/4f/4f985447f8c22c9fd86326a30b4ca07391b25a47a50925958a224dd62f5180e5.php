@@ -78,6 +78,6 @@ class __TwigTemplate_e42e646bf7fab79c3a57bd5a3cc21e9fe500645944e61ea819ddba192d8
 {% block fos_user_content %}
 {% include \"MembersManagementBundle:Registration:register_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "FOSUserBundle:Registration:register.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/Registration/register.html.twig");
+", "FOSUserBundle:Registration:register.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/Registration/register.html.twig");
     }
 }

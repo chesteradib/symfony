@@ -69,6 +69,6 @@ class __TwigTemplate_425ddec4a29fbe72925cb42dbdd5fa7f772f9da908caf77c136ca884a0c
 <div id=\"center-content\">
    {% include \"MembersManagementBundle:HomePageInitial:HomePagePostsInitial.html.twig\" %} 
    <div id=\"center-content-pagination\"></div>
-</div>", "MembersManagementBundle:HomePageInitial:HomePageCenterInitial.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePageCenterInitial.html.twig");
+</div>", "MembersManagementBundle:HomePageInitial:HomePageCenterInitial.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePageCenterInitial.html.twig");
     }
 }

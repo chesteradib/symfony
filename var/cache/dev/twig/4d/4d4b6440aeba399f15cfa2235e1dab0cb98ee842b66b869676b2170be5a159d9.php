@@ -128,6 +128,6 @@ class __TwigTemplate_9de4344cad753261d5a65024a3811ab4ac769ea295c219c1f4ba49bb030
         {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
     </a>
 </div>
-", "MembersManagementBundle:HomePageInitial:HomePageHeader.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePageHeader.html.twig");
+", "MembersManagementBundle:HomePageInitial:HomePageHeader.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePageHeader.html.twig");
     }
 }

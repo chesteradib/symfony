@@ -67,6 +67,6 @@ class __TwigTemplate_ad9a316df0b7dfe2e758ac363d7c8eff7344796250bc867b7105d29693a
         <div class=\"categories_dialog\" style=\"display:none\">
             {% include \"ShopManagementBundle:Category:AllCategoriesForHeader.html.twig\" %}
         </div>
-    </div>", "MembersManagementBundle:HomePageInitial:header_dialogs.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/header_dialogs.html.twig");
+    </div>", "MembersManagementBundle:HomePageInitial:header_dialogs.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/header_dialogs.html.twig");
     }
 }

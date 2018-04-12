@@ -55,6 +55,6 @@ class __TwigTemplate_0009996147f8ac3bf1c99bd3944f39d5d0a3ce9f2a34e2be1ea2f372e0f
     {
         return new Twig_Source("
 
-", "MembersManagementBundle:HomePageInitial:HomePageRightInitial.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePageRightInitial.html.twig");
+", "MembersManagementBundle:HomePageInitial:HomePageRightInitial.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/HomePageRightInitial.html.twig");
     }
 }

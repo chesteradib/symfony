@@ -71,6 +71,6 @@ class __TwigTemplate_f63c99910d623a323af1495201f651b41f912c5cf7e52f26700a8563363
     <path d=\"m 175.72382,165.31731 43.04293,10.02943 c 17.55149,-5.8505 29.67037,-22.5662 29.67037,-40.95347 0,-17.96938 -11.07415,-33.8493 -27.78985,-40.326635 l -56.4155,49.311325 11.49205,21.93935 0,0 z\" fill=\"#aaaaaa\" />
   </g>
 </svg>
-", "@FOSElastica/Collector/icon.svg", "/home/adib/devenv/vendor/friendsofsymfony/elastica-bundle/src/Resources/views/Collector/icon.svg");
+", "@FOSElastica/Collector/icon.svg", "/vagrant/vendor/friendsofsymfony/elastica-bundle/src/Resources/views/Collector/icon.svg");
     }
 }

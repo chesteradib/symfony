@@ -124,6 +124,6 @@ class __TwigTemplate_7c9ab333f4fc8b538e836c78c7753678714bc503b9fc5d73f53cbd522d4
             <div class=\"clear\"></div>
         </div>
     </div>
-</script>", "MembersManagementBundle:HomePageInitial:homePageTemplates.html.twig", "/home/adib/devenv/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/homePageTemplates.html.twig");
+</script>", "MembersManagementBundle:HomePageInitial:homePageTemplates.html.twig", "/vagrant/src/Members/Bundle/ManagementBundle/Resources/views/HomePageInitial/homePageTemplates.html.twig");
     }
 }
