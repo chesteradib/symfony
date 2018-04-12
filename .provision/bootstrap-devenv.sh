@@ -109,5 +109,21 @@ update-rc.d elasticsearch defaults 95 10
 /etc/init.d/elasticsearch start
 
 
+echo "------- NodeJS NPM Gulp"
+
+apt-get install -y  nodejs npm
+ln -s /usr/bin/nodejs /usr/bin/node
+
+cd /vagrant
+
+npm install gulp 
+npm install gulp-cli
+npm install gulp-if
+npm install gulp-uglify
+npm install gulp-cssmin
+npm install gulp-concat
+npm install gulp-sass
+npm install browser-sync
+
 
 
