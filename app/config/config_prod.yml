@@ -22,3 +22,21 @@ monolog:
             path:  %kernel.logs_dir%/%kernel.environment%.log
             level: debug
 
+
+fos_elastica:
+    clients:
+        default: { host: ec2-35-180-66-147.eu-west-3.compute.amazonaws.com, port: 9200 }
+    indexes:
+        search:
+            client: default
+            types:
+                post:
+                    properties:
+                        postTitle: ~
+                        postContent: ~
+                    persistence:
+                        driver: orm
+                        model: Shop\Bundle\ManagementBundle\Entity\Post
+                        provider: ~
+                        #listener: ~
+                        finder: ~

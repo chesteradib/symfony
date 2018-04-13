@@ -343,7 +343,7 @@ class PostController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder(array('id' => $id))
-            ->add('id', 'hidden')
+            //->add('id', 'hidden')
             ->getForm()
         ;
     }

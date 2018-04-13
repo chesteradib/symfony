@@ -104,22 +104,6 @@ liip_imagine:
             post_processors:
                 jpegoptim: { max: 50 }
               
-fos_elastica:
-    clients:
-        default: { host: localhost, port: 9200 }
-    indexes:
-        search:
-            client: default
-            types:
-                post:
-                    properties:
-                        postTitle: ~
-                        postContent: ~
-                    persistence:
-                        driver: orm
-                        model: Shop\Bundle\ManagementBundle\Entity\Post
-                        provider: ~
-                        #listener: ~            
-                        finder: ~
+
     
 

@@ -24,7 +24,23 @@ monolog:
             type:  chromephp
             level: info
 
-
+fos_elastica:
+    clients:
+        default: { host: localhost, port: 9200 }
+    indexes:
+        search:
+            client: default
+            types:
+                post:
+                    properties:
+                        postTitle: ~
+                        postContent: ~
+                    persistence:
+                        driver: orm
+                        model: Shop\Bundle\ManagementBundle\Entity\Post
+                        provider: ~
+                        #listener: ~
+                        finder: ~
     
 
 #swiftmailer:

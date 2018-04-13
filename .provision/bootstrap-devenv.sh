@@ -119,6 +119,9 @@ ln -s /usr/bin/nodejs /usr/bin/node
 
 cd /vagrant
 
+npm install -g bower
+bower install
+
 npm install gulp 
 npm install gulp-cli
 npm install gulp-if
@@ -128,5 +131,7 @@ npm install gulp-concat
 npm install gulp-sass
 npm install browser-sync
 
+
+gulp dashboard_styles_sass homepage_styles_sass lib-js homepage_js dashboard_js images
 php bin/console doctrine:schema:create -vvv
 
