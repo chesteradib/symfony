@@ -14,7 +14,7 @@ class AdminController extends Controller
     /* action for admin area */
     public function adminAction(Request $request)
     {
-        if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') ){
+        if( $this->container->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY') ){
             $user = $this->getUser();
         
             $request->getSession()->set('current_user_id', $user->getId());
@@ -26,13 +26,14 @@ class AdminController extends Controller
             $numberOfFollowsNotSeen= $this->get('members_management.follow.services')->getNumberOfFollowsNotSeenByFollowed($user->getId());
 
             /* This is a temporary solution because it uses a big SQL Query of another place to just count some value*/
+            /*
             $messages= $this->get('shop_management.my_market.services')->getLatestPostsByFolloweds($user->getId());
 
             $sumArray=0;
             foreach ($messages as $k=>$subArray) {
                 $sumArray+=(int)$subArray['countF'];
             }
-
+            */
             $categories= $this->get('shop_management.category.services')->getAllCategories();
 
             return $this->render('MembersManagementBundle:AdminInitial:adminInitial.html.twig', array(
@@ -40,7 +41,7 @@ class AdminController extends Controller
                 'number_of_followers_of_current_user' => $numberOfFollowersOfCurrentUser,
                 'number_of_messages_not_seen' => $numberOfMessagesNotSeen,
                 'number_of_follows_not_seen' => $numberOfFollowsNotSeen,
-                'number_of_new_posts_by_followeds_not_seen' => $sumArray,
+                'number_of_new_posts_by_followeds_not_seen' => 0,
                 'categories' => $categories
 
             ));

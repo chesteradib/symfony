@@ -19,11 +19,15 @@ Update
 
 echo "------PHP 7.0 Installation"
 
-apt-get install -y git acl zip pkg-config build-essential
+apt-get install -y git acl zip pkg-config build-essential jpegoptim
 
 git clone https://github.com/chesteradib/symfony /vagrant
 
-apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip php-pear php-curl
+apt-get install -y php7.0 libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip php-pear php-curl php7.0-gd
+
+
+phpenmod gd
+
 
 
 echo "------Mysql 5.7 Installation "
