@@ -436,7 +436,7 @@ class PostController extends Controller
 
             $em = $this->getDoctrine()->getManager();
 
-            $result= $this->get('request')->request->get('result');
+            $result= $request->request->get('result');
 
             if ($result)
             {
@@ -463,7 +463,7 @@ class PostController extends Controller
 
             }
 
-            $mainImageId=$this->get('request')->request->get('main-image');
+            $mainImageId = $request->request->get('main-image');
 
             if ($mainImageId)
             {
