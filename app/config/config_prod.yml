@@ -25,7 +25,7 @@ monolog:
 
 fos_elastica:
     clients:
-        default: { host: ec2-35-180-66-147.eu-west-3.compute.amazonaws.com, port: 9200 }
+        default: { host: 35.180.87.141, port: 9200 }
     indexes:
         search:
             client: default
