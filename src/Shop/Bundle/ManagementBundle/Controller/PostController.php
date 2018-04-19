@@ -4,15 +4,12 @@ namespace Shop\Bundle\ManagementBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Shop\Bundle\ManagementBundle\Entity\Post;
-use Shop\Bundle\ManagementBundle\Entity\Image;
-use Shop\Bundle\ManagementBundle\Form\PostType;
-use Doctrine\Common\Collections\ArrayCollection;
-
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
-
 use Symfony\Component\HttpFoundation\Response;
+
+use Shop\Bundle\ManagementBundle\Entity\Post;
+use Shop\Bundle\ManagementBundle\Form\PostType;
+
 
 class PostController extends Controller
 {
@@ -413,10 +410,11 @@ class PostController extends Controller
      */
     public function createsAction(Request $request)
     {
+
         $status= false;
         $message = '';
-        $me = $this->getUser();
-        if($me)
+
+        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED'))
         {
             $entity = new Post();
             $form = $this->createCreateForm($entity);
@@ -436,7 +434,7 @@ class PostController extends Controller
 
             $em = $this->getDoctrine()->getManager();
 
-            $result= $this->get('request')->request->get('result');
+            $result= $request->request->get('result');
 
             if ($result)
             {
@@ -463,7 +461,7 @@ class PostController extends Controller
 
             }
 
-            $mainImageId=$this->get('request')->request->get('main-image');
+            $mainImageId = $request->request->get('main-image');
 
             if ($mainImageId)
             {
@@ -474,9 +472,8 @@ class PostController extends Controller
 
                 $entity->setPostMainImagePath($mainImage);
                 if ($form->isValid()) {
-
-                    $user = $this->getUser();
-                    $entity->setUser($user);
+                    $connectedUser = $this->getUser();
+                    $entity->setUser($connectedUser);
 
                     $date= new \DateTime();
                     $entity->setPostDate($date);
@@ -492,10 +489,10 @@ class PostController extends Controller
                     $em->flush();
 
                     /* Notify followers of the new Post*/
-                    if ($user->getProfilePicture())
+                    if ($connectedUser->getProfilePicture())
                     {
-                        $followedProfilePictureUrl =  $user->getProfilePicture()->getPath();
-                        $followedProfilePictureWidthVsHeight =  $user->getProfilePicture()->getWidthVsHeight();
+                        $followedProfilePictureUrl =  $connectedUser->getProfilePicture()->getPath();
+                        $followedProfilePictureWidthVsHeight =  $connectedUser->getProfilePicture()->getWidthVsHeight();
                     }
                     else
                     {
@@ -513,8 +510,8 @@ class PostController extends Controller
 
                     $pushData= array(
                                 'type' => 'my_market',
-                                'followed_name' => $user->getUsername(),
-                                'followed_id' => $user->getId(),
+                                'followed_name' => $connectedUser->getUsername(),
+                                'followed_id' => $connectedUser->getId(),
                                 'followers' => $followers,
                                 'followed_profile_picture_url' => $followedProfilePictureUrl,
                                 'followed_profile_picture_widthVsHeight' => $followedProfilePictureWidthVsHeight,
