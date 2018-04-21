@@ -17,35 +17,6 @@
         </a>
     </div>
 
-    <div class="my_inbox notification-container">
-            <a href="javascript:void(0);" class="show_inbox_trigger" data-url="{{path('inbox_messages',{ 'receiver_id': currentUser.id })}}">
-                {{ 'menu.my_inbox'| trans}}
-            </a>
-            <span class="notification-counter-my_inbox"
-                  {% if number_of_messages_not_seen < 1 %}
-                    style="display:none"
-                  {% endif%}
-                  >
-                {% if number_of_messages_not_seen > 0 %}
-                {{number_of_messages_not_seen}}
-                {% endif%}
-            </span>
-    </div>
-    <div class="my_market notification-container">
-            <a href="javascript:void(0);" class="show_my_market_trigger" data-url="{{path('get_my_market_dialog')}}">
-                {{ 'menu.my_market'| trans}}
-            </a>
-                <span class="notification-counter-my_market"
-
-                    {% if number_of_new_posts_by_followeds_not_seen < 1 %}
-                        style="display:none"
-                    {% endif%} 
-                    >
-                    {% if number_of_new_posts_by_followeds_not_seen > 0 %}
-                        {{number_of_new_posts_by_followeds_not_seen}}
-                    {% endif%}
-                </span>
-    </div>
     <div class="my_shop_and_new_article">
         <div class="">
                 <a href="javascript:void(0);" class="show_my_shop" data-url="{{path('get_my_shop')}}">
