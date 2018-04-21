@@ -421,7 +421,7 @@ class PostController extends Controller
             $form->handleRequest($request);
 
             $dirty_images= $entity->getImages();
-            
+
             $dirty_categories= $entity->getCategories();
 
             foreach ($dirty_images as $di)
@@ -488,38 +488,6 @@ class PostController extends Controller
 
                     $em->persist($entity);
                     $em->flush();
-
-                    /* Notify followers of the new Post*/
-                    if ($connectedUser->getProfilePicture())
-                    {
-                        $followedProfilePictureUrl =  $connectedUser->getProfilePicture()->getPath();
-                        $followedProfilePictureWidthVsHeight =  $connectedUser->getProfilePicture()->getWidthVsHeight();
-                    }
-                    else
-                    {
-                        $followedProfilePictureUrl =  'web/pp/index.png';
-                        $followedProfilePictureWidthVsHeight =  0;
-                    }
-
-
-                    $followers= array_map('current', $this->get('members_management.follow.services')->getFollowers($user->getId()));
-
-                    $context=  new \ZMQContext;
-                    $socket = $context->getSocket(\ZMQ::SOCKET_PUSH, 'my_pusher');
-
-                    $socket->connect('tcp://localhost:5555');
-
-                    $pushData= array(
-                                'type' => 'my_market',
-                                'followed_name' => $connectedUser->getUsername(),
-                                'followed_id' => $connectedUser->getId(),
-                                'followers' => $followers,
-                                'followed_profile_picture_url' => $followedProfilePictureUrl,
-                                'followed_profile_picture_widthVsHeight' => $followedProfilePictureWidthVsHeight,
-                                'date' => $date
-                                ); 
-
-                    $socket->send(json_encode($pushData));
 
                     return $this->showAction($entity->getId());
                 }
