@@ -62,7 +62,7 @@
         <div id="form-images-error" class="error-theme">{{ form_errors(form) }}</div>
         <div id="form-images-widget"
              class="images_input" 
-             data-prototype="{{ form_widget(form.images.vars.prototype)|e }}">
+             data-prototype="{{ form_widget(form.images.vars.prototype)|e('html_attr') }}">
             <div id="add_image_label">
                 {{'post.new.add_images_label'|trans }}                                
             </div>

@@ -421,6 +421,7 @@ class PostController extends Controller
             $form->handleRequest($request);
 
             $dirty_images= $entity->getImages();
+            var_dump($entity->getImages());
             $dirty_categories= $entity->getCategories();
 
             foreach ($dirty_images as $di)
@@ -431,11 +432,11 @@ class PostController extends Controller
             {
                 $entity->removeCategory($dc);
             }
-
+            //var_dump($entity->getImages());
             $em = $this->getDoctrine()->getManager();
 
             $result= $request->request->get('result');
-
+            var_dump($result);
             if ($result)
             {
                 foreach( $result as $res)
@@ -447,7 +448,7 @@ class PostController extends Controller
                     $entity->addImage($image);
                 }
             }
-
+            var_dump($entity->getImages());die;
             $result2= $request->request->get('shop_bundle_managementbundle_posttype')['categories'];
 
             if ($result2 && !empty($result2[0]))

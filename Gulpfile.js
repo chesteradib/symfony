@@ -156,7 +156,7 @@ gulp.task('mobile_show_js', function () {
 gulp.task('browser-sync', function(){
     browserSync.init({
         //proxy: "community.dev/web/app_dev.php"
-        proxy: "localhost/app_dev.php"
+        proxy: "127.0.0.1:8000/app_dev.php"
     });
 });
 
