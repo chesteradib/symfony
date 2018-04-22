@@ -28,12 +28,27 @@ page_of_all_new_posters:
   path: /page_of_all_new_posters
   defaults: {_controller: MembersManagementBundle:Admin:pageOfAllNewPosters}
 
-
-###############################################  
+###################################
+### Landing pages ##############
+###################################
 
 user_admin_page:
-    path:     /admin/
-    defaults: { _controller: MembersManagementBundle:Admin:admin }
+     path:     /admin/
+     defaults: { _controller: MembersManagementBundle:Admin:admin }
+
+mobile_admin:
+    path:     /m-admin/{page}
+    defaults: { _controller: MembersManagementBundle:Admin:mobileAdmin }
+
+index:
+  path: /
+  defaults: { _controller: MembersManagementBundle:Index:index }
+
+mobile_index:
+    path:   /m/my/index/g/{page}
+    defaults: { _controller: MobileManagementBundle:MobileIndex:mobileIndex }
+
+
 
 ############################################### 
 
@@ -81,10 +96,7 @@ page_of_all_my_followeds:
   path: /page_of_my_followeds
   defaults: {_controller: MembersManagementBundle:Follow:pageOfAllMyFolloweds}
   
-###############################################  
-index:
-  path: /
-  defaults: { _controller: MembersManagementBundle:Index:index }
+
 
 
 

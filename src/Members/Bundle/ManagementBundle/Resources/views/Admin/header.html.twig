@@ -48,20 +48,6 @@
 
 <div class="right_navigation">
     <div class="superior_right">
-            <div class="my_followers notification-container">
-                <a href="javascript:void(0);" class="show_network_trigger" data-url="{{path('network_messages')}}">
-                {{number_of_followers_of_current_user }}
-                </a>
-                <span class="notification-counter notification-counter-my_followers"
-                      {% if number_of_follows_not_seen < 1 %}
-                       style="display:none"
-                      {% endif%}
-                      >
-                {% if number_of_follows_not_seen > 0 %}
-                        {{number_of_follows_not_seen}}
-                {% endif%}
-                </span>
-            </div>
             <div class="profile_image">
                 <a href="javascript:void(0);" class="show_my_profile" data-url="{{path('fos_user_profile_show')}}">
                 {% if currentUser.getProfilePicture %}

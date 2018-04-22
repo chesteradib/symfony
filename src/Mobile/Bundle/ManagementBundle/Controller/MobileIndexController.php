@@ -9,8 +9,7 @@ class MobileIndexController extends Controller
 {
     public function mobileIndexAction($page)
     {
-        //var_dump($this->get('session'));
-        if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') ){
+        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')){
             $url = $this->generateUrl("mobile_admin", array( 'page' => $page));
             return $this->redirect($url);
         }

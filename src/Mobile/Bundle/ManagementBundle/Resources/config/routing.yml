@@ -66,18 +66,7 @@ mobile_discussion:
     defaults: {_controller: MobileManagementBundle:MobileMessaging:getDiscussionAboutPostWith}
 
    
-###################################
-### Landing pages ##############
-###################################
-    
-mobile_admin:
-    path:     /m/my/admin/g/{page}
-    defaults: { _controller: MobileManagementBundle:MobileAdmin:mobileAdmin }
-    
-mobile_index:
-    path:   /m/my/index/g/{page}
-    defaults: { _controller: MobileManagementBundle:MobileIndex:mobileIndex }
-    
+
 #######################################
 
 

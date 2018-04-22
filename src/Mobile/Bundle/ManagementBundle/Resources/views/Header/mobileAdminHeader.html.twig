@@ -13,35 +13,6 @@
                 </a>
             </li>
             <li>
-                <a href="{{ path('mobile_my_inbox', { 'page': 0}) }}">
-                    {{ 'menu.my_inbox'| trans}}
-                </a>
-                <span class="notification-counter-my_inbox"
-                  {% if number_of_messages_not_seen < 1 %}
-                    style="display:none"
-                  {% endif%}
-                  >
-                {% if number_of_messages_not_seen > 0 %}
-                {{number_of_messages_not_seen}}
-                {% endif%}
-                </span>
-            </li>
-            <li>
-                <a href="{{ path('mobile_my_market', { 'page': 0}) }}">
-                    {{ 'menu.my_market'| trans}}
-                </a>
-                <span class="notification-counter-my_market"
-
-                    {% if number_of_new_posts_by_followeds_not_seen < 1 %}
-                        style="display:none"
-                    {% endif%} 
-                    >
-                    {% if number_of_new_posts_by_followeds_not_seen > 0 %}
-                        {{number_of_new_posts_by_followeds_not_seen}}
-                    {% endif%}
-                </span>
-            </li>
-            <li>
                 <a href="{{ path('mobile_my_shop', { 'page': 0}) }}">
                     {{ 'menu.my_shop'| trans}}
                 </a>
@@ -54,25 +25,6 @@
             <li>
                 <a href="#">
                     {{ 'menu.my_settings'| trans}}
-                </a>
-            </li>
-            <li>
-                <a href="{{ path('mobile_all_my_network', { 'page': 0}) }}">
-                    {{ 'left.all_my_network.all_my_network'| trans}}
-                </a>
-                <span class="notification-counter notification-counter-my_followers"
-                      {% if number_of_follows_not_seen < 1 %}
-                       style="display:none"
-                      {% endif%}
-                      >
-                {% if number_of_follows_not_seen > 0 %}
-                        {{number_of_follows_not_seen}}
-                {% endif%}
-                </span>
-            </li>
-            <li>
-                <a href="{{ path('mobile_all_my_followeds', { 'page': 0}) }}">
-                    {{ 'left.all_my_followeds.all_my_followeds'| trans}}
                 </a>
             </li>
             <li>

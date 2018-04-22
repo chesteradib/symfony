@@ -10,41 +10,16 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AdminController extends Controller
 {
-    
-    /* action for admin area */
-    public function adminAction(Request $request)
+
+    const ITEMS_PER_PAGE = 10;
+
+    public function adminAction()
     {
-        if( $this->container->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY') ){
-            $user = $this->getUser();
-        
-            $request->getSession()->set('current_user_id', $user->getId());
+        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')){
 
-            $numberOfFollowersOfCurrentUser= $this->get('members_management.follow.services')->getNumberOfFollowersOfUser($user->getId());
+            $connectedUserAndCategories = $this->getConnectedUserAndCategories();
 
-            $numberOfMessagesNotSeen= $this->get('members_management.messages.services')->getNumberOfMessagesNotSeenByReceiver($user->getId());
-
-            $numberOfFollowsNotSeen= $this->get('members_management.follow.services')->getNumberOfFollowsNotSeenByFollowed($user->getId());
-
-            /* This is a temporary solution because it uses a big SQL Query of another place to just count some value*/
-            /*
-            $messages= $this->get('shop_management.my_market.services')->getLatestPostsByFolloweds($user->getId());
-
-            $sumArray=0;
-            foreach ($messages as $k=>$subArray) {
-                $sumArray+=(int)$subArray['countF'];
-            }
-            */
-            $categories= $this->get('shop_management.category.services')->getAllCategories();
-
-            return $this->render('MembersManagementBundle:AdminInitial:adminInitial.html.twig', array(
-                'currentUser'=> $user,
-                'number_of_followers_of_current_user' => $numberOfFollowersOfCurrentUser,
-                'number_of_messages_not_seen' => $numberOfMessagesNotSeen,
-                'number_of_follows_not_seen' => $numberOfFollowsNotSeen,
-                'number_of_new_posts_by_followeds_not_seen' => 0,
-                'categories' => $categories
-
-            ));
+            return $this->render('MembersManagementBundle:AdminInitial:adminInitial.html.twig', $connectedUserAndCategories);
         }
        else 
         { 
@@ -52,7 +27,24 @@ class AdminController extends Controller
            return $this->redirect($url);  
        }
     }
-    
+
+    public function mobileAdminAction($page)
+    {
+        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')){
+
+            $connectedUserAndCategories = $this->getConnectedUserAndCategories();
+            $pageItems = $this->getItemsOfPage($page);
+
+            $connectedUserAndCategoriesAndPageItems = array_merge($connectedUserAndCategories, $pageItems);
+
+            return $this->render('MobileManagementBundle::admin.html.twig', $connectedUserAndCategoriesAndPageItems);
+        }
+        else
+        {
+            $url = $this->generateUrl("mobile_fos_user_security_login");
+            return $this->redirect($url);
+        }
+    }
     
     public function allNewPostersAction(Request $request)
     {
@@ -209,5 +201,41 @@ class AdminController extends Controller
         }
         else return new Response('Not XMLHttpRequest');
         
+    }
+
+    /**
+     * Getting the connected user object and the list of categories
+     *
+     * @return array
+     */
+    protected function getConnectedUserAndCategories()
+    {
+        $user = $this->getUser();
+        $categories= $this->get('shop_management.category.services')->getAllCategories();
+
+        return array(
+            'currentUser'=> $user,
+            'categories' => $categories
+        );
+    }
+
+    /**
+     * Getting the connected user object and the list of categories
+     *
+     * @return array
+     */
+    protected function getItemsOfPage($page)
+    {
+        $totalNumberOfItems= (int)$this->get('my_shop_controller')->getNumberOfAllItems();
+        $items = $this->get('my_shop_controller')->getAllPosts($page,self::ITEMS_PER_PAGE);
+
+        return array(
+            'page' => $page,
+            'number_of_pages'=> ceil($totalNumberOfItems/self::ITEMS_PER_PAGE),
+            'entities' =>  $items,
+            'total_number_of_items'=> $totalNumberOfItems,
+
+
+        );
     }
 }

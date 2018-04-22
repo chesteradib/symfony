@@ -213,36 +213,6 @@ class ItemController extends Controller
                     $em->persist($entity);
                     $em->flush();
 
-                    /* Notify followers of the new Post*/
-
-                    if ($user->getProfilePicture())
-                    {
-                        $followedProfilePictureUrl =  $user->getProfilePicture()->getPath();
-                        $followedProfilePictureWidthVsHeight =  $user->getProfilePicture()->getWidthVsHeight();
-                    }
-                    else
-                    {
-                        $followedProfilePictureUrl =  'web/pp/index.png';
-                        $followedProfilePictureWidthVsHeight =  0;
-                    }
-                    $followers= array_map('current', $this->get('members_management.follow.services')->getFollowers($user->getId()));
-
-                    $context=  new \ZMQContext;
-                    $socket = $context->getSocket(\ZMQ::SOCKET_PUSH, 'my_pusher');
-
-                    $socket->connect('tcp://localhost:5555');
-
-                    $pushData= array(
-                                'type' => 'my_market',
-                                'followed_name' => $user->getUsername(),
-                                'followed_id' => $user->getId(),
-                                'followers' => $followers,
-                                'followed_profile_picture_url' => $followedProfilePictureUrl,
-                                'followed_profile_picture_widthVsHeight' => $followedProfilePictureWidthVsHeight,
-                                'date' => $date
-                                ); 
-
-                    $socket->send(json_encode($pushData));
 
                     return $this->redirect($this->generateUrl('mobile_item_show',
                             array('id' => $entity->getId())
