@@ -128,7 +128,7 @@ class ResettingController extends Controller
 
             if (null === $response = $event->getResponse()) {
 
-                $url = $this->generateUrl('user_admin_page');
+                $url = $this->generateUrl('admin');
                 $response = new RedirectResponse($url);
             }
 

@@ -13,39 +13,92 @@ class AdminController extends Controller
 
     const ITEMS_PER_PAGE = 10;
 
+    /**
+     *
+     *
+     */
     public function adminAction()
     {
-        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')){
+        if($this->isUserConnected()){
 
-            $connectedUserAndCategories = $this->getConnectedUserAndCategories();
+            $connectedUser = $this->getConnectedUser();
+            $categories = $this->getCategories();
+            $connectedUserAndCategories = array_merge($connectedUser, $categories);
 
             return $this->render('MembersManagementBundle:AdminInitial:adminInitial.html.twig', $connectedUserAndCategories);
         }
        else 
         { 
            $url = $this->generateUrl("index");
+
            return $this->redirect($url);  
        }
     }
 
+    /**
+     *
+     *
+     */
     public function mobileAdminAction($page)
     {
-        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY')){
-
-            $connectedUserAndCategories = $this->getConnectedUserAndCategories();
+        if($this->isUserConnected()){
+            $connectedUser = $this->getConnectedUser();
+            $categories = $this->getCategories();
             $pageItems = $this->getItemsOfPage($page);
-
-            $connectedUserAndCategoriesAndPageItems = array_merge($connectedUserAndCategories, $pageItems);
+            $connectedUserAndCategoriesAndPageItems = array_merge($connectedUser, $categories, $pageItems);
 
             return $this->render('MobileManagementBundle::admin.html.twig', $connectedUserAndCategoriesAndPageItems);
         }
         else
         {
             $url = $this->generateUrl("mobile_fos_user_security_login");
+
             return $this->redirect($url);
         }
     }
-    
+
+    /**
+     *
+     *
+     */
+    public function indexAction()
+    {
+        if($this->isUserConnected()){
+            $url = $this->generateUrl("admin");
+
+            return $this->redirect($url);
+        }
+        else
+        {
+            $categories = $this->getCategories();
+
+            return $this->render('MembersManagementBundle:Index:index.html.twig', $categories);
+        }
+    }
+
+    /**
+     *
+     *
+     */
+    public function mobileIndexAction($page)
+    {
+        if($this->isUserConnected()){
+            $url = $this->generateUrl("mobile_admin", array( 'page' => $page));
+
+            return $this->redirect($url);
+        }
+        else
+        {
+            $categories = $this->getCategories();
+            $pageItems = $this->getItemsOfPage($page);
+            $categoriesAndPageItems = array_merge($categories, $pageItems);
+
+            return $this->render('MobileManagementBundle::index.html.twig', $categoriesAndPageItems);
+        }
+    }
+
+
+
     public function allNewPostersAction(Request $request)
     {
         if($request->isXmlHttpRequest())
@@ -204,17 +257,40 @@ class AdminController extends Controller
     }
 
     /**
+     * Getting if user is granted authenticated_fully from authorization checker
+     *
+     * @return array
+     */
+    protected function getConnectedUser()
+    {
+        $user = $this->getUser();
+
+        return array(
+            'currentUser'=> $user,
+        );
+    }
+
+
+    /**
+     * Getting the connected user object and the list of categories
+     *
+     * @return boolean
+     */
+    protected function isUserConnected()
+    {
+        return $this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY');
+    }
+
+    /**
      * Getting the connected user object and the list of categories
      *
      * @return array
      */
-    protected function getConnectedUserAndCategories()
+    protected function getCategories()
     {
-        $user = $this->getUser();
         $categories= $this->get('shop_management.category.services')->getAllCategories();
 
         return array(
-            'currentUser'=> $user,
             'categories' => $categories
         );
     }

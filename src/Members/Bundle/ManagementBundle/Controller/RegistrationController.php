@@ -147,7 +147,7 @@ class RegistrationController extends Controller
             throw new AccessDeniedException('This user does not have access to this section.');
         }
         
-        $url = $this->generateUrl("user_admin_page");
+        $url = $this->generateUrl("admin");
         return $this->redirect(
              $url
         );

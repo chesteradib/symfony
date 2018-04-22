@@ -32,7 +32,7 @@ page_of_all_new_posters:
 ### Landing pages ##############
 ###################################
 
-user_admin_page:
+admin:
      path:     /admin/
      defaults: { _controller: MembersManagementBundle:Admin:admin }
 
@@ -42,12 +42,11 @@ mobile_admin:
 
 index:
   path: /
-  defaults: { _controller: MembersManagementBundle:Index:index }
+  defaults: { _controller: MembersManagementBundle:Admin:index }
 
 mobile_index:
-    path:   /m/my/index/g/{page}
-    defaults: { _controller: MobileManagementBundle:MobileIndex:mobileIndex }
-
+    path:   /m/{page}
+    defaults: { _controller: MembersManagementBundle:Admin:mobileIndex }
 
 
 ############################################### 
