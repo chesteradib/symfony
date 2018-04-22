@@ -41,20 +41,9 @@ class ItemController extends Controller
             'categories' => $categories
             
         );
-        if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') )
-        {
-            $user = $this->getUser();
-            $secondPart= $this->get('mobile_management.menu.notification')->getMobileMenuNotifications($user->getId());
-            $finalArray= array_merge( $firstPart, $secondPart);
-            
-        }
-        else
-        {
-            $finalArray= $firstPart;
-        }
         
-        return $this->render('MobileManagementBundle::mobileShowFull.html.twig', $finalArray
-            );
+        return $this->render('MobileManagementBundle::mobileShowFull.html.twig', $firstPart
+        );
     } 
     
     /**
@@ -91,12 +80,8 @@ class ItemController extends Controller
                 'form'   => $form->createView(),
                 'categories' => $categories
                 );
-            
-            $secondPart= $this->get('mobile_management.menu.notification')->getMobileMenuNotifications($me->getId());
-            
-            $finalArray= array_merge( $firstPart, $secondPart);
-            
-            return $this->render('MobileManagementBundle::mobileNewFull.html.twig', $finalArray);   
+
+            return $this->render('MobileManagementBundle::mobileNewFull.html.twig', $firstPart);
         }
         else
         {
@@ -228,12 +213,9 @@ class ItemController extends Controller
                     'form'   => $form->createView(),
                     'categories' => $categories 
                 );
+
             
-            $secondPart= $this->get('mobile_management.menu.notification')->getMobileMenuNotifications($me->getId());
-            
-            $finalArray= array_merge( $firstPart, $secondPart);
-            
-            return $this->render('MobileManagementBundle::mobileNewFull.html.twig', $finalArray);
+            return $this->render('MobileManagementBundle::mobileNewFull.html.twig', $firstPart );
             }
         else
         {
@@ -273,13 +255,10 @@ class ItemController extends Controller
                     'delete_form'   => $deleteForm->createView(),
                     'categories' => $categories
                 );
-            
-                $secondPart= $this->get('mobile_management.menu.notification')->getMobileMenuNotifications($me->getId());
-            
-                $finalArray= array_merge( $firstPart, $secondPart);
+
                 
                 
-                return $this->render('MobileManagementBundle::mobileEditsFull.html.twig',$finalArray );
+                return $this->render('MobileManagementBundle::mobileEditsFull.html.twig',$firstPart );
             }
             else
             {
@@ -406,13 +385,10 @@ class ItemController extends Controller
                 'delete_form' => $deleteForm->createView(),
                 'categories' => $categories
             );
-            
-            $secondPart= $this->get('mobile_management.menu.notification')->getMobileMenuNotifications($me->getId());
-            
-            $finalArray= array_merge( $firstPart, $secondPart);
+
             
             
-            return $this->render('MobileManagementBundle::mobileEditsFull.html.twig', $finalArray);
+            return $this->render('MobileManagementBundle::mobileEditsFull.html.twig', $firstPart);
         }
             else
             {

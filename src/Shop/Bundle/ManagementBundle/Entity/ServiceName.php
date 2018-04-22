@@ -6,32 +6,11 @@ use Doctrine\ORM\Query\ResultSetMapping;
 class ServiceName {
 
     protected $entityManager;
-    protected $followManager;
 
-    public function __construct($entityManager,$followManager) {
+    public function __construct($entityManager) {
         $this->entityManager = $entityManager;
-        $this->followManager = $followManager;
-    }
- /*
-  public function getAllPosts2($page, $articlesPerPage)
-    {
-        $em = $this->entityManager;
-        
-        $offset= $page * $articlesPerPage;
-        $query = $em->createQuery(
-                'SELECT p, i
-                FROM ShopManagementBundle:Post p
-                JOIN ShopManagementBundle:Image i
-                WITH p.postMainImagePath = i.id
-                WHERE p.postStatus = :ps
-                ORDER BY p.postDate DESC'
-                
-                )->setParameter('ps', 'p')->setFirstResult($offset)->setMaxResults($articlesPerPage);
-        $products = $query->getResult();
 
-        return   $products;   
-        
-    }*/
+    }
     
     public function getAllPosts($page, $articlesPerPage)
     {
@@ -122,25 +101,7 @@ class ServiceName {
 
         return (int)$n[0][1];   
     }
-    
-    public function getPostsOfFolloweds($page, $articlesPerPage)
-    {
-        $em = $this->entityManager;
-        
-        $offset= $page * $articlesPerPage;
-        $query = $em->createQuery(
-                'SELECT p
-                FROM ShopManagementBundle:Post p               
-                WHERE p.user = :user_id
-                AND p.postStatus = :ps
-                ORDER BY p.postDate DESC'
-                
-                )->setParameter('ps', 'p')->setParameter('user_id', $shop_id)->setFirstResult($offset)->setMaxResults($articlesPerPage);
-                $products = $query->getResult();
 
-        return   $products;   
-    }
-    
     
     
     public function getPostsOfSpecificCategory($category_id, $page, $articlesPerPage)
@@ -180,43 +141,7 @@ class ServiceName {
         return (int)$items[0][1]; 
     }
     
-    public function setLastDate($shop_id, $current_user_id)
-    {
-        $does=$this->followManager->doesAUserFollowAUser($current_user_id, $shop_id); 
-        
-        if($does)
-        {
-            $em = $this->entityManager;
-            $follow=$this->followManager->getFollowByFollowerAndFollowed($shop_id,$current_user_id);     
 
-            if (!$follow) {
-                throw $this->createNotFoundException('Unable to find Follow entity.');
-            }
-
-            $lastDate=new \DateTime();;
-            $follow->setLastDate($lastDate);
-
-            $em->persist($follow);
-            $em->flush();
-        }
-    }
-    
-    public function setFollowSeen($follower_id, $current_user_id)
-    {
-
-        $em = $this->entityManager;
-        $follow=$this->followManager->getFollowByFollowerAndFollowed($current_user_id,$follower_id);   
-
-        if (!$follow) {
-                throw $this->createNotFoundException('Unable to find Follow entity.');
-        }
-
-        $follow->setFollowSeen(true);
-
-        $em->persist($follow);
-        $em->flush();
-           
-    }
 
 }
 ?>

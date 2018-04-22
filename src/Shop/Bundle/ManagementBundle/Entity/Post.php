@@ -87,10 +87,6 @@ class Post
      */
     private $postStatus;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $messages;
 
     /**
      * @var \Members\Bundle\ManagementBundle\Entity\User
@@ -132,7 +128,6 @@ class Post
     
     public function __construct()
     {
-        $this->messages = new \Doctrine\Common\Collections\ArrayCollection();
         $this->images = new \Doctrine\Common\Collections\ArrayCollection();
         $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
     }
@@ -308,38 +303,6 @@ class Post
         return $this->postStatus;
     }
 
-    /**
-     * Add messages
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Message $messages
-     * @return Post
-     */
-    public function addMessage(\Members\Bundle\ManagementBundle\Entity\Message $messages)
-    {
-        $this->messages[] = $messages;
-    
-        return $this;
-    }
-
-    /**
-     * Remove messages
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Message $messages
-     */
-    public function removeMessage(\Members\Bundle\ManagementBundle\Entity\Message $messages)
-    {
-        $this->messages->removeElement($messages);
-    }
-
-    /**
-     * Get messages
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getMessages()
-    {
-        return $this->messages;
-    }
 
     /**
      * Set user

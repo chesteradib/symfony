@@ -159,83 +159,6 @@ class User extends BaseUser
     }
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $messages_sent;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $messages_received;
-
-
-    /**
-     * Add messages_sent
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Message $messagesSent
-     * @return User
-     */
-    public function addMessagesSent(\Members\Bundle\ManagementBundle\Entity\Message $messagesSent)
-    {
-        $this->messages_sent[] = $messagesSent;
-    
-        return $this;
-    }
-
-    /**
-     * Remove messages_sent
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Message $messagesSent
-     */
-    public function removeMessagesSent(\Members\Bundle\ManagementBundle\Entity\Message $messagesSent)
-    {
-        $this->messages_sent->removeElement($messagesSent);
-    }
-
-    /**
-     * Get messages_sent
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getMessagesSent()
-    {
-        return $this->messages_sent;
-    }
-
-    /**
-     * Add messages_received
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Message $messagesReceived
-     * @return User
-     */
-    public function addMessagesReceived(\Members\Bundle\ManagementBundle\Entity\Message $messagesReceived)
-    {
-        $this->messages_received[] = $messagesReceived;
-    
-        return $this;
-    }
-
-    /**
-     * Remove messages_received
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Message $messagesReceived
-     */
-    public function removeMessagesReceived(\Members\Bundle\ManagementBundle\Entity\Message $messagesReceived)
-    {
-        $this->messages_received->removeElement($messagesReceived);
-    }
-
-    /**
-     * Get messages_received
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getMessagesReceived()
-    {
-        return $this->messages_received;
-    }
-
-    /**
      * Get id
      *
      * @return integer 
@@ -272,45 +195,8 @@ class User extends BaseUser
     {
         return $this->profile_picture;
     }
- 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $followedds;
 
 
-    /**
-     * Add followedds
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Follow $followedds
-     * @return User
-     */
-    public function addFollowedd(\Members\Bundle\ManagementBundle\Entity\Follow $followedds)
-    {
-        $this->followedds[] = $followedds;
-    
-        return $this;
-    }
-
-    /**
-     * Remove followedds
-     *
-     * @param \Members\Bundle\ManagementBundle\Entity\Follow $followedds
-     */
-    public function removeFollowedd(\Members\Bundle\ManagementBundle\Entity\Follow $followedds)
-    {
-        $this->followedds->removeElement($followedds);
-    }
-
-    /**
-     * Get followedds
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getFollowedds()
-    {
-        return $this->followedds;
-    }
     /**
      * @var \Doctrine\Common\Collections\Collection
      */

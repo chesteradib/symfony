@@ -1,8 +1,4 @@
- 
-################################
-global_item_show:
-    path:  /g/item/{id}
-    defaults: { _controller: "ShopManagementBundle:Post:globalShow" }
+
     
 post_show:
     path:  /{id}/show
@@ -42,18 +38,6 @@ post_bought:
     requirements: { _method: post|delete }
 
 
-#######################################
-get_my_market_posts:
-    path:  /my_market_posts/
-    defaults: { _controller: "ShopManagementBundle:Market:displayMarketPosts" }
-
-get_my_market:
-    path:  /my_market/
-    defaults: { _controller: "ShopManagementBundle:Market:displayMyMarket" }
-
-get_my_market_dialog:
-    path: /my_market_dialog/
-    defaults: { _controller: "ShopManagementBundle:Market:myMarketDialog"}
 ################################
 
 get_posts:

@@ -35,26 +35,10 @@ class ShopController extends Controller
 
             $user= $em->getRepository('MembersManagementBundle:User')->find($shop_id);
             $articlesPerPage = (int)$request->request->get('articles_per_page');
-            $numberOfFollowersOfUser= $this->get('members_management.follow.services')->getNumberOfFollowersOfUser($shop_id);
-            $doesCurrentUserFollowThisUser= $this->get('members_management.follow.services')->doesAUserFollowAUser($user->getId(),$shop_id);
-            
-            $me= $this->getUser();
-        
-            if($me && $me->getId() != $shop_id){
-                $this->get('my_shop_controller')->setLastDate($shop_id, $me->getId());
 
-                $followSeen = $request->request->get('followSeen');
-
-                if($followSeen) 
-                {
-                    $this->get('my_shop_controller')->setFollowSeen($shop_id, $me->getId());
-                }
-            }
             
             return $this->render('ShopManagementBundle:Shop:Shop.html.twig', array(
                 'user' => $user,
-                'doesCurrentUserFollowThisUser' => $doesCurrentUserFollowThisUser,
-                'number_of_followers_of_user' => $numberOfFollowersOfUser,
                 'entities' =>  $this->get('my_shop_controller')->getPostsOfSpecificShop($shop_id,0,$articlesPerPage),
                 'number_of_pages'=> ceil($this->get('my_shop_controller')->getNumberOfArticles($shop_id)/$articlesPerPage),
                 'total_number_of_items'=> $this->get('my_shop_controller')->getNumberOfArticles($shop_id)

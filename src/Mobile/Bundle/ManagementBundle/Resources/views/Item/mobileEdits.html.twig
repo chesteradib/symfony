@@ -4,8 +4,7 @@
         action="{{ path('mobile_item_updates', { 'id': id }) }}"  
         data-iu-url="{{ path('image_uploads')}}" 
         data-id-url="{{ path('image_deletes')}}"
-        method="post" 
-        {{ form_enctype(edit_form) }} 
+        method="post"
         novalidate>
 
         <div id="item-form-top">

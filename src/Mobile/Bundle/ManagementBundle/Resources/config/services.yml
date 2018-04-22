@@ -7,13 +7,3 @@ services:
         arguments:    ["@fos_user.mailer", "@fos_user.util.token_generator", "@router", "@session"]
         tags:
             - { name: kernel.event_subscriber }
-    #custom_service:
-     #   class: %custom_service.class%
-      #  arguments:    ["@fos_user.mailer", "@fos_user.util.token_generator", "@router", "@session"]
-       # tags:
-        #    - { name: kernel.event_subscriber }
-        
-        
-    mobile_management.menu.notification:
-        class: %mobile_management.menu.notification.class%
-        arguments: ["@members_management.messages.services", "@members_management.follow.services", "@shop_management.mymarket.services"]

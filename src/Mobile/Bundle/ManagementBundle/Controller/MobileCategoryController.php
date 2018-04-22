@@ -37,19 +37,8 @@ class MobileCategoryController extends Controller
                 'category' => $currentCategory
             );
  
-        if( $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY') )
-        {
-            $user = $this->getUser();
-            $secondPart= $this->get('mobile_management.menu.notification')->getMobileMenuNotifications($user->getId());
-            $finalArray= array_merge($firstPart, $secondPart);
-            
-        }
-        else
-        {
-            $finalArray= $firstPart;
-        }
 
-        return $this->render('MobileManagementBundle::mobileCategory.html.twig', $finalArray
+        return $this->render('MobileManagementBundle::mobileCategory.html.twig', $firstPart
            );
     }
 

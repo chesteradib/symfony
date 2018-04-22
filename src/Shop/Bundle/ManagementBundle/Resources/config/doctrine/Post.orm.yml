@@ -59,10 +59,6 @@ Shop\Bundle\ManagementBundle\Entity\Post:
         mappedBy: post
         targetEntity: Shop\Bundle\ManagementBundle\Entity\Image
         cascade:      [persist]
-      messages:
-        mappedBy: post
-        targetEntity: Members\Bundle\ManagementBundle\Entity\Message
-        cascade:      [persist]
     oneToOne:        
       postMainImagePath:
         fetch: EAGER

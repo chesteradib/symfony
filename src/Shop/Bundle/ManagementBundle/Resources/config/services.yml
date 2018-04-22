@@ -5,17 +5,14 @@ parameters:
 services:
    my_shop_controller:
         class: Shop\Bundle\ManagementBundle\Entity\ServiceName
-        arguments:    ["@doctrine.orm.default_entity_manager", "@members_management.follow.services"]
+        arguments:    ["@doctrine.orm.default_entity_manager"]
    
    
    shop_management.image.services:
         class: Shop\Bundle\ManagementBundle\Entity\ImageServices
         arguments:    ["@doctrine.orm.default_entity_manager"]
         
-        
-   shop_management.mymarket.services:
-        class: Shop\Bundle\ManagementBundle\Entity\MyMarketServices
-        arguments:    ["@doctrine.orm.default_entity_manager"]
+
         
    shop_management.post.handler:
         class: Shop\Bundle\ManagementBundle\Handler\PostHandler

@@ -104,8 +104,7 @@ class AdminController extends Controller
         if($request->isXmlHttpRequest())
         {
             $itemsPerPage = (int)$request->request->get('items_per_page');
-            
-            $user= $this->getUser();
+
             $newPostersAndDates= $this->get('members_management.user.services')->getNewPostersAndDates(0, $itemsPerPage);
 
             $newPostersRelatedData =  array();
@@ -113,9 +112,7 @@ class AdminController extends Controller
             {
                $newPostersRelatedData[]= array(
                     'item' => $newPoster,
-                    'number_of_articles' =>  $this->get('my_shop_controller')->getNumberOfArticles($newPoster),
-                    'number_of_followers' => $this->get('members_management.follow.services')->getNumberOfFollowersOfUser($newPoster->getId()),
-                    'doesCurrentUserFollowThisUser' => $this->get('members_management.follow.services')->doesAUserFollowAUser( $user,$newPoster->getId()),
+                    'number_of_articles' =>  $this->get('my_shop_controller')->getNumberOfArticles($newPoster)
                 );   
             }
            
@@ -136,16 +133,13 @@ class AdminController extends Controller
             $page = (int)$request->request->get('current_page');
             
             $newPostersAndDates= $this->get('members_management.user.services')->getNewPostersAndDates($page,$itemsPerPage);
-            
-            $user= $this->get('security.context')->getToken()->getUser();
+
             $newPostersRelatedData =  array();
             foreach($newPostersAndDates as $newPoster)
             {
                $newPostersRelatedData[]= array(
                     'item' => $newPoster,
-                    'number_of_articles' =>  $this->get('my_shop_controller')->getNumberOfArticles($newPoster),
-                    'number_of_followers' => $this->get('members_management.follow.services')->getNumberOfFollowersOfUser($newPoster->getId()),
-                    'doesCurrentUserFollowThisUser' => $this->get('members_management.follow.services')->doesAUserFollowAUser( $user,$newPoster->getId()),
+                    'number_of_articles' =>  $this->get('my_shop_controller')->getNumberOfArticles($newPoster)
                 );   
             }
             return $this->render('MembersManagementBundle:User:all_new_posters_items.html.twig', array(

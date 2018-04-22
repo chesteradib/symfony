@@ -42,14 +42,6 @@ class PostController extends Controller
         return $response;
     } 
 
-    /**
-     * Finds and displays a Post entity.
-     *
-     */
-    public function globalShowAction($id)
-    {
-        return new Response("globalShow" . $id);
-    } 
     
     /**
      * Displays a form to edit an existing Post entity.
