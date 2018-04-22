@@ -1,19 +1,47 @@
+
+###################################
+### Landing pages ##############
+###################################
+
+admin:
+     path: /admin/
+     defaults: { _controller: MembersManagementBundle:Admin:admin }
+
+mobile_admin:
+    path: /m-admin/{page}
+    defaults: { _controller: MembersManagementBundle:Admin:mobileAdmin }
+
+index:
+  path: /
+  defaults: { _controller: MembersManagementBundle:Admin:index }
+
+mobile_index:
+    path: /m/{page}
+    defaults: { _controller: MembersManagementBundle:Admin:mobileIndex }
+
+###################################
+### Search ########################
+###################################
+
+
 get_site_search_posts:
     path:  /{search_text}/site/search/
-    defaults: { _controller: "MembersManagementBundle:Admin:pageOfSearch" } 
-    
+    defaults: { _controller: "MembersManagementBundle:Admin:pageOfSearch" }
+
 site_search:
     path:  /site/search
     defaults: { _controller: MembersManagementBundle:Admin:search}
     requirements: { _method: post|head }
 
+###################################
+### Search ########################
+###################################
 
-#######################################
 all_jawla:
   path:  /all_jawla
   defaults: { _controller: MembersManagementBundle:Admin:allJawla}
-  
-  
+
+
 all_jawla_items:
   path: /all_jawla_items
   defaults: {_controller: MembersManagementBundle:Admin:allJawlaItems}
@@ -22,31 +50,11 @@ all_jawla_items:
 all_new_posters:
   path:  /all_new_posters
   defaults: { _controller: MembersManagementBundle:Admin:allNewPosters}
-  
-  
+
+
 page_of_all_new_posters:
   path: /page_of_all_new_posters
   defaults: {_controller: MembersManagementBundle:Admin:pageOfAllNewPosters}
-
-###################################
-### Landing pages ##############
-###################################
-
-admin:
-     path:     /admin/
-     defaults: { _controller: MembersManagementBundle:Admin:admin }
-
-mobile_admin:
-    path:     /m-admin/{page}
-    defaults: { _controller: MembersManagementBundle:Admin:mobileAdmin }
-
-index:
-  path: /
-  defaults: { _controller: MembersManagementBundle:Admin:index }
-
-mobile_index:
-    path:   /m/{page}
-    defaults: { _controller: MembersManagementBundle:Admin:mobileIndex }
 
 
 ############################################### 
@@ -56,91 +64,8 @@ non_fos_user_security_login:
     defaults: { _controller: MembersManagementBundle:Security:bigLogin }
 
 
-###############################################  
 
-follow_unfollow_shop:
-    path:     /followunfollow/{shop_id}
-    defaults: { _controller: MembersManagementBundle:Follow:followUnfollow }
-    requirements: { _method: post|delete }
-
-network_messages:
-  path:  /network_messages
-  defaults: { _controller: MembersManagementBundle:Follow:networkMessages}
-  
-  
-  
-follow_seen:
-  path: /follow_seen
-  defaults: {_controller: MembersManagementBundle:Follow:followSeen}
-
-last_date:
-  path: /last_date
-  defaults: {_controller: MembersManagementBundle:Follow:lastDate}
-  
-all_my_network:
-  path:  /all_my_network
-  defaults: { _controller: MembersManagementBundle:Follow:allMyNetwork}
-  
-  
-page_of_all_my_network:
-  path: /page_of_all_my_network
-  defaults: {_controller: MembersManagementBundle:Follow:pageOfAllMyNetwork}
-  
-all_my_followeds:
-  path:  /all_my_followeds
-  defaults: { _controller: MembersManagementBundle:Follow:allMyFolloweds}
-  
-  
-page_of_all_my_followeds:
-  path: /page_of_my_followeds
-  defaults: {_controller: MembersManagementBundle:Follow:pageOfAllMyFolloweds}
-  
-
-
-
-
-mobile:
-  path: /mobile
-  defaults: { _controller: MembersManagementBundle:Index:mobile }
-  
-
-############################################### 
-
-
-add_message:
-  path:  /{receiver_id}/{post_id}/add_message
-  defaults: { _controller: MembersManagementBundle:Messages:addMessage}
-  
-new_message:
-  path:  /new_message/{receiver_id}/{post_id}
-  defaults: { _controller: MembersManagementBundle:Messages:newMessage}
-
-inbox_messages:
-  path:  /{receiver_id}/inbox_messages
-  defaults: { _controller: MembersManagementBundle:Messages:inboxMessages}
-  
-all_my_inbox:
-  path:  /all_my_inbox
-  defaults: { _controller: MembersManagementBundle:Messages:allMyInbox}
-
-page_of_all_my_inbox:
-  path: /page_of_all_my_inbox
-  defaults: {_controller: MembersManagementBundle:Messages:pageOfAllMyInbox}
-      
-messages_between_two_users_about_article:
-  path: /messages_between_two_users_about_article/{sender_id}/{receiver_id}/{post_id}
-  defaults: {_controller: MembersManagementBundle:Messages:getMessagesBetweenTwoUsersAboutArticle}
-
-
-message_seen:
-  path: /message_seen
-  defaults: {_controller: MembersManagementBundle:Messages:messageSeen}
-  
-messages_seen:
-  path: /messages_seen
-  defaults: {_controller: MembersManagementBundle:Messages:messagesSeen}
-
-############################################### 
+###############################################
 
 latlngjson:
     path: /latlngjson

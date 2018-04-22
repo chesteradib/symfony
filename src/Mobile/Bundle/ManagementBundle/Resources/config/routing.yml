@@ -46,28 +46,11 @@ mobile_my_shop:
     path: /m/my/shop/g/{page}
     defaults: { _controller: "MobileManagementBundle:MobileMyShop:displayMobileMyShop" }
 
-###################################
-mobile_my_market:
-    path: /m/my/market/g/{page}
-    defaults: { _controller: "MobileManagementBundle:MobileMyMarket:displayMobileMyMarket" }
 
-###################################
-
-mobile_my_inbox:
-    path: /m/my/inbox/g/{page}
-    defaults: { _controller: "MobileManagementBundle:MobileMessaging:mobileMyInbox" }
 
 ###################################
 ### Discussion route ##############
 ###################################
-
-mobile_discussion:
-    path : /m/mobile_discussion/{post_id}/{shop_id}/
-    defaults: {_controller: MobileManagementBundle:MobileMessaging:getDiscussionAboutPostWith}
-
-   
-
-#######################################
 
 
 mobile_fos_user_security_login:
@@ -114,17 +97,6 @@ mobile_fos_user_resetting_reset:
     defaults: { _controller: MobileManagementBundle:MobileResetting:reset}
 
 
-#######################################
-
-mobile_all_my_network:
-    path:     /m/my/network/g/{page}
-    defaults: { _controller: MobileManagementBundle:MobileFollow:mobileAllMyNetwork }
-
-mobile_all_my_followeds:
-    path:     /m/my/followeds/g/{page}
-    defaults: { _controller: MobileManagementBundle:MobileFollow:mobileAllMyFolloweds }
-    
-#######################################
 
 
 mobile_page_of_search:

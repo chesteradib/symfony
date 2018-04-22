@@ -105,7 +105,7 @@ class AdminController extends Controller
         {
             $itemsPerPage = (int)$request->request->get('items_per_page');
             
-            $user= $this->get('security.context')->getToken()->getUser();
+            $user= $this->getUser();
             $newPostersAndDates= $this->get('members_management.user.services')->getNewPostersAndDates(0, $itemsPerPage);
 
             $newPostersRelatedData =  array();
