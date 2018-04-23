@@ -10,109 +10,108 @@ use Symfony\Component\HttpFoundation\Response;
 class SearchController extends Controller
 {
     const ITEMS_PER_PAGE = 10;
+    const FIRST_PAGE = 0;
 
+    /**
+     * Action for displaying search results for the ajaxed design
+     * Displays only the first page (page=0)
+     *
+     */
     public function searchAction(Request $request)
     {
         if($request->isXmlHttpRequest())
         {
-            $finder = $this->container->get('fos_elastica.finder.search.post');
-            $SearchText = $request->request->get('SearchText');
-            $articlesPerPage = (int)$request->request->get('articles_per_page');
-            $paginator = $finder->findPaginated($SearchText);
-
-            $paginator->setMaxPerPage($articlesPerPage);
-            $countOfResults = $paginator->getNbResults();
-            $resultsSet= $paginator->getCurrentPageResults();
+            $page = self::FIRST_PAGE;
+            $articlesPerPage = (int) $request->request->get('articles_per_page');
+            $searchText= (string) $request->request->get('SearchText');
+            $page ++;
+            $resultsSet= $this->getItemsOfPage($searchText, $page, $articlesPerPage);
 
 
             return $this->render('ShopManagementBundle:Search:Search.html.twig', array(
-                'entities' =>  $resultsSet,
-                'number_of_pages'=> ceil($countOfResults/$articlesPerPage),
-                'countOfResults' => $countOfResults,
-                'searchText'=> $SearchText
+                'entities' => $resultsSet['entities'],
+                'number_of_pages'=> $resultsSet['number_of_pages'],
+                'countOfResults' =>  $resultsSet['countOfResults'],
+                'searchText'=> $searchText
             ));
         }
         else return new Response('Not XMLHttpRequest');
     }
 
-    public function pageOfSearchAction(Request $request, $search_text)
+    /**
+     * Action for displaying search results for a specific page for the ajaxed design
+     *
+     *
+     */
+    public function pageOfSearchAction(Request $request, $searchText)
     {
         if($request->isXmlHttpRequest())
         {
-
             $page = (int)$request->request->get('page');
             $articlesPerPage = (int)$request->request->get('articles_per_page');
-            $finder = $this->container->get('fos_elastica.finder.search.post');
+
             $page++;
-            $paginator = $finder->findPaginated($search_text);
-
-            $paginator->setMaxPerPage($articlesPerPage);
-            $paginator->setCurrentPage($page);
-
-            $resultsSet= $paginator->getCurrentPageResults();
-
             return $this->render('ShopManagementBundle::items.html.twig', array(
-                'entities' =>  $resultsSet,
+                'entities' =>  $this->getItemsOfPage($searchText, $page, $articlesPerPage)['entities']
             ));
         }
         else return new Response('Not XMLHttpRequest');
 
     }
 
-
+    /**
+     * Action for displaying search results for the mobile design
+     * Displays only the first page (page=0)
+     *
+     */
     public function mobileSearchAction(Request $request)
     {
-        $SearchText = (string)$request->request->get('SearchText');
-
+        $searchText = (string) $request->request->get('SearchText');
+        $page = self::FIRST_PAGE;
         $categories= $this->get('shop_management.category.services')->getAllCategories();
 
-        if(strlen($SearchText) > 0)
+        if(strlen($searchText) > 0)
         {
-            $finder = $this->container->get('fos_elastica.finder.search.post');
+            $page++;
 
-            $paginator = $finder->findPaginated($SearchText);
-
-            $paginator->setMaxPerPage(self::ITEMS_PER_PAGE);
-            $countOfResults = $paginator->getNbResults();
-            $resultsSet= $paginator->getCurrentPageResults();
-
-
-
-            $firstPart = array(
-                'entities' =>  $resultsSet,
-                'number_of_pages'=> ceil($countOfResults/self::ITEMS_PER_PAGE),
-                'countOfResults' => $countOfResults,
-                'searchText'=> $SearchText,
+            $pageOfMobileSearch = array_merge(array(
+                'searchText'=> $searchText,
                 'categories' => $categories,
-                'page' => 0
-            );
+                'page' => $page
+            ), $this->getItemsOfPage($searchText, $page, self::ITEMS_PER_PAGE));
 
         }
         else
         {
-            $firstPart = array(
+            $pageOfMobileSearch = array(
                 'entities' =>  null,
                 'number_of_pages'=> 0,
                 'countOfResults' => 0,
                 'searchText'=> '',
                 'categories' => $categories,
-                'page' => 0);
+                'page' => $page);
         }
 
 
-        return $this->render('MobileManagementBundle::mobileSearch.html.twig', $firstPart);
+        return $this->render('MobileManagementBundle::mobileSearch.html.twig', $pageOfMobileSearch);
     }
 
-    public function pageOfMobileSearchAction($SearchText, $page)
+    /**
+     * Action for displaying search results for the mobile design for a specific page $page
+     *
+     *
+     */
+
+    public function pageOfMobileSearchAction($searchText, $page)
     {
         $page++;
 
         $categories= $this->get('shop_management.category.services')->getAllCategories();
         $pageOfMobileSearch = array_merge(array(
-                                                'searchText'=> $SearchText,
+                                                'searchText'=> $searchText,
                                                 'categories' => $categories,
                                                 'page' => $page
-                                            ), $this->getItemsOfPage($SearchText, $page));
+                                            ), $this->getItemsOfPage($searchText, $page, self::ITEMS_PER_PAGE));
 
         return $this->render('MobileManagementBundle::mobileSearch.html.twig', $pageOfMobileSearch);
     }
@@ -122,11 +121,11 @@ class SearchController extends Controller
      *
      * @return array
      */
-    protected function getItemsOfPage($SearchText, $page)
+    protected function getItemsOfPage($searchText, $page, $articlesPerPage)
     {
         $finder = $this->get('fos_elastica.finder.search.post');
-        $paginator = $finder->findPaginated($SearchText);
-        $paginator->setMaxPerPage(self::ITEMS_PER_PAGE);
+        $paginator = $finder->findPaginated($searchText);
+        $paginator->setMaxPerPage($articlesPerPage);
         $paginator->setCurrentPage($page);
 
         $resultsSet = $paginator->getCurrentPageResults();
@@ -134,12 +133,9 @@ class SearchController extends Controller
         $countOfResults = $paginator->getNbResults();
 
         return array(
-            'number_of_pages'=> ceil($countOfResults/self::ITEMS_PER_PAGE),
+            'number_of_pages'=> ceil($countOfResults/$articlesPerPage),
             'countOfResults' => $countOfResults,
             'entities' =>  $resultsSet
         );
     }
-
-
-
 }
