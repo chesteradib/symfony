@@ -96,3 +96,27 @@ post_retweet:
     defaults: { _controller: "ShopManagementBundle:Post:retweet" }
     requirements: { _method: post|delete }
 
+
+###################################
+### Search ########################
+###################################
+
+
+page_of_search:
+    path:  /search/{search_text}
+    defaults: { _controller: ShopManagementBundle:Search:pageOfSearch }
+
+search:
+    path:  /search
+    defaults: { _controller: ShopManagementBundle:Search:search }
+    requirements: { _method: post|head }
+
+
+mobile_page_of_search:
+    path:  /m-search/{SearchText}/{page}
+    defaults: { _controller: ShopManagementBundle:Search:pageOfMobileSearch }
+
+mobile_site_search:
+    path:  /m-search
+    defaults: { _controller: ShopManagementBundle:Search:mobileSearch }
+    requirements: { _method: post|head }

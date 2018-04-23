@@ -202,53 +202,7 @@ class AdminController extends Controller
             return new Response('Not XMLHttpRequest');
     }
     
-    public function searchAction(Request $request)
-    {
-        if($request->isXmlHttpRequest())
-        {
-            $finder = $this->container->get('fos_elastica.finder.search.post');
-            $SearchText = $request->request->get('SearchText');
-            $articlesPerPage = (int)$request->request->get('articles_per_page');
-            $paginator = $finder->findPaginated($SearchText);
 
-            $paginator->setMaxPerPage($articlesPerPage);
-            $countOfResults = $paginator->getNbResults();
-            $resultsSet= $paginator->getCurrentPageResults();
-
-
-            return $this->render('ShopManagementBundle:Search:Search.html.twig', array(
-                'entities' =>  $resultsSet,
-                'number_of_pages'=> ceil($countOfResults/$articlesPerPage),
-                'countOfResults' => $countOfResults,
-                'searchText'=> $SearchText
-            )); 
-        }
-        else return new Response('Not XMLHttpRequest');
-    }
-    
-    public function pageOfSearchAction(Request $request, $search_text)
-    {
-        if($request->isXmlHttpRequest())
-        {
-
-            $page = (int)$request->request->get('page');
-            $articlesPerPage = (int)$request->request->get('articles_per_page');
-            $finder = $this->container->get('fos_elastica.finder.search.post');
-            $page++;
-            $paginator = $finder->findPaginated($search_text);   
-            
-            $paginator->setMaxPerPage($articlesPerPage);
-            $paginator->setCurrentPage($page);
-
-            $resultsSet= $paginator->getCurrentPageResults();
-            
-            return $this->render('ShopManagementBundle::items.html.twig', array(
-                'entities' =>  $resultsSet,
-            )); 
-        }
-        else return new Response('Not XMLHttpRequest');
-        
-    }
 
     /**
      * Getting if user is granted authenticated_fully from authorization checker

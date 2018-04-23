@@ -56,7 +56,6 @@ class ItemController extends Controller
     private function createDeleteForm($id)
     {
         return $this->createFormBuilder(array('id' => $id))
-            ->add('id', 'hidden')
             ->getForm()
         ;
     }
@@ -139,7 +138,7 @@ class ItemController extends Controller
 
             $em = $this->getDoctrine()->getManager();
 
-            $result= $this->get('request')->request->get('result');
+            $result= $request->request->get('result');
 
             if ($result)
             {
@@ -166,7 +165,7 @@ class ItemController extends Controller
 
             }
 
-            $mainImageId= $this->get('request')->request->get('main-image');
+            $mainImageId= $request->request->get('main-image');
 
             if ($mainImageId)
             {
@@ -323,7 +322,7 @@ class ItemController extends Controller
                 $entity->removeCategory($dc);
             }
 
-            $result=$this->get('request')->request->get('result');
+            $result=$request->request->get('result');
             if ($result)
             {
                 foreach( $result as $res)
@@ -348,7 +347,7 @@ class ItemController extends Controller
                     if($category->getParent()) $entity->addCategory($category->getParent());
 
                 }
-            $mainImageId=(int)$this->get('request')->request->get('main-image');
+            $mainImageId=(int)$request->request->get('main-image');
             $value=0;
             if ($mainImageId!=0)
             {

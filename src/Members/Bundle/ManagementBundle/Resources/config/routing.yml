@@ -19,19 +19,7 @@ mobile_index:
     path: /m/{page}
     defaults: { _controller: MembersManagementBundle:Admin:mobileIndex }
 
-###################################
-### Search ########################
-###################################
 
-
-get_site_search_posts:
-    path:  /{search_text}/site/search/
-    defaults: { _controller: "MembersManagementBundle:Admin:pageOfSearch" }
-
-site_search:
-    path:  /site/search
-    defaults: { _controller: MembersManagementBundle:Admin:search}
-    requirements: { _method: post|head }
 
 ###################################
 ### Search ########################

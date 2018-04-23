@@ -17,7 +17,7 @@
     
     <div id="center-content-pagination" class="center-pagination"
         data-current-page="0" 
-        data-url="{{path('get_site_search_posts',{ 'search_text':searchText})}}"
+        data-url="{{path('page_of_search',{ 'search_text':searchText})}}"
         data-total-pages="{{number_of_pages}}"
         >
         {% include "MembersManagementBundle:HomePage:pagination.html.twig" %}

@@ -166,7 +166,8 @@ class PostController extends Controller
                     $entity->removeCategory($dc);
                 }
 
-                $result=$this->get('request')->request->get('result');
+                $result= $request->request->get('result');
+
                 if ($result)
                 {
                     foreach( $result as $res)
@@ -191,7 +192,7 @@ class PostController extends Controller
 
                 }
                 
-                $mainImageId=(int)$this->get('request')->request->get('main-image');
+                $mainImageId=(int)$request->request->get('main-image');
 
                 $value=0;
                 if ($mainImageId!=0)

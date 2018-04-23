@@ -99,15 +99,7 @@ mobile_fos_user_resetting_reset:
 
 
 
-mobile_page_of_search:
-    path:  /m/search/{SearchText}/g/{page}
-    defaults: { _controller: "MobileManagementBundle:MobileAdmin:pageOfSearch" } 
-    
-mobile_site_search:
-    path:  /m/search/
-    defaults: { _controller: MobileManagementBundle:MobileAdmin:search}
-    requirements: { _method: post|head }
-    
+
     
 #######################################
 
