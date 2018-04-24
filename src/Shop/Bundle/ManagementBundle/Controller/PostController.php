@@ -14,35 +14,50 @@ use Shop\Bundle\ManagementBundle\Form\PostType;
 class PostController extends Controller
 {
     /**
-     * Finds and displays an ite,
+     * Finds and displays an item in the ajax design
      *
      */
-    public function showAction($id)
+    public function showAction(Post $entity)
     {
-        $em = $this->getDoctrine()->getManager();
-       
-        $entity = $em->getRepository('ShopManagementBundle:Post')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Post entity.');
-        }
-        
-        $deleteForm = $this->createDeleteForm($id);
+        $deleteForm = $this->createDeleteForm($entity->getId());
         
         $html = $this->renderView('ShopManagementBundle:Post:show.html.twig', array(
                 'entity'      => $entity,
                 'delete_form' => $deleteForm->createView()
-               ) );
-        $status= true;
-        $response = new Response(json_encode( 
-                array("html" => $html, "target" => "show", "status" => $status) )
-                );
-        $response->headers->set('Content-Type', 'application/json');
-        
-        return $response;
-    } 
+               ));
 
-    
+        $status= true;
+        $responseArray = array(
+            "html" => $html,
+            "target" => "show",
+            "status" => $status
+        );
+
+        return $this->returnJSONResponse($responseArray);
+    }
+
+    /**
+     * Finds and displays an item in the mobile design
+     *
+     */
+    public function mobileShowAction(Post $entity)
+    {
+
+        $deleteForm = $this->createDeleteForm($entity->getId());
+
+        $categories= $this->get('shop_management.category.services')->getAllCategories();
+
+        $responseArray = array(
+            'entity'      => $entity,
+            'delete_form' => $deleteForm->createView(),
+            'categories' => $categories
+
+        );
+
+        return $this->render('MobileManagementBundle::mobileShowFull.html.twig', $responseArray);
+    }
+
+
     /**
      * Displays a form to edit an existing Post entity.
      *
@@ -319,7 +334,6 @@ class PostController extends Controller
 
                     return $this->returnJSONResponse($responseArray);
                 }
-
             }
             else{
                 $status = false;
@@ -417,11 +431,7 @@ class PostController extends Controller
      */
     public function createsAction(Request $request)
     {
-
-        $status= false;
-        $message = '';
-
-        if($this->isUserConnected())
+        if($this->isUserConnected() && $request->isXmlHttpRequest())
         {
             $entity = new Post();
             $form = $this->createCreateForm($entity);
@@ -450,7 +460,7 @@ class PostController extends Controller
                 {
                     $image = $em->getRepository('ShopManagementBundle:Image')->find((int)$res);
                     if (!$image) {
-                        throw $this->createNotFoundException('Unable to find it Post entity');
+                        throw $this->createNotFoundException('Unable to find image entity');
                     }
                     $entity->addImage($image);
                 }
@@ -475,7 +485,7 @@ class PostController extends Controller
             {
                 $mainImage = $em->getRepository('ShopManagementBundle:Image')->find((int)$mainImageId);
                 if (!$mainImage) {
-                    throw $this->createNotFoundException('Unable to find MAin Image entity');
+                    throw $this->createNotFoundException('Unable to find main Image entity');
                 }
 
                 $entity->setPostMainImagePath($mainImage);
@@ -506,22 +516,23 @@ class PostController extends Controller
                 'form'   => $form->createView()
             ));
             $status = true;
-            $response = new Response(json_encode( 
-                    array("status" => $status, "html" => $html, "target" => "form") )
-                    );
-            $response->headers->set('Content-Type', 'application/json');
 
-            return $response;
+            $responseArray = array(
+                "status" => $status,
+                "html" => $html,
+                "target" => "form"
+            );
+
+            return $this->returnJSONResponse($responseArray);
         }
         else
         {
             $status = false;
-            $message = 'You are not connected!';
+            $message = 'You are not connected or the request is not AJAX';
+
             $responseArray =array("status" => $status,"message" => $message);
-            
-            $response = new Response(json_encode($responseArray));
-            $response->headers->set('Content-Type', 'application/json');
-            return $response;
+
+            return $this->returnJSONResponse($responseArray);
         }
 
     }
@@ -620,7 +631,7 @@ class PostController extends Controller
         
         $me = $this->getUser();
         
-        if($me){
+        if($this->isUserConnected()){
             if($request->isXmlHttpRequest())
             {
                 $em = $this->getDoctrine()->getManager();

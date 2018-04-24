@@ -55,14 +55,14 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     #spool:     { type: memory }
-    delivery_address: adib.aroui@hotmail.fr
+    #delivery_address: adib.aroui@hotmail.fr
 
 
 fos_user:
   db_driver: orm
   firewall_name: main
   from_email:
-              address: "info@voyatrax.tk"
+              address: "team@jou.la"
               sender_name: "No Reply"
   user_class: Members\Bundle\ManagementBundle\Entity\User
   profile:
@@ -72,14 +72,14 @@ fos_user:
         confirmation:
             enabled:    true
             from_email:
-                address:        registration@acmedemo.com
-                sender_name:    WebsiteName Confirming Registration
+                address:        registration@jou.la
+                sender_name:    Confirming Registration at Joula
             template: MembersManagementBundle:Registration:email.txt.twig
   resetting:
         email:
             from_email:
-                address:        resetting@acmedemo.com
-                sender_name:    WebsiteName Resetting
+                address:        resetting@jou.la
+                sender_name:    Resetting your account at Joula
             template: MembersManagementBundle:Resetting:email.txt.twig
   service:
         mailer: fos_user.mailer.twig_swift

@@ -17,35 +17,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 class ItemController extends Controller
 {
 
-    /**
-     * Finds and displays a Post entity.
-     *
-     */
-    public function mobileShowAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-       
-        $entity = $em->getRepository('ShopManagementBundle:Post')->find($id);
 
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Post entity.');
-        }
-        
-        $deleteForm = $this->createDeleteForm($id);
-        
-        $categories= $this->get('shop_management.category.services')->getAllCategories();
-        
-        $firstPart = array(
-            'entity'      => $entity,
-            'delete_form' => $deleteForm->createView(),
-            'categories' => $categories
-            
-        );
-        
-        return $this->render('MobileManagementBundle::mobileShowFull.html.twig', $firstPart
-        );
-    } 
-    
     /**
      * Creates a form to delete a Post entity by id.
      *

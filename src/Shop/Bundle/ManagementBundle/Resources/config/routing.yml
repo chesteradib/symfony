@@ -4,6 +4,10 @@ post_show:
     path:  /{id}/show
     defaults: { _controller: "ShopManagementBundle:Post:show" }
 
+mobile_item_show:
+    path:  /m/item/{id}
+    defaults: { _controller: "ShopManagementBundle:Post:mobileShow" }
+
 post_new:
     path:  /new
     defaults: { _controller: "ShopManagementBundle:Post:new" }

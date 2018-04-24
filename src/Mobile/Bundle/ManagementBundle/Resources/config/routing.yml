@@ -1,6 +1,4 @@
-mobile_item_show:
-    path:  /m/item/{id}
-    defaults: { _controller: "MobileManagementBundle:Item:mobileShow" }
+
     
 mobile_item_new:
     path: /m/new

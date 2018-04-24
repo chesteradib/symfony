@@ -1,8 +1,7 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 <div id="mobile-container">  
-    <form id="register_form" action="{{ path('mobile_fos_user_registration_register') }}" 
-      {{ form_enctype(form) }} 
+    <form id="register_form" action="{{ path('mobile_fos_user_registration_register') }}"
       method="POST" 
       class="fos_user_registration_register" 
       novalidate
