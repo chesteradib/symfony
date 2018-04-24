@@ -14,7 +14,7 @@ function show_article_listener()
         show_article(product_url,showArticleCallback);
         return false;
    });
-}  
+}
 
 function show_article(url,callback)
 {
@@ -165,7 +165,6 @@ function update_article(data,url){
                             show_edit_article_listener();
                             delete_listener();
                             bought_listener();
-                            open_chat_listener();
                             articleImagesScroller();
                             display_image_on_thumb_click_listener();
                             show_shop_listener();
@@ -345,7 +344,6 @@ function create_article(data,url){
                        show_edit_article_listener();
                        delete_listener();
                        bought_listener();
-                       open_chat_listener();
                        articleImagesScroller();
                        display_image_on_thumb_click_listener();
                        show_shop_listener();
@@ -389,7 +387,7 @@ function delete_listener()
         var $this= $(this);
         var url= $this.attr('action');
         var data= $this.serialize();
-        delete_article(data,url);      
+        delete_article(data,url);
 
         return false;       
   

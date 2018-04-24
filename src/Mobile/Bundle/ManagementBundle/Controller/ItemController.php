@@ -402,40 +402,6 @@ class ItemController extends Controller
        
     }
        
-    /**
-     * Deletes a Post entity.
-     *
-     */             
-    public function mobileDeletesAction(Request $request,$id)
-    {
-        $me = $this->getUser();
-        if($me)
-        {
-            $form = $this->createDeleteForm($id);
-            $form->bind($request);
 
-            if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
-                $entity = $em->getRepository('ShopManagementBundle:Post')->find($id);
-
-                if (!$entity) {
-                    throw $this->createNotFoundException('Unable to find Post entity.');
-                }
-                if($entity->getUser()!=$me)
-                {
-                   return new Response('You are not allowed to delete this post'); 
-                }
-                $em->remove($entity);
-                $em->flush();
-            }
-
-            return $this->redirect($this->generateUrl('mobile_my_shop', array('page'=> 0)));
-            }
-        else
-        {
-            $url = $this->generateUrl("mobile_fos_user_security_login");
-            return $this->redirect($url); 
-        }
-    }
   
 }

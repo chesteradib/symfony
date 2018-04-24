@@ -28,6 +28,11 @@ post_deletes:
     path:  /{id}/deletes
     defaults: { _controller: "ShopManagementBundle:Post:deletes" }
     requirements: { _method: post|delete }
+
+mobile_item_deletes:
+    path:  /m/deletes/{id}
+    defaults: { _controller: "ShopManagementBundle:Post:mobileDeletes" }
+    requirements: { _method: post|delete }
     
     
 ################################    

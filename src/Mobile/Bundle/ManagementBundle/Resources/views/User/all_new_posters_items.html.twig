@@ -35,14 +35,7 @@
                     </div>
                 </div>
             </a>
-      
-            <div class="follow_unfollow_of_follower">
-                <a data-url="{{path('follow_unfollow_shop',{ 'shop_id': new_poster['item'].id}) }}"
-                   href="javascript:void(0);" 
-                   class="trigger_follow {% if new_poster['doesCurrentUserFollowThisUser'] %}trigger_unfollow{% endif %}"
-                   ></a>
-                <a href="javascript:void(0);" class="follow-word">{% if new_poster['doesCurrentUserFollowThisUser'] %}{{ 'global.unfollow'| trans}}{% else %}{{ 'global.follow'| trans}}{%endif%}</a>
-            </div>
+
             <div class="clear"></div>
         </div>
 {% endfor %}

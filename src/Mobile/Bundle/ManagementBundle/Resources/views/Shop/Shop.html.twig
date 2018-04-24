@@ -35,23 +35,6 @@
                 <img class="photo equal-profile-image" src="{{asset('pp/index.png') }}" height= 25/>
             </div>
         {%endif%}
-        {% if app.user %}
-        <div id="follow_unfollow_of_follower_in_shop">
-                <a data-url="{{path('follow_unfollow_shop',{ 'shop_id': user.id}) }}"
-                   href="javascript:void(0);" 
-                   class="trigger_follow {% if doesCurrentUserFollowThisUser %}trigger_unfollow{% endif %} rotate"
-                   ></a>
-                <a href="javascript:void(0);" class="follow-word">{% if doesCurrentUserFollowThisUser %}{{ 'global.unfollow'| trans}}{% else %}{{ 'global.follow'| trans}}{%endif%}</a>
-        </div>
-        {% else %}
-        <div id="follow_unfollow_of_follower_in_shop">
-                <a data-url="{{path('follow_unfollow_shop',{ 'shop_id': user.id}) }}"
-                   href="javascript:void(0);" 
-                   class="trigger_follow rotate"
-                   ></a>
-                <a href="javascript:void(0);" class="follow-word">{{ 'global.follow'| trans}}</a>
-        </div>
-        {%endif%}
     </div>
 
     <div id="mobile-content">

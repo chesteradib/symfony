@@ -21,10 +21,7 @@ mobile_item_updates:
     requirements: { _method: post|put }
 
 
-mobile_item_deletes:
-    path:  /m/deletes/{id}
-    defaults: { _controller: "MobileManagementBundle:Item:mobileDeletes" }
-    requirements: { _method: post|delete }
+
     
 ###################################
 

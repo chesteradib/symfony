@@ -29,12 +29,6 @@ $(document).ready(function(){
     
     initialize_direction();
     direction_listener();
-    
-    
-    open_chat_listener();
-    show_network_listener();
-    show_my_market_listener();
-    show_inbox_listener();
     hideWhenVisible();
     //////////////////////////////////////////////////////////////////////////////
     /// Call to listener of show page of products of shop
@@ -133,9 +127,8 @@ function show_all_new_posters(){
         success: function(data){
             $target.css("visibility", "visible").empty().html(data);
             progress.secondProgress($targetProgress,95);
-            //show_shop_listener();
             final_next_previous_page_listenner('left','network');
-            follow_shop_listener();
+
             },
         complete: function(){
             progress.thirdProgress($target,$targetProgress);
@@ -170,3 +163,71 @@ var frontend = (function()
 })();
 
 $(document).ready(frontend.calculateFlexibleHeigth);
+
+
+var hideWhenVisible = function()
+{
+
+    $(document).mouseup(function (e)
+    {
+        var $inboxDialogContainer = $('.inbox_dialog');
+        var $networkDialogContainer = $('.network_dialog');
+        var $myMarketDialogContainer = $('.my_market_dialog');
+        var $categoriesDialogContainer = $('.categories_dialog')
+
+        /*
+         if($inboxDialogContainer.is(':visible')
+         || $networkDialogContainer.is(':visible')
+         || $myMarketDialogContainer.is(':visible')
+         || $categoriesDialogContainer.is(':visible')
+         )
+         { */
+        if (!$inboxDialogContainer.is(e.target) // if the target of the click isn't the container...
+            && $inboxDialogContainer.has(e.target).length !== 0  // ... nor a descendant of the container
+            && !$('.show_inbox_trigger').is(e.target)
+            ||
+            !$inboxDialogContainer.is(e.target)
+            && !$('.show_inbox_trigger').is(e.target)
+        )
+        {
+            $inboxDialogContainer.hide();
+        }
+
+        if (!$networkDialogContainer.is(e.target)
+            && $networkDialogContainer.has(e.target).length !== 0
+            && !$('.show_network_trigger').is(e.target)
+            ||
+            !$networkDialogContainer.is(e.target)
+            && !$('.show_network_trigger').is(e.target))
+        {
+            $networkDialogContainer.hide();
+
+        }
+
+        if (!$myMarketDialogContainer.is(e.target)
+            && $myMarketDialogContainer.has(e.target).length !== 0
+            && !$('.show_my_market_trigger').is(e.target)
+            ||
+            !$myMarketDialogContainer.is(e.target)
+            && !$('.show_my_market_trigger').is(e.target))
+        {
+            $myMarketDialogContainer.hide();
+
+        }
+
+        if (!$categoriesDialogContainer.is(e.target)
+            && $categoriesDialogContainer.has(e.target).length !== 0
+            && !$('.show_categories_trigger').is(e.target)
+            ||
+            !$categoriesDialogContainer.is(e.target)
+            && !$('.show_categories_trigger').is(e.target))
+        {
+
+            //console.log($categoriesDialogContainer);
+            $categoriesDialogContainer.hide();
+        }
+        // }
+
+    });
+
+}

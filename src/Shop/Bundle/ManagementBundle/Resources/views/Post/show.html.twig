@@ -164,35 +164,6 @@
                     class="wide"
                 {%endif%}
             >
-                <div class="post-chat" id="post-chat">        
-                {% if entity.user and app.user and app.user.id != entity.user.id %}
-                    <a href="javascript:void(0);" 
-                        class="open_chat_trigger o-c-t-s" 
-                        data-post-author-id="{{entity.user.id}}"
-                        data-post-id="{{entity.id}}" 
-                        data-sender-id="{{app.user.id}}"
-                        data-url="{{ path('index')}}new_message/"
-                        data-url2="{{ path('index')}}messages_between_two_users_about_article/"
-                        data-main-src="{{ asset(image_url) }}"
-                        data-wVsH="{{entity.postMainImagePath.widthVsHeight}}"
-                        >
-                        <div id="chat_symbol"></div>
-                        <div id="chat_text">
-                            {{'post.show.chat'|trans}}
-                        </div>
-                        <div class="clear"></div> 
-                    </a>              
-                {%elseif not app.user %}
-                    <a href="javascript:void(0);" 
-                        class="open_chat_trigger o-c-t-s notpossible" 
-                        >
-                        <div id="chat_symbol"></div>
-                        <div id="chat_text">
-                            {{'post.show.chat'|trans}}
-                        </div>
-                    </a>
-                {%endif%}
-                </div>
             {% if entity.user %}
                 <a href="javascript:void(0);" 
                    class="show_shop item" 

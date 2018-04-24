@@ -79,3 +79,19 @@ function show_page_of_nonproducts(url,current_page,numberOfItemsPerPage,type)
         return false;
     
 }
+
+/*product_hover_listener();*/
+
+function product_hover_listener()
+{
+
+    $('.product-image-and-title').hover(function() {
+        //$(this).parent().find('.product-title-in-posts').show();
+        $(this).find('.product-title-in-posts').css('z-index', 3000);
+
+    }, function() {
+        //$(this).parent().find('.product-title-in-posts').hide();
+        $(this).find('.product-title-in-posts').css('z-index', -1);
+    });
+
+}

@@ -56,31 +56,12 @@
     </div>
     <div id="post-footer">
         <div class="post-footer-right" id="post-footer-right">
-            <div class="post-chat" id="post-chat">
-                {% if entity.user and app.user and app.user.id != entity.user.id %}
-                <a href="{{ path('mobile_discussion', { 'post_id' : entity.id ,'shop_id' : entity.user.id })}}" 
-                   class="open_chat_trigger o-c-t-s" 
-                   ></a>
-                {%elseif not app.user %}
-                 <a href="javascript:void(0);" 
-                   class="open_chat_trigger o-c-t-s notpossible"
-                   ></a>    
-                {%endif%}
-                <a href="javascript:void(0);" id="chat-word">{{'post.show.chat'|trans}}</a>
-            </div>
-                
+
             {% if entity.user %}
                 <a href="{{ path('mobile_shop_show', { 'shop_id' : entity.user.id, 'page' : 0})}}" 
                    class="show_shop item"
                    data-shop-id="{{entity.user.id}}"
-                   {#this if else need more study, it was incorporated here to take into account removal of last_date url
-                   but it all depends, normally a logged in user should have last_date url available only if he followes :-)
-                   #}
-                   {% if app.user and app.user.id != entity.user.id %}
-                   data-last-date-url="{{path('last_date')}}">
-                   {%else%}
                    >
-                   {%endif%}    
                 <div class="post-date-owner-image-owner-name" id="post-owner-image-name">
                     {% if entity.user.getProfilePicture %}
                         <div class="post-owner-image {% if entity.user.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}" 

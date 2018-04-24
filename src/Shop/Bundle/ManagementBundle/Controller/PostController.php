@@ -14,7 +14,7 @@ use Shop\Bundle\ManagementBundle\Form\PostType;
 class PostController extends Controller
 {
     /**
-     * Finds and displays a Post entity.
+     * Finds and displays an ite,
      *
      */
     public function showAction($id)
@@ -267,77 +267,91 @@ class PostController extends Controller
         }
         
     }
-       
+
     /**
-     * Deletes a Post entity.
+     * Deletes an item from the mobile design
+     *
+     */
+    public function mobileDeletesAction(Request $request, Post $entity)
+    {
+        if ($this->isUserConnected()) {
+
+            $connectedUser = $this->getUser();
+            if ($entity->getUser() == $connectedUser) {
+
+                $form = $this->createDeleteForm();
+                $form->handleRequest($request);
+
+                if ($form->isSubmitted() && $form->isValid()) {
+                    $this->deleteItem($entity);
+                }
+
+                return $this->redirect($this->generateUrl('mobile_my_shop', array('page' => 0)));
+            }
+
+        }
+        else {
+            $url = $this->generateUrl("mobile_fos_user_security_login");
+            return $this->redirect($url);
+        }
+    }
+    /**
+     * Deletes an item from the ajaxed design
      *
      */             
-    public function deletesAction(Request $request,$id)
+    public function deletesAction(Request $request, Post $entity)
     {
-        $status= false;
-        $message = '';
-        $me = $this->getUser();
-        if($me)
+        if($request->isXmlHttpRequest() && $this->isUserConnected())
         {
-            $form = $this->createDeleteForm($id);
-            $form->bind($request);
+            $connectedUser = $this->getUser();
+            if($entity->getUser() == $connectedUser) {
 
-            if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
-                $entity = $em->getRepository('ShopManagementBundle:Post')->find($id);
+                $form = $this->createDeleteForm();
+                $form->handleRequest($request);
 
-                if (!$entity) {
-                    throw $this->createNotFoundException('Unable to find Post entity.');
-                }
-                
-                if($entity->getUser()!=$me)
-                {
-                    $status = false;
-                    $message = 'You are not alowed!';
-                    $responseArray =array("status" => $status,"message" => $message );
-                    
-                    $response = new Response(json_encode($responseArray));
-                    $response->headers->set('Content-Type', 'application/json');
-                    return $response;
+                if ($form->isSubmitted() && $form->isValid()) {
+
+                    $this->deleteItem($entity);
+
+                    $status = true;
+                    $message = 'Item deleted!';
+                    $responseArray = array("status" => $status, "message" => $message);
+
+                    return $this->returnJSONResponse($responseArray);
                 }
 
-                $em->remove($entity);
-                $em->flush();
             }
-            $status = true;
-            $message = 'Item deleted!';
-            $responseArray =array("status" => $status,"message" => $message );
-            
-            $response = new Response(json_encode($responseArray));
-            $response->headers->set('Content-Type', 'application/json');
-            return $response;
+            else{
+                $status = false;
+                $message = 'You are not allowed!';
+                $responseArray =array("status" => $status,"message" => $message );
+
+                return $this->returnJSONResponse($responseArray);
+            }
         }
         else
         {   $status = false;
-            $message = 'You are not connected!';
+            $message = 'You are not connected! OR THE request is not AJAX';
             $responseArray =array("status" => $status,"message" => $message );
-            
-            $response = new Response(json_encode($responseArray));
-            $response->headers->set('Content-Type', 'application/json');
-            return $response;
+
+            return $this->returnJSONResponse($responseArray);
         }
     }
 
     /**
-     * Creates a form to delete a Post entity by id.
+     * Creates a form to delete a Item entity by id.
      *
-     * @param mixed $id The entity id
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm($id)
+    private function createDeleteForm()
     {
-        return $this->createFormBuilder(array('id' => $id))
-            //->add('id', 'hidden')
+        return $this->createFormBuilder()
+            ->setMethod('DELETE')
             ->getForm()
         ;
     }
- 
+
     
     /**
      * Creates a form to create a Post entity.
@@ -407,7 +421,7 @@ class PostController extends Controller
         $status= false;
         $message = '';
 
-        if($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED'))
+        if($this->isUserConnected())
         {
             $entity = new Post();
             $form = $this->createCreateForm($entity);
@@ -606,7 +620,7 @@ class PostController extends Controller
         
         $me = $this->getUser();
         
-        if($me){            
+        if($me){
             if($request->isXmlHttpRequest())
             {
                 $em = $this->getDoctrine()->getManager();
@@ -673,5 +687,40 @@ class PostController extends Controller
             return $response;
         }
 
+    }
+
+    /**
+     * Getting the connected user object and the list of categories
+     *
+     * @return boolean
+     */
+    protected function isUserConnected()
+    {
+        return $this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_FULLY');
+    }
+
+    /**
+     * Effectively delete an item with doctrine manager
+     *
+     * @return array
+     */
+    protected function deleteItem(Post $entity)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($entity);
+        $em->flush();
+    }
+
+    /**
+     * Preparing the response
+     *
+     * @return array
+     */
+    protected function returnJSONResponse($responseArray)
+    {
+        $response = new Response(json_encode($responseArray));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
     }
 }
