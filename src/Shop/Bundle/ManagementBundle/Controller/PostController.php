@@ -229,7 +229,7 @@ class PostController extends Controller
                     $em->persist($entity);
                     $em->flush();
 
-                    return $this->showAction($id);
+                    return $this->showAction($entity);
                 }
 
 
@@ -506,7 +506,7 @@ class PostController extends Controller
                     $em->persist($entity);
                     $em->flush();
 
-                    return $this->showAction($entity->getId());
+                    return $this->showAction($entity);
                 }
             }
 
