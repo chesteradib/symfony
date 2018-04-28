@@ -1,6 +1,4 @@
 menu:
-    my_inbox: My Inbox
-    my_market: My Market
     my_shop: My Shop
     new_article: New Article
     my_settings: My Settings
@@ -11,43 +9,15 @@ menu:
     home: Home
 
 errors:
-    follow:
-        login_to_follow: You should be logged in to follow a user
-    chat:
-        login_to_chat: You should be logged in to chat with this person!
     pagination: This value is not valid!
     
 header_dialogs:
-    my_inbox:
-        about: about
-        at: at
-        chat_with: Discussion avec
-        show_all_my_inbox: Show all my inbox
-        no_new_messages: You have no new messages for the moment.
-    my_network:
-        is_now_following_you: is now following you.
-        show_all_my_network: Show all my followers.
-        no_new_followers: You have no new followers for the moment.
-    my_market:
-        at: at
-        show_all_my_market: Show all my market.
-        no_new_items: There are no new items from people you follow.
-        empty: Your market is empty because you are not following anywone yet or because people you follow hasn't posted yet. Follow someone by clicking on
     my_shop:
         empty: Votre boutique est vide. Pour commencer a vendre, veuillez cliquer sur "Déposer une annonce".        
 left:
-    all_my_inbox:
-        all_my_inbox: My Inbox
-        no_messages: You have no messages yet.
-    all_my_network:
-        all_my_network: My followers
-        no_followers: You have no followers yet. Try to follow people first. Suggestions
     all_new_posters:
         all_new_posters: Active Members
-        no_new_posters: No active members for the moment. There are no posts at all in the whole website.  
-    all_my_followeds:
-        all_my_followeds: All my Followeds
-        no_new_followeds: You are not following any one. Click on "Follow". Suggestions
+        no_new_posters: No active members for the moment. There are no posts at all in the whole website.
        
 
 
@@ -65,23 +35,16 @@ center:
         
 
 global:
-    follower: follower
-    followers: followers
     article: article
     articles: articles
     service: service
-    followed: followed
-    followeds: followeds
     total: in total
-    follow: Follow
-    unfollow: Unfollow
     result: Result
     
 post:
     show:
         edit: Edit
         delete: Delete
-        chat: Chat
         sold: Sold
         disponible: Available
         retweet: Re-déposer l'annonce
@@ -91,6 +54,7 @@ post:
         enter_price: The price?
         product_or_service: 
         add_images_label: Add Images ( Max=10 et Min=2)
+        image_notice : La mise en ligne de photos peut prendre plusieurs minutes en fonctions de la taille de l'image et de la vitesse de connexion.
         create_article: Create
         cancel_article_creation: Cancel
         enter_category: What category?
@@ -98,9 +62,6 @@ post:
         principale: Principale
     edit:
         update: Update
-        
-        
-        #####################
 
 informatique:
     informatique: Informatique

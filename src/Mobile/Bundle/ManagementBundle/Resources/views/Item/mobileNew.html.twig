@@ -9,18 +9,18 @@
         <div id="item-form-top">
             <div id="form-categories-error" class="error-theme">{{ form_errors(form.categories) }}</div>
             <div id="form-categories-widget">
-                
+
                 <div id="select_category_label">
-                    {{ 'post.new.enter_category' | trans}}                    
+                    {{ 'post.new.enter_category' | trans}}
                 </div>
-                
-                <select id="shop_bundle_managementbundle_posttype_categories" 
+
+                <select id="shop_bundle_managementbundle_posttype_categories"
                     name="shop_bundle_managementbundle_posttype[categories][]">
-                    
-                    <option value="" 
-                        {% if form.categories.vars.value is empty %}selected{% endif %}  
+
+                    <option value=""
+                        {% if form.categories.vars.value is empty %}selected{% endif %}
                     ></option>
-                    
+
                     {% for key,val in form.categories.vars.choices %}
                     <option value="{{ val.value }}"
                             {% if form.categories.vars.value is not empty %}
@@ -37,7 +37,7 @@
                         {{ (val.data.getName~'.'~val.data.getName) | trans }}
                         {% else %}
                         {{ (val.data.getParent.getName~'.'~val.data.getName) | trans }}
-                        {% endif %}   
+                        {% endif %}
                     </option>
                     {% endfor %}
                 </select>
@@ -120,12 +120,7 @@
                     <div class="clear"></div>
                     </div>
             </div>
-            
-            <div id="form-notes-error" class="error-theme">{{ form_errors(form.postNotes) }}</div>
-            <div id="form-notes-widget">
-                {{ form_widget(form.postNotes, { 'attr': { 'placeholder' : 'post.new.notes'|trans }}) }}
-            </div>
-                 
+
             <div id="form-hiddens">
                 {% set counter = 0 %}
                 {% for image in entity.images %}
@@ -139,7 +134,7 @@
             </div>
         </div>    
         <div id="item-form-bottom">
-            <button id="add_item_button" type="submit">{{'post.new.create_article'|trans }}</button>
+            <button id="add_item_button" type="submit">{{'post.new.create_article' | trans }}</button>
             <a id="cancel_item_button" href="{{ path('mobile_my_shop', { page : 0 }) }}">
                 {{'post.new.cancel_article_creation'|trans }}
             </a>

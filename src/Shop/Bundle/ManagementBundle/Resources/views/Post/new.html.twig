@@ -45,17 +45,17 @@
 
         <div id="form-title-error" class="error-theme">{{ form_errors(form.postTitle) }}</div>
         <div id="form-title-widget">
-            {{ form_widget(form.postTitle, { 'attr': { 'placeholder' : 'post.new.enter_title'|trans }}) }}
+            {{ form_widget(form.postTitle, { 'attr': { 'placeholder' : 'post.new.enter_title' | trans }}) }}
         </div>
         
         <div id="form-content-error" class="error-theme">{{ form_errors(form.postContent) }}</div>
         <div id="form-content-widget">
-            {{ form_widget(form.postContent, { 'attr': { 'placeholder' : 'post.new.enter_description'|trans }}) }}
+            {{ form_widget(form.postContent, { 'attr': { 'placeholder' : 'post.new.enter_description' | trans }}) }}
         </div>
         
         <div id="form-price-error" class="error-theme">{{ form_errors(form.postPrice) }}</div>
         <div id="form-price-widget">
-            {{ form_widget(form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price'|trans }}) }}
+            {{ form_widget(form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price' | trans }}) }}
         </div> 
         
         <div id="form-images-error" class="error-theme">{{ form_errors(form) }}</div>
@@ -117,11 +117,6 @@
                 <div style="display:none" id="dvloader"><img src="{{ asset('images/loading.gif')}}" /></div>
                 <div class="clear"></div>
                 </div>
-        </div>
-                
-        <div id="form-notes-error" class="error-theme">{{ form_errors(form.postNotes) }}</div>
-        <div id="form-notes-widget">
-            {{ form_widget(form.postNotes, { 'attr': { 'placeholder' : 'post.new.notes'|trans }}) }}
         </div>
 
         <div id="form-hiddens">

@@ -11,7 +11,7 @@ class MobileShopController extends Controller
     {
         $user = $this->getUser();
         
-        
+
         $firstPart= array();
         
         if($user)
