@@ -57,6 +57,9 @@
             <div id="form-price-error" class="error-theme">{{ form_errors(form.postPrice) }}</div>
             <div id="form-price-widget">
                 {{ form_widget(form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price'|trans }}) }}
+                <div id="price_label">
+                    DH(s)
+                </div>
             </div> 
 
             <div id="form-images-error" class="error-theme">{{ form_errors(form) }}</div>
@@ -81,7 +84,11 @@
                         {% set counter = counter + 1 %}
                     {% endfor %}
                     <a href="#" id="add_image_trigger"></a>
+                    <div id="add_image_notice">
+                        {{ 'post.new.image_notice' | trans }}
+                    </div>
                 </div>
+
                 <div id="uploaded_images" data-principale="{{'post.new.principale'|trans}}">                
                     {% for image in entity.images %}
                     <div class="image_cont has-image">

@@ -57,6 +57,13 @@ $rouge: #c1272d;
 {
     width:40%;
     height:100%;
+    float:left;
+}
+#price_label
+{
+    padding: 6px;
+    font-size: 14px;
+    float:left;
 }
 
 
@@ -96,18 +103,19 @@ $rouge: #c1272d;
 {
     color: darkgray;
     font: 12px Arial;
-    margin: 16px 10px 0px 16px;
+    margin: 25px 6px 0px 2px;
     display: inline;
-    width: 80px;
+    width: 120px;
     float: left;
+    text-align: center;
 }
 #add_image
 {
+
     width: 100%;
     margin: 0 5px 5px 5px;
     padding: 2.5px;
     height: 65px;
-
 
 }
 
@@ -120,7 +128,17 @@ a#add_image_trigger
     background: url('../images/spritesheet1.png') no-repeat;    
     float: left;
 }
+#add_image_notice
+{
+    font-size: 7px;
+    line-height: 8px;
+    color: red;
+    width: 150px;
+    float: left;
+    margin-left: 6px;
+    margin-top: 20px;
 
+}
 
 a#add_image_trigger:hover
 {

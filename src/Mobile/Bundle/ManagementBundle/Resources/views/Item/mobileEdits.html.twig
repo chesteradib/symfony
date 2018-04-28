@@ -46,18 +46,21 @@
             
             <div id="form-title-error" class="error-theme">{{ form_errors(edit_form.postTitle) }}</div>
             <div id="form-title-widget">
-                {{ form_widget(edit_form.postTitle, { 'attr': { 'placeholder' : 'post.new.enter_title'|trans }}) }}
+                {{ form_widget(edit_form.postTitle, { 'attr': { 'placeholder' : 'post.new.enter_title' | trans }}) }}
             </div>
 
             <div id="form-content-error" class="error-theme">{{ form_errors(edit_form.postContent) }}</div>
             <div id="form-content-widget">
-                {{ form_widget(edit_form.postContent, { 'attr': { 'placeholder' : 'post.new.enter_description'|trans }}) }}
+                {{ form_widget(edit_form.postContent, { 'attr': { 'placeholder' : 'post.new.enter_description' | trans }}) }}
             </div>
 
             <div id="form-price-error" class="error-theme">{{ form_errors(edit_form.postPrice) }}</div>
             <div id="form-price-widget">
-                {{ form_widget(edit_form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price'|trans }}) }}
-            </div> 
+                {{ form_widget(edit_form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price' | trans }}) }}
+                <div id="price_label">
+                    DH(s)
+                </div>
+            </div>
 
             <div id="form-images-error" class="error-theme">{{ form_errors(edit_form) }}</div>
             <div id="form-images-widget"
@@ -82,6 +85,9 @@
                         {% set counter = counter + 1 %}
                     {% endfor %}
                     <a href="#" id="add_image_trigger"></a>
+                    <div id="add_image_notice">
+                        {{ 'post.new.image_notice' | trans }}
+                    </div>
                 </div>
 
                 <div id="uploaded_images" data-principale="{{'post.new.principale'|trans}}">
@@ -135,7 +141,7 @@
             </div>
         </div>
         <div id="item-form-bottom" data-post-id="{{id}}">
-            <button id="add_item_button" type="submit">{{'post.edit.update'|trans }}</button>
+            <button id="add_item_button" type="submit">{{ 'post.edit.update' | trans }}</button>
                 <a id="cancel_item_button" href="{{path('mobile_item_show',{ 'id': entity.id})}}">
                     {{'post.new.cancel_article_creation'|trans }}
                 </a>
@@ -148,7 +154,7 @@
         >
           <input type="hidden" name="_method" value="DELETE" />
           {{ form_widget(delete_form) }}
-          <button type="submit">{{'post.show.delete'|trans }}</button>
+          <button type="submit">{{ 'post.show.delete' | trans }}</button>
     </form>
 </div>
 

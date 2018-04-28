@@ -57,8 +57,14 @@ $rouge: #c1272d;
 {
     width:40%;
     height:100%;
+    float:left;
 }
-
+#price_label
+{
+    padding: 6px;
+    font-size: 14px;
+    float:left;
+}
 
 #form-content-widget
 {
@@ -96,10 +102,11 @@ $rouge: #c1272d;
 {
     color: darkgray;
     font: 12px Arial;
-    margin: 16px 10px 0px 16px;
+    margin: 25px 6px 0px 2px;
     display: inline;
-    width: 80px;
+    width: 120px;
     float: left;
+    text-align: center;
 }
 #add_image
 {

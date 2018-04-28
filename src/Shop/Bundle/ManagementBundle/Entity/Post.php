@@ -62,7 +62,7 @@ class Post
     *      message = "post.price.not_blank" 
     * )
     * @Assert\Type(
-    *     type="numeric", 
+    *     type="numeric",
     *     message="post.price.type"
      * )  
     * @Assert\Length(
@@ -109,6 +109,10 @@ class Post
      * @var \Doctrine\Common\Collections\Collection
      * @Assert\NotBlank(
      *      message = "post.categories.not_blank" 
+     * )
+     *
+     * @Assert\NotNull(
+     *      message = "post.categories.not_blank"
      * )
      */
     private $categories;

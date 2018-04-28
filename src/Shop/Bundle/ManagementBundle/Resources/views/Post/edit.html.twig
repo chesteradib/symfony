@@ -54,7 +54,10 @@
         <div id="form-price-error" class="error-theme">{{ form_errors(edit_form.postPrice) }}</div>
         <div id="form-price-widget">
             {{ form_widget(edit_form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price'|trans }}) }}
-        </div> 
+            <div id="price_label">
+                DH(s)
+            </div>
+        </div>
 
         <div id="form-images-error" class="error-theme">{{ form_errors(edit_form) }}</div>
         <div id="form-images-widget"
@@ -79,6 +82,9 @@
                     {% set counter = counter + 1 %}
                 {% endfor %}
                 <a href="#" id="add_image_trigger"></a>
+                <div id="add_image_notice">
+                    {{ 'post.new.image_notice' | trans }}
+                </div>
             </div>
 
             <div id="uploaded_images" data-principale="{{'post.new.principale'|trans}}">
@@ -132,7 +138,7 @@
         </div>
     </div>
     <div id="item-form-bottom" data-post-id="{{id}}">
-            <button id="add_item_button" type="submit">{{'post.edit.update'|trans }}</button>
+            <button id="add_item_button" type="submit">{{ 'post.edit.update' | trans }}</button>
             <a id="cancel_item_button">
                 {{'post.new.cancel_article_creation'|trans }}
             </a>
@@ -145,16 +151,3 @@
             ></a>
     </div>
 </form>
-{#
-<form 
-    action="{{ path('post_deletes', { 'id': id }) }}" 
-    method="post" 
-    id="delete_article_trigger"
-    >
-      <input type="hidden" name="_method" value="DELETE" />
-      {{ form_widget(delete_form) }}
-      <button type="submit" id="delete_article_button">{{'post.show.delete'|trans }}</button>
-</form>
-
-#}
-

@@ -56,14 +56,17 @@
         <div id="form-price-error" class="error-theme">{{ form_errors(form.postPrice) }}</div>
         <div id="form-price-widget">
             {{ form_widget(form.postPrice, { 'attr': { 'placeholder' : 'post.new.enter_price' | trans }}) }}
+            <div id="price_label">
+                DH(s)
+            </div>
         </div> 
         
         <div id="form-images-error" class="error-theme">{{ form_errors(form) }}</div>
         <div id="form-images-widget"
              class="images_input" 
-             data-prototype="{{ form_widget(form.images.vars.prototype)|e('html_attr') }}">
+             data-prototype="{{ form_widget(form.images.vars.prototype) | e('html_attr') }}">
             <div id="add_image_label">
-                {{'post.new.add_images_label'|trans }}                                
+                {{ 'post.new.add_images_label' | trans }}
             </div>
             <div class="add_image" id="add_image">
                 {% set counter = 0 %}
@@ -80,7 +83,11 @@
                     {% set counter = counter + 1 %}
                 {% endfor %}
                 <a href="#" id="add_image_trigger"></a>
+                <div id="add_image_notice">
+                    {{ 'post.new.image_notice' | trans }}
+                </div>
             </div>
+
             <div id="uploaded_images" data-principale="{{'post.new.principale'|trans}}">                
                 {% for image in entity.images %}
                 <div class="image_cont has-image">
@@ -108,7 +115,7 @@
                             <a href="javascript:void(0);" class="set_as_main {% if main_image_id and image.id == main_image_id %}main{% endif %}"></a>
                         </div>
                         {% if main_image_id and image.id == main_image_id %}
-                        <div id="principale">{{'post.new.principale'|trans}}</div>
+                        <div id="principale">{{ 'post.new.principale' | trans }}</div>
                         {% endif %}
                     </div>
                 </div>
@@ -127,16 +134,14 @@
             {% endfor %}
 
             <input type="hidden" name="main-image" value="{%if main_image_id %}{{main_image_id}} {%endif%}">
-
             {{ form_widget(form._token) }}
         </div>
     </div>    
     <div id="item-form-bottom">
-        <button id="add_item_button" type="submit">{{'post.new.create_article'|trans }}</button>
+        <button id="add_item_button" type="submit">{{'post.new.create_article' | trans }}</button>
         <a id="cancel_item_button">
-            {{'post.new.cancel_article_creation'|trans }}
+            {{ 'post.new.cancel_article_creation' | trans }}
         </a>
     </div>
-        
 </form>
         
