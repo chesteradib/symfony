@@ -96,11 +96,11 @@ $vert-opace:rgba(0,98,51,0.1);
     height: 100px;
     top: 20px;
     left:0;
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.5);
     opacity:0;
     transition: all 1s;
     -webkit-transition: all 1s;
-    border-radius: 50%;
+    border-radius: 5%;
     overflow: hidden;
 
 }
@@ -148,7 +148,7 @@ $vert-opace:rgba(0,98,51,0.1);
 }
 
 .round {
-  border-radius: 50%;
+  border-radius: 5%;
   overflow: hidden;
   width: 100px;
   height: 100px;

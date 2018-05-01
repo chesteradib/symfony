@@ -3,7 +3,8 @@
       action="{{ path('post_creates')}}"
       data-iu-url="{{ path('image_uploads')}}"
       data-id-url="{{ path('image_deletes')}}"
-      method="post" 
+      method="post"
+      enctype="multipart/form-data"
       novalidate>
     <div id="item-form-top">
         <div id="form-categories-error" class="error-theme">{{ form_errors(form.categories) }}</div>
