@@ -32,7 +32,10 @@
         "phpunit/phpunit": "@dev",
         "liip/imagine-bundle": "^1.5",
         "friendsofsymfony/elastica-bundle": "^5.0",
-        "white-october/pagerfanta-bundle": "^1.0"
+        "white-october/pagerfanta-bundle": "^1.0",
+        "knplabs/gaufrette":                    "dev-master",
+        "knplabs/knp-gaufrette-bundle":         "dev-master",
+        "aws/aws-sdk-php":    "dev-master"
     },
     "require-dev": {
         "liip/functional-test-bundle": "^1.2",

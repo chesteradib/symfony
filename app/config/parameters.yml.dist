@@ -13,3 +13,9 @@ parameters:
     mailer_password: salamoalaikom
     locale: fr
     secret: ThisTokenIsNotSoSecretChangeIt
+    amazon_s3.key:          ~
+    amazon_s3.secret:       ~
+    amazon_s3.base_url:     ~
+    amazon_s3.bucket_name:  ~
+    amazon_s3.region: eu-west-3
+    amazon_s3.base_url: 'https://s3.eu-west-3.amazonaws.com/uploadimagesbucket/'

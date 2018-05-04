@@ -117,3 +117,15 @@ services:
         # this means you cannot fetch services directly from the container via $container->get()
         # if you need to do this, you can override this setting on individual services
         public: true
+
+knp_gaufrette:
+        adapters:
+            image_storage:
+                aws_s3:
+                    service_id: shop_management.aws_s3.client
+                    bucket_name:  %amazon_s3.bucket_name%
+                    detect_content_type: true
+        filesystems:
+            image_storage_filesystem:
+                adapter:    image_storage
+                alias:      image_storage_filesystem

@@ -23,7 +23,8 @@ class AppKernel extends Kernel
             new FOS\ElasticaBundle\FOSElasticaBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Mobile\Bundle\ManagementBundle\MobileManagementBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle()
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

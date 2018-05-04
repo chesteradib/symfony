@@ -6,7 +6,7 @@
 function show_article_listener()
 {
     $('a.show_article_trigger').click(function(e){
-        e.preventDefault();            
+        e.preventDefault();
         var product_url=$(this).attr("data-show-url");
         $(this).manageActiveItem();
         var $content= $('#content');
@@ -32,7 +32,7 @@ function show_article(url,callback)
         }, 
         success: callback,
         complete:function(){
-            progress.thirdProgress($target,$targetProgress);   
+            progress.thirdProgress($target,$targetProgress);
         }
     });    
 }

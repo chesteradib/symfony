@@ -220,7 +220,8 @@ class ImageController extends Controller {
                     $this->renameAfterFilter($b,'uploads/'.$big_path);
                 } 
                 unlink($path);
-                $spath2 = str_replace("uploads","",$small_path );
+
+                $spath2= $this->container->getParameter('amazon_s3.base_url') . 'uploads/'.$small_path;
 
                 $json= json_encode(array(
                     'code' => true,
@@ -247,12 +248,20 @@ class ImageController extends Controller {
         
     public function renameAfterFilter($imageContent,$imagePath)
     {
-        $f = fopen($imagePath, 'w');                                 
-        fwrite($f, $imageContent );                                            
-        fclose($f);
+        $this->getFileSystem()->write($imagePath, $imageContent);
+
         
     }
-    
+
+    /**
+     * Getting the filesystem
+     *
+     * @return boolean
+     */
+    protected function getFileSystem()
+    {
+        return $this->get('knp_gaufrette.filesystem_map')->get('image_storage_filesystem');
+    }
     
     
     

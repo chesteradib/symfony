@@ -27,7 +27,7 @@ function show_shop_listener()
 var showShopClickCallback=  function(e)
 {
     e.preventDefault();
-    
+
     var $content= $('#content');
     
     //$content.moveContentToLeft();
@@ -100,7 +100,7 @@ var showShopClickCallback=  function(e)
                 show_direction();
 
             }
-    });    
+    });
     return false; 
 };
 

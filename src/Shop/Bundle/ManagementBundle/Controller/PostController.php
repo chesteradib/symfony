@@ -701,7 +701,7 @@ class PostController extends Controller
     }
 
     /**
-     * Getting the connected user object and the list of categories
+     * Checking if user is connected
      *
      * @return boolean
      */
