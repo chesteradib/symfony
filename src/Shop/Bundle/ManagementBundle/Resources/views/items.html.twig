@@ -24,11 +24,11 @@
                                                     ~entity.postMainImagePath.path
                                 %}
                         {% if entity.postMainImagePath.widthVsHeight == 0 %}
-                        <img src="{{  asset(image_url) }}"/>
+                        <img src="{{  prefix ~ image_url }}"/>
                         {% elseif entity.postMainImagePath.widthVsHeight == 1 %}
-                        <img class="fatty"  src="{{  asset(image_url) }}"/>
+                        <img class="fatty"  src="{{  prefix ~ image_url }}"/>
                         {% elseif entity.postMainImagePath.widthVsHeight == 2 %}
-                        <img class="tally"  src="{{ asset(image_url) }}"/>
+                        <img class="tally"  src="{{ prefix ~ image_url }}"/>
                         {% endif%}
                     {% endif %}
                 </div>
@@ -45,12 +45,12 @@
                                         ~entity.user.getProfilePicture.path
                                     %}
                     {% if entity.user.getProfilePicture.widthVsHeight == 0 %}
-                    <img class="m-i-p-p-u photo equal" src="{{ asset(image_url) }}" height= 25/>
+                    <img class="m-i-p-p-u photo equal" src="{{ prefix ~ image_url }}" height= 25/>
                     {% elseif entity.user.getProfilePicture.widthVsHeight == 1 %}
                     <span class="helper"></span>
-                    <img class="m-i-p-p-u photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                    <img class="m-i-p-p-u photo fat-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
                     {% elseif entity.user.getProfilePicture.widthVsHeight == 2 %}
-                    <img class="m-i-p-p-u photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                    <img class="m-i-p-p-u photo tall-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
                     {% endif%}
                  {% endif %}
                </div>

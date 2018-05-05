@@ -221,7 +221,7 @@ class ImageController extends Controller {
                 } 
                 unlink($path);
 
-                $spath2= $this->container->getParameter('amazon_s3.base_url') . 'uploads/'.$small_path;
+                $spath2= $this->getParameter('filesystem.base_url') . 'uploads/'.$small_path;
 
                 $json= json_encode(array(
                     'code' => true,

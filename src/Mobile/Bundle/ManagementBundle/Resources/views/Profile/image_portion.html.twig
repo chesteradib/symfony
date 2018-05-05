@@ -1,5 +1,5 @@
 
 <div id="{{image_id}}" url="{{path('delete_profile_picture', {'img_id' :image_id})}}">
-    <img class="photo"  src="{{ asset(uploadedURL) }}" width="60"/>
+    <img class="photo"  src="{{ prefix ~ uploadedURL }}" width="60"/>
     <a href="javascript:void(0);" class="delete_profile_photo_trigger">supprimer</a>
 </div>

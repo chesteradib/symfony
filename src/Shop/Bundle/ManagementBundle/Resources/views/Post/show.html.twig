@@ -52,12 +52,12 @@
                                                 ~entity.postMainImagePath.path
                             %}
                             {% if entity.postMainImagePath.widthVsHeight == 0 %}
-                            <img class="photo equal"  src="{{ asset(image_url) }}"/>
+                            <img class="photo equal"  src="{{ prefix ~ image_url }}"/>
                             {% elseif entity.postMainImagePath.widthVsHeight == 1 %}
                             <span class="helper"></span>
-                            <img class="photo fat"  src="{{ asset(image_url) }}"/>
+                            <img class="photo fat"  src="{{ prefix ~ image_url }}"/>
                             {% elseif entity.postMainImagePath.widthVsHeight == 2 %}
-                            <img class="photo tall"  src="{{ asset(image_url) }}"/>
+                            <img class="photo tall"  src="{{ prefix ~ image_url }}"/>
                             {% endif%}
                         </div>
                         {% set counter = counter + 1 %}
@@ -77,12 +77,12 @@
                                                     ~image.path
                                     %}
                                     {% if image.widthVsHeight == 0 %}
-                                    <img class="photo equal"  src="{{ asset(image_url) }}"/>
+                                    <img class="photo equal"  src="{{ prefix ~ image_url }}"/>
                                     {% elseif image.widthVsHeight == 1 %}
                                     <span class="helper"></span>
-                                    <img class="photo fat"  src="{{ asset(image_url) }}"/>
+                                    <img class="photo fat"  src="{{ prefix ~ image_url }}"/>
                                     {% elseif image.widthVsHeight == 2 %}
-                                    <img class="photo tall"  src="{{ asset(image_url) }}"/>
+                                    <img class="photo tall"  src="{{ prefix ~ image_url }}"/>
                                     {% endif%}
                                 </div>
                             {%endif%}
@@ -106,7 +106,7 @@
                                         ~uploadDate|date('H')~'/'~'m_'
                                         ~entity.postMainImagePath.path
                                     %}
-                    <img src="{{ asset(image_url) }}">
+                    <img src="{{ prefix ~ image_url }}">
                     <div class="image-zoom"></div>
             </div>
     </div>
@@ -180,12 +180,12 @@
                             ~createdAt|date('m')~'/'
                             ~entity.user.getProfilePicture.path %}
                             {% if entity.user.getProfilePicture.widthVsHeight == 0 %}
-                            <img class="photo equal" src="{{ asset(image_url) }}"/>
+                            <img class="photo equal" src="{{ prefix ~ image_url }}"/>
                             {% elseif entity.user.getProfilePicture.widthVsHeight == 1 %}
                             <span class="helper"></span>
-                            <img class="photo fat-profile-image" src="{{ asset(image_url) }}"/>
+                            <img class="photo fat-profile-image" src="{{ prefix ~ image_url }}"/>
                             {% elseif entity.user.getProfilePicture.widthVsHeight == 2 %}
-                            <img class="photo tall-profile-image" src="{{ asset(image_url) }}"/>
+                            <img class="photo tall-profile-image" src="{{ prefix ~ image_url }}"/>
                             {% endif%}
                     </div>
                     {% else %}

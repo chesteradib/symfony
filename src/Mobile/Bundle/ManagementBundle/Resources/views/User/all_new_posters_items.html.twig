@@ -10,12 +10,12 @@
                             ~createdAt|date('m')~'/'
                             ~new_poster['item'].getProfilePicture.path %}
                             {% if new_poster['item'].getProfilePicture.widthVsHeight == 0 %}
-                            <img class="m-i-p-p-u photo equal" src="{{ asset(image_url) }}" height= 25/>
+                            <img class="m-i-p-p-u photo equal" src="{{ prefix ~ image_url }}" height= 25/>
                             {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 1 %}
                             <span class="helper"></span>
-                            <img class="m-i-p-p-u photo fat-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                            <img class="m-i-p-p-u photo fat-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
                             {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 2 %}
-                            <img class="m-i-p-p-u photo tall-profile-image" src="{{ asset(image_url) }}" height= 25/>
+                            <img class="m-i-p-p-u photo tall-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
                             {% endif%}
                     </div>
                 {% else %}

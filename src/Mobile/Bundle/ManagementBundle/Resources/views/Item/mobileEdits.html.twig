@@ -105,12 +105,12 @@
                                                 ~image.path
                                 %}
                                 {% if image.widthVsHeight == 0 %}
-                                <img class="photo equal"  src="{{ asset(image_url) }}"/>
+                                <img class="photo equal"  src="{{ prefix ~ image_url }}"/>
                                 {% elseif image.widthVsHeight == 1 %}
                                 <span class="helper"></span>
-                                <img class="photo fat"  src="{{ asset(image_url) }}"/>
+                                <img class="photo fat"  src="{{ prefix ~ image_url }}"/>
                                 {% elseif image.widthVsHeight == 2 %}
-                                <img class="photo tall"  src="{{ asset(image_url) }}"/>
+                                <img class="photo tall"  src="{{ prefix ~ image_url }}"/>
                                 {% endif%}
                                 </div>
                             <div class="image_controls">
