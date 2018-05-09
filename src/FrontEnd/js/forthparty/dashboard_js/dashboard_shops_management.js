@@ -37,7 +37,7 @@ var showShopClickCallback=  function(e)
     $(this).manageLeftActiveItem();
     
     var $target= $('#center');
-    var $targetProgress = $("#center_progress");
+    var $targetProgress = $("#progress_center");
     
     var $this= $(this);
     var shop_id=$this.data('shop-id');
@@ -57,14 +57,13 @@ var showShopClickCallback=  function(e)
         data:{ articles_per_page: numberOfItemsPerPage , followSeen: followSeen },
         cache: false,
         beforeSend:function(){
-                progress.firstProgress($target,$targetProgress,65);
+                progress.startProgress($target,$targetProgress);
             },
         success: function(data){
             $target.empty().html(data);
 
             show_article_listener();
             product_hover_listener();
-            progress.secondProgress($targetProgress,85);
              
             final_next_previous_page_listenner('center');
 
@@ -82,7 +81,7 @@ var showShopClickCallback=  function(e)
             }
         },
         complete:function(){
-                progress.thirdProgress($target,$targetProgress);
+                progress.endProgress($target,$targetProgress);
                 $content.moveContentToCenter();
                 if($('.show_article_trigger').length >0 )
                 {
@@ -127,7 +126,7 @@ function show_my_shop(url)
     $content.moveContentToRight();
     
     var $target= $('#center');
-    var $targetProgress = $("#center_progress");
+    var $targetProgress = $("#progress_center");
     var numberOfItemsPerPage= $('#content').data('number-of-items-per-center');
     $.ajax({
             type: "POST",
@@ -135,22 +134,19 @@ function show_my_shop(url)
             url: url,
             cache: false,
             beforeSend: function(){
-                progress.firstProgress($target,$targetProgress,65);
+                progress.startProgress($target,$targetProgress);
             },
             success: function(data){
                 $('#right').empty();
                 $target.empty().html(data);
                 show_article_listener();
                 product_hover_listener();
-            
-                progress.secondProgress($targetProgress,85);
-            
-             
+
                 final_next_previous_page_listenner('center');
 
             },
             complete:function(){
-                progress.thirdProgress($target,$targetProgress);
+                progress.endProgress($target,$targetProgress);
                 var new_article_url=$('#content').attr("data-new-article-url");
                 new_article(new_article_url);
             },

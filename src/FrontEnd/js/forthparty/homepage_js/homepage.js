@@ -25,7 +25,7 @@ function show_all_jawla(url)
     
     
     var $target= $('#center');
-    var $targetProgress = $("#center_progress");
+    var $targetProgress = $("#progress_center");
     var numberOfItemsPerCenter= $('#content').data('number-of-items-per-center');
     
     $.ajax({
@@ -34,7 +34,7 @@ function show_all_jawla(url)
             data:{ articles_per_page: numberOfItemsPerCenter},
             cache: false,
             beforeSend:function(){
-                progress.firstProgress($target,$targetProgress,65);
+                progress.startProgress($target,$targetProgress);
             },
             success: function(data){
                 $target.empty().html(data.html);
@@ -47,17 +47,16 @@ function show_all_jawla(url)
                     $('.show_article_trigger:first').children().eq(0).addClass('active');
                     //var product_url=$('.show_article_trigger:first').attr("data-show-url");
                     //show_article(product_url,showArticleCallback);
-                    console.log($('.show_article_trigger:first'));
+                    //console.log($('.show_article_trigger:first'));
                     $('.show_article_trigger:first').click();
                 }
                 else{
-                    console.log('0');
+                    //console.log('0');
                 }
-                progress.secondProgress($targetProgress,85);
                
             },
             complete:function(){
-                progress.thirdProgress($target,$targetProgress);
+                progress.endProgress($target,$targetProgress);
                 show_all_new_posters();
 
             }

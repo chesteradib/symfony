@@ -60,7 +60,7 @@ function show_all_jawla(url)
     $content.moveContentToRight();
 
     var $target= $('#center');
-    var $targetProgress = $("#center_progress");
+    var $targetProgress = $("#progress_center");
     var numberOfItemsPerCenter= $('#content').data('number-of-items-per-center');
     
     $.ajax({
@@ -69,7 +69,7 @@ function show_all_jawla(url)
             data:{ articles_per_page: numberOfItemsPerCenter},
             cache: false,
             beforeSend:function(){
-                progress.firstProgress($target,$targetProgress,65);
+                progress.startProgress($target,$targetProgress);
             },
             success: function(data){
 
@@ -87,10 +87,10 @@ function show_all_jawla(url)
                 else{
                     console.log('0');
                 }
-                progress.secondProgress($targetProgress,85);
+
             },
             complete:function(){
-                progress.thirdProgress($target,$targetProgress);
+                progress.endProgress($target,$targetProgress);
                 show_all_new_posters();
             }
         });    
@@ -109,7 +109,7 @@ function show_all_jawla_listener()
 }
 
 function show_all_new_posters(){
-    
+
     var $target = $('#left');
     var $targetProgress= $('#left_progress');
 
@@ -122,17 +122,13 @@ function show_all_new_posters(){
         cache: false,
         data: { items_per_page: numberOfItemsPerLeft},
         beforeSend: function(){
-            progress.firstProgress($target,$targetProgress,85);
             }, 
         success: function(data){
             $target.css("visibility", "visible").empty().html(data);
-            progress.secondProgress($targetProgress,95);
             final_next_previous_page_listenner('left','network');
 
             },
         complete: function(){
-            progress.thirdProgress($target,$targetProgress);
-
             //var url_all_jawla = $('#content').attr('data-url-all-jawla');
             //show_all_jawla(url_all_jawla );
             }    

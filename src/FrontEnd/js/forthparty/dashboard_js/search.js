@@ -21,7 +21,7 @@ function search_listener()
 function search(data,url){
     
     var $target= $('#center');
-    var $targetProgress = $("#center_progress");
+    var $targetProgress = $("#progress_center");
     
     $.ajax({
             type: "POST",
@@ -29,20 +29,18 @@ function search(data,url){
             data: data,
             cache: false,
             beforeSend: function(){
-                progress.firstProgress($target,$targetProgress, 35);   
+                progress.startProgress($target,$targetProgress);
             }, 
             success: function(data){
                 $target.empty().html(data);
             
                 show_article_listener();
                 product_hover_listener();
-                progress.secondProgress($targetProgress,85);
-
                 final_next_previous_page_listenner('center');
                        
             },
             complete:function(){
-                progress.thirdProgress($target,$targetProgress);   
+                progress.endProgress($target,$targetProgress);
             }      
         });    
         return false;

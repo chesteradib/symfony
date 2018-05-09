@@ -25,7 +25,6 @@ function show_page_of_products(url, page, numberOfItemsPerPage)
             url: url,
             cache: false,
             beforeSend:function(){
-               progress.firstFadeProgress($target); 
             },
             success: function(data){          
                 $target.empty().html(data);
@@ -33,7 +32,6 @@ function show_page_of_products(url, page, numberOfItemsPerPage)
                 product_hover_listener();
             },
             complete:function(){
-               progress.secondFadeProgress($target);  
             },
         });    
         return false;
@@ -57,7 +55,6 @@ function show_page_of_nonproducts(url,current_page,numberOfItemsPerPage,type)
             url: url,
             cache: false,
             beforeSend:function(){
-                progress.firstFadeProgress($target); 
             },
             success: function(data){
                 $target.empty().html(data);
@@ -72,11 +69,9 @@ function show_page_of_nonproducts(url,current_page,numberOfItemsPerPage,type)
 
                 }
                 //show_shop_listener();
-                
                                 
             },
             complete:function(){
-               progress.secondFadeProgress($target);  
             },
         });    
         return false;

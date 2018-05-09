@@ -10,7 +10,7 @@ var showShopClickCallback =  function(e)
    
     
     var $target= $('#center');
-    var $targetProgress = $("#center_progress");
+    var $targetProgress = $("#progress_center");
     console.log($(this).attr('class'));
     var $this= $(this);
     var shop_id=$this.data('shop-id');
@@ -26,20 +26,19 @@ var showShopClickCallback =  function(e)
         data:{ articles_per_page: numberOfItemsPerCenter},
         cache: false,
         beforeSend:function(){
-            progress.firstProgress($target,$targetProgress,65);
+            progress.startProgress($target,$targetProgress);
         },
         success: function(data){
             $target.empty().html(data);
             show_article_listener();
             product_hover_listener();
-            progress.secondProgress($targetProgress,85);
              
             final_next_previous_page_listenner('center');
             follow_unfollow_in_homepage_listener();
         },
             
         complete:function(){
-            progress.thirdProgress($target,$targetProgress);
+            progress.endProgress($target,$targetProgress);
             $content.moveContentToCenter();
             
             if($('.show_article_trigger').length >0 )

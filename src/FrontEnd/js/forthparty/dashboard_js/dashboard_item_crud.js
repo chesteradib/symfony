@@ -18,21 +18,19 @@ function show_article_listener()
 
 function show_article(url,callback)
 {
-
     var $target= $('#right');
-    var $targetProgress = $("#right_progress");
-    
-    
+    var $targetProgress = $("#progress_right");
+
     $.ajax({
         type: "GET",
         url: url,
         cache: true,
         beforeSend: function(){
-            progress.firstProgress($target,$targetProgress, 35);   
+            progress.startProgress($target,$targetProgress);
         }, 
         success: callback,
         complete:function(){
-            progress.thirdProgress($target,$targetProgress);
+            progress.endProgress($target,$targetProgress);
         }
     });    
 }
@@ -40,18 +38,14 @@ function show_article(url,callback)
 
 function showArticleCallback(data){
 
-    var $targetProgress = $("#right_progress");
-    
-    $.when(right_fully_loaded(data)).done(function(){              
+    $.when(right_fully_loaded(data)).done(function(){
         show_edit_article_listener();
-        retweet_listener();             
+        retweet_listener();
         delete_listener();
         bought_listener();
         articleImagesScroller();
         display_image_on_thumb_click_listener();
-        progress.secondProgress($targetProgress, 70);
-
-        show_shop_listener();         
+        show_shop_listener();
     });  
 }
 function right_fully_loaded(data)
@@ -79,15 +73,15 @@ function show_edit_article_listener()
 function show_edit_article(url)
 {
     var $target=$('#right');
-    var $targetProgress = $("#right_progress");
+    var $targetProgress = $("#progress_right");
     
     $.ajax({
         type: "GET",
         url: url,
         cache: false,
         beforeSend: function(){
-            progress.firstProgress($target,$targetProgress, 35);   
-            }, 
+            progress.startProgress($target,$targetProgress);
+        },
         success: function(data){
             if(data.status)
             {
@@ -106,11 +100,10 @@ function show_edit_article(url)
             else
             {
                 console.log(data.message);
-            }            
-            progress.secondProgress($targetProgress, 70);  
+            }
             },
         complete:function(){
-                progress.thirdProgress($target,$targetProgress);   
+            progress.endProgress($target,$targetProgress);
         }
     }); 
 
@@ -144,7 +137,7 @@ function update_article_listener()
 function update_article(data,url){
     
     var $target= $('#right');
-    var $targetProgress = $("#right_progress");
+    var $targetProgress = $("#progress_right");
     
     $.ajax({
             type: "POST",
@@ -154,8 +147,8 @@ function update_article(data,url){
             processData: false,
             contentType:false,
             beforeSend: function(){
-                progress.firstProgress($target,$targetProgress, 35);   
-            }, 
+                progress.startProgress($target,$targetProgress);
+            },
             success: function(data){
                 if(data.status)
                 { 
@@ -185,11 +178,10 @@ function update_article(data,url){
                 {
                     console.log(data.message);
                 }
-                progress.secondProgress($targetProgress, 70);
-                       
+
             },
             complete:function(){
-                progress.thirdProgress($target,$targetProgress);   
+                progress.endProgress($target,$targetProgress);
             }      
         });    
         return false;
@@ -227,14 +219,14 @@ function new_article(url)   {
 
 
     var $target= $('#right');
-    var $targetProgress = $("#right_progress");
+    var $targetProgress = $("#progress_right");
 
     $.ajax({
         type: "GET",
         url: url,
         cache: false,
         beforeSend: function(){
-            progress.firstProgress($target,$targetProgress,35);   
+            progress.startProgress($target,$targetProgress);
         },
         success: function(data){
             if(data.status){
@@ -253,13 +245,9 @@ function new_article(url)   {
             {
                 console.log(data.message);
             }
-            
-
-            progress.secondProgress($targetProgress, 70);
-
             },
         complete:function(){
-            progress.thirdProgress($target,$targetProgress);   
+            progress.endProgress($target,$targetProgress);
         }   
     }); 
     return false;
@@ -323,7 +311,7 @@ function create_article_listener()
 function create_article(data,url){
     
     var $target= $('#right');
-    var $targetProgress = $("#right_progress");
+    var $targetProgress = $("#progress_right");
     
     $.ajax({
         type: "POST",
@@ -333,7 +321,7 @@ function create_article(data,url){
         processData: false,
         contentType:false,
         beforeSend: function(){
-            progress.firstProgress($target,$targetProgress, 35);   
+            progress.startProgress($target,$targetProgress);
         }, 
         success: function(data){
             if(data.status){
@@ -366,11 +354,9 @@ function create_article(data,url){
             {
                 console.log(data.message);
             }
-            
-            progress.secondProgress($targetProgress, 70);                
             },
         complete:function(){
-            progress.thirdProgress($target,$targetProgress);   
+            progress.endProgress($target,$targetProgress);
         }
      });    
 }
@@ -397,7 +383,7 @@ function delete_listener()
 function delete_article(data,url){
     
     var $target= $('#right');
-    var $targetProgress = $("#right_progress");
+    var $targetProgress = $("#progress_right");
     
     $.ajax({
         type: "POST",
@@ -405,7 +391,7 @@ function delete_article(data,url){
         data: data,
         cache: false,
         beforeSend: function(){
-            progress.firstProgress($target,$targetProgress, 35);   
+            progress.startProgress($target,$targetProgress);
         }, 
         success: function(data){
             if(data.status){
@@ -414,11 +400,9 @@ function delete_article(data,url){
             else{
                 //$target.empty().append(data);
             }
-            
-            progress.secondProgress($targetProgress, 70);
             },
         complete:function(){
-            progress.thirdProgress($target,$targetProgress);   
+            progress.endProgress($target,$targetProgress);
         }                     
     });    
 }

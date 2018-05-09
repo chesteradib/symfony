@@ -102,14 +102,14 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 #left_progress,#right_progress,#center_progress
 {
   height: 4px;
-  background-color: #e9f6e9;
+  background-color: $vert;
 }
 
 #right_progress div, #center_progress div, #left_progress div
 {
     height: 100%;
     width: 0;
-    background-color: $vert;  
+
 }
 
 #left_progress
@@ -163,7 +163,25 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     opacity: 0.8;
 }
 
+#progress_right
+{
+  float: left;
+  display: none;
+  position: relative;
+  top: 10%;
+  left: 55%;
+  margin: -100% 0px 0px -10%;
+}
 
+
+#progress_center
+{
+  float: left;
+  display: none;
+  position: relative;
+  top: -55%;
+  left: 50%;
+}
 #left_direction
 {
   left:0;

@@ -59,7 +59,7 @@ var show_category_articles= function(url,category_id)
     
     var $right= $('#right');
     var $target= $('#center');
-    var $targetProgress = $("#center_progress");
+    var $targetProgress = $("#progress_center");
     var numberOfItemsPerCenter= $('#content').data('number-of-items-per-center');
     
     $.ajax({
@@ -70,7 +70,7 @@ var show_category_articles= function(url,category_id)
                 },
             cache: false,
             beforeSend:function(){
-                progress.firstProgress($target,$targetProgress,65);
+                progress.startProgress($target,$targetProgress);
             },
             success: function(data){
                 if(data.status){  
@@ -90,10 +90,10 @@ var show_category_articles= function(url,category_id)
                         console.log('0');
                     }
                 }
-                progress.secondProgress($targetProgress,85);
+
             },
             complete:function(){
-                progress.thirdProgress($target,$targetProgress);
+                progress.endProgress($target,$targetProgress);
                 
             }
         });    

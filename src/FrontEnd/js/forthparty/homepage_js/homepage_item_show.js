@@ -146,18 +146,18 @@ function show_article_listener()
 function show_article(url,callback)
 {
     var $target= $('#right');
-    var $targetProgress = $("#right_progress");
+    var $targetProgress = $("#progress_right");
     
     $.ajax({
         type: "GET",
         url: url,
         cache: false,
         beforeSend: function(){
-            progress.firstProgress($target,$targetProgress, 35);   
+            progress.startProgress($target,$targetProgress);
         }, 
         success: callback,
         complete:function(){
-            progress.thirdProgress($target,$targetProgress);   
+            progress.endProgress($target,$targetProgress);
         }
     });    
 }
@@ -171,7 +171,6 @@ function showArticleCallback(data){
         articleImagesScroller();
         display_image_on_thumb_click_listener();
         open_chat_in_homepage_listener();
-        progress.secondProgress($targetProgress, 70);
         bought_listener();      
     });  
 }
