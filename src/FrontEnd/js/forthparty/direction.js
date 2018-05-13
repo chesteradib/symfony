@@ -2,12 +2,21 @@ $.fn.moveContentToLeft = function(){
     this.removeClass("righty");
     this.removeClass("centry");
     $('#right_direction').css('visibility','visible');
-    $('#left_direction').css('visibility','hidden');  
+    $('#left_direction').css('visibility','hidden');
 };
+
+$.fn.moveContentToLeft = function(){
+    this.removeClass("righty");
+    this.removeClass("centry");
+    $('#right_direction').css('visibility','visible');
+    $('#left_direction').css('visibility','hidden');
+};
+
+
 $.fn.moveContentToCenter = function(){
     this.addClass("centry");
     this.removeClass("righty");
-    $('#left_direction').css('visibility','visible');
+    $('#left_direction').css('visibility','hidden');
     $('#right_direction').css('visibility','visible');
 };
 
@@ -15,7 +24,7 @@ $.fn.moveContentToRight = function(){
     this.addClass("righty");
     this.removeClass("centry");
     $('#left_direction').css('visibility','visible');
-    $('#right_direction').css('visibility','hidden'); 
+    $('#right_direction').css('visibility','hidden');
 };
 
 function initialize_direction()

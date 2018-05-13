@@ -96,7 +96,7 @@ var showShopClickCallback=  function(e)
                     show_all_new_posters();
 
                 }
-                show_direction();
+                //show_direction();
 
             }
     });
