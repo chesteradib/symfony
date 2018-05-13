@@ -219,7 +219,7 @@
     })();
     
     $(function(){
-        var security = new SecurityManagement(); 
+        var security = new SecurityManagement();
         
         var $content= $('#content');
         $content.data('number-of-items-per-center',findNumberOfItemsPer('center',0));

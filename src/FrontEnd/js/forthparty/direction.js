@@ -4,7 +4,6 @@ $.fn.moveContentToLeft = function(){
     $('#right_direction').css('visibility','visible');
     $('#left_direction').css('visibility','hidden');  
 };
-
 $.fn.moveContentToCenter = function(){
     this.addClass("centry");
     this.removeClass("righty");

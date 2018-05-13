@@ -97,7 +97,9 @@ gulp.task('lib-js', function() {
 
 gulp.task('dashboard_js', function () {
     gulp.src([
-        'src/FrontEnd/js/forthparty/dashboard_js/*.js'])
+        'src/FrontEnd/js/forthparty/dashboard_js/*.js',
+        'src/FrontEnd/js/forthparty/*.js'
+    ])
         .pipe(concat('dashboard_js.js'))
 //        .pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulp.dest('web/js'))
@@ -106,7 +108,9 @@ gulp.task('dashboard_js', function () {
 
 gulp.task('homepage_js', function () {
     gulp.src([
-        'src/FrontEnd/js/forthparty/homepage_js/*.js'])
+        'src/FrontEnd/js/forthparty/homepage_js/*.js',
+        'src/FrontEnd/js/forthparty/*.js'
+    ])
         .pipe(concat('homepage_js.js'))
         //.pipe(uglify())
         .pipe(gulp.dest('web/js'))

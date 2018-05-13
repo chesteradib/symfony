@@ -10,7 +10,7 @@ function show_shop_listener_others()
 {
     //always move to center , if current shop open => click on first item
     //                        if current shop not open => LOAD SHOP =>click first
-    
+
     $('.network_dialog').on('click', 'a.show_shop',{where:"my_network"},showShopClickCallback);
     $('.my_market_dialog').on('click', 'a.show_shop',{where:"my_market"},showShopClickCallback); // show people i follow in left and show first item form shop
     $('#left').on('click', '.all_my_inbox a.show_shop',{where:"all_my_inbox"},showShopClickCallback); // keep left as it is  show first item form shop
@@ -147,8 +147,11 @@ function show_my_shop(url)
             },
             complete:function(){
                 progress.endProgress($target,$targetProgress);
-                var new_article_url=$('#content').attr("data-new-article-url");
-                new_article(new_article_url);
+                $('.show_article_trigger:first').children().eq(0).addClass('active');
+                //var product_url=$('.show_article_trigger:first').attr("data-show-url");
+                //show_article(product_url,showArticleCallback);
+                //console.log($('.show_article_trigger:first'));
+                $('.show_article_trigger:first').click();
             },
         });    
         return false;

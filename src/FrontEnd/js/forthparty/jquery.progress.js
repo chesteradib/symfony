@@ -3,7 +3,7 @@
 /// Progress 
 ////////////////////////////////////////////////////////////////////////////
 
-var progress= (function(){
+var progress = (function(){
 
 
     $.fn.cProgressBar = function (percent){

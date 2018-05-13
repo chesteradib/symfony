@@ -3,7 +3,7 @@
 /// 2. Show product
 ////////////////////////////////////////////////////////////////////////////
 
-function show_article_listener()
+var show_article_listener = function()
 {
     $('a.show_article_trigger').click(function(e){
         e.preventDefault();
@@ -16,27 +16,12 @@ function show_article_listener()
    });
 }
 
-function show_article(url,callback)
+var show_article = function(url,callback)
 {
-    var $target= $('#right');
-    var $targetProgress = $("#progress_right");
-
-    $.ajax({
-        type: "GET",
-        url: url,
-        cache: true,
-        beforeSend: function(){
-            progress.startProgress($target,$targetProgress);
-        }, 
-        success: callback,
-        complete:function(){
-            progress.endProgress($target,$targetProgress);
-        }
-    });    
+    Utils.ajax_call("GET", url, {} , true, startPogressRight ,callback, endPogressRight);
 }
 
-
-function showArticleCallback(data){
+var showArticleCallback = function(data){
 
     $.when(right_fully_loaded(data)).done(function(){
         show_edit_article_listener();
@@ -48,11 +33,26 @@ function showArticleCallback(data){
         show_shop_listener();
     });  
 }
-function right_fully_loaded(data)
+
+var right_fully_loaded = function(data)
 {
     $('#right').empty().html(data.html);
     return;             
 }
+
+var startPogressRight = function() {
+    var $target= $('#right');
+    var $targetProgress = $("#progress_right");
+    progress.startProgress($target,$targetProgress);
+};
+
+var endPogressRight = function() {
+    var $target= $('#right');
+    var $targetProgress = $("#progress_right");
+    progress.endProgress($target,$targetProgress);
+};
+
+
 
 ////////////////////////////////////////////////////////////////////////////
 /// 1. Listen to Edit product, input parameters : product id
@@ -60,53 +60,42 @@ function right_fully_loaded(data)
 ////////////////////////////////////////////////////////////////////////////
 
 
-function show_edit_article_listener()
+var show_edit_article_listener = function()
 {
     $('#edit_article_trigger').click(function(e){
         e.preventDefault();
         console.log($(this));
         var url=$(this).attr("data-url");
-        show_edit_article(url);
+        show_edit_article(url, showEditArticleCallback);
         return false;
    });    
 }
-function show_edit_article(url)
+var show_edit_article = function (url, callback)
 {
-    var $target=$('#right');
-    var $targetProgress = $("#progress_right");
-    
-    $.ajax({
-        type: "GET",
-        url: url,
-        cache: false,
-        beforeSend: function(){
-            progress.startProgress($target,$targetProgress);
-        },
-        success: function(data){
-            if(data.status)
-            {
-                $.when(right_fully_loaded(data)).done(function(){              
-                    add_new_inputForImageUpload_listener();
-                    imageUpload_listener();
-                    imageDelete_listener(); 
-                    set_as_main_listener();
-                    validation_errors_control_listener();
-                    update_article_listener();
-                    cancel_button_in_edit_page_listener();
-                    delete_listener();
-                    bought_listener();  
-                });  
-            }
-            else
-            {
-                console.log(data.message);
-            }
-            },
-        complete:function(){
-            progress.endProgress($target,$targetProgress);
-        }
-    }); 
+    Utils.ajax_call("GET", url, {} , true, startPogressRight ,callback, endPogressRight);
+}
 
+
+var showEditArticleCallback = function(data){
+
+    if(data.status)
+    {
+        $.when(right_fully_loaded(data)).done(function(){
+            add_new_inputForImageUpload_listener();
+            imageUpload_listener();
+            imageDelete_listener();
+            set_as_main_listener();
+            validation_errors_control_listener();
+            update_article_listener();
+            cancel_button_in_edit_page_listener();
+            delete_listener();
+            bought_listener();
+        });
+    }
+    else
+    {
+        console.log(data.message);
+    }
 }
 ////////////////////////////////////////////////////////////////////////////
 /// 1. Listen to Update Button in Edit-product page,
@@ -114,9 +103,9 @@ function show_edit_article(url)
 ////////////////////////////////////////////////////////////////////////////
 
 
-function update_article_listener()
+var update_article_listener = function ()
 {
-        $("#update_article_trigger").submit(function(){ 
+    $("#update_article_trigger").submit(function(){
         
         var main_image_id= $('#uploaded_images .has-image').last().find('.one_photo').attr('id');
         
@@ -124,21 +113,19 @@ function update_article_listener()
             $('input[type=hidden][name=main-image]').val(main_image_id); 
          
         var formData = new FormData($(this)[0]);
-         
-         
-         
+
         var url= $(this).attr('action');
-        update_article(formData,url);      
+        update_article(formData,url);
         return false;
-});
+    });
       
 }
 
-function update_article(data,url){
-    
+var update_article = function(data,url){
+
     var $target= $('#right');
     var $targetProgress = $("#progress_right");
-    
+
     $.ajax({
             type: "POST",
             url: url,
@@ -149,45 +136,40 @@ function update_article(data,url){
             beforeSend: function(){
                 progress.startProgress($target,$targetProgress);
             },
-            success: function(data){
-                if(data.status)
-                { 
-                   $.when(right_fully_loaded(data)).done(function(){  
-                        if(data.target==="show")
-                        {
-                            show_edit_article_listener();
-                            delete_listener();
-                            bought_listener();
-                            articleImagesScroller();
-                            display_image_on_thumb_click_listener();
-                            show_shop_listener();
-                            retweet_listener();
-                        }
-                        if(data.target==="form")
-                        {
-                            update_article_listener();
-                            add_new_inputForImageUpload_listener();
-                            imageUpload_listener();
-                            imageDelete_listener();
-                            set_as_main_listener();
-                            validation_errors_control_listener();
-                       }
-                    });
-                }
-                else
-                {
-                    console.log(data.message);
-                }
-
-            },
+            success:  updateArticleCallback,
             complete:function(){
                 progress.endProgress($target,$targetProgress);
-            }      
-        });    
+            }
+        });
         return false;
 }
 
-
+var updateArticleCallback = function(data) {
+    if (data.status) {
+        $.when(right_fully_loaded(data)).done(function () {
+            if (data.target === "show") {
+                show_edit_article_listener();
+                delete_listener();
+                bought_listener();
+                articleImagesScroller();
+                display_image_on_thumb_click_listener();
+                show_shop_listener();
+                retweet_listener();
+            }
+            if (data.target === "form") {
+                update_article_listener();
+                add_new_inputForImageUpload_listener();
+                imageUpload_listener();
+                imageDelete_listener();
+                set_as_main_listener();
+                validation_errors_control_listener();
+            }
+        });
+    }
+    else {
+        console.log(data.message);
+    }
+};
 
 ////////////////////////////////////////////////////////////////////////////
 /// 1. Listen to Add new article admin page
@@ -346,6 +328,7 @@ function create_article(data,url){
                        validation_errors_control_listener();
                        create_article_listener();
                        delete_listener();
+                       cancel_in_new_article_listener();
                     }
 
                 });
