@@ -5,7 +5,7 @@
 /// 2. Show product
 ////////////////////////////////////////////////////////////////////////////
 
-function show_article_listener()
+var show_article_listener = function()
 {
     $('a.show_article_trigger').click(function(e){
         e.preventDefault();
@@ -18,49 +18,30 @@ function show_article_listener()
     });
 }
 
-function show_article(url,callback)
+var show_article = function(url,callback)
 {
-    var $target= $('#right');
-    var $targetProgress = $("#progress_right");
-
-    $.ajax({
-        type: "GET",
-        url: url,
-        cache: false,
-        beforeSend: function(){
-            progress.startProgress($target,$targetProgress);
-        },
-        success: callback,
-        complete:function(){
-            progress.endProgress($target,$targetProgress);
-        }
-    });
+        Utils.ajax_call("GET", url, {} , true, startPogressRight ,callback, endPogressRight);
 }
 
 
-function showArticleCallback(data){
-
-    var $targetProgress = $("#right_progress");
+var showArticleCallback = function (data){
 
     $.when(right_fully_loaded(data)).done(function(){
         articleImagesScroller();
         display_image_on_thumb_click_listener();
-        open_chat_in_homepage_listener();
         bought_listener();
     });
 }
 
 
-
-////////////////////////////////////////////////////////////////////////////////
-function right_fully_loaded(data)
+var right_fully_loaded = function(data)
 {
     $('#right').empty().html(data.html);
     return;
 }
 
 
-function validation_errors_control_listener()
+var validation_errors_control_listener = function()
 {
 
     $('.error-message-close').click(function(){
@@ -104,32 +85,43 @@ var bought_listener = function()
 
 }
 
+
 var update_bought_value = function(url,checked)
 {
-    var $boughtSymbol= $('.bought_article_symbol');
-    var $boughtWord=$('.bought_article_text');
 
-    $.ajax({
-        type: "POST",
-        url: url,
-        cache: false,
-        data:{checked:checked},
-        success: function(data){
-            if(data.status) {
-                $boughtSymbol.toggleClass("bought_trigger_off");
-                if(checked)
-                {
-                    $boughtWord.empty().append('Disponible');
-                }
-                else
-                {
-                    $boughtWord.empty().append('Vendu');
-                }
-            }
-            else{
-                alert(data.message);
-            }
-        }
-    });
+    Utils.ajax_call("POST", url, { checked : checked } , false, function(){} ,updateBoughtValueCallback, function(){});
+
     return false;
 }
+
+
+var updateBoughtValueCallback = function(data) {
+    var $boughtSymbol= $('.bought_article_symbol');
+    var $boughtWord=$('.bought_article_text');
+    if(data.status) {
+        $boughtSymbol.toggleClass("bought_trigger_off");
+        if(checked)
+        {
+            $boughtWord.empty().append('Disponible');
+        }
+        else
+        {
+            $boughtWord.empty().append('Vendu');
+        }
+    }
+    else{
+        alert(data.message);
+    }
+}
+
+var startPogressRight = function() {
+    var $target= $('#right');
+    var $targetProgress = $("#progress_right");
+    progress.startProgress($target,$targetProgress);
+};
+
+var endPogressRight = function() {
+    var $target= $('#right');
+    var $targetProgress = $("#progress_right");
+    progress.endProgress($target,$targetProgress);
+};

@@ -34,7 +34,6 @@ var showShopClickCallback =  function(e)
             product_hover_listener();
              
             final_next_previous_page_listenner('center');
-            follow_unfollow_in_homepage_listener();
         },
             
         complete:function(){

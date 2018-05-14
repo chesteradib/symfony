@@ -18,7 +18,7 @@ var Utils= (function(){
                              processData){
 
 
-        contentType = typeof contentType !== 'undefined' ? a : 'application/x-www-form-urlencoded; charset=UTF-8';
+        contentType = typeof contentType !== 'undefined' ? contentType : 'application/x-www-form-urlencoded; charset=UTF-8';
         processData = typeof processData !== 'undefined' ? processData : true;
         data = typeof data !== 'undefined' ? data : {};
 
@@ -35,7 +35,30 @@ var Utils= (function(){
         });
     };
 
+    var dump = function(obj) {
+        var out = '';
+        for (var i in obj) {
+            out += i + ": " + obj[i] + "\n";
+        }
+        // or, if you wanted to avoid alerts...
+
+        var pre = document.createElement('pre');
+        pre.innerHTML = out;
+        document.body.appendChild(pre)
+    }
+
+
+
     return {
-        ajax_call : ajax_call
+        ajax_call : ajax_call,
+        dump: dump
     };
 })();
+
+
+////////////////////////////////////////////////////////////////////////////
+/// Dumping function for debug purposes To be deleted in production
+////////////////////////////////////////////////////////////////////////////
+
+
+

@@ -267,9 +267,9 @@ function show_all_new_posters(){
             success: function(data){
                 $target.css("visibility", "visible").empty().html(data);
                 progress.secondProgress($targetProgress,95);
-                //show_shop_listener();
+                show_shop_listener();
                 final_next_previous_page_listenner('left','network');
-                follow_unfollow_in_homepage_listener();
+
                 },
             complete: function(){
 

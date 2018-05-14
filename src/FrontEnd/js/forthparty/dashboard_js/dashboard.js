@@ -24,24 +24,18 @@ $(document).ready(function(){
 
     var url_all_jawla = $('#content').attr('data-url-all-jawla');
     show_all_jawla(url_all_jawla);
-    
-    show_shop_listener_others();     
-    
+
+    //show_shop_listener();
+
     initialize_direction();
     direction_listener();
     hideWhenVisible();
-    //////////////////////////////////////////////////////////////////////////////
-    /// Call to listener of show page of products of shop
-    ////////////////////////////////////////////////////////////////////////////
-    //show_page_of_products_listener();
 
     show_my_shop_listener();
     search_listener();
-    ////////////////////////////////////////////////////////////////////////////
-    /// Call to listener of add new product
-    ////////////////////////////////////////////////////////////////////////////
+
     new_article_listener();
-    //follow_shop_listener();
+
     
     return false;    
 });
@@ -126,7 +120,7 @@ function show_all_new_posters(){
         success: function(data){
             $target.css("visibility", "visible").empty().html(data);
             final_next_previous_page_listenner('left','network');
-
+            show_shop_listener();
             },
         complete: function(){
             //var url_all_jawla = $('#content').attr('data-url-all-jawla');
@@ -166,50 +160,7 @@ var hideWhenVisible = function()
 
     $(document).mouseup(function (e)
     {
-        var $inboxDialogContainer = $('.inbox_dialog');
-        var $networkDialogContainer = $('.network_dialog');
-        var $myMarketDialogContainer = $('.my_market_dialog');
         var $categoriesDialogContainer = $('.categories_dialog')
-
-        /*
-         if($inboxDialogContainer.is(':visible')
-         || $networkDialogContainer.is(':visible')
-         || $myMarketDialogContainer.is(':visible')
-         || $categoriesDialogContainer.is(':visible')
-         )
-         { */
-        if (!$inboxDialogContainer.is(e.target) // if the target of the click isn't the container...
-            && $inboxDialogContainer.has(e.target).length !== 0  // ... nor a descendant of the container
-            && !$('.show_inbox_trigger').is(e.target)
-            ||
-            !$inboxDialogContainer.is(e.target)
-            && !$('.show_inbox_trigger').is(e.target)
-        )
-        {
-            $inboxDialogContainer.hide();
-        }
-
-        if (!$networkDialogContainer.is(e.target)
-            && $networkDialogContainer.has(e.target).length !== 0
-            && !$('.show_network_trigger').is(e.target)
-            ||
-            !$networkDialogContainer.is(e.target)
-            && !$('.show_network_trigger').is(e.target))
-        {
-            $networkDialogContainer.hide();
-
-        }
-
-        if (!$myMarketDialogContainer.is(e.target)
-            && $myMarketDialogContainer.has(e.target).length !== 0
-            && !$('.show_my_market_trigger').is(e.target)
-            ||
-            !$myMarketDialogContainer.is(e.target)
-            && !$('.show_my_market_trigger').is(e.target))
-        {
-            $myMarketDialogContainer.hide();
-
-        }
 
         if (!$categoriesDialogContainer.is(e.target)
             && $categoriesDialogContainer.has(e.target).length !== 0

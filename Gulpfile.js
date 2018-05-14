@@ -101,7 +101,7 @@ gulp.task('dashboard_js', function () {
         'src/FrontEnd/js/forthparty/*.js'
     ])
         .pipe(concat('dashboard_js.js'))
-        .pipe(gulpif(env == 'prod', uglify()))
+        //.pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulp.dest('web/js'))
         .pipe(reload({stream:true}));
 });
@@ -112,7 +112,7 @@ gulp.task('homepage_js', function () {
         'src/FrontEnd/js/forthparty/*.js'
     ])
         .pipe(concat('homepage_js.js'))
-        .pipe(gulpif(env == 'prod', uglify()))
+        //.pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulp.dest('web/js'))
         .pipe(reload({stream:true}));
 });
@@ -121,7 +121,7 @@ gulp.task('mobile_new_item_js', function () {
     gulp.src([
         'src/FrontEnd/js/forthparty/mobile_js/mobile_new_item_js/*.js'])
         .pipe(concat('mobile_new_item_js.js'))
-        .pipe(gulpif(env == 'prod', uglify()))
+        //.pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulp.dest('web/js'))
         .pipe(reload({stream:true}));
 });
@@ -130,7 +130,7 @@ gulp.task('mobile_chat_js', function () {
     gulp.src([
         'src/FrontEnd/js/forthparty/mobile_js/mobile_chat_js/*.js'])
         .pipe(concat('mobile_chat_js.js'))
-        .pipe(gulpif(env == 'prod', uglify()))
+        //.pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulp.dest('web/js'))
         .pipe(reload({stream:true}));
 });
@@ -139,7 +139,7 @@ gulp.task('mobile_my_inbox_js', function () {
     gulp.src([
         'src/FrontEnd/js/forthparty/mobile_js/mobile_my_inbox_js/*.js'])
         .pipe(concat('mobile_my_inbox_js.js'))
-        .pipe(gulpif(env == 'prod', uglify()))
+        //.pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulp.dest('web/js'))
         .pipe(reload({stream:true}));
 });
@@ -148,7 +148,7 @@ gulp.task('mobile_show_js', function () {
     gulp.src([
         'src/FrontEnd/js/forthparty/mobile_js/mobile_show_js/*.js'])
         .pipe(concat('mobile_show_js.js'))
-        .pipe(gulpif(env == 'prod', uglify()))
+        //.pipe(gulpif(env == 'prod', uglify()))
         .pipe(gulp.dest('web/js'))
         .pipe(reload({stream:true}));
 });
