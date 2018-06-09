@@ -1,12 +1,9 @@
-parameters:
-     members_management.message.class:  Members\Bundle\ManagementBundle\Entity\Message
 services:
-  members_management.profile.form.type:
-    class: Members\Bundle\ManagementBundle\Form\Type\ProfileFormType
-    arguments: [%fos_user.model.user.class%]
-    tags:
-      - {name:form.type, alias:members_management_user_profile}
   members_management.user.services:
       class: Members\Bundle\ManagementBundle\Entity\UserServices
       arguments:    ["@doctrine.orm.default_entity_manager"]
-  
+  app.form.profile:
+          class: Members\Bundle\ManagementBundle\Form\Type\ProfileFormType
+          arguments: [%fos_user.model.user.class%]
+          tags:
+              - { name: form.type, alias: app_user_profile }

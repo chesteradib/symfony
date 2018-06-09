@@ -35,7 +35,7 @@ $(document).ready(function(){
     search_listener();
 
     new_article_listener();
-
+    profile.show_profile_listener();
     
     return false;    
 });

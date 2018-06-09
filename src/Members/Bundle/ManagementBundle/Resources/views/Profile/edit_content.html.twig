@@ -1,15 +1,15 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} 
+<form action="{{ path('fos_user_profile_edit') }}"
       method="POST" 
       class="fos_user_profile_edit" 
-      data-iu-url="{{ path('update_profile_picture', { 'user_id': user.id })}}"  
+      data-iu-url="{{ path('update_profile_picture', { 'user_id': form.vars.value.getId })}}"
       novalidate>
-      {{ form_errors(form) }}
-{{ form_widget(form) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
       
     <div class="profile_picture">
-         <img class="photo"  src="{{ prefix ~ profile_url }}" width="60"/>
+         <img class="photo"  src="{{ prefix ~ form.vars.value.getProfilePicture }}" width="60"/>
          <input type="file" id="fos_user_profile_form_profile_picture" name="fos_user_profile_form[profile_picture]" required="required" class="chooser">
          <a href="#">Click me to choose a file</a>
       </div>      

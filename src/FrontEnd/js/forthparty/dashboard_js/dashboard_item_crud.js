@@ -11,14 +11,14 @@ var show_article_listener = function()
         $(this).manageActiveItem();
         var $content= $('#content');
         $content.moveContentToRight();
-        show_article(product_url,showArticleCallback);
+        show_article(product_url);
         return false;
    });
 }
 
-var show_article = function(url,callback)
+var show_article = function(url)
 {
-    Utils.ajax_call("GET", url, {} , true, startPogressRight ,callback, endPogressRight);
+    Utils.ajax_call("GET", url, {} , true, startPogressRight ,showArticleCallback, endPogressRight);
 }
 
 var showArticleCallback = function(data){

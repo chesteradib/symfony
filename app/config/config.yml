@@ -67,7 +67,7 @@ fos_user:
   user_class: Members\Bundle\ManagementBundle\Entity\User
   profile:
         form:
-            type:               members_management_user_profile
+            type:              Members\Bundle\ManagementBundle\Form\Type\ProfileFormType
   registration:
         confirmation:
             enabled:    true

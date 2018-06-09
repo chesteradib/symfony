@@ -49,7 +49,7 @@ function show_page_of_nonproducts(url,current_page,numberOfItemsPerPage,type)
 
     $.ajax({
             type: "POST",
-            data: {current_page: current_page, items_per_page: numberOfItemsPerPage},
+            data: { current_page: current_page, items_per_page: numberOfItemsPerPage },
             url: url,
             cache: false,
             beforeSend:function(){

@@ -1,14 +1,29 @@
 <?php
 
+/*
+ * This file is part of the FOSUserBundle package.
+ *
+ * (c) FriendsOfSymfony <http://friendsofsymfony.github.com/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Members\Bundle\ManagementBundle\Form\Type;
-use Members\Bundle\ManagementBundle\Form\ProfilePhotoType;
+
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ProfileFormType extends AbstractType
 {
+    /**
+     * @var string
+     */
     private $class;
 
     /**
@@ -19,38 +34,65 @@ class ProfileFormType extends AbstractType
         $this->class = $class;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $this->buildUserForm($builder, $options);
 
-        $builder
-            ->add('latitude', 'hidden', array('label' => false))
-            ->add('longitude','hidden', array('label' => false))
-            ->add('username', 'text', array('label' =>  false))
-            ->add('email', 'email', array('label' =>  "Email"))
-            ->add('domain_name','text', array('label' => "Domain Name"))
-            ->add('store_description','textarea', array('label' => "Store Description"))
-            //->add('profile_picture','file', array('label' => false, 'attr'=>array('class'=>'chooser'), 'required' => true, 'data_class' => 'Members\Bundle\ManagementBundle\Entity\ProfilePhoto'))
-        ;
-        
-        $builder->add('current_password', 'password', array(
+        $constraintsOptions = array(
+            'message' => 'fos_user.current_password.invalid',
+        );
+
+        if (!empty($options['validation_groups'])) {
+            $constraintsOptions['groups'] = array(reset($options['validation_groups']));
+        }
+
+        $builder->add('current_password', PasswordType::class, array(
             'label' => 'form.current_password',
             'translation_domain' => 'FOSUserBundle',
-            'mapped' => false, 
-            'constraints' => new UserPassword(),
+            'mapped' => false,
+            'constraints' => array(
+                new NotBlank(),
+                new UserPassword($constraintsOptions),
+            ),
+            'attr' => array(
+                'autocomplete' => 'current-password',
+            ),
         ));
     }
 
-    public function getParent()
+    /**
+     * {@inheritdoc}
+     */
+    public function configureOptions(OptionsResolver $resolver)
     {
-        return 'fos_user_profile';
+        $resolver->setDefaults(array(
+            'data_class' => $this->class,
+            'csrf_token_id' => 'profile',
+        ));
     }
 
-
-
-    public function getName()
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
     {
-        return 'members_management_user_profile';
+        return 'app_user_profile';
     }
 
-    
+    /**
+     * Builds the embedded form representing the user.
+     *
+     * @param FormBuilderInterface $builder
+     * @param array                $options
+     */
+    protected function buildUserForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle'))
+            ->add('email', EmailType::class, array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
+        ;
+    }
 }

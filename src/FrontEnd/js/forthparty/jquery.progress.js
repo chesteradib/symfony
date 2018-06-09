@@ -27,6 +27,15 @@ var progress = (function(){
         secondFadeProgress(target);
     };
 
+
+
+
+
+
+
+
+
+
     var startProgress = function(target,targetProgress){
         firstFadeProgress(target);
         showProgress(targetProgress);
