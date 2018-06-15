@@ -18,7 +18,8 @@ left:
     all_new_posters:
         all_new_posters: Active Members
         no_new_posters: No active members for the moment. There are no posts at all in the whole website.
-       
+    profile:
+      deactivate : Deactivate account
 
 
 center:

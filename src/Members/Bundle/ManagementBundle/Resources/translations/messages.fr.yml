@@ -1,7 +1,7 @@
 menu:
     my_shop: Mes annonces
     new_article: Déposer une annonce
-    my_settings: Mes parametres
+    my_settings: Mon profil
     navigate_by_category : >
                         Naviguer par catégorie
     search:
@@ -21,6 +21,15 @@ left:
     all_new_posters:
         all_new_posters: Membres actifs
         no_new_posters: Pas de membres actifs pour le moment.
+    profile:
+      deactivate : >
+        Désactiver le compte
+      show:
+        username: Ton nom d'utilisateur
+        email: Ton addresse mail
+        website: Ton site web
+        address: Ton addresse
+
 item : article
 
 center:

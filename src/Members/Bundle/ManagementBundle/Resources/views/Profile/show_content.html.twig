@@ -1,12 +1,23 @@
-{% trans_default_domain 'FOSUserBundle' %}
 
 <div class="fos_user_user_show" data-latitude="{{ user.latitude }}" data-longitude="{{ user.longitude }}">
     <div class="profile_picture">
-      <img class="photo"  src="{{ prefix }}" width="60"/>
+        {% if user.getProfilePicture %}
+            {% set profilePhotoLink = prefix ~ user.getProfilePicture   %}
+        {% else %}
+            {% set profilePhotoLink = prefix ~ "pp/index.png"   %}
+        {%endif%}
+        <img class="photo" src="{{ profilePhotoLink }}" width="60"/>
+        <input
+                type="file"
+                id="fos_user_profile_form_profile_picture"
+                name="fos_user_profile_form[profile_picture]"
+                required="required"
+                class="chooser">
+        <a href="#">Click me to choose a file</a>
     </div>
-    
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+
+    <p>{{ 'left.profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'left.profile.show.email'|trans }}: {{ user.email }}</p>
     <p>{{ user.getDomainName }}</p>
     <p>{{ user.getStoreDescription }}</p>
     <div class="map-canvas" id="map-profile-show" style="height:180px"></div>
@@ -15,11 +26,6 @@
     
     
 
-
-<a href="javascript:void(0);" class="edit_my_profile" data-url="{{path('fos_user_profile_edit')}}">
-edit
-</a>
-
 <a href="javascript:void(0);" class="deactivate_my_profile" data-url="{{path('deactivate_profile')}}">
-deactivate
+{{ 'left.profile.deactivate' | trans }}
 </a>

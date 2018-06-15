@@ -1,4 +1,11 @@
-{% block fos_user_content %}
-{% include "MembersManagementBundle:Profile:show_content.html.twig" %}
-{% endblock fos_user_content %}
+<div id="left_context">
+    <div id="left-context-articles-from">
+        {{ 'menu.my_settings'| trans}}
+    </div>
+</div>
 
+<div id="left_content">
+    {% block fos_user_content %}
+        {% include "MembersManagementBundle:Profile:show_content.html.twig" %}
+    {% endblock fos_user_content %}
+</div>

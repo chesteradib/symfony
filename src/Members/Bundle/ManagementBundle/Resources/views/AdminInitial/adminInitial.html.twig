@@ -39,9 +39,14 @@
             <div id="left">
                 {% include "MembersManagementBundle:AdminInitial:adminLeftInitial.html.twig" %}
             </div>
+            <div id="progress_left">
+                <img src="{{ asset('images/loading.gif')}}" />
+            </div>
         </div>
         <div id="center_container">
-            <div id="center_progress"><div></div></div>
+            <div id="center_progress">
+                <div></div>
+            </div>
             <div id="center">
                 {% include "MembersManagementBundle:AdminInitial:adminCenterInitial.html.twig" %}
             </div>

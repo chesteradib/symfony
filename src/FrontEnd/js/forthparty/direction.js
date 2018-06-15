@@ -1,9 +1,3 @@
-$.fn.moveContentToLeft = function(){
-    this.removeClass("righty");
-    this.removeClass("centry");
-    $('#right_direction').css('visibility','visible');
-    $('#left_direction').css('visibility','hidden');
-};
 
 $.fn.moveContentToLeft = function(){
     this.removeClass("righty");

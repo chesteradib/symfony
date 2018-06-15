@@ -1,8 +1,14 @@
 var profile = (function(){
 
+    var $content= $('#content');
+    var $right = $('#right');
+    var $center = $('#center');
+    var $left = $('#left');
+
     var show_profile_listener = function ()
     {
         $('a.show_my_profile').click(function(e){
+            $content.moveContentToLeft();
             e.preventDefault();
             var url = $('a.show_my_profile').attr('data-url');
             show_profile(url);
@@ -12,14 +18,15 @@ var profile = (function(){
 
     var show_profile = function(url)
     {
-        Utils.ajax_call("GET", url, {} , true, startPogressCenter ,showProfileCallback, endPogressCenter);
+        Utils.ajax_call("GET", url, {} , true, startPogressLeft ,showProfileCallback, endPogressLeft);
     };
 
 
     var showProfileCallback = function(data)
     {
-        $('#right').empty();
-        $('#center').empty().html(data);
+        $right.empty();
+        $center.empty();
+        $left.empty().html(data);
 
         show_edit_profile_listener();
         //initialize_show_profile_map();
@@ -39,13 +46,12 @@ var profile = (function(){
 
     var show_edit_profile = function(url)
     {
-        Utils.ajax_call("GET", url, {} , true, startPogressCenter ,showEditProfileCallback, endPogressCenter);
+        Utils.ajax_call("GET", url, {} , true, startPogressLeft ,showEditProfileCallback, endPogressLeft);
     };
 
     var showEditProfileCallback = function(data)
     {
-        $('#center').empty();
-        $('#center').html(data);
+        $left.empty().html(data);
         //initi();
         profile_upload_listener();
         update_profile_listener();
@@ -69,14 +75,14 @@ var profile = (function(){
 
     function update_profile(data,url)
     {
-        Utils.ajax_call("POST", url, data , false, startPogressCenter,updateProfileCallback, endPogressCenter, false, false);
+        Utils.ajax_call("POST", url, data , false, startPogressLeft,updateProfileCallback, endPogressLeft, false, false);
         return false;
     }
 
 
     var updateProfileCallback = function(data){
 
-        $('#center').empty().html(data);
+        $left.empty().html(data);
 
         show_edit_profile_listener();
         update_profile_listener();
@@ -182,7 +188,7 @@ var profile = (function(){
 
     var deactivate_profile = function(url)
     {
-        Utils.ajax_call("POST", url, data , false, startPogressCenter, deactivateProfileCallback, endPogressCenter, false, false);
+        Utils.ajax_call("POST", url, data , false, startPogressLeft, deactivateProfileCallback, endPogressLeft, false, false);
         return false;
     };
 
@@ -247,14 +253,3 @@ var profile = (function(){
 })();
 
 
-var startPogressCenter = function() {
-    var $target= $('#center');
-    var $targetProgress = $("#progress_center");
-    progress.startProgress($target,$targetProgress);
-};
-
-var endPogressCenter = function() {
-    var $target= $('#center');
-    var $targetProgress = $("#progress_center");
-    progress.endProgress($target,$targetProgress);
-};

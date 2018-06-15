@@ -9,8 +9,20 @@
         {{ form_widget(form) }}
       
     <div class="profile_picture">
-         <img class="photo"  src="{{ prefix ~ form.vars.value.getProfilePicture }}" width="60"/>
-         <input type="file" id="fos_user_profile_form_profile_picture" name="fos_user_profile_form[profile_picture]" required="required" class="chooser">
+        {% if form.vars.value.getProfilePicture %}
+            {% set profilePhotoLink = prefix ~ form.vars.value.getProfilePicture   %}
+
+        {% else %}
+            {% set profilePhotoLink = prefix ~ "pp/index.png"   %}
+        {%endif%}
+         <img class="photo"  src="{{ profilePhotoLink }}" width="60"/>
+        {{ dump(profilePhotoLink) }}
+         <input
+                 type="file"
+                 id="fos_user_profile_form_profile_picture"
+                 name="fos_user_profile_form[profile_picture]"
+                 required="required"
+                 class="chooser">
          <a href="#">Click me to choose a file</a>
       </div>      
     
