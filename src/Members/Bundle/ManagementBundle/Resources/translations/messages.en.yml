@@ -20,7 +20,15 @@ left:
         no_new_posters: No active members for the moment. There are no posts at all in the whole website.
     profile:
       deactivate : Deactivate account
-
+      show:
+        username: Ton nom d'utilisateur
+        email: Ton addresse mail
+        website: Ton site web
+        address: Ton addresse
+        storeDescription: Descriptif de ton compte
+        newProfilePhoto : Mettre une photo du compte
+        updateProfilePhoto : Modifier la photo du compte
+        deleteProfilePhoto : Supprimer
 
 center:
     home: Welcome, total number of articles now is

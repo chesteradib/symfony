@@ -1,7 +1,5 @@
 @import 'dashboard_header';
-@import 'all_my_inbox';
 @import 'all_my_network';
-@import 'notification';
 @import 'customLightBox';
 @import 'pagination';
 @import 'center_styles';
@@ -10,7 +8,6 @@
 @import 'dashboard_item_show';
 @import 'dashboard_add_new_item';
 @import 'dashboard_validation_styles';
-@import 'jquery.ui.chatbox';
 @import 'categories';
 
 $rouge: #c1272d;
@@ -218,9 +215,6 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 /**/
-/**/
-/**/
-
 
 
 .chooser { top: -100px; z-index: 1; 
@@ -234,15 +228,6 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 }
 
-/**/
-/**/
-
-.profile_picture { 
-    position: relative; margin: 0 0 40px;
-}
-
-            
-
 #chatters_container
 {
   position:absolute;
@@ -250,3 +235,4 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   background-color: $vert-opace;
   left: 710px;
 }
+

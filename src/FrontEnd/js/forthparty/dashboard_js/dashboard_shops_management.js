@@ -10,7 +10,7 @@
 function show_shop_listener()
 {
 
-    $('a.show_shop.item').click({where:"item"},showShopClickCallback);
+    $('a.show_shop').click({where:"item"},showShopClickCallback);
 
 }
 
@@ -34,8 +34,8 @@ var showShopClickCallback=  function(e)
     var base_url = $this.attr('data-url');
         
     var show_shop_url= base_url + shop_id +'/';
-    
 
+    console.log(shop_id);console.log(base_url);console.log(show_shop_url);
     var numberOfItemsPerPage= $('#content').data('number-of-items-per-center');
 
     $.ajax({

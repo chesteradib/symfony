@@ -63,11 +63,11 @@ latlngjson:
 ###############################################  
 
 update_profile_picture:
-    path: /{user_id}/update_profile_picture
+    path: /update_profile_picture
     defaults: { _controller: MembersManagementBundle:Profile:updateProfilePicture}
 
 delete_profile_picture:
-    path: /{img_id}/delete_profile_picture
+    path: /delete_profile_picture
     defaults: { _controller: MembersManagementBundle:Profile:deleteProfilePicture}
 
     

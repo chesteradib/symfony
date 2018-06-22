@@ -25,7 +25,7 @@ $(document).ready(function(){
     var url_all_jawla = $('#content').attr('data-url-all-jawla');
     show_all_jawla(url_all_jawla);
 
-    //show_shop_listener();
+    show_shop_listener();
 
     initialize_direction();
     direction_listener();

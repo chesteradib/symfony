@@ -15,9 +15,8 @@
     {% if user and  user.getProfilePicture %}
         <div id="center-context-user-image" class="{% if user.getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
         {% set createdAt = user.getCreatedAt %}
-        {% set image_url = 'pp/'~createdAt|date('Y')~'/'
-            ~createdAt|date('m')~'/'
-            ~user.getProfilePicture.path %}
+        {% set image_url = 'uploads/profilepictures/prpf/'
+                            ~user.getProfilePicture.path %}
             {% if user.getProfilePicture.widthVsHeight == 0 %}
             <img class="photo equal-profile-image"  src="{{ prefix ~ image_url }}"/>
             {% elseif user.getProfilePicture.widthVsHeight == 1 %}

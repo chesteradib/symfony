@@ -29,6 +29,10 @@ left:
         email: Ton addresse mail
         website: Ton site web
         address: Ton addresse
+        storeDescription: Descriptif de ton compte
+        newProfilePhoto : Mettre une photo du compte
+        updateProfilePhoto : Modifier la photo du compte
+        deleteProfilePhoto : Supprimer
 
 item : article
 

@@ -176,8 +176,7 @@
                          id="post-owner-image"
                          data-wVsH="{{entity.user.getProfilePicture.widthVsHeight}}">
                         {% set createdAt = entity.user.getCreatedAt %}
-                        {% set image_url = 'pp/'~createdAt|date('Y')~'/'
-                            ~createdAt|date('m')~'/'
+                        {% set image_url = 'uploads/profilepictures/prpf/'
                             ~entity.user.getProfilePicture.path %}
                             {% if entity.user.getProfilePicture.widthVsHeight == 0 %}
                             <img class="photo equal" src="{{ prefix ~ image_url }}"/>
