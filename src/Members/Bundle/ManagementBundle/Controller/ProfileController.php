@@ -93,6 +93,7 @@ class ProfileController extends Controller
             }
 
             $image->setFile($image_file);
+            $fileContent =  file_get_contents( $image->getFile()->getPathName());
             $validator = $this->get('validator');
             $errors = $validator->validate($image);
             if (count($errors) > 0) {
@@ -102,6 +103,8 @@ class ProfileController extends Controller
                 $image->setSubDir('prpf');
 
                 $path =$image->upload();
+
+                $this->renameAfterFilter($fileContent, $path);
 
                 $image->setUser($user);
                 $image->setWidthVsHeight($widthVsHeight);

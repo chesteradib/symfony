@@ -15,7 +15,7 @@ class UploadFileMover {
         
     }
     
-    public function moveUploadedFile(UploadedFile $file, $uploadBasePath,$relativePath)
+    public function moveUploadedFile(UploadedFile $file, $uploadBasePath, $relativePath)
     {
         
         $reNamed = $this->renameUploadedFile($file);

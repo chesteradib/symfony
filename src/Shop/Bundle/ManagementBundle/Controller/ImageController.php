@@ -134,10 +134,9 @@ class ImageController extends Controller {
                 $widen_big= array( 'widen' => 960) ;
                 
                 $path = $image->getTheWebPath();
-                
-                $container = $this->container;                                 
-                $dataManager = $container->get('liip_imagine.data.manager');
-                $filterManager = $container->get('liip_imagine.filter.manager');
+
+                $dataManager = $this->get('liip_imagine.data.manager');
+                $filterManager = $this->get('liip_imagine.filter.manager');
 
                 $binary = $dataManager->find($filter, $path);
                     

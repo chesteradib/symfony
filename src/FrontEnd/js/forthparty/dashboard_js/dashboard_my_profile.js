@@ -45,6 +45,7 @@ var profile = (function(){
     {
         $('a#change_profile_picture_trigger').click(function(e){
             e.preventDefault();
+
             $('#fos_user_profile_form_profile_picture').trigger('click');
             return false;
         });
@@ -65,8 +66,8 @@ var profile = (function(){
 
     var completeHandlerProfile = function(data){
 
-        $profilePicture.attr('src', data);
-        $deleteProfilePictureTrigger.show();
+        $('#profile_picture').attr('src', data);
+        $('#delete_profile_picture_trigger').show();
         delete_profile_photo_listener();
         return false;
 
@@ -80,7 +81,7 @@ var profile = (function(){
 
     var delete_profile_photo_listener = function ()
     {
-        $deleteProfilePictureTrigger.on("click", function(e){
+        $('#delete_profile_picture_trigger').on("click", function(e){
 
             e.preventDefault();
             var url=$(this).attr("data-id-url");
@@ -100,8 +101,8 @@ var profile = (function(){
 
     var deleteProfilePhotoComplete = function(data){
 
-        $profilePicture.attr('src', data);
-        $deleteProfilePictureTrigger.hide();
+        $('#profile_picture').attr('src', data);
+        $('#delete_profile_picture_trigger').hide();
         return false;
 
 
