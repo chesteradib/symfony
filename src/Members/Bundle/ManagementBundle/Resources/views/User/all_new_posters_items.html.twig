@@ -14,9 +14,8 @@
                 {% if new_poster['item'].getProfilePicture %}
                     <div class="image_of_follower m-i-p-p-u-d {% if new_poster['item'].getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
                         {% set createdAt = new_poster['item'].getCreatedAt %}
-                        {% set image_url = 'pp/'~createdAt|date('Y')~'/'
-                            ~createdAt|date('m')~'/'
-                            ~new_poster['item'].getProfilePicture.path %}
+                        {% set image_url = prefix ~"uploads/profilepictures/prpf/" ~
+                                new_poster['item'].getProfilePicture.path %}
                             {% if new_poster['item'].getProfilePicture.widthVsHeight == 0 %}
                             <img class="m-i-p-p-u photo equal" src="{{ prefix ~ image_url }}" height= 25/>
                             {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 1 %}
