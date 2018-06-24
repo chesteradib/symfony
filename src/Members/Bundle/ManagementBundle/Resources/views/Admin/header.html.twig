@@ -56,8 +56,7 @@
                 <a href="javascript:void(0);" class="show_my_profile" data-url="{{path('fos_user_profile_show')}}">
                 {% if currentUser.getProfilePicture %}
                     {% set createdAt = currentUser.getCreatedAt %}
-                    {% set image_url = 'pp/'~createdAt|date('Y')~'/'
-                        ~createdAt|date('m')~'/'
+                    {% set image_url = prefix ~"uploads/profilepictures/prpf/"
                         ~currentUser.getProfilePicture.path %}                        
                     {% if currentUser.getProfilePicture.widthVsHeight == 0 %}
                         <img class="photo equal" src="{{ prefix ~ image_url }}"/>

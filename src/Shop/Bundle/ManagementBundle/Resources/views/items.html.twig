@@ -40,7 +40,7 @@
                <div class="product-user-image"> 
                  {% if entity.user and  entity.user.getProfilePicture %}
                     {% set createdAt = entity.user.getCreatedAt %}
-                    {% set image_url = 'uploads/profilepictures/prpf/'
+                    {% set image_url = prefix ~'uploads/profilepictures/prpf/'
                                         ~entity.user.getProfilePicture.path
                                     %}
                     {% if entity.user.getProfilePicture.widthVsHeight == 0 %}
