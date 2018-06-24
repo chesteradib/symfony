@@ -14,15 +14,15 @@
                 {% if new_poster['item'].getProfilePicture %}
                     <div class="image_of_follower m-i-p-p-u-d {% if new_poster['item'].getProfilePicture.widthVsHeight == 2%}center-horizontally{% endif%}">
                         {% set createdAt = new_poster['item'].getCreatedAt %}
-                        {% set image_url = prefix ~"uploads/profilepictures/prpf/" ~
-                                new_poster['item'].getProfilePicture.path %}
+                        {% set image_url = prefix ~"uploads/profilepictures/prpf/"
+                        ~new_poster['item'].getProfilePicture.path %}
                             {% if new_poster['item'].getProfilePicture.widthVsHeight == 0 %}
-                            <img class="m-i-p-p-u photo equal" src="{{ prefix ~ image_url }}" height= 25/>
+                            <img class="m-i-p-p-u photo equal" src="{{ image_url }}" height= 25/>
                             {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 1 %}
                             <span class="helper"></span>
-                            <img class="m-i-p-p-u photo fat-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
+                            <img class="m-i-p-p-u photo fat-profile-image" src="{{ image_url }}" height= 25/>
                             {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 2 %}
-                            <img class="m-i-p-p-u photo tall-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
+                            <img class="m-i-p-p-u photo tall-profile-image" src="{{ image_url }}" height= 25/>
                             {% endif%}
                     </div>
                 {% else %}
