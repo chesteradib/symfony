@@ -18,13 +18,16 @@
                 >
                 {{ profilePhotoUpdateText | trans }}
             </a>
-            {% if user.getProfilePicture %}
+
             <a href="javascript:void(0);"
+                    {% if not user.getProfilePicture %}
+                        style="display: none"
+                    {%endif%}
                id="delete_profile_picture_trigger"
                data-id-url="{{ path('delete_profile_picture')}}">
                 {{ 'left.profile.show.deleteProfilePhoto' | trans }}
             </a>
-            {%endif%}
+
             <div class='clear'>
         </div>
 

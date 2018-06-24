@@ -184,7 +184,7 @@ class ProfilePhoto
     {
         return null === $this->path
             ? null
-            : $this->getUploadDir().'/'.$this->path;
+            : $this->getUploadDir().'/'.$this->getSubDir().'/'.$this->path;
     }
 
     protected function getUploadRootDir()

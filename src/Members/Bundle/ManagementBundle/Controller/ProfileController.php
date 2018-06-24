@@ -103,8 +103,9 @@ class ProfileController extends Controller
                 $image->setSubDir('prpf');
 
                 $path =$image->upload();
+                unlink($image->getWebPath());
 
-                $this->renameAfterFilter($fileContent, $path);
+                $this->renameAfterFilter($fileContent, '/uploads/profilepictures/prpf/'. $path);
 
                 $image->setUser($user);
                 $image->setWidthVsHeight($widthVsHeight);
