@@ -98,6 +98,8 @@ immobilier:
     autre: Autre
 la_maison:
     la_maison: Maison
+    electromenager : Electromenager
+    chambre_a_coucher : Chambre a coucher
     cuisine: Cuisine 
     meubles: Meubles
     decoration: Décoration

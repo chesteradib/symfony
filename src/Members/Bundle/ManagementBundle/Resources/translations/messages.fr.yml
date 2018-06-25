@@ -115,7 +115,10 @@ immobilier:
     autre: Autre
 la_maison:
     la_maison: Maison
-    cuisine: Cuisine 
+    electromenager : Eléctromenager
+    chambre_a_coucher :  >
+                    Chambre à coucher
+    cuisine: Cuisine
     meubles: Meubles
     decoration: Décoration
     jardin: Jardin
@@ -159,7 +162,7 @@ art:
 collections:
     collections: Collections
 voyages:
-    voyages: Voyages
+    voyages: Voyages et camping
 cinema:
     cinema: >
         Cinéma

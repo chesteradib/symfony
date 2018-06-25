@@ -42,6 +42,8 @@ class CategoryServices{
             $finalArray[]= array($parentCategory,$childArray);
             
         }
+
+        //var_dump($finalArray);die;
         return $finalArray;
         
     }

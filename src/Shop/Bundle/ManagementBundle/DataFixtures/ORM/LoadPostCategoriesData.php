@@ -15,40 +15,37 @@ Class LoadPostCategoriesData extends AbstractFixture implements OrderedFixtureIn
     public function load(ObjectManager $om)
     {
         $categories = array(
+            'telephones'=> array(
+            ),
+            'la_maison' => array(
+                'electromenager', 'chambre_a_coucher', 'cuisine', 'meubles','decoration','jardin','outils_de_bricolage', 'autre'
+            ),
             'informatique' => array(
-                'ordinateurs_de_bureau','ordinateurs_portables','tablettes','accessoires_informatiques'
+                'ordinateurs_de_bureau','ordinateurs_portables','tablettes','accessoires_informatiques', 'autre'
             ),
             'multimedia'=> array(
-                'son','jeux_video_et_consoles','televisions','projecteurs','appareils_photo_et_cameras','accessoires_multimedia'
+                'son','jeux_video_et_consoles','televisions','projecteurs','appareils_photo_et_cameras','accessoires_multimedia', 'autre'
             ),
             'immobilier' => array(
                 'appartements','maisons_et_villas','collocation','bureaux','magasins', 'terrains_et_fermes' , 'locations_de_vacances','autre'
             ),
-            'la_maison' => array(
-                'cuisine', 'meubles','decoration','jardin','outils_de_bricolage', 'autre'
-            ),
             'habillement_et_bien_etre' => array(
                 'vetements', 'chaussures','montres','bijoux','sacs','beaute','bebe', 'accessoires', 'autre'
             ),
-            'emploi' => array(
-                'demandes_d_emploi' ,'offres_d_emploi','offres_de_stages','demandes_de_stages'
-            ),
             'lecture' => array (
                  'livres', 'magazines'
-            ),
-            'telephones'=> array(
-            ),
-            'mariage'=> array(
             ),
             'instruments_de_musique'=> array(
             ),
             'sport' => array(
             ),
+            'voyages'=> array(
+            ),
+            'materiels_professionel'=> array(
+            ),
             'art'=> array(
             ),
             'collections'=> array(
-            ),
-            'voyages'=> array(
             ),
             'cinema'=> array(
             ),
@@ -56,11 +53,12 @@ Class LoadPostCategoriesData extends AbstractFixture implements OrderedFixtureIn
             ),
             'affaires'=> array(
             ),
-            'materiels_professionel'=> array(
-            ),
             'cours_et_formations'=> array(
             ),
             'services'=> array(
+            ),
+            'emploi' => array(
+                'demandes_d_emploi' ,'offres_d_emploi','offres_de_stages','demandes_de_stages'
             )
         );
         $i=0;
