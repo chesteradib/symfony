@@ -24,7 +24,6 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-
             ->add('postTitle', TextType::class, array('required' => false))
             ->add('postContent', TextareaType::class, array('required' => false))
             ->add('postNotes', TextareaType::class, array('required' => false))
@@ -36,8 +35,6 @@ class PostType extends AbstractType
                 'by_reference' => false
                 ) )
             ->add('categories');
-            
-        
     }
     /**
      * @param OptionsResolver $resolver
