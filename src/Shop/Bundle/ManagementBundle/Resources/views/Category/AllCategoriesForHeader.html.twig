@@ -1,9 +1,8 @@
-
 <table id="categories_table">
     <tr>
-    
+
     <td>
-            {% for i in 0..2 %}
+            {% for i in 0..3 %}
                 <h4>
                     <a href="javascript:void(0);"
                        class="show_category_trigger"
@@ -14,19 +13,19 @@
                 <ul>
                     {% for subCategory in categories[i][1] %}
                         <li>
-                            <a href="javascript:void(0);" 
+                            <a href="javascript:void(0);"
                                 class="show_category_trigger"
                                 data-id="{{subCategory.id}}"
                                 >{{ (categories[i][0].Name~'.'~subCategory.Name)| trans }}
                             </a>
                             </li>
-                    {%endfor%} 
+                    {%endfor%}
                 </ul>
             {%endfor%}
         </td>
-        
+
         <td>
-            {% for i in 3..5 %}
+            {% for i in 4..7 %}
                 <h4>
                     <a href="javascript:void(0);"
                        class="show_category_trigger"
@@ -37,19 +36,19 @@
                 <ul>
                     {% for subCategory in categories[i][1] %}
                         <li>
-                            <a href="javascript:void(0);" 
+                            <a href="javascript:void(0);"
                                 class="show_category_trigger"
                                 data-id="{{subCategory.id}}"
                                 >{{ (categories[i][0].Name~'.'~subCategory.Name)| trans }}
                             </a>
                             </li>
-                    {%endfor%} 
+                    {%endfor%}
                 </ul>
             {%endfor%}
         </td>
-            
+
         <td>
-             {% for i in 6..19 %}
+             {% for i in 8..18 %}
                 <h4>
                     <a href="javascript:void(0);"
                        class="show_category_trigger"
@@ -60,13 +59,13 @@
                 <ul>
                     {% for subCategory in categories[i][1] %}
                         <li>
-                            <a href="javascript:void(0);" 
+                            <a href="javascript:void(0);"
                                 class="show_category_trigger"
                                 data-id="{{subCategory.id}}"
                                 >{{ (categories[i][0].Name~'.'~subCategory.Name)| trans }}
                             </a>
                             </li>
-                    {%endfor%} 
+                    {%endfor%}
                 </ul>
             {%endfor%}
         </td>

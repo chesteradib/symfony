@@ -18,7 +18,6 @@ class CategoryType extends AbstractType
             ->add('name')
             ->add('hasChildren')
             ->add('parent')
-            ->add('posts')
         ;
     }
     

@@ -17,21 +17,19 @@
             <select id="shop_bundle_managementbundle_posttype_categories" 
                 name="shop_bundle_managementbundle_posttype[categories][]">
 
-                <option value="" 
-                    selected
-                ></option>
+                <option value selected></option>
 
                 {% for key,val in form.categories.vars.choices %}
                 <option value="{{ val.value }}"
                         {% if form.categories.vars.value is not empty %}
                             {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
-                    {% endif %}
+                        {% endif %}
                             {% if not val.data.getParent %}
-                        class ="parent_category"
-                    {% if val.data.hasChildren %}
-                        disabled="disabled"
-                    {% endif %}
-                    {% endif %}
+                            class ="parent_category"
+                            {% if val.data.hasChildren or (not val.data.hasChildren and not val.data.getParent) %}
+                            disabled="disabled"
+                            {% endif %}
+                            {% endif %}
                     >
                     {% if not val.data.getParent %}
                     {{ (val.data.getName~'.'~val.data.getName) | trans }}
@@ -39,6 +37,11 @@
                     {{ (val.data.getParent.getName~'.'~val.data.getName) | trans }}
                     {% endif %}   
                 </option>
+                {% if not val.data.hasChildren and not val.data.getParent %}
+                    <option value="{{ val.value }}">
+                        {{ (val.data.getName~'.'~val.data.getName) | trans }}
+                    </option>
+                {% endif %}
                 {% endfor %}
             </select>
             <div class="clear"></div>
