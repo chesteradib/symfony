@@ -1,25 +1,80 @@
-{% trans_default_domain 'FOSUserBundle' %}
+<div class="fos_user_user_show"
+     data-latitude="{{ user.latitude }}"
+     data-longitude="{{ user.longitude }}">
+    <div>
+        {% if user.getProfilePicture %}
+            {% set profilePhotoLink = prefix ~"uploads/profilepictures/prpf/" ~ user.getProfilePicture.getPath   %}
+            {% set profilePhotoUpdateText = 'left.profile.show.updateProfilePhoto'   %}
+        {% else %}
+            {% set profilePhotoLink = prefix ~ "pp/index.png"   %}
+            {% set profilePhotoUpdateText = 'left.profile.show.newProfilePhoto'   %}
 
-<div class="fos_user_user_show" data-latitude="{{ user.latitude }}" data-longitude="{{ user.longitude }}">
-    <div class="profile_picture">
-      <img class="photo"  src="{{ prefix ~ profile_url }}" width="60"/>
+        {%endif%}
+
+        <div id="profile_picture_block"
+        >
+            <a href="javascript:void(0);"
+               id="change_profile_picture_trigger"
+            >
+                {{ profilePhotoUpdateText | trans }}
+            </a>
+
+            <a href="javascript:void(0);"
+                    {% if not user.getProfilePicture %}
+                        style="display: none"
+                    {%endif%}
+               id="delete_profile_picture_trigger"
+               data-id-url="{{ path('delete_profile_picture')}}">
+                {{ 'left.profile.show.deleteProfilePhoto' | trans }}
+            </a>
+
+            <div class='clear'>
+            </div>
+
+            <img  id="profile_picture"
+                  src="{{ profilePhotoLink }}"
+                  width="100"/>
+
+            <form id="user_profile_form_profile_picture"
+                  method="post"
+                  enctype="multipart/form-data"
+                  novalidate>
+                <input
+                        type="file"
+                        id="fos_user_profile_form_profile_picture"
+                        name="fos_user_profile_form[profile_picture]"
+                        required="required"
+                        class="chooser"
+                        data-iu-url="{{ path('update_profile_picture', { 'user_id': user.getId })}}"
+                >
+            </form>
+        </div>
+        <br><br>
+        <br>
+        <p class="title_in_profile">{{ 'left.profile.show.username'|trans }}:</p>
+        <p class="content_in_profile">{{ user.username }}</p>
+        <p class="title_in_profile">{{ 'left.profile.show.email'|trans }}: </p>
+        <p class="content_in_profile">{{ user.email }}</p>
+
+
+        <p class="title_in_profile">{{ 'left.profile.show.website'|trans }}:</p>
+        <p class="content_in_profile">
+            www.{{ user.username }}.jou.la
+        </p>
+
+        {% if user.getStoreDescription %}
+            <p class="title_in_profile">{{ 'left.profile.show.storeDescription'|trans }}:</p>
+            <p class="content_in_profile">{{ user.getStoreDescription }}</p>
+        {%endif%}
+
+        <a href="javascript:void(0);"
+           style="display: none;"
+           id="deactivate_my_profile"
+           data-url="{{path('deactivate_profile')}}"
+        >
+            {{ 'left.profile.deactivate' | trans }}
+        </a>
     </div>
-    
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
-    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-    <p>{{ user.getDomainName }}</p>
-    <p>{{ user.getStoreDescription }}</p>
-    <div class="map-canvas" id="map-profile-show" style="height:180px"></div>
-
 </div>
     
-    
 
-
-<a href="javascript:void(0);" class="edit_my_profile" data-url="{{path('fos_user_profile_edit')}}">
-edit
-</a>
-
-<a href="javascript:void(0);" class="deactivate_my_profile" data-url="{{path('deactivate_profile')}}">
-deactivate
-</a>

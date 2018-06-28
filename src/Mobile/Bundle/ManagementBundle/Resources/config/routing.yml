@@ -27,14 +27,6 @@ mobile_shop_show:
     path: /m/{shop_id}/g/{page}
     defaults: { _controller: "MobileManagementBundle:MobileShop:displayMobileShop" }
 
-
-mobile_shop_from_my_network_show:
-    path: /m/{shop_id}/g/g/{page}
-    defaults: { _controller: "MobileManagementBundle:MobileShop:displayMobileShopFromMyNetwork" }
-
-mobile_shop_from_my_market_show:
-    path: /m/{shop_id}/g/d/{page}
-    defaults: { _controller: "MobileManagementBundle:MobileShop:displayMobileShopFromMyMarket" }
     
 ###################################
 mobile_my_shop:
@@ -90,11 +82,6 @@ mobile_fos_user_resetting_check_email:
 mobile_fos_user_resetting_reset:
     path:     /m/resetting/reset/{token}
     defaults: { _controller: MobileManagementBundle:MobileResetting:reset}
-
-
-
-
-
     
 #######################################
 
@@ -102,3 +89,10 @@ mobile_fos_user_resetting_reset:
 mobile_category:
     path:  /m/category/{categoryId}/g/{page}
     defaults: { _controller: "MobileManagementBundle:MobileCategory:mobileCategory" } 
+
+#######################################
+
+
+mobile_profile:
+    path:  /m/profile
+    defaults: { _controller: "MobileManagementBundle:MobileProfile:show" }

@@ -42,16 +42,15 @@
                 {% if entity.user.getProfilePicture %}
                 <div class="product-user-image"> 
                     {% set createdAt = entity.user.getCreatedAt %}
-                    {% set image_url = 'pp/'~createdAt|date('Y')~'/'
-                        ~createdAt|date('m')~'/'
-                        ~entity.user.getProfilePicture.path %}
+                    {% set image_url = prefix ~ 'uploads/profilepictures/prpf/'
+                                        ~ entity.user.getProfilePicture.path %}
                     {% if entity.user.getProfilePicture.widthVsHeight == 0 %}
-                    <img class="m-i-p-p-u photo equal" src="{{ prefix ~ image_url }}" height= 25/>
+                    <img class="m-i-p-p-u photo equal" src="{{ image_url }}" height= 25/>
                     {% elseif entity.user.getProfilePicture.widthVsHeight == 1 %}
                     <span class="helper"></span>
-                    <img class="m-i-p-p-u photo fat-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
+                    <img class="m-i-p-p-u photo fat-profile-image" src="{{  image_url }}" height= 25/>
                     {% elseif entity.user.getProfilePicture.widthVsHeight == 2 %}
-                    <img class="m-i-p-p-u photo tall-profile-image" src="{{ prefix ~ image_url }}" height= 25/>
+                    <img class="m-i-p-p-u photo tall-profile-image" src="{{ image_url }}" height= 25/>
                     {% endif%}
                </div>
                {%  else %}

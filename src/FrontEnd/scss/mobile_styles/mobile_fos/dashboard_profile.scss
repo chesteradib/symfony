@@ -1,0 +1,62 @@
+
+$vert:#006233;
+$rouge: #c1272d;
+$black: black;
+$gris:#e1e1e1;
+
+#profile_picture_block
+{
+    margin: 10px 0 4px 0;
+}
+#change_profile_picture_trigger
+{
+    color: $vert;
+    font-size: 11px;
+    width: 50%;
+    display: block;
+    float:left;
+    text-align: center;
+}
+
+#delete_profile_picture_trigger
+{
+    color: $rouge;
+    font-size: 11px;
+    width: 50%;
+    display: block;
+    float:right;
+    text-align: right;
+}
+
+#profile_picture
+{
+    margin: 10px auto;
+    display: block;
+}
+
+#deactivate_my_profile
+{
+    background-color: $rouge;
+    color: white;
+    width: 90%;
+    text-align: center;
+    display: block;
+    margin: 70px auto 0;
+    padding: 3px;
+
+}
+
+.title_in_profile
+{
+    font-size: 10px;
+    margin-bottom: 0;
+
+}
+
+.content_in_profile
+{
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+}
