@@ -70,9 +70,6 @@ Class LoadPostCategoriesData extends AbstractFixture implements OrderedFixtureIn
             $category->setName($key);
             $category->setParent(null);
 
-            if(count($value)>0) $category->setHasChildren(true);
-            else  $category->setHasChildren(false);
-
             $om->persist($category);
             $om->flush();
 
@@ -83,7 +80,6 @@ Class LoadPostCategoriesData extends AbstractFixture implements OrderedFixtureIn
                     $category2= new Category();
                     $category2->setName($value2);
                     $category2->setParent($category);
-                    $category2->setHasChildren(false);
 
                     $this->setReference('post-category'.$i, $category2);
                     $i++;

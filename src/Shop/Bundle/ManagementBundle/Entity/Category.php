@@ -127,8 +127,7 @@ class Category
         return $this->posts;
     }
     
-    
-    
+
      public function __toString()
     {
     	return (string)$this->getName();
