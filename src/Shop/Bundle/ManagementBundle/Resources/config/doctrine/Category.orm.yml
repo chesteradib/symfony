@@ -10,21 +10,6 @@ Shop\Bundle\ManagementBundle\Entity\Category:
     fields:
         name:
             type: string
-    manyToOne:
-        parent:
-            targetEntity: Shop\Bundle\ManagementBundle\Entity\Category
-            inversedBy: children
-            JoinColumn:
-                name: parent_id 
-                referencedColumnName: id
-                onUpdate: "CASCADE" 
-                onDelete: "CASCADE"
-    OneToMany:
-        children:
-            targetEntity: Shop\Bundle\ManagementBundle\Entity\Category
-            mappedBy: parent
-            cascade:      [persist]
-    
     manyToMany:
         posts:
             mappedBy: categories
