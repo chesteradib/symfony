@@ -31,11 +31,6 @@
                     {{ (val.data.getParent.getName~'.'~val.data.getName) | trans }}
                     {% endif %}   
                 </option>
-                {% if not val.data.hasChildren and not val.data.getParent %}
-                    <option value="{{ val.value }}">
-                        {{ (val.data.getName~'.'~val.data.getName) | trans }}
-                    </option>
-                {% endif %}
                 {% endfor %}
             </select>
             <div class="clear"></div>
