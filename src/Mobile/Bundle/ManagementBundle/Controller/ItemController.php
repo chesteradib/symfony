@@ -133,7 +133,6 @@ class ItemController extends Controller
                     throw $this->createNotFoundException('Unable to find that Category entity');
                 }
                 $entity->addCategory($category);
-                if($category->getParent()) $entity->addCategory($category->getParent());
 
             }
 
@@ -316,7 +315,6 @@ class ItemController extends Controller
                         throw $this->createNotFoundException('Unable to find that Category entity');
                     }
                     $entity->addCategory($category);
-                    if($category->getParent()) $entity->addCategory($category->getParent());
 
                 }
             $mainImageId=(int)$request->request->get('main-image');

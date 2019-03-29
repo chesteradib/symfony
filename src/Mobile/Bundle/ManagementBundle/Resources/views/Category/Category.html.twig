@@ -2,11 +2,7 @@
     <div id="mobile-context">
         <div id="mobile-context-breadcrumb">
             <div id="mobile-context-user-name">
-                {% if not category.getParent %}
-                {{ (category.getName~'.'~category.getName) | trans }}
-                {% else %}
-                {{ (category.getParent.getName~'.'~category.getName) | trans }}
-                {% endif %} 
+                {{ category.getName }}
             </div>
             <div id="mobile-context-number-of-items">
                 {% if total_number_of_items >0 %}
@@ -20,11 +16,7 @@
         <div id="mobile-content-items-container">
             {% if entities|length <=0 %}
                 <div class="no-items">{{'center.category.no_items'|trans}} 
-                "{% if not category.getParent %}
-                {{ (category.getName~'.'~category.getName) | trans }}
-                {% else %}
-                {{ (category.getParent.getName~'.'~category.getName) | trans }}
-                {% endif %}"
+                "{{ category.getName }}"
             </div>
             {% endif %}
             {% include "MobileManagementBundle::items.html.twig" %}  

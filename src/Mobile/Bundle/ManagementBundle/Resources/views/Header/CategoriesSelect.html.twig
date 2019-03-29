@@ -12,19 +12,8 @@
                 {#  {% if form.categories.vars.value is not empty %}
                         {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
                 {% endif %}#}
-                class ="parent_category"
                 >
                 {{ (category[0].getName~'.'~category[0].getName) | trans }}
             </option>
-    
-            {% for subCategory in category[1] %}
-                <option value="{{ subCategory.id }}"
-                {#  {% if form.categories.vars.value is not empty %}
-                        {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
-                {% endif %}#}
-                >
-                {{ (subCategory.getParent.getName~'.'~subCategory.getName) | trans }}
-                </option>
-            {%endfor%} 
         {% endfor %}
         </select>

@@ -27,12 +27,7 @@
                             {% if form.categories.vars.value is not empty %}
                                 {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
                             {% endif %}
-                        >
-                        {% if not val.data.getParent %}
-                        {{ (val.data.getName~'.'~val.data.getName) | trans }}
-                        {% else %}
-                        {{ (val.data.getParent.getName~'.'~val.data.getName) | trans }}
-                        {% endif %}
+                        >{{ (val.data.getName~'.'~val.data.getName) | trans }}
                     </option>
                     {% endfor %}
                 </select>

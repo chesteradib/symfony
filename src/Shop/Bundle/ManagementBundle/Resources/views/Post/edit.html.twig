@@ -24,12 +24,7 @@
                             {% endif %} 
                         {% endfor %}
                     {% endif %}
-                    >
-                    {% if not val.data.getParent %}
-                    {{ (val.data.getName~'.'~val.data.getName) | trans }}
-                    {% else %}
-                    {{ (val.data.getParent.getName~'.'~val.data.getName) | trans }}
-                    {% endif %}   
+                    >{{ (val.data.getName~'.'~val.data.getName) | trans }}
                 </option>
                 {% endfor %}
             </select>

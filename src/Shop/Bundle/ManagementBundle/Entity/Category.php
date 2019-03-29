@@ -18,11 +18,6 @@ class Category
     private $name;
 
     /**
-     * @var \Shop\Bundle\ManagementBundle\Entity\Category
-     */
-    private $parent;
-
-    /**
      * @var \Doctrine\Common\Collections\Collection
      */
     private $posts;
@@ -69,29 +64,6 @@ class Category
         return $this->name;
     }
 
-    /**
-     * Set parent
-     *
-     * @param \Shop\Bundle\ManagementBundle\Entity\Category $parent
-     *
-     * @return Category
-     */
-    public function setParent(\Shop\Bundle\ManagementBundle\Entity\Category $parent = null)
-    {
-        $this->parent = $parent;
-
-        return $this;
-    }
-
-    /**
-     * Get parent
-     *
-     * @return \Shop\Bundle\ManagementBundle\Entity\Category
-     */
-    public function getParent()
-    {
-        return $this->parent;
-    }
 
     /**
      * Add post

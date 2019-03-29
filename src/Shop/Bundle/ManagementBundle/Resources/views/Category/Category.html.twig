@@ -1,10 +1,6 @@
 <div id="center-context">
     <div id="center-context-articles-from">
-        {% if not category.getParent %}
-        {{ (category.getName~'.'~category.getName) | trans }}
-        {% else %}
-        {{ (category.getParent.getName~'.'~category.getName) | trans }}
-        {% endif %}
+        {{ category.getName }}
         {% if total_number_of_items >0 %}
         ({{total_number_of_items}} {{ 'global.article'| trans}}{% if total_number_of_items >1 %}s{%endif%})  
         {%endif%}
@@ -16,11 +12,7 @@
     <div id="center-items-container">
         {% if entities|length <=0 %}
             <div class="no-items">{{'center.category.no_items'|trans}} 
-                "{% if not category.getParent %}
-                {{ (category.getName~'.'~category.getName) | trans }}
-                {% else %}
-                {{ (category.getParent.getName~'.'~category.getName) | trans }}
-                {% endif %}"
+                "{{ category.getName }}"
             </div>
         {% endif %}
         {% include "ShopManagementBundle::items.html.twig" %}  

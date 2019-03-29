@@ -18,32 +18,10 @@ class CategoryServices{
     public function getAllCategories()
     {
         $em = $this->entityManager;
-        
-        $finalArray= array();
 
-        $parentCategories= $em->getRepository('ShopManagementBundle:Category')->findBy(
-                array(
-                    'parent'=> null)
-                );
-        
-        foreach($parentCategories as $parentCategory)
-        {
-            $childArray= array();
-            
-            $childCategories= $em->getRepository('ShopManagementBundle:Category')->findBy(
-                array(
-                    'parent'=> $parentCategory->getId())
-                );
-            
-            foreach($childCategories as $childCategory)
-            {
-                $childArray[]= $childCategory;
-            }   
-            $finalArray[]= array($parentCategory,$childArray);
-            
-        }
 
-        //var_dump($finalArray);die;
+        $finalArray= $em->getRepository('ShopManagementBundle:Category')->findAll();
+
         return $finalArray;
         
     }
