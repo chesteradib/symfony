@@ -10,8 +10,6 @@ Shop\Bundle\ManagementBundle\Entity\Category:
     fields:
         name:
             type: string
-        hasChildren:
-            type: boolean
     manyToOne:
         parent:
             targetEntity: Shop\Bundle\ManagementBundle\Entity\Category

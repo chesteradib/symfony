@@ -93,37 +93,6 @@ class Category
         return $this->parent;
     }
 
-
-    /**
-     * @var boolean
-     */
-    private $hasChildren;
-
-
-    /**
-     * Set hasChildren
-     *
-     * @param boolean $hasChildren
-     *
-     * @return Category
-     */
-    public function setHasChildren($hasChildren)
-    {
-        $this->hasChildren = $hasChildren;
-
-        return $this;
-    }
-
-    /**
-     * Get hasChildren
-     *
-     * @return boolean
-     */
-    public function getHasChildren()
-    {
-        return $this->hasChildren;
-    }
-
     /**
      * Add post
      *
