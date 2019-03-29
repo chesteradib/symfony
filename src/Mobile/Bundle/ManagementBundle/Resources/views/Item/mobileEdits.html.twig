@@ -22,16 +22,10 @@
                 <option value="{{ val.value }}"
                     {% if edit_form.categories.vars.value is not empty %}
                         {% for key2,val2 in edit_form.categories.vars.value %}
-                            {%if val.value == val2 and not val.data.hasChildren%}
+                            {%if val.value == val2%}
                             selected
                             {% endif %} 
                         {% endfor %}
-                    {% endif %}
-                    {% if not val.data.getParent %}
-                        class ="parent_category"
-                    {% if val.data.hasChildren %}
-                        disabled="disabled"
-                    {% endif %}
                     {% endif %}
                     >
                     {% if not val.data.getParent %}

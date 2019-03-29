@@ -24,12 +24,6 @@
                         {% if form.categories.vars.value is not empty %}
                             {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
                         {% endif %}
-                            {% if not val.data.getParent %}
-                            class ="parent_category"
-                            {% if val.data.hasChildren or (not val.data.hasChildren and not val.data.getParent) %}
-                            disabled="disabled"
-                            {% endif %}
-                            {% endif %}
                     >
                     {% if not val.data.getParent %}
                     {{ (val.data.getName~'.'~val.data.getName) | trans }}
