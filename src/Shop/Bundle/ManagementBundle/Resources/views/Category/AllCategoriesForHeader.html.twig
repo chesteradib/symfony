@@ -1,9 +1,9 @@
-{% for alphabet, categories2 in categories %}
+{% for alphabet, categories in orderedCategories %}
 
-    <b style="font-size: 25px">{{ alphabet | upper }}</b>
-    {% for category in categories2 %}
+    <b class="alphabet-in-categories">{{ alphabet | upper }}</b>
+    {% for category in categories %}
         <a href="javascript:void(0);"
-           class="show_category_trigger"
+           class="show_category_trigger dialog-category-anchor"
            data-id="{{category['id']}}"
             >
            {{ category['name'] }}

@@ -239,7 +239,7 @@ class AdminController extends Controller
         $categories= $this->get('shop_management.category.services')->getAllCategories();
 
         return [
-            'categories' => $categories
+            'orderedCategories' => $categories
         ];
     }
 

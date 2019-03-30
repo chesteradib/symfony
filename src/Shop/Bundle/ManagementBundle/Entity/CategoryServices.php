@@ -15,59 +15,31 @@ class CategoryServices{
     /**
      * Find the categories ordered and grouped alphabetically
      *
-     * @return array $categories
+     * @return array $orderedCategories
      */
     public function getAllCategories()
     {
         $em = $this->entityManager;
         $categories = $em->getRepository('ShopManagementBundle:Category')->findBy(
             [],
-            ['name' => 'ASC']//,
-            //Query::HYDRATE_ARRAY
+            ['name' => 'ASC']
         );
+
         $lastChar = '';
-        $cats = array();
+        $orderedCategories = [];
         foreach($categories as $val) {
-            $char = $val->getName()[0]; //first char
-
-
+            $char = strtoupper($val->getName()[0]);
             if ($char !== $lastChar) {
-                //if ($lastChar !== '')
-                   //echo '<br>';
-
-                //echo strtoupper($char).'<br>'; //print A / B / C etc
                 $lastChar = $char;
             }
 
-            $cats[$char][] =
-                [
+            $orderedCategories[$char][] = [
                     'name' => $val->getName(),
                     'id' => $val->getId()
-
             ];
         }
 
-        //die(var_dump($cats));
-        /*
-        $categories = [
-            'A' => [
-                [   'name' => "Accessoire",
-                    'id'=> '15'
-                ],
-                [   'name' => "Adib",
-                    'id'=> '16'
-                ],
-            ],
-            'D' => [
-                [   'name' => "Diour",
-                    'id'=> '15'
-                ],
-                [   'name' => "Dbab",
-                    'id'=> '16'
-                ],
-            ]
-        ];*/
-        return $cats;
+        return $orderedCategories;
         
     }
 }
