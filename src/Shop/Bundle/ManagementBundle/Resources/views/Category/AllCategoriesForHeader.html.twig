@@ -1,9 +1,13 @@
-{% for category in categories %}
+{% for alphabet, categories2 in categories %}
+
+    <b style="font-size: 25px">{{ alphabet | upper }}</b>
+    {% for category in categories2 %}
         <a href="javascript:void(0);"
            class="show_category_trigger"
-           data-id="{{category.id}}"
+           data-id="{{category['id']}}"
             >
-            {{ category.Name }}
+           {{ category['name'] }}
         </a>
-{%endfor%}
+    {% endfor %}
+{% endfor %}
 

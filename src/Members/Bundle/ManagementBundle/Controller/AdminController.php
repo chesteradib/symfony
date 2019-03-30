@@ -230,7 +230,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Getting the connected user object and the list of categories
+     * Get the categories ordered and grouped alphabetically
      *
      * @return array
      */
@@ -238,9 +238,9 @@ class AdminController extends Controller
     {
         $categories= $this->get('shop_management.category.services')->getAllCategories();
 
-        return array(
+        return [
             'categories' => $categories
-        );
+        ];
     }
 
     /**
