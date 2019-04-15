@@ -85,8 +85,8 @@ gulp.task('lib-js', function() {
  'bower_components/jquery/jquery.js',
  'bower_components/jquery-ui/jquery-ui.js',
  'bower_components/moment/moment.js',
- 'bower_components/jsrender/jsrender.js',
- 'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js'
+ 'bower_components/jsrender/jsrender.js'
+// 'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js'
  ])
  .pipe(concat('app.js'))
 // .pipe(gulpif(env == 'prod', uglify()))
@@ -172,7 +172,9 @@ gulp.task('browser-sync', function(){
 gulp.task('watch', function()
 {
    gulp.watch('src/FrontEnd/js/forthparty/dashboard_js/*.js',['dashboard_js']);
+   gulp.watch('src/FrontEnd/js/forthparty/*.js',['dashboard_js']);
    gulp.watch('src/FrontEnd/js/forthparty/homepage_js/*.js',['homepage_js']);
+   gulp.watch('src/FrontEnd/js/forthparty/*.js',['homepage_js']);
    gulp.watch('src/FrontEnd/js/forthparty/mobile_js/mobile_new_item_js/*.js',['mobile_new_item_js']);
    gulp.watch('src/FrontEnd/js/forthparty/mobile_js/mobile_chat_js/*.js',['mobile_chat_js']);
    gulp.watch('src/FrontEnd/js/forthparty/mobile_js/mobile_my_inbox_js/*.js',['mobile_my_inbox_js']);

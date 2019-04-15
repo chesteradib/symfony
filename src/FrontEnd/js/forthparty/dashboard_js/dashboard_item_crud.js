@@ -18,7 +18,20 @@ var show_article_listener = function()
 
 var show_article = function(url)
 {
-    Utils.ajax_call("GET", url, {} , true, startPogressRight ,showArticleCallback, endPogressRight);
+    //Utils.ajax_call("GET", url, {} , true, startPogressRight ,showArticleCallback, endPogressRight);
+    abortPreviousRequests();
+
+    $.ajax({
+        type: "GET",
+        url: url,
+        cache: true,
+        beforeSend:function(jqXHR){
+            promises.push(jqXHR);
+            startPogressRight();
+        },
+        success: showArticleCallback,
+        complete: endPogressRight
+    });
 }
 
 var showArticleCallback = function(data){

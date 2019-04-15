@@ -3,6 +3,7 @@
 /// Global
 ////////////////////////////////////////////////////////////////////////////
 
+//
 var Utils= (function(){
 
     var $ = jQuery;
@@ -17,12 +18,12 @@ var Utils= (function(){
                              contentType,
                              processData){
 
-
         contentType = typeof contentType !== 'undefined' ? contentType : 'application/x-www-form-urlencoded; charset=UTF-8';
         processData = typeof processData !== 'undefined' ? processData : true;
         data = typeof data !== 'undefined' ? data : {};
 
-        $.ajax({
+
+         $.ajax({
             type: type,
             url: url,
             data:data,
@@ -55,10 +56,23 @@ var Utils= (function(){
     };
 })();
 
+let promises = [];
 
+
+let abortPreviousRequests = () => {
+
+    var promise;
+    while (promises.length > 0) {
+        promise = promises.pop();
+        promise.abort();
+    }
+};
 ////////////////////////////////////////////////////////////////////////////
 /// Dumping function for debug purposes To be deleted in production
 ////////////////////////////////////////////////////////////////////////////
+
+
+
 
 
 
