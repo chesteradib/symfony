@@ -262,22 +262,19 @@ function show_all_new_posters(){
             cache: false,
             data: { items_per_page: numberOfItemsPerLeft},
             beforeSend: function(){
-                progress.firstProgress($target,$targetProgress,85);
-                }, 
+                startPogressLeft();
+                },
             success: function(data){
                 $target.css("visibility", "visible").empty().html(data);
-                progress.secondProgress($targetProgress,95);
                 show_shop_listener();
                 final_next_previous_page_listenner('left','network');
 
                 },
             complete: function(){
-
-                progress.thirdProgress($target,$targetProgress);
-                
                 //var url_all_jawla = $('#content').attr('data-url-all-jawla');
                 //show_all_jawla(url_all_jawla );
-                }    
+                endPogressLeft();
+                }
             });
 } 
 

@@ -14,7 +14,7 @@ function show_shop_listener()
 
 }
 
-var showShopClickCallback=  function(e)
+var showShopClickCallback =  function(e)
 {
     e.preventDefault();
 

@@ -126,15 +126,3 @@ var updateBoughtValueCallback = function(data) {
         alert(data.message);
     }
 }
-
-var startPogressRight = function() {
-    var $target= $('#right');
-    var $targetProgress = $("#progress_right");
-    progress.startProgress($target,$targetProgress);
-};
-
-var endPogressRight = function() {
-    var $target= $('#right');
-    var $targetProgress = $("#progress_right");
-    progress.endProgress($target,$targetProgress);
-};
