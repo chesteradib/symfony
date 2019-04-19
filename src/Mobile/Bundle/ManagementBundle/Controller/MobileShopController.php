@@ -38,7 +38,7 @@ class MobileShopController extends Controller
             'number_of_pages'=> ceil($this->get('my_shop_controller')->getNumberOfArticles($shop_id)/$articlesPerPage),
             'total_number_of_items'=> $this->get('my_shop_controller')->getNumberOfArticles($shop_id),
             'page' => $page,
-            'categories' => $categories
+            'orderedCategories' => $categories
         );
         
         $finalArray=array_merge($mainPart,$firstPart);

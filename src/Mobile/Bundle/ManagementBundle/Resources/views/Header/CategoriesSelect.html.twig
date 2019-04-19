@@ -7,7 +7,7 @@
                 selected
             ></option>
 
-        {% for category in categories %}
+        {% for category in orederedCategories %}
             <option value="{{ category[0].id }}"
                 {#  {% if form.categories.vars.value is not empty %}
                         {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}

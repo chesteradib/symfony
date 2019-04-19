@@ -32,7 +32,7 @@ class MobileCategoryController extends Controller
                 'category_id' => $categoryId,
                 'number_of_pages'=> ceil($total_number_of_items/$articlesPerPage),
                 'total_number_of_items'=> $total_number_of_items,
-                'categories' => $categories,
+                'orderedCategories' => $categories,
                 'page' => $page,
                 'category' => $currentCategory
             );

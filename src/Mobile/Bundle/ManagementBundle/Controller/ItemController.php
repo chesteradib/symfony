@@ -223,7 +223,7 @@ class ItemController extends Controller
                     'main_image_id' => $entity->getPostMainImagePath()->getId(),
                     'edit_form'   => $editForm->createView(),
                     'delete_form'   => $deleteForm->createView(),
-                    'categories' => $categories
+                    'orderedCategories' => $categories
                 );
 
                 
