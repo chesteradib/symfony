@@ -1,8 +1,8 @@
 $logoWidth: 156px;
 $headerHeight: 60px;
 $menuItemWidth: 86px;
-$sprite1 :url('../images/spritesheet1.png');
-$sprite3 : url('../images/spritesheet3.png');
+$sprite1 :url('../images/spritesheet.png');
+$sprite3 : url('../images/spritesheet.png');
 $vert:#006233;
 $rouge: #c1272d;
 $black: black;
@@ -33,10 +33,10 @@ $vert-opace:rgb(230, 239, 235);
 {
     background: $sprite3 no-repeat;
     cursor: pointer;
-    background-position: 100% 0%;
-    background-size: 3460% 100%;
+    background-position: 24.2% 0%;
+    background-size: 3800% 141%;
     opacity: 0.7;
-    width: 20px;
+    width: 16px;
     height: 36px;
     margin: 4px 4px 0 0;
 }
@@ -46,17 +46,17 @@ $vert-opace:rgb(230, 239, 235);
     opacity: 1;
 }
 
-#show_previous_page:click
+#show_previous_page:active
 {
-    background-position: 75% 0;
+    opacity: 0.7;
 }
 
 #show_next_page
 {
     background: $sprite3 no-repeat;
     cursor: pointer;
-    background-position: 61.309% 0%;
-    background-size: 3460% 100%;
+    background-position: 17.4% 0%;
+    background-size: 3000% 141%;
     opacity: 0.7;
     width: 20px;
     height: 36px;
@@ -68,9 +68,9 @@ $vert-opace:rgb(230, 239, 235);
     opacity: 1;
 }
 
-#show_next_page:click
+#show_next_page:active
 {
-    background-position: 35% 0;
+    opacity: 0.7;
 }
 
 #current-page

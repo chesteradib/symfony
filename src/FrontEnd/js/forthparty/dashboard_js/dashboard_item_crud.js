@@ -401,7 +401,11 @@ var updateBoughtValueCallback = function(data) {
     var $boughtWord=$('.bought_article_text');
     if(data.status) {
         $boughtSymbol.toggleClass("bought_trigger_off");
-        if(checked)
+
+        var checked_bool =  $boughtSymbol.hasClass('bought_trigger_off');
+
+        var checked = (checked_bool ? 0 : 1);
+        if(!checked)
             {
                 $boughtWord.empty().append('Disponible');
             }

@@ -1,8 +1,8 @@
 $logoWidth: 156px;
 $headerHeight: 60px;
 $menuItemWidth: 86px;
-$sprite1 :url('../images/spritesheet1.png');
-$sprite3 : url('../images/spritesheet3.png');
+$sprite1 :url('../images/spritesheet.png');
+$sprite3 : url('../images/spritesheet.png');
 $vert:#006233;
 $rouge: #c1272d;
 $black: black;
@@ -100,8 +100,8 @@ a
     height: $headerHeight;
     display:block;
     background: $sprite3 no-repeat;
-    background-position: 35% 0;
-    background-size: 635.68% 100%;
+    background-position: 100% 2px;
+    background-size: 551.66% 100%;
 }
 .website_logo a:hover
 {
@@ -213,7 +213,7 @@ And My Market Dialog */
     float:left;
     width: $menuItemWidth * 6;
     height:$headerHeight;
-    //display:none;
+    padding-left: 5px;
 }
 .searchbar-form
 {
@@ -242,8 +242,8 @@ And My Market Dialog */
     background: #c1272d $sprite1 no-repeat -587px 8px;
     border-radius: 0 3px 3px 0;
     float:left;
-    background-position: 70.95% 0;
-    background-size: 2110% 120%;
+    background-position: 39.2% 0;
+    background-size: 2648% 180%;
 }
 
 
@@ -539,8 +539,11 @@ Navigate by categories in Menu styles
 
 .show_categories_arrow
 {
-    background-image: url("../images/down-arrow.png");
-    background-size: 100%;
+    background: $sprite3 no-repeat;
+    cursor: pointer;
+    background-position: 3.5% 0%;
+    background-size: 5300% 300%;
+    //opacity: 0.7;
     display: inline-block;
     height: 16px;
     position: relative;

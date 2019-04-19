@@ -1,6 +1,6 @@
-$sprite1 :url('../images/spritesheet1.png');
-$sprite2 : url('../images/spritesheet2.png');
-$sprite3 : url('../images/spritesheet3.png');
+$sprite1 :url('../images/spritesheet.png');
+$sprite2 : url('../images/spritesheet.png');
+$sprite3 : url('../images/spritesheet.png');
 $vert:#006233;
 $rouge: #c1272d;
 
@@ -123,7 +123,7 @@ a#add_image_trigger
     width: 65px;
     background-position: 12.77% 0%;
     background-size:1660% 100%;
-    background: url('../images/spritesheet1.png') no-repeat;    
+    background: $sprite1 no-repeat;
     float: left;
 }
 
@@ -264,7 +264,7 @@ a#add_image_trigger:active
     width:20px;
     height:20px;
     display: block;
-    background: url('../images/spritesheet2.png') no-repeat;
+    background: $sprite1 no-repeat;
     cursor: pointer;
     background-position: 38.205% 0;
     background-size: 1605% 200%;

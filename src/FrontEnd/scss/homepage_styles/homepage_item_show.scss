@@ -1,7 +1,7 @@
-$sprite1 :url('../images/spritesheet1.png');
-$sprite2 : url('../images/spritesheet2.png');
-$sprite3 : url('../images/spritesheet3.png');
-$sprite4 : url('../images/chat.png');
+$sprite1 :url('../images/spritesheet.png');
+$sprite2 : url('../images/spritesheet.png');
+$sprite3 : url('../images/spritesheet.png');
+$sprite4 : url('../images/spritesheet.png');
 
 $vert:#006233;
 $vert-opace:rgba(0,98,51,0.3);
@@ -303,36 +303,32 @@ $vert-opace7:rgba(0,98,51,0.7);
     display: inline-block;
     width:50px;
     height:40px;
-    background-size: 1547.14% 116.07%;
+    background-size: 1891.4% 160.7%;
 }
 .bought_trigger_on
 {
-
-    background-position: 86.179% 0;  
+    background-position: 81% 0;
 }
 .bought_trigger_on:hover
 {
-    
-    background-position: 93.089% 0;
+    background-position: 75.2% 0;
 }
 .bought_trigger_on:active
 {
-   background-position: 100% 0;
+   //background-position: 100% 0;
 }
 
 .bought_trigger_off
 {
-
-    background-position: 100% 0;
-    
+    background-position: 75.2% 0;
 }
 .bought_trigger_off:hover
 {
-    background-position: 93.089% 0;
+    background-position: 81% 0;
 }
 .bought_trigger_off:active
 {
-    background-position: 86.179% 0; 
+    //background-position: 86.179% 0;
 }
 
 .bought_article_symbol

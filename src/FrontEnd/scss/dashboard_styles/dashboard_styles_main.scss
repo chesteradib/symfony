@@ -16,9 +16,9 @@ $vert-opace2:rgba(0,98,51,0.2);
 $vert-opace3:rgba(0,98,51,0.3);
 
 $vert:#006233;
-$sprite1 :url('../images/spritesheet1.png');
-$sprite2 : url('../images/spritesheet2.png');
-$sprite3 : url('../images/spritesheet3.png');
+$sprite1 :url('../images/spritesheet.png');
+$sprite2 : url('../images/spritesheet.png');
+$sprite3 : url('../images/spritesheet.png');
 
 
 
@@ -195,20 +195,20 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 #right_direction_arrow
 {
 
-  background: url("../images/spritesheet3.png") no-repeat;
+  background: $sprite1 no-repeat;
   cursor: pointer;
-  background-position: 61.309% 0%;
-  background-size: 3460% 100%;
+  background-position: 17.2% 0%;
+  background-size: 3900% 160%;
   width: 20px;
   height: 36px;
 
 }
 #left_direction_arrow
 {
-    background: url("../images/spritesheet3.png") no-repeat;
+    background: $sprite1 no-repeat;
     cursor: pointer;
-    background-position: 100% 0%;
-    background-size: 3460% 100%;
+    background-position: 24.2% 0%;
+    background-size: 3900% 160%;
     opacity: 0.7;
     width: 20px;
     height: 36px;
