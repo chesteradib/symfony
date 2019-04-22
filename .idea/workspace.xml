@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d23ed39-5154-488c-ad76-ae7c95cd8260" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FrontEnd/images/spritesheet.png" />
       <change type="NEW" beforePath="" afterPath="/var/www/html/presta080419/themes/hifi-store/_dev/img/favicon/android-icon-144x144.png" />
       <change type="NEW" beforePath="" afterPath="/var/www/html/presta080419/themes/hifi-store/_dev/img/favicon/android-icon-192x192.png" />
       <change type="NEW" beforePath="" afterPath="/var/www/html/presta080419/themes/hifi-store/_dev/img/favicon/android-icon-36x36.png" />
@@ -1249,29 +1248,15 @@
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Constraints/Fixtures/test_corrupted.gif" afterPath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Constraints/Fixtures/test_corrupted.gif" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Yaml/Tests/Fixtures/arrow.gif" afterPath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Yaml/Tests/Fixtures/arrow.gif" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/tecnickcom/tcpdf/include/sRGB.icc" afterPath="/var/www/html/presta080419/vendor/tecnickcom/tcpdf/include/sRGB.icc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test-repository-master.iml" afterPath="$PROJECT_DIR$/.idea/test-repository-master.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js" afterPath="$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/all_my_network.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/all_my_network.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_add_new_item.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_add_new_item.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_header.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_item_show.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_item_show.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_styles_main.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_styles_main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/pagination.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/pagination.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/all_my_network.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/all_my_network.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_header.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_item_show.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_item_show.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_styles_main.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_styles_main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/pagination.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/pagination.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/shop.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/shop.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_discussion/dashboard_header.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_discussion/dashboard_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_discussion/mobile_item_new.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_discussion/mobile_item_new.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_fos/dashboard_header.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_fos/dashboard_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/all_my_network.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/all_my_network.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/dashboard_header.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/dashboard_header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/mobile_item_new.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/mobile_item_new.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/mobile_item_show.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/mobile_item_show.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/pagination.scss" afterPath="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/pagination.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/ItemController.php" afterPath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/ItemController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Header/CategoriesSelect.html.twig" afterPath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Header/CategoriesSelect.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/SearchController.php" afterPath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/SearchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/bootstrap.php.cache" afterPath="$PROJECT_DIR$/var/bootstrap.php.cache" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/.gitignore" afterPath="/var/www/html/presta080419/.gitignore" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/.htaccess" afterPath="/var/www/html/presta080419/.htaccess" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/LICENSES" afterPath="/var/www/html/presta080419/LICENSES" />
@@ -12679,61 +12664,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard_styles_main.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_styles_main.scss">
+      <file leaf-file-name="dashboard_item_crud.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="199" column="27" lean-forward="false" selection-start-line="199" selection-start-column="27" selection-end-line="199" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard_header.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_fos/dashboard_header.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="545" column="26" lean-forward="false" selection-start-line="545" selection-start-column="26" selection-end-line="545" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homepage_header.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_header.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homepage_styles_main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_styles_main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="191" column="27" lean-forward="false" selection-start-line="191" selection-start-column="27" selection-end-line="191" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard_header.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/dashboard_header.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="543" column="32" lean-forward="false" selection-start-line="543" selection-start-column="32" selection-end-line="543" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard_header.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_header.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="544" column="32" lean-forward="false" selection-start-line="544" selection-start-column="32" selection-end-line="544" selection-end-column="32" />
+            <state relative-caret-position="120">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -12759,11 +12694,13 @@
       <find>$sprite1</find>
       <find>left_direction_arrow</find>
       <find>right_direction_arrow</find>
+      <find>showEditArticleCallback</find>
+      <find>al</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
-      <dir>$PROJECT_DIR$/src/FrontEnd/js</dir>
       <dir>$PROJECT_DIR$/src/FrontEnd/scss</dir>
+      <dir>$PROJECT_DIR$/src/FrontEnd/js</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -12783,7 +12720,6 @@
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/all_my_network.scss" />
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_discussion/dashboard_header.scss" />
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_item_show.scss" />
-        <option value="$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js" />
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/all_my_network.scss" />
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_add_new_item.scss" />
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_item_show.scss" />
@@ -12800,6 +12736,10 @@
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_fos/dashboard_header.scss" />
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_styles_main.scss" />
         <option value="$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_styles_main.scss" />
+        <option value="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Header/CategoriesSelect.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/SearchController.php" />
+        <option value="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/ItemController.php" />
+        <option value="$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js" />
       </list>
     </option>
   </component>
@@ -12842,6 +12782,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -12882,37 +12823,15 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FrontEnd" />
+              <option name="myItemId" value="Mobile" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
+              <option name="myItemId" value="Bundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FrontEnd" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homepage_styles" />
+              <option name="myItemId" value="ManagementBundle" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -12930,14 +12849,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FrontEnd" />
+              <option name="myItemId" value="Mobile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ManagementBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -13023,22 +12953,23 @@
       <workItem from="1553867845039" duration="2708000" />
       <workItem from="1555454292619" duration="3629000" />
       <workItem from="1555496138530" duration="12963000" />
+      <workItem from="1555888573001" duration="3664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19300000" />
+    <option name="totallyTimeSpent" value="22964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="24" width="1319" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30322075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3574234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51941746" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51941746" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -13065,117 +12996,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_discussion/mobile_item_new.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/mobile_item_new.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/mobile_item_show.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/pagination.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/pagination.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/pagination.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/DataFixtures/ORM/LoadPostCategoriesData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="81" column="53" lean-forward="false" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileEdits.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileNew.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/config/doctrine/Category.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/DataFixtures/ORM/LoadPostCategoriesData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="81" column="53" lean-forward="false" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileNew.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -13253,7 +13073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13261,7 +13080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13269,7 +13087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13277,7 +13094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13285,7 +13101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="330" column="6" lean-forward="false" selection-start-line="330" selection-start-column="6" selection-end-line="330" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13293,14 +13108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="400" column="24" lean-forward="false" selection-start-line="400" selection-start-column="24" selection-end-line="400" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -13317,7 +13124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="264" column="16" lean-forward="false" selection-start-line="264" selection-start-column="16" selection-end-line="264" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13325,7 +13131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="44" column="20" lean-forward="true" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13333,7 +13138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="328" column="35" lean-forward="false" selection-start-line="328" selection-start-column="35" selection-end-line="328" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13341,7 +13145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="265" column="16" lean-forward="false" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13349,7 +13152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13357,7 +13159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="478" column="25" lean-forward="false" selection-start-line="478" selection-start-column="25" selection-end-line="478" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13365,7 +13166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="256" column="24" lean-forward="false" selection-start-line="256" selection-start-column="24" selection-end-line="256" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13373,7 +13173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13381,7 +13180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13389,7 +13187,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13397,13 +13194,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="38" column="17" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="38" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="2160">
           <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
           <folding />
         </state>
@@ -13411,7 +13207,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="8160">
           <caret line="544" column="32" lean-forward="false" selection-start-line="544" selection-start-column="32" selection-end-line="544" selection-end-column="32" />
           <folding />
         </state>
@@ -13419,7 +13215,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_other/dashboard_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="8145">
           <caret line="543" column="32" lean-forward="false" selection-start-line="543" selection-start-column="32" selection-end-line="543" selection-end-column="32" />
           <folding />
         </state>
@@ -13427,7 +13223,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_fos/dashboard_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="8175">
           <caret line="545" column="26" lean-forward="false" selection-start-line="545" selection-start-column="26" selection-end-line="545" selection-end-column="26" />
           <folding />
         </state>
@@ -13435,7 +13231,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_styles_main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="2865">
           <caret line="191" column="27" lean-forward="false" selection-start-line="191" selection-start-column="27" selection-end-line="191" selection-end-column="27" />
           <folding />
         </state>
@@ -13443,8 +13239,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/dashboard_styles_main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="15">
           <caret line="199" column="27" lean-forward="false" selection-start-line="199" selection-start-column="27" selection-end-line="199" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Category/AllCategoriesForHeader.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="90" column="51" lean-forward="false" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/MobileProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/MobileRegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1625">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/MobileResettingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1760">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/MobileSecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/MobileShopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-531">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/MobileMyShopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Header/CategoriesSelect.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Shop/mobileMyShop.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Shop/mobileMyShopFull.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Shop/Shop.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-785">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/ItemController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5160">
+          <caret line="354" column="25" lean-forward="false" selection-start-line="354" selection-start-column="25" selection-end-line="354" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/MobileCategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileNew.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

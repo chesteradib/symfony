@@ -66,20 +66,46 @@ var show_edit_article_listener = function()
 {
     $('#edit_article_trigger').click(function(e){
         e.preventDefault();
-        console.log($(this));
+
         var url=$(this).attr("data-url");
-        show_edit_article(url, showEditArticleCallback);
+
+
+        show_edit_article(url);
         return false;
    });    
 }
-var show_edit_article = function (url, callback)
+var show_edit_article = function (url)
 {
-    Utils.ajax_call("GET", url, {} , true, startPogressRight ,callback, endPogressRight);
+
+    //abortPreviousRequests();
+    //Utils.ajax_call("GET", url, {}, false, startPogressRight ,showEditArticleCallback, endPogressRight);
+    //Utils.ajax_call("GET", url, {} , true, startPogressRight ,callback, endPogressRight);
+    $.ajax({
+        type: "GET",
+        url: url,
+        cache: true,
+        beforeSend:function(jqXHR){
+          /*  console.log(jqXHR);
+            promises.push(jqXHR);
+
+            startPogressRight();*/
+        },
+        success: function(data){
+            console.log(data);
+
+            showEditArticleCallback(data);
+        } ,
+        complete: endPogressRight
+    });
+    return false;
+
 }
 
 
 var showEditArticleCallback = function(data){
 
+    alert(data);
+     /*
     if(data.status)
     {
         $.when(right_fully_loaded(data)).done(function(){
@@ -97,7 +123,7 @@ var showEditArticleCallback = function(data){
     else
     {
         console.log(data.message);
-    }
+    }*/
 }
 ////////////////////////////////////////////////////////////////////////////
 /// 1. Listen to Update Button in Edit-product page,

@@ -49,7 +49,7 @@ class ItemController extends Controller
                 'entity'      => $entity,
                 'main_image_id' => null,
                 'form'   => $form->createView(),
-                'categories' => $categories
+                'orderedCategories' => $categories
                 );
 
             return $this->render('MobileManagementBundle::mobileNewFull.html.twig', $firstPart);
@@ -181,7 +181,7 @@ class ItemController extends Controller
                     'entity' => $entity,
                     'main_image_id' =>$mainImageId,
                     'form'   => $form->createView(),
-                    'categories' => $categories 
+                    'orderedCategories' => $categories
                 );
 
             
@@ -352,7 +352,7 @@ class ItemController extends Controller
                 'main_image_id' => $value,
                 'edit_form'   => $editForm->createView(),
                 'delete_form' => $deleteForm->createView(),
-                'categories' => $categories
+                'orderedCategories' => $categories
             );
 
             

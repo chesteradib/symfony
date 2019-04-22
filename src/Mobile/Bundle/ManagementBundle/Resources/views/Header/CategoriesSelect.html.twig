@@ -3,17 +3,14 @@
         id="shop_bundle_managementbundle_posttype_categories" 
         name="shop_bundle_managementbundle_posttype[categories][]">
         
-            <option value="" 
-                selected
-            ></option>
-
-        {% for category in orederedCategories %}
-            <option value="{{ category[0].id }}"
-                {#  {% if form.categories.vars.value is not empty %}
-                        {{ form.categories.vars.value[0] == '' and key == 0 ? ' selected ' :(val.value == form.categories.vars.value[0] ? ' selected ' : '') }}
-                {% endif %}#}
-                >
-                {{ (category[0].getName~'.'~category[0].getName) | trans }}
+    <option value="" selected></option>
+    {% for alphabet, categories in orderedCategories %}
+        {% for category in categories %}
+            <option value="{{category['id']}}">
+                {{ category['name'] }}
             </option>
         {% endfor %}
-        </select>
+    {% endfor %}
+</select>
+
+

@@ -76,7 +76,7 @@ class SearchController extends Controller
 
             $pageOfMobileSearch = array_merge(array(
                 'searchText'=> $searchText,
-                'categories' => $categories,
+                'orderedCategories' => $categories,
                 'page' => $page
             ), $this->getItemsOfPage($searchText, $page, self::ITEMS_PER_PAGE));
 
@@ -88,7 +88,7 @@ class SearchController extends Controller
                 'number_of_pages'=> 0,
                 'countOfResults' => 0,
                 'searchText'=> '',
-                'categories' => $categories,
+                'orderedCategories' => $categories,
                 'page' => $page);
         }
 
