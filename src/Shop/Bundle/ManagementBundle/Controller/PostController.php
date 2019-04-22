@@ -50,7 +50,7 @@ class PostController extends Controller
         $responseArray = array(
             'entity'      => $entity,
             'delete_form' => $deleteForm->createView(),
-            'categories' => $categories
+            'orderedCategories' => $categories
 
         );
 
