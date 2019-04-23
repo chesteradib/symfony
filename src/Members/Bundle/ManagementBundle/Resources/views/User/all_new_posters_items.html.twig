@@ -17,18 +17,16 @@
                         {% set image_url = prefix ~"uploads/profilepictures/prpf/"
                         ~new_poster['item'].getProfilePicture.path %}
                             {% if new_poster['item'].getProfilePicture.widthVsHeight == 0 %}
-                            <img class="m-i-p-p-u photo equal" src="{{ image_url }}" height= 25/>
+                            <img class="m-i-p-p-u photo equal" src="{{ image_url }}">
                             {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 1 %}
                             <span class="helper"></span>
-                            <img class="m-i-p-p-u photo fat-profile-image" src="{{ image_url }}" height= 25/>
+                            <img class="m-i-p-p-u photo fat-profile-image" src="{{ image_url }}">
                             {% elseif new_poster['item'].getProfilePicture.widthVsHeight == 2 %}
-                            <img class="m-i-p-p-u photo tall-profile-image" src="{{ image_url }}" height= 25/>
+                            <img class="m-i-p-p-u photo tall-profile-image" src="{{ image_url }}">
                             {% endif%}
                     </div>
                 {% else %}
-                    <div class="image_of_follower m-i-p-p-u-d center-horizontally">
-                        <img class="photo equal" src="{{ asset('pp/index.png') }}"/>
-                    </div>
+                    <div class="image_of_follower m-i-p-p-u-d pp-unavailable"></div>
                 {% endif %}
                 
                 <div class="initial_info_of_follower">

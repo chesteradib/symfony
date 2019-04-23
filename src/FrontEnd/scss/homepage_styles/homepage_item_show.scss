@@ -138,23 +138,32 @@ $vert-opace7:rgba(0,98,51,0.7);
     float:left;
     display: block;
     background: $sprite3 no-repeat;
+    background-size: 4010% 176.45%;
     cursor: pointer;
     width: 20px;
     height: 40px;
-    margin: 15px 0;  
+    margin: 15px 0;
 }
 #left_arrow
 {
-    
-    background-size: 3460% 117.64%;
-    background-position: 100% 0px;
+    background-position: 24.2% 0%;
 }
 
 #right_arrow
 {
-    background-size: 3460% 117.647%;
-    background-position: 61.3% 0px;
+    background-position: 17.2% 0%;
 }
+
+#left_arrow:hover,#right_arrow:hover
+{
+    opacity: 0.7;
+}
+#left_arrow:active,#right_arrow:active
+{
+    opacity: 1;
+}
+
+
 
 #post-images-toScroll
 {
@@ -285,6 +294,13 @@ $vert-opace7:rgba(0,98,51,0.7);
     font-size:15px;
     height: 60px;
     line-height: 60px;    
+}
+
+.pp-unavailable
+{
+    background: $sprite1 no-repeat;
+    background-size: 2120% 150%;
+    background-position: 55.3% 0;
 }
 /* Post Bought CSS */
 /* Post  Bought CSS */
@@ -451,9 +467,10 @@ a#bought-trigger:hover,
     position:absolute;
     height:60px;
     width:60px;
-    background-color: black;
     bottom: 70px;
-    background: $sprite3 no-repeat;
-    margin-left:10px;
+    background: $sprite1 no-repeat;
+    background-position: 39% 0;
+    background-size: 2590% 180%;
+    margin-left: 8%;
 
 }

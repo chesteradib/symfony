@@ -138,38 +138,37 @@ $.fn.imageHoverFunction = function(){
 
     $('div.image_div').on({
         mouseenter: function(e){
-
-            $(this).next().find('.delete_image_trigger').css('background-position', '31.565% 0');
-            $(this).next().find('.set_as_main').css('background-position', '77.20% 0');
+            $(this).next().find('.delete_image_trigger').css('opacity', '10.7');
+            $(this).next().find('.set_as_main').css('background-position', '8.1% 0');
 
         },
         mouseleave:function(e){
-            $(this).next().find('.delete_image_trigger').css('background-position', '38.205% 0');
-            $(this).next().find('.set_as_main').css('background-position', '80.05% 0');
+            $(this).next().find('.delete_image_trigger').css('opacity', '1');
+            $(this).next().find('.set_as_main').css('background-position', '10.3% 0');
         }
     });
 
     $('a.delete_image_trigger').on({
         mouseenter: function(e){
-            $(this).css('background-position', '24.91% 0');
+            $(this).css('opacity', '1');
         },
         mouseleave:function(e){
-            $(this).css('background-position', '38.205% 0');
+            $(this).css('opacity', '0.7');
         },
         click:function(e){
-            $(this).css('background-position', '31.56% 0');
+            $(this).css('opacity', '1');
         }
     });
 
     $('a.set_as_main').on({
         mouseenter: function(e){
-            $(this).css('background-position', '77.20% 0');
+            $(this).css('background-position', '8.1% 0');
         },
         mouseleave:function(e){
-            $(this).css('background-position', '80.05% 0');
+            $(this).css('background-position', '10.7% 0');
         },
         click:function(e){
-            $(this).css('background-position', '74.359% 0');
+            $(this).css('background-position', '8.1% 0');
         }
 
     });

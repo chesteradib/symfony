@@ -138,6 +138,7 @@ $vert-opace7:rgba(0,98,51,0.7);
     float:left;
     display: block;
     background: $sprite3 no-repeat;
+    background-size: 4010% 176.45%;
     cursor: pointer;
     width: 20px;
     height: 40px;
@@ -145,16 +146,23 @@ $vert-opace7:rgba(0,98,51,0.7);
 }
 #left_arrow
 {
-    
-    background-size: 3460% 117.64%;
-    background-position: 100% 0px;
+    background-position: 24.2% 0%;
 }
 
 #right_arrow
 {
-    background-size: 3460% 117.647%;
-    background-position: 61.3% 0px;
+    background-position: 17.2% 0%;
 }
+
+#left_arrow:hover,#right_arrow:hover
+{
+    opacity: 0.7;
+}
+#left_arrow:active,#right_arrow:active
+{
+    opacity: 1;
+}
+
 
 #post-images-toScroll
 {
@@ -303,6 +311,13 @@ $vert-opace7:rgba(0,98,51,0.7);
     height: 60px;
     line-height: 60px;    
 }
+
+.pp-unavailable
+{
+    background: $sprite1 no-repeat;
+    background-size: 2120% 150%;
+    background-position: 55.3% 0;
+}
 /* Post Bought CSS */
 /* Post  Bought CSS */
 
@@ -424,8 +439,8 @@ $vert-opace7:rgba(0,98,51,0.7);
     margin: 1.5px 0;
     background: $sprite1 no-repeat;
     cursor: pointer;
-    background-size: 3008.33% 162.5%;
-    background-position : 25.5% 0;
+    background-size: 3500% 180%;
+    background-position: 32.1% 0;
 }
 
 #edit_article_text
@@ -477,9 +492,9 @@ form#delete_article_trigger button
     width:24px;
     height:24px;
     background: $sprite1 no-repeat;
-    background-size:1003.125% 100%; 
-    background-position:100% 0;
-    float:left; 
+    background-size: 3800% 180%;
+    background-position: 26.6% 0;
+    float:left;
 }
 
 #delete_article_text
@@ -518,8 +533,9 @@ form#delete_article_trigger button
     width:34px;
     margin:0 auto;
     height:34px;
-    background: url('../images/retweet.png') no-repeat;
-    background-size: 100%;
+    background: $sprite1 no-repeat;
+    background-position: 46.95% 0;
+    background-size: 2590% 180%;
     float:left;
 }
 
@@ -634,9 +650,10 @@ a#bought-trigger:hover,
     position:absolute;
     height:60px;
     width:60px;
-    background-color: black;
     bottom: 70px;
-    background: $sprite3 no-repeat;
-    margin-left:10px;
+    background: $sprite1 no-repeat;
+    background-position: 39% 0;
+    background-size: 2590% 180%;
+    margin-left: 8%;
 
 }

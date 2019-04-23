@@ -211,6 +211,13 @@ $vert-opace7:rgba(0,98,51,0.7);
     height: 60px;
     line-height: 60px;    
 }
+
+.pp-unavailable
+{
+    background: $sprite1 no-repeat;
+    background-size: 2120% 150%;
+    background-position: 55.3% 0;
+}
 /* Post Bought CSS */
 /* Post  Bought CSS */
 
@@ -278,8 +285,8 @@ $vert-opace7:rgba(0,98,51,0.7);
     margin: 1.5px 0;
     background: $sprite1 no-repeat;
     cursor: pointer;
-    background-size: 3008.33% 162.5%;
-    background-position : 25.5% 0;
+    background-size: 3500% 180%;
+    background-position: 32.1% 0;
 }
 
 #edit_article_text
@@ -327,8 +334,8 @@ form#delete_article_trigger button
     width:30px;
     height:30px; 
     background: $sprite1 no-repeat;
-    background-size:1003.125% 100%; 
-    background-position:100% 0;
+    background-size: 3800% 180%;
+    background-position: 26.6% 0;
     float:left; 
 }
 
@@ -364,8 +371,10 @@ form#delete_article_trigger button
     width:50px;
     float:left;
     height:50px;
-    background: url('../images/retweet.png') no-repeat;
-    background-size: 100%;
+    background: $sprite1 no-repeat;
+    background-position: 46.95% 0;
+    background-size: 2590% 180%;
+
 }
 
 #retweet_article_text

@@ -121,10 +121,20 @@ a#add_image_trigger
 {
     height: 65px;
     width: 65px;
-    background-position: 12.77% 0%;
-    background-size:1660% 100%;
     background: $sprite1 no-repeat;
+    background-position: 69.8% 0%;
+    background-size: 2036% 138%;
     float: left;
+}
+
+a#add_image_trigger:hover
+{
+    opacity: 0.7;
+}
+
+a#add_image_trigger:active
+{
+    opacity: 1;
 }
 
 #add_image_notice
@@ -139,16 +149,6 @@ a#add_image_trigger
 
 }
 
-a#add_image_trigger:hover
-{
-    background-position:6.385% 0%;
-}
-
-
-a#add_image_trigger:active
-{
-    background-position:0% 0%;
-}
 
 #uploaded_images
 {
@@ -227,63 +227,59 @@ a#add_image_trigger:active
     width: 35px;
     height: 25px;
     display: block;
-    background: $sprite1 no-repeat;
     cursor: pointer;
     margin-top: 30px;
     z-index: 11;
     right: 12px;
     position: relative;
-    background-position: 80.05% 0;
+    background: $sprite1 no-repeat;
+    background-position: 10.3% 0;
+    background-size: 3782% 360%;
 }
 
 .set_as_main:hover
 {
-    
-    background-position: 77.359% 0;
+    background-position: 8.1% 0;
+    opacity: 0.5;
 }
 .set_as_main:active
 {
-    
-    background-position:74.359% 0;
+    background-position:8.1% 0;
 }
 
 .main
 {
-    
-   background-position:74.359% 0;
+    background-position:8.1% 0;
 }
 
 .main:hover
 {
-    
-   background-position:74.359% 0;
+    background-position:8.1% 0;
+    opacity: 0.5;
 }
+
+
 .delete_image_trigger
 {
-
     width:20px;
     height:20px;
     display: block;
     background: $sprite1 no-repeat;
     cursor: pointer;
-    background-position: 38.205% 0;
-    background-size: 1605% 200%;
-    
+    background-position: 0% 0;
+    background-size: 6620% 450%;
+    opacity: 0.7;
+
 }
 .delete_image_trigger:hover
 {
-
- background-position: 24.91% 0;
-    
+    opacity: 1;
 }
 
 .delete_image_trigger:active
 {
-
- background-position: 31.56% 0
-    
+    opacity: 0.7;
 }
-
 ///////////////////////// Form Footer 
 #add_item_button,#cancel_item_button,#delete_article_button
 {

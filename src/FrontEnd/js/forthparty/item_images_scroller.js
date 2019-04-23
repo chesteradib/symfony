@@ -24,41 +24,26 @@ var articleImagesScroller = function(){
         
         var index=0;
 
-        $('#right_arrow').on({ 
-            mouseenter: function(e){
-                $(this).css('background-position', '58.33% 0');     
-            },
-            mouseleave:function(e){
-                $(this).css('background-position', '61.30% 0');     
-            },
+        $('#right_arrow').on({
             click:function(e){
 
                 index++;  
                 $leftArrow.css('visibility', 'visible');
                 $postImagesToScroll.animate({left:-postScrollerHeight* index}, {duration: 300, easing: "swing"});
                 if(index===currentImagesNumber-5)  $rightArrow.css('visibility', 'hidden');
-                
-                $(this).css('background-position', '55.357% 0');     
+
             }
         });
         
         
-        $('#left_arrow').on({ 
-            mouseenter: function(e){
-                $(this).css('background-position', '97.02% 0');     
-            },
-            mouseleave:function(e){
-                $(this).css('background-position', '100% 0');     
-          },
+        $('#left_arrow').on({
             click:function(e){
                 
                 index--;
                 $rightArrow.css('visibility', 'visible');
                 $postImagesToScroll.animate({left: -postScrollerHeight* index}, {duration: 300, easing: "swing"});
                 if(index===0)  $leftArrow.css('visibility', 'hidden');
-                
-                $(this).css('background-position', '94.04% 0');
-                
+
           }
         });
         
