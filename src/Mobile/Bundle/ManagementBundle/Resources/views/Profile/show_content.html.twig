@@ -6,9 +6,7 @@
             {% set profilePhotoLink = prefix ~"uploads/profilepictures/prpf/" ~ user.getProfilePicture.getPath   %}
             {% set profilePhotoUpdateText = 'left.profile.show.updateProfilePhoto'   %}
         {% else %}
-            {% set profilePhotoLink = prefix ~ "pp/index.png"   %}
             {% set profilePhotoUpdateText = 'left.profile.show.newProfilePhoto'   %}
-
         {%endif%}
 
         <div id="profile_picture_block"
@@ -31,9 +29,14 @@
             <div class='clear'>
             </div>
 
-            <img  id="profile_picture"
-                  src="{{ profilePhotoLink }}"
-                  width="100"/>
+            {% if user.getProfilePicture %}
+                <img  id="profile_picture"
+                      src="{{ profilePhotoLink }}"
+                      width="100"/>
+
+            {% else %}
+                <div class="pp-unavailable"></div>
+            {%endif%}
 
             <form id="user_profile_form_profile_picture"
                   method="post"
