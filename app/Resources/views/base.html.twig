@@ -9,6 +9,7 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         {% block myscript %}
+
         {#
         <script type="text/javascript" id= "mscript" data-url="{{ path('mobile')}}" >
             /* The mobile designis for :
@@ -25,6 +26,8 @@
         </script>
         #}
         {% endblock %}
+
+        {% block noindex %}{% endblock %}
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

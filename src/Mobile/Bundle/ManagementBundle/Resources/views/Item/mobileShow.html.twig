@@ -40,7 +40,9 @@
         <img class="mobile_image" src="{{ prefix ~ image_url }}">
     </div>    
     <div id="post-images">
+        {% set i = -1 %}
         {% for image in entity.images %}
+            {% set i = i + 1 %}
             {%if image!=entity.postMainImagePath%}
             <div>
                 {% set uploadDate = image.uploadDate %}
@@ -49,7 +51,10 @@
                     ~uploadDate|date('d')~'/'
                     ~uploadDate|date('H')~'/'~'m_'
                     ~image.path %}
-                <img class="mobile_image" src="{{ prefix ~ image_url }}"/>
+                <img class="mobile_image"
+                     src="{{ prefix ~ image_url }}"
+                     alt="{{ entity.postTitle ~ ' Kenitra ' ~ 'image ' ~ i }}"
+                />
             </div>
             {%endif%}
         {% endfor %}

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file:///var/www/html/presta080419/.idea/prestashop.iml" filepath="/var/www/html/presta080419/.idea/prestashop.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/test-repository-master.iml" filepath="$PROJECT_DIR$/.idea/test-repository-master.iml" />
     </modules>
   </component>

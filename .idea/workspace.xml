@@ -1248,10 +1248,16 @@
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Constraints/Fixtures/test_corrupted.gif" afterPath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Constraints/Fixtures/test_corrupted.gif" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Yaml/Tests/Fixtures/arrow.gif" afterPath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Yaml/Tests/Fixtures/arrow.gif" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/tecnickcom/tcpdf/include/sRGB.icc" afterPath="/var/www/html/presta080419/vendor/tecnickcom/tcpdf/include/sRGB.icc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test-repository-master.iml" afterPath="$PROJECT_DIR$/.idea/test-repository-master.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js" afterPath="$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/PostController.php" afterPath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/new.html.twig" afterPath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig" afterPath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig" afterPath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig" afterPath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig" afterPath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig" afterPath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/.gitignore" afterPath="/var/www/html/presta080419/.gitignore" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/.htaccess" afterPath="/var/www/html/presta080419/.htaccess" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/LICENSES" afterPath="/var/www/html/presta080419/LICENSES" />
@@ -12659,11 +12665,71 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard_item_crud.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js">
+      <file leaf-file-name="mobileShowFull.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="90" column="32" lean-forward="false" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+            <state relative-caret-position="-36">
+              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.tpl" pinned="false" current-in-tab="false">
+        <entry file="file:///var/www/html/presta080419/themes/hifi-store/templates/catalog/product.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="32" column="98" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobileShow.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="945">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminInitial.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -12672,7 +12738,7 @@
       <file leaf-file-name="ItemController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/ItemController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="4260">
               <caret line="354" column="25" lean-forward="false" selection-start-line="354" selection-start-column="25" selection-end-line="354" selection-end-column="25" />
               <folding />
             </state>
@@ -12682,18 +12748,8 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/new.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="333">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -12721,11 +12777,13 @@
       <find>right_direction_arrow</find>
       <find>showEditArticleCallback</find>
       <find>al</find>
+      <find>onorientation</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$/src/FrontEnd/scss</dir>
       <dir>$PROJECT_DIR$/src/FrontEnd/js</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -12766,6 +12824,12 @@
         <option value="$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js" />
         <option value="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig" />
+        <option value="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig" />
+        <option value="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig" />
       </list>
     </option>
   </component>
@@ -12808,7 +12872,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -12817,7 +12880,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
+              <option name="myItemId" value="presta080419" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -12827,37 +12890,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
+              <option name="myItemId" value="presta080419" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shop" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagementBundle" />
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -12867,31 +12904,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
+              <option name="myItemId" value="presta080419" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Shop" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagementBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="hifi-store" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -12901,35 +12922,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
+              <option name="myItemId" value="presta080419" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Shop" />
+              <option name="myItemId" value="hifi-store" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagementBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Post" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -12939,63 +12944,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
+              <option name="myItemId" value="presta080419" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Shop" />
+              <option name="myItemId" value="hifi-store" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ManagementBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devenv" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shop" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ManagementBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="catalog" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -13082,35 +13054,36 @@
       <workItem from="1555454292619" duration="3629000" />
       <workItem from="1555496138530" duration="12963000" />
       <workItem from="1555888573001" duration="4591000" />
+      <workItem from="1556221347177" duration="8872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23891000" />
+    <option name="totallyTimeSpent" value="32763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="24" width="1319" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19795758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51941746" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3644933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51941746" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980362" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -13124,105 +13097,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/homepage_js/homepage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-492">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/homepage_js/homepage_shops_management.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/homepage_js/homepage_security.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="264" column="23" lean-forward="false" selection-start-line="264" selection-start-column="23" selection-end-line="264" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/jquery.progress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/images/spritesheet.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/images/spritesheet1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file:///var/www/html/presta080419/themes/hifi-store/_dev/css/theme.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///var/www/html/presta080419/themes/hifi-store/_dev/css/partials/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/dashboard_styles/all_my_network.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/mobile_styles/mobile_discussion/dashboard_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///var/www/html/presta080419/modules/hs_homepage/views/templates/widget/homepage_header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///var/www/html/presta080419/modules/hs_homepage/views/templates/widget/homepage_contact.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontEnd/scss/homepage_styles/homepage_item_show.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="330" column="6" lean-forward="false" selection-start-line="330" selection-start-column="6" selection-end-line="330" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/mobile_js/mobile_show_js/mobile_bought.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13315,7 +13193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
           <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13323,7 +13200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8160">
           <caret line="544" column="32" lean-forward="false" selection-start-line="544" selection-start-column="32" selection-end-line="544" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13339,7 +13215,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8175">
           <caret line="545" column="26" lean-forward="false" selection-start-line="545" selection-start-column="26" selection-end-line="545" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13347,7 +13222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2865">
           <caret line="191" column="27" lean-forward="false" selection-start-line="191" selection-start-column="27" selection-end-line="191" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13355,7 +13229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="199" column="27" lean-forward="false" selection-start-line="199" selection-start-column="27" selection-end-line="199" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13363,7 +13236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13379,7 +13251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13387,7 +13258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1625">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13395,7 +13265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1760">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13403,7 +13272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-665">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13411,7 +13279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-531">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13419,7 +13286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13427,7 +13293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13435,7 +13300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13443,7 +13307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13451,7 +13314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-785">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13459,7 +13321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-186">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -13467,31 +13328,102 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard_item_crud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
+        <state relative-caret-position="1305">
           <caret line="90" column="32" lean-forward="false" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/ItemController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="354" column="25" lean-forward="false" selection-start-line="354" selection-start-column="25" selection-end-line="354" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-          <folding />
+          <folding>
+            <marker date="1555894984099" expanded="false" signature="0:234" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="275:588" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="326:584" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="623:1026" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="769:1022" ph="{&quot;type&quot;: &quot;GET&quot;...}" />
+            <marker date="1555894984099" expanded="true" signature="865:943" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="1068:1368" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="1123:1362" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="1410:1479" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="1484:1728" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="1775:1966" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="1825:1958" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="2006:2530" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="2042:2236" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="2248:2507" ph="{&quot;type&quot;: &quot;GET&quot;...}" />
+            <marker date="1555894984099" expanded="true" signature="2344:2424" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="2577:3101" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="2604:3043" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="2662:3035" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="3057:3099" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="3102:3331" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="3376:3864" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="3428:3853" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="3905:4048" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="4093:4940" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="4116:4868" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="4176:4860" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="4218:4521" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="4562:4850" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="4878:4920" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="4943:5166" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="5206:5477" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="5257:5473" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="5519:5981" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="5540:5905" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="5598:5819" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="5919:5961" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="6016:6456" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="6022:6156" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="6162:6262" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="6509:7173" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="6562:7169" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="6714:7075" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="6763:6842" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="7097:7141" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="7175:7415" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="7458:8112" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="7521:8094" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="8153:8278" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="8323:9322" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="8345:9246" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="8403:9238" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="8454:8798" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="8472:8496" ph="/*...*/" />
+            <marker date="1555894984099" expanded="true" signature="8854:9227" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="9260:9302" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="9324:9622" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="9656:9892" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="9708:9887" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="9933:10058" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="10104:10245" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="10126:10169" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="10178:10225" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="10247:10485" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="10541:11064" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="10590:11060" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="10680:10755" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="11149:11466" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="11505:11949" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="11554:11936" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="11999:12142" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="12192:12767" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="12313:12708" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="12527:12600" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="12630:12698" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="12721:12765" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="12925:13210" ph="//..." />
+            <marker date="1555894984099" expanded="true" signature="13246:13458" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="13300:13454" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="13489:13600" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="13640:13745" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="13662:13698" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="13707:13743" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="13867:13969" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="13916:13965" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="14019:14129" ph="{...}" />
+            <marker date="1555894984099" expanded="true" signature="14096:14114" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -13499,6 +13431,136 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/direction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-372">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontEnd/js/forthparty/dashboard_js/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="110" column="9" lean-forward="false" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Resetting/reset.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Resetting/reset.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/twig/72/7252f5bc128536911ad9ac24257c1b7e99d54c792fc4a40f1dfd1efc6521dbf7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="71" column="14" lean-forward="false" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Controller/ItemController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4260">
+          <caret line="354" column="25" lean-forward="false" selection-start-line="354" selection-start-column="25" selection-end-line="354" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///var/www/html/presta080419/themes/hifi-store/templates/catalog/product.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="32" column="98" lean-forward="false" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding />
         </state>
       </provider>

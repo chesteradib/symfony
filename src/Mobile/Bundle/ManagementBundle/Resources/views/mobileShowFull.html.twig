@@ -1,11 +1,13 @@
 {% extends '::base.html.twig' %}
 
+{% block title %}{{ entity.postTitle ~ ' Kenitra ' }} {% endblock %}
+
 {% block myscript %}
     <script type="text/javascript" id= "mscript" data-url="{{ path('index') }}" >
             /* The mobile designis for :
              * 1. device can rotate
              * 2. device width < device height
-             * 3. device dith < 500 // not yet implemented in following if
+             * 3. device width < 500 // not yet implemented in following if
              **/  
             if( !(
                     ('onorientationchange' in window) 

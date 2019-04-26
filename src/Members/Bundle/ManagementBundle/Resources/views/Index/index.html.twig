@@ -1,5 +1,9 @@
 {% extends '::base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/homepage_styles.css') }}" />
+{% endblock %}
+
 {% block myscript %}
     <script type="text/javascript" id= "mscript" data-url="{{ path('mobile_index', { page : 0 })}}" >
 
@@ -13,8 +17,8 @@
     </script>
 {% endblock %}
 
-{% block stylesheets %}
-   <link rel="stylesheet" href="{{ asset('css/homepage_styles.css') }}" />
+{% block noindex %}
+    <meta name="robots" content="noindex">
 {% endblock %}
 
 {% block body %}

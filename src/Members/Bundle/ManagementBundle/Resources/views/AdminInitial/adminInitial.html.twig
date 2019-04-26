@@ -1,20 +1,26 @@
 {% extends '::base.html.twig' %}
 
-{% block myscript %}
-<script type="text/javascript" id= "mscript" data-url="{{ path('mobile_admin', { page : 0})}}" >
-        
-    if( ('onorientationchange' in window) 
-            || (window.screen.width< window.screen.height)
-            || (window.screen.width< 1280)
-            ) { 
-        var url = document.getElementById('mscript').getAttribute('data-url');
-        window.location.replace(url);
-    }
-</script>
-{% endblock %}
+
 
 {% block stylesheets %}
    <link rel="stylesheet" href="{{ asset('css/dashboard_styles.css') }}" />
+{% endblock %}
+
+{% block myscript %}
+    <script type="text/javascript" id= "mscript" data-url="{{ path('mobile_admin', { page : 0})}}" >
+
+        if( ('onorientationchange' in window)
+            || (window.screen.width< window.screen.height)
+            || (window.screen.width< 1280)
+        ) {
+            var url = document.getElementById('mscript').getAttribute('data-url');
+            window.location.replace(url);
+        }
+    </script>
+{% endblock %}
+
+{% block noindex %}
+    <meta name="robots" content="noindex">
 {% endblock %}
 
 {% block body %}
