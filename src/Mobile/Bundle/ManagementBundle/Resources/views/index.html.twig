@@ -7,8 +7,9 @@
 {% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/homepage_styles.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/mobile_styles.css') }}" />
 {% endblock %}
+
 
 {% block myscript %}
     <script type="text/javascript" id= "mscript" data-url="{{ path('index') }}" >
@@ -22,7 +23,7 @@
             window.location.replace(url);
         }
     </script>
-{% endblock %} 
+{% endblock %}
 
 {% block noindex %}
     <meta name="robots" content="noindex">
@@ -32,9 +33,6 @@
     <link rel="canonical" href="http://www.jem3a.com/m/0" />
 {% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/mobile_styles.css') }}" />
-{% endblock %}
 
 {% block body %}
    {% include "MobileManagementBundle:Header:mobileNonAdminHeader.html.twig" %}
