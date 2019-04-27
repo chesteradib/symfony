@@ -1,5 +1,36 @@
 {% extends ':mobile:base.html.twig' %}
 
+{% block title %}Jem3a: Marché aux puces de Kenitra - Kenitra flea market - جوطية القنيطرة{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Besoin d'acheter un produit d'occasion dans la région de Kenitra? Jem3a est un marché aux puces électronique à e-commerçants vérifiés et plein de categories: salles a manger, chambre a coucher...">
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/homepage_styles.css') }}" />
+{% endblock %}
+
+{% block myscript %}
+    <script type="text/javascript" id= "mscript" data-url="{{ path('mobile_index', { page : 0 })}}" >
+
+        if( ('onorientationchange' in window)
+            || (window.screen.width < window.screen.height)
+            || (window.screen.width < 1280)
+        ) {
+            var url = document.getElementById('mscript').getAttribute('data-url');
+            window.location.replace(url);
+        }
+    </script>
+{% endblock %}
+
+{% block noindex %}
+    <meta name="robots" content="noindex">
+{% endblock %}
+
+{% block canonical %}
+    <link rel="canonical" href="http://www.jem3a.com/m/0" />
+{% endblock %}
+
 {% block myscript %}
     <script type="text/javascript" id= "mscript" data-url="{{ path('index') }}" >
         if( !(
