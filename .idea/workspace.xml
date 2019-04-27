@@ -1248,15 +1248,9 @@
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Constraints/Fixtures/test_corrupted.gif" afterPath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Validator/Tests/Constraints/Fixtures/test_corrupted.gif" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Yaml/Tests/Fixtures/arrow.gif" afterPath="/var/www/html/presta080419/vendor/symfony/symfony/src/Symfony/Component/Yaml/Tests/Fixtures/arrow.gif" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/vendor/tecnickcom/tcpdf/include/sRGB.icc" afterPath="/var/www/html/presta080419/vendor/tecnickcom/tcpdf/include/sRGB.icc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/test-repository-master.iml" afterPath="$PROJECT_DIR$/.idea/test-repository-master.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig" afterPath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig" afterPath="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig" afterPath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig" afterPath="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig" afterPath="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/.gitignore" afterPath="/var/www/html/presta080419/.gitignore" />
       <change type="MODIFICATION" beforePath="/var/www/html/presta080419/.htaccess" afterPath="/var/www/html/presta080419/.htaccess" />
@@ -12685,11 +12679,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobileShow.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mobileShow.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -12708,8 +12702,8 @@
       <file leaf-file-name="adminInitial.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -12725,11 +12719,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="30">
+              <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -12825,11 +12819,11 @@
         <option value="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig" />
         <option value="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/mobileShowFull.html.twig" />
+        <option value="$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig" />
         <option value="$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig" />
       </list>
     </option>
   </component>
@@ -13054,12 +13048,12 @@
       <workItem from="1555454292619" duration="3629000" />
       <workItem from="1555496138530" duration="12963000" />
       <workItem from="1555888573001" duration="4591000" />
-      <workItem from="1556221347177" duration="8872000" />
+      <workItem from="1556221347177" duration="10896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32763000" />
+    <option name="totallyTimeSpent" value="34787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="24" width="1319" height="744" extended-state="6" />
@@ -13072,7 +13066,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3644933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31264728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51941746" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980362" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -13509,38 +13503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///var/www/html/presta080419/themes/hifi-store/templates/catalog/product.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -13557,10 +13519,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/Index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Members/Bundle/ManagementBundle/Resources/views/AdminInitial/adminInitial.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Shop/Bundle/ManagementBundle/Resources/views/Post/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="30">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mobile/Bundle/ManagementBundle/Resources/views/Item/mobileShow.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>

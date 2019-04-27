@@ -20,6 +20,13 @@ gulp.task('images', function () {
         })
         .pipe(gulp.dest('web/images/'))
         .pipe(reload({stream:true}));
+
+    gulp.src('src/FrontEnd/images/favicon/*', {
+        base: 'src/FrontEnd/images/favicon/'
+    })
+        .pipe(gulp.dest('web/images/favicon/'))
+        .pipe(reload({stream:true}));
+
 });
 /*
  * sass task 

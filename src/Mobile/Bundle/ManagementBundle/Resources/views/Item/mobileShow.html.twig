@@ -1,7 +1,8 @@
 <div id="mobile-container">
     <div id="post-title-price-description">
         <div class="post-title-and-price" id="post-title-price-date">
-            <div id="post-title">{{ entity.postTitle }}</div>
+            <div id="post-title">
+                <h1 class="h1" itemprop="name">{{ entity.postTitle }}</h1></div>
             <div id="post-price-and-date">
                 <div id="post-price">
                     <span id="p-price">{{ entity.postPrice }}</span>
@@ -37,7 +38,10 @@
                             ~uploadDate|date('d')~'/'
                             ~uploadDate|date('H')~'/'~'m_'
                             ~entity.postMainImagePath.path %}
-        <img class="mobile_image" src="{{ prefix ~ image_url }}">
+        <img class="mobile_image"
+             src="{{ prefix ~ image_url }}"
+             alt="{{ entity.postTitle ~ ' Kenitra'  }}"
+        >
     </div>    
     <div id="post-images">
         {% set i = -1 %}
